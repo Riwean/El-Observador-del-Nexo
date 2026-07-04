@@ -1,0 +1,752 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap");
+
+body {
+  font-family: "Share Tech Mono", "Courier New", monospace;
+  background-color: #0a0e14;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 255, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 255, 255, 0.03) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 255, 255, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 255, 255, 0.03) 3px
+    ),
+    radial-gradient(circle at 50% 50%, #0f1419 0%, #0a0e14 100%);
+  padding: 20px;
+  color: #00ff88;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Efecto de corrupción de datos */
+.data-corruption {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.03) 2px,
+    rgba(0, 255, 255, 0.03) 4px
+  );
+  animation: scanline 8s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Contenedor del periódico */
+.newspaper-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #141820;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow:
+    0 0 60px rgba(0, 255, 255, 0.3),
+    0 0 100px rgba(255, 0, 100, 0.2),
+    inset 0 0 100px rgba(0, 20, 40, 0.5);
+  padding: 40px;
+  border: 2px solid #00ffff;
+  border-image: linear-gradient(135deg, #00ffff, #ff00ff, #00ffff) 1;
+  position: relative;
+}
+
+.newspaper-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 0, 255, 0.1) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+/* Línea de escaneo */
+.header-scanline {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00ffff 20%,
+    #00ffff 80%,
+    transparent
+  );
+  box-shadow: 0 0 10px #00ffff;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Cabecera del periódico */
+.newspaper-header {
+  text-align: center;
+  border-bottom: 3px solid #00ffff;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.header-ornament {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9em;
+  color: #00ffff;
+  margin: 15px 0;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.newspaper-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4.5em;
+  font-weight: 900;
+  letter-spacing: 8px;
+  margin: 20px 0;
+  color: #00ffff;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+/* Efecto glitch */
+.glitch {
+  position: relative;
+  display: inline-block;
+  animation: glitch-skew 3s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00ff;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow:
+    -2px 0 #00ffff,
+    2px 2px #ff00ff;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  20% {
+    clip: rect(60px, 9999px, 74px, 0);
+  }
+  40% {
+    clip: rect(10px, 9999px, 85px, 0);
+  }
+  60% {
+    clip: rect(95px, 9999px, 15px, 0);
+  }
+  80% {
+    clip: rect(50px, 9999px, 30px, 0);
+  }
+  100% {
+    clip: rect(70px, 9999px, 40px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 119px, 0);
+  }
+  20% {
+    clip: rect(40px, 9999px, 66px, 0);
+  }
+  40% {
+    clip: rect(20px, 9999px, 89px, 0);
+  }
+  60% {
+    clip: rect(80px, 9999px, 35px, 0);
+  }
+  80% {
+    clip: rect(15px, 9999px, 95px, 0);
+  }
+  100% {
+    clip: rect(45px, 9999px, 25px, 0);
+  }
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+  10% {
+    transform: skew(0deg);
+  }
+  11% {
+    transform: skew(2deg);
+  }
+  12% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+.newspaper-subtitle {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1em;
+  color: #00ff88;
+  margin: 15px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #00ff88;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85em;
+  margin-top: 20px;
+  padding: 15px 0;
+  border-top: 1px solid #00ffff;
+  color: #00ffff;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Selector de ediciones */
+.edition-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.edition-btn {
+  font-family: "Orbitron", sans-serif;
+  background: rgba(0, 255, 255, 0.05);
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  padding: 6px 14px;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edition-btn:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.edition-btn.active {
+  background: #00ffff;
+  color: #0a0e14;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* Banner de alerta */
+.alert-banner {
+  background: linear-gradient(90deg, #ff0000, #ff6600, #ff0000);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  animation: blink 1s infinite;
+  border: 2px solid #ffff00;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Noticia destacada */
+.featured-news {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #00ffff;
+}
+
+.featured-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.8em;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  border-top: 2px solid #ff00ff;
+  border-bottom: 2px solid #ff00ff;
+  padding: 20px 0;
+}
+
+.featured-subtitle {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #00ff88;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.featured-content {
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #cccccc;
+}
+
+.featured-content p {
+  margin-bottom: 15px;
+}
+
+/* Letra capital */
+.dropcap::first-letter {
+  float: left;
+  font-size: 5em;
+  line-height: 0.8;
+  margin: 5px 15px 0 0;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Columnas de noticias */
+.news-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Artículos */
+.news-article {
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 20px;
+  background: rgba(0, 255, 255, 0.02);
+  padding: 15px;
+  border-left: 3px solid #00ffff;
+}
+
+.news-article h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.news-article p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #b0b0b0;
+}
+
+/* Sección de opinión */
+.opinion-section {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.1),
+    rgba(0, 255, 255, 0.1)
+  );
+  border-left: 4px solid #ff00ff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+}
+
+.opinion-author {
+  font-style: italic;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+/* Anuncios clasificados */
+.classifieds-section {
+  background: rgba(0, 255, 136, 0.05);
+  border-left: 4px solid #00ff88;
+}
+
+.classified-ad {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #00ff88;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.classified-ad strong {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+}
+
+/* Avisos oficiales */
+.official-notices {
+  margin-top: 40px;
+  padding: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 100, 0, 0.1)
+  );
+  border: 3px solid #ff0000;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+.official-notices h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+.official-content p {
+  text-align: left;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #ffcccc;
+}
+
+.official-content strong {
+  color: #ff6666;
+  text-shadow: 0 0 5px #ff0000;
+}
+
+/* Pie de página */
+.newspaper-footer {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 3px solid #00ffff;
+  text-align: center;
+  font-size: 0.8em;
+  color: #00ffff;
+}
+
+.newspaper-footer p {
+  margin: 8px 0;
+  opacity: 0.7;
+}
+
+.disclaimer {
+  margin-top: 15px;
+  font-style: italic;
+  color: #ff00ff;
+  opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .newspaper-container {
+    padding: 20px;
+  }
+
+  .newspaper-title {
+    font-size: 2.5em;
+  }
+
+  .featured-title {
+    font-size: 1.8em;
+  }
+
+  .featured-content {
+    column-count: 1;
+  }
+
+  .news-columns {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .header-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+/* Efectos hover */
+.news-article:hover {
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.classified-ad:hover {
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+/* Mercados + Rumores */
+.market-rumor-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #00ffff;
+}
+
+@media (max-width: 768px) {
+  .market-rumor-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Cinta de cotizaciones bursátiles */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 2px solid #00ffff;
+  border-bottom: 2px solid #00ffff;
+  padding: 10px 0;
+  margin: 25px 0 0;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  position: relative;
+}
+
+.ticker-track {
+  display: inline-flex;
+  width: max-content;
+  animation: ticker-scroll 45s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 30px;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 0.9em;
+  color: #cccccc;
+  border-right: 1px solid rgba(0, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.ticker-symbol {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+.ticker-price {
+  color: #ffffff;
+}
+
+.ticker-up {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+  font-weight: bold;
+}
+
+.ticker-down {
+  color: #ff4466;
+  text-shadow: 0 0 5px #ff4466;
+  font-weight: bold;
+}
+
+.ticker-flat {
+  color: #aaaaaa;
+  font-weight: bold;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .ticker-item {
+    font-size: 0.8em;
+    padding: 0 18px;
+  }
+}
+
+/* Tablón de contratos */
+.tablon-row {
+  margin-top: 30px;
+}
+
+/* Sección de Mercados y Cotizaciones */
+.markets-section {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.08),
+    rgba(0, 255, 255, 0.05)
+  );
+  border-left: 4px solid #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.market-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px dashed #00ff88;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.market-item h4 {
+  font-size: 0.95em;
+  color: #00ffff;
+  margin-bottom: 6px;
+  text-shadow: 0 0 5px #00ffff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.market-item p {
+  font-size: 0.9em;
+  color: #b0d0c0;
+  margin: 0;
+}
+
+.market-up {
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+}
+
+.market-down {
+  color: #ff4466;
+  text-shadow: 0 0 5px #ff4466;
+}
+
+.market-flat {
+  color: #aaaaaa;
+}
+
+.market-item:hover {
+  background: rgba(0, 255, 136, 0.1);
+  transform: translateX(3px);
+  transition: all 0.3s ease;
+}
+
+/* Sección de Rumores */
+.rumores-section {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.1),
+    rgba(255, 69, 0, 0.1)
+  );
+  border-left: 4px solid #ff8800;
+  box-shadow: 0 0 20px rgba(255, 136, 0, 0.3);
+}
+
+.rumor-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px dashed #ff8800;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.rumor-item h4 {
+  font-size: 1em;
+  color: #ffaa00;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px #ff8800;
+}
+
+.rumor-item p {
+  font-size: 0.95em;
+  color: #ccaa77;
+  margin: 0;
+}
+
+.rumor-item:hover {
+  background: rgba(255, 136, 0, 0.1);
+  transform: translateX(3px);
+  transition: all 0.3s ease;
+}

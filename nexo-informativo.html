@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      El Observador del Nexo - Periódico Independiente de La Cicatriz
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="data-corruption"></div>
+    <div class="newspaper-container">
+      <!-- Cabecera del periódico -->
+      <header class="newspaper-header">
+        <div class="header-scanline"></div>
+        <div class="header-ornament">
+          ▸▸▸ INFORMACIÓN LIBRE E INDEPENDIENTE ◂◂◂
+        </div>
+        <h1 class="newspaper-title">
+          <span class="glitch" data-text="EL OBSERVADOR DEL NEXO"
+            >EL OBSERVADOR DEL NEXO</span
+          >
+        </h1>
+        <p class="newspaper-subtitle">
+          └─ SECTOR LA CICATRIZ │ PUBLICACIÓN NEUTRAL ─┘
+        </p>
+        <div class="header-info">
+          <span class="edition-info" id="editionInfo"
+            >TRANSMISIÓN #1000000101</span
+          >
+          <span class="date-info" id="dateInfo">247.M42 │ 13:45 HST</span>
+          <span class="price-info">ACCESO: 2 CR</span>
+        </div>
+        <div class="edition-selector" id="editionSelector"></div>
+        <div class="header-ornament bottom">
+          ▸▸▸ LA VERDAD TIENE PRECIO, PERO LA MENTIRA CUESTA MÁS ◂◂◂
+        </div>
+        <div class="header-scanline"></div>
+      </header>
+
+      <!-- Cinta de cotizaciones bursátiles (desplazamiento infinito) -->
+      <div class="ticker-wrap" id="stockTicker">
+        <div class="ticker-track" id="tickerTrack"></div>
+      </div>
+
+      <!-- Contenido principal -->
+      <main class="newspaper-content">
+        <!-- Noticia destacada -->
+        <section class="featured-news" id="featuredNews"></section>
+
+        <!-- Columnas de noticias -->
+        <div class="news-columns"></div>
+
+        <!-- Mercados (izquierda) y Rumores (derecha) -->
+        <section class="market-rumor-row" id="marketRumorSection"></section>
+
+        <!-- Tablón de contratos (antes clasificados) -->
+        <section class="tablon-row" id="tablonSection"></section>
+
+        <!-- Sección de anuncios del gobierno -->
+        <section class="official-notices">
+          <h3>⟨⟨ AVISOS OFICIALES DE EL NEXO ⟩⟩</h3>
+          <div class="official-content"></div>
+        </section>
+      </main>
+
+      <!-- Pie de página -->
+      <footer class="newspaper-footer">
+        <p>
+          EL OBSERVADOR DEL NEXO - Fundado Año 1000 P.E. - Emitiendo desde El
+          Nexo, Módulo 1 - Nivel 100
+        </p>
+        <p>
+          Directora: Aria Kastor [Independiente] | Editor Jefe: Marco Vex
+          [Verificado]
+        </p>
+        <p class="disclaimer">
+          ※ Información verificada por múltiples fuentes | El Observador no
+          responde a Los Cinco Capos ni a facciones externas ※
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
