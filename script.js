@@ -33,7 +33,7 @@ const ediciones = {
             "[FORJA MUERTA] La 'Clase Cigüeña' conquista las rutas comerciales",
           contenido: [
             "La Tecnocracia de Forja Muerta ha empezado a entregar en serie su nuevo modelo de carguero ligero, bautizado extraoficialmente como 'Clase Cigüeña' por su silueta alargada y sus característicos brazos de carga externos. El Gran Ingeniero de turno presume de un coste de producción un 40% inferior a los modelos anteriores, gracias a piezas modulares que cualquier taller del sector puede reparar sin depender de Forja Muerta para cada recambio.",
-            "El resultado: decenas de comerciantes independientes de El Nexo y Verdante ya han hecho pedidos, y algunos círculos comerciales hablan de la Cigüeña como 'la nave que por fin cualquiera puede permitirse'. No faltan las voces críticas — varios pilotos veteranos desconfían de un blindaje que califican de 'preocupantemente ligero' — pero de momento la demanda supera con holgura a la producción.",
+            "El resultado: decenas de comerciantes independientes de El Nexo y Verdal ya han hecho pedidos, y algunos círculos comerciales hablan de la Cigüeña como 'la nave que por fin cualquiera puede permitirse'. No faltan las voces críticas — varios pilotos veteranos desconfían de un blindaje que califican de 'preocupantemente ligero' — pero de momento la demanda supera con holgura a la producción.",
           ],
         },
       ],
@@ -88,7 +88,7 @@ const ediciones = {
           texto: "Sin cambios reseñables esta semana, oferta constante.",
         },
         {
-          recurso: "Comida y biomasa (Verdante)",
+          recurso: "Comida y biomasa (Verdal)",
           variacion: "▲ +3%",
           texto:
             "Ligero repunte por demanda de reservas ante la inestabilidad en otras rutas comerciales.",
@@ -169,7 +169,7 @@ const ediciones = {
       },
       {
         simbolo: "VRDT",
-        nombre: "República de Verdante Agro-Exportaciones",
+        nombre: "República de Verdal Agro-Exportaciones",
         valor: "615 CR",
         variacion: "+0.4%",
       },
@@ -254,6 +254,286 @@ const ediciones = {
         tipo: "SEGURIDAD",
         texto:
           "Se solicita a la ciudadanía reportar cualquier avistamiento de naves no identificadas a la estación de tránsito más cercana. El Observador recuerda que, hasta la fecha, ninguna autoridad del sector ha confirmado el origen de dichas naves.",
+      },
+    ],
+  },
+
+  2: {
+    numero: "LC-0002",
+    fecha: "Año 1050 P.E. | Día 309 | 20:05 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "ÚLTIMA HORA",
+      titulo:
+        "VENAS ROJAS DEJA DE EXISTIR: EL SECTOR ASISTE ATÓNITO A LA DESAPARICIÓN DE UN MUNDO ENTERO",
+      subtitulo:
+        "» Estaciones de todo el Sistema Carmesí registran el fenómeno en directo — Nadie tiene una explicación",
+      contenido: [
+        "Lo que las estaciones de relevo del Sistema Carmesí captaron en la madrugada de ayer no admite comparación con nada registrado antes en el sector: una grieta de luz blanca se abrió en la superficie de Venas Rojas y se extendió en cuestión de segundos por medio continente, seguida de una onda que llegó a deformar visiblemente la curva del propio planeta. Cuando la imagen dejó de saturarse de luz, donde antes había un mundo solo quedaba una nube de escombros en expansión.",
+        "Venas Rojas, operado desde hace años por El Barón como uno de los mayores complejos mineros industriales del sector, ha desaparecido por completo. No hay complejo que rescatar, ni superficie a la que enviar equipos: el planeta, sencillamente, ya no está. Representantes de El Barón en El Nexo no han facilitado cifras de personal presente en el momento del suceso, y el propio Barón no ha hecho declaraciones públicas desde hace semanas.",
+        "Ningún especialista consultado por este periódico ha sabido ofrecer una explicación convincente. Los fenómenos geológicos conocidos no destruyen un planeta entero en segundos, lo que ha llevado a buena parte del sector a descartar la hipótesis del accidente natural. Crece el número de voces que apuntan a algún tipo de arma o tecnología de una capacidad sin precedentes, y no faltan quienes conectan el suceso con los avistamientos de naves no identificadas registrados semanas atrás en estaciones de tránsito menores, aunque ninguna autoridad del sector ha confirmado relación alguna.",
+        "La nube de escombros continúa expandiéndose y ya se ha declarado zona de exclusión en toda la región. Ninguna nave se atreve a acercarse. El Observador seguirá informando a medida que lleguen más datos verificables, si es que llegan.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[BARONES DEL POLVO] La disputa entre Horno y Viento Rojo estalla en combate abierto",
+          contenido: [
+            "La tensión que llevaba semanas en forma de escaramuzas menores entre los Barones de Horno y Viento Rojo se rompió del todo esta semana con un choque armado de mercenarios de ambos bandos, cerca de una de las rutas de tránsito compartidas. Los primeros informes hablan de al menos una decena de muertos confirmados, aunque la cifra real podría ser mayor: ninguno de los dos Barones ha permitido acceso a observadores externos.",
+            "Varios comerciantes de la zona señalan que la desaparición de Venas Rojas ha dejado un vacío repentino en rutas de suministro que ambos Barones se disputaban con la operación de El Barón, y que la escalada podría estar ligada a la carrera por ocupar ese hueco. Ninguno de los dos señores de la guerra da muestras de querer negociar, y el corredor entre ambos territorios ya se evita por completo.",
+          ],
+        },
+        {
+          titulo:
+            "[FORJA MUERTA] Primer incidente grave de la 'Clase Cigüeña' reaviva las críticas sobre su blindaje",
+          contenido: [
+            "Un carguero 'Clase Cigüeña' sufrió una brecha en el casco durante una tormenta electromagnética menor cerca de Viento Rojo, obligando a la tripulación a un aterrizaje de emergencia. No hay heridos graves, pero el incidente ha reavivado las dudas que varios pilotos venían expresando desde el lanzamiento del modelo sobre un blindaje que calificaban de 'preocupantemente ligero'.",
+            "El Gran Ingeniero de Forja Muerta ha calificado el incidente de 'caso aislado atribuible a condiciones climáticas extremas' y descarta retirar unidades del mercado. Aun así, varios compradores han empezado a solicitar inspecciones adicionales antes de aceptar entregas, y algunas aseguradoras de El Nexo ya han empezado a encarecer las pólizas para naves de este modelo.",
+          ],
+        },
+        {
+          titulo:
+            "[EL NEXO] Un golpe rompe las reglas no escritas del territorio neutral",
+          contenido: [
+            "Un ataque directo contra un cargamento de uno de los Cinco Capos ha sacudido El Nexo esta semana, en lo que varios testigos describen como una operación demasiado precisa para ser un simple robo oportunista. El incidente tuvo lugar en pleno Módulo 2, zona que tradicionalmente se respeta como terreno neutral entre facciones rivales.",
+            "Ninguno de los Capos ha reclamado la autoría ni señalado a otro abiertamente, pero el ambiente en los círculos comerciales se ha tensado de forma notable. Varios comerciantes independientes ya hablan de reforzar su propia seguridad, temiendo que sea el primero de varios golpes que rompan un equilibrio que llevaba años sin alterarse.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[HIELO ETERNO] Pescadores confirman avistamiento cerca de Puerto Grieta",
+          contenido: [
+            "Lo que hace semanas era solo un rumor entre pescadores empieza a tomar forma: varias tripulaciones que faenaban cerca de Puerto Grieta aseguran haber visto 'algo grande moviéndose bajo el hielo', lo bastante cerca del asentamiento como para provocar el regreso anticipado de al menos tres embarcaciones. El Consejo de Matriarcas no ha hecho comentarios oficiales, pero fuentes locales confirman que se han reforzado las patrullas submarinas en la zona.",
+            "Ninguna imagen ni registro sensorial del avistamiento ha sido compartido públicamente, y los más escépticos apuntan a que podría tratarse de fauna conocida del abismo reaccionando a actividad sísmica. Aun así, la pesca en la zona se ha reducido notablemente esta semana.",
+          ],
+        },
+        {
+          titulo:
+            "[SANTUARIO ORBITAL] La Hermandad comparte un hallazgo captado durante una alineación que solo se repite cada 60 años",
+          contenido: [
+            "Una vez cada aproximadamente 60 ciclos, la órbita de Santuario y la posición del punto de Lagrange donde se asienta crean una ventana de observación excepcionalmente despejada hacia los confines del sector. La Hermandad aprovechó la alineación de esta semana para operar sus observatorios a máxima capacidad, y de forma poco habitual en ellos, ha decidido hacer públicos parte de los datos obtenidos en vez de guardarlos bajo llave como es costumbre.",
+            "Según el comunicado oficial, las lecturas muestran estructuras de gran tamaño en los límites del sector, coherentes con restos asociados a la Gran Escisión, aunque el Primado Científico se ha negado a especular sobre su naturaleza exacta. La decisión de compartir los datos ha sorprendido a buena parte del sector, y ya hay quien se pregunta qué les ha llevado a romper con la costumbre.",
+          ],
+        },
+        {
+          titulo:
+            "[VERDANTE] Familias del Consejo de Agricultores chocan por el reparto del excedente",
+          contenido: [
+            "El Consejo de Agricultores de Verdal vive una de sus sesiones más tensas en años por el reparto del excedente de la última cosecha, con varias familias acusándose mutuamente de acaparar cupos de exportación en beneficio propio. La disputa lleva semanas gestándose, según fuentes internas, pero ha estallado tras la publicación de las cifras oficiales de reparto.",
+            "Un consejero que pidió mantener el anonimato asegura que 'hay familias que llevan generaciones controlando las mismas rutas de venta, y otras que empiezan a hartarse de quedarse con las sobras'. El Consejo ha aplazado la votación final hasta la próxima sesión.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Seguros de carga (sector completo)",
+          variacion: "▲ +22%",
+          texto:
+            "El pánico tras Venas Rojas dispara las primas de las aseguradoras de El Nexo en todas las rutas del sector.",
+        },
+        {
+          recurso: "Fletes 'Clase Cigüeña' (Forja Muerta)",
+          variacion: "▼ -30%",
+          texto:
+            "Tras el incidente de blindaje, la confianza en el modelo se desploma.",
+        },
+        {
+          recurso: "Hierro de alta pureza (Viento Rojo)",
+          variacion: "▲ +12%",
+          texto:
+            "La tregua con Horno reabre las rutas de exportación cerradas.",
+        },
+        {
+          recurso: "Metales refractarios (Horno)",
+          variacion: "▲ +8%",
+          texto:
+            "Misma tregua, normalización parcial del intercambio comercial.",
+        },
+        {
+          recurso: "Cristales de Azufre (Ceniza Prima)",
+          variacion: "— estable",
+          texto:
+            "La Cúpula Sur ya reparada, la producción vuelve a niveles normales.",
+        },
+        {
+          recurso: "Agua pura (Hielo Eterno)",
+          variacion: "▼ -4%",
+          texto:
+            "El avistamiento cerca de Puerto Grieta frena las expediciones de pesca en la zona.",
+        },
+        {
+          recurso: "Organismos bioluminiscentes (Hielo Eterno)",
+          variacion: "▼ -9%",
+          texto:
+            "Misma causa: los recolectores evitan la zona del avistamiento.",
+        },
+        {
+          recurso: "Comida y biomasa (Verdal)",
+          variacion: "▲ +5%",
+          texto:
+            "Acumulación de reservas ante la incertidumbre general del sector.",
+        },
+        {
+          recurso: "Silicio ultra-puro (Cristal Roto)",
+          variacion: "— estable",
+          texto: "Sin cambios relevantes esta semana.",
+        },
+        {
+          recurso: "Operaciones de El Barón (Venas Rojas)",
+          variacion: "SUSPENDIDA",
+          texto:
+            "Cotización suspendida indefinidamente: el planeta que albergaba sus operaciones ha dejado de existir.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "El Barón no responde",
+          texto:
+            "Nadie de su círculo cercano ha sido visto en El Nexo desde el incidente. Algunos aseguran que abandonó la zona días antes de la explosión, aunque nadie ha podido confirmarlo.",
+        },
+        {
+          titulo: "Restos que no encajan",
+          texto:
+            "Técnicos que analizaron a distancia la nube de escombros hablan de fragmentos de nave que no corresponden a ningún modelo conocido de la flota de El Barón, alimentando la teoría de un ataque externo.",
+        },
+        {
+          titulo: "El Maestro Kaine se derrumba",
+          texto:
+            "La Esfinge Carmesí ha cancelado varias funciones alegando 'problemas técnicos', aunque testigos en el último atraque hablan de una discusión a gritos entre el Maestro Kaine y su padre, el Consorte Valerius.",
+        },
+        {
+          titulo: "Las cuentas de Venas Rojas no cuadraban",
+          texto:
+            "Un antiguo proveedor del complejo asegura que la contabilidad de Venas Rojas llevaba meses dando problemas, mucho antes de la explosión, aunque no ha querido dar más detalles.",
+        },
+        {
+          titulo: "Puerto Grieta cierra filas",
+          texto:
+            "Hielo Eterno ha restringido el acceso de comerciantes externos a Puerto Grieta 'hasta nuevo aviso', sin dar explicaciones oficiales sobre el motivo.",
+        },
+        {
+          titulo: "Grietas que se confirman",
+          texto:
+            "Tras el incidente de la Cigüeña en Viento Rojo, un segundo piloto denuncia haber recibido una unidad con el sellado del casco 'visiblemente defectuoso' antes de que Forja Muerta se lo llevara para 'revisión'.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "738 CR",
+        variacion: "-12.4%",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "1.264 CR",
+        variacion: "+5.0%",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "628 CR",
+        variacion: "+2.1%",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.525 CR",
+        variacion: "+9.3%",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.033 CR",
+        variacion: "+3.5%",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "508 CR",
+        variacion: "-6.0%",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "349 CR",
+        variacion: "-15.2%",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "211 CR",
+        variacion: "+4.0%",
+      },
+      {
+        simbolo: "BARN",
+        nombre: "El Barón — Operaciones Venas Rojas",
+        valor: "— CR",
+        variacion: "SUSPENDIDA",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Pilotos dispuestos a acercarse a la zona de exclusión de Venas Rojas para tareas de reconocimiento. Alto riesgo, pago 5.000 CR por vuelo. Preguntar por 'El Cartógrafo', Módulo 9.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Piezas de repuesto para 'Clase Cigüeña' con certificado de blindaje verificado. Pago inmediato, cualquier cantidad. Muelle 6, El Nexo.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se buscan inspectores de carga para verificar mercancía antes de asegurarla, ante la reciente subida de primas. Experiencia valorada. Módulo 2, La Bolsa.",
+        },
+        {
+          tipo: "RECOMPENSA",
+          texto:
+            "500 CR por cualquier fragmento identificable de la explosión de Venas Rojas para análisis independiente. Discreción garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Guías con experiencia en rutas alternativas de Hielo Eterno, ante el cierre de accesos a Puerto Grieta. Pago negociable. Módulo 11.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "El Consejo de la Cicatriz declara zona de exclusión temporal alrededor de Venas Rojas. Toda nave debe mantener una distancia mínima de 500 km hasta nuevo aviso.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Puerto Grieta (Hielo Eterno) restringe el acceso a comerciantes externos hasta nuevo aviso. Se recomienda planificar rutas alternativas.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se recuerda que la especulación con pólizas de seguro de carga durante emergencias declaradas está sujeta a sanción según las normas de El Nexo.",
+      },
+      {
+        tipo: "SANIDAD",
+        texto:
+          "Toda tripulación que haya operado en rutas cercanas a Venas Rojas en los últimos 10 ciclos debe pasar una revisión médica voluntaria en la estación de tránsito más cercana.",
       },
     ],
   },
