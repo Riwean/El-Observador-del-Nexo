@@ -321,7 +321,7 @@ const ediciones = {
         },
         {
           titulo:
-            "[VERDANTE] Familias del Consejo de Agricultores chocan por el reparto del excedente",
+            "[VERDAL] Familias del Consejo de Agricultores chocan por el reparto del excedente",
           contenido: [
             "El Consejo de Agricultores de Verdal vive una de sus sesiones más tensas en años por el reparto del excedente de la última cosecha, con varias familias acusándose mutuamente de acaparar cupos de exportación en beneficio propio. La disputa lleva semanas gestándose, según fuentes internas, pero ha estallado tras la publicación de las cifras oficiales de reparto.",
             "Un consejero que pidió mantener el anonimato asegura que 'hay familias que llevan generaciones controlando las mismas rutas de venta, y otras que empiezan a hartarse de quedarse con las sobras'. El Consejo ha aplazado la votación final hasta la próxima sesión.",
