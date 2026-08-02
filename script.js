@@ -364,15 +364,15 @@ const ediciones = {
         },
         {
           recurso: "Agua pura (Hielo Eterno)",
-          variacion: "▼ -4%",
+          variacion: "▲ +6%",
           texto:
-            "El avistamiento cerca de Puerto Grieta frena las expediciones de pesca en la zona.",
+            "El avistamiento cerca de Puerto Grieta reduce las expediciones de pesca y tensiona el suministro.",
         },
         {
           recurso: "Organismos bioluminiscentes (Hielo Eterno)",
-          variacion: "▼ -9%",
+          variacion: "▲ +10%",
           texto:
-            "Misma causa: los recolectores evitan la zona del avistamiento.",
+            "La escasez de recolectores dispuestos a acercarse a la zona dispara el precio de lo poco que llega al mercado.",
         },
         {
           recurso: "Comida y biomasa (Verdal)",
