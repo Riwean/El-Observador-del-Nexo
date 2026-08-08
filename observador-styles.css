@@ -60,6 +60,41 @@ body {
   }
 }
 
+/* Botón de navegación a otra web del sector */
+.nav-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(10, 14, 20, 0.7);
+  border: 1px solid #00ffff;
+  border-radius: 2px;
+  color: #00ffff;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.25), inset 0 0 10px rgba(0, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+.nav-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.nav-btn:hover {
+  background: #00ffff;
+  color: #0a0e14;
+  text-shadow: none;
+  box-shadow: 0 0 20px #00ffff;
+}
+@media (max-width: 768px) {
+  .nav-btn span { display: none; }
+  .nav-btn { padding: 9px; top: 12px; right: 12px; }
+}
+
 /* Contenedor del periódico */
 .newspaper-container {
   max-width: 1400px;

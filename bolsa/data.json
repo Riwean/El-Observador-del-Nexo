@@ -1,0 +1,1653 @@
+{
+  "recursos": [
+    {
+      "name": "cristales de azufre",
+      "origin": "ceniza prima",
+      "price": 340,
+      "prev": 340,
+      "history": [
+        {
+          "p": 340,
+          "t": "edición 1"
+        },
+        {
+          "p": 340,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "gremios locales de Ceniza Prima",
+          "pct": 70
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 30
+        }
+      ]
+    },
+    {
+      "name": "fletes clase cigüeña",
+      "origin": "forja muerta",
+      "price": 210,
+      "prev": 300,
+      "history": [
+        {
+          "p": 300,
+          "t": "edición 1"
+        },
+        {
+          "p": 210,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "Tecnocracia de Forja Muerta",
+          "pct": 80
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 20
+        }
+      ]
+    },
+    {
+      "name": "hierro de alta pureza",
+      "origin": "viento rojo",
+      "price": 314,
+      "prev": 280,
+      "history": [
+        {
+          "p": 280,
+          "t": "edición 1"
+        },
+        {
+          "p": 314,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "señor local de Viento Rojo",
+          "pct": 65
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 35
+        }
+      ]
+    },
+    {
+      "name": "metales refractarios",
+      "origin": "horno",
+      "price": 281,
+      "prev": 260,
+      "history": [
+        {
+          "p": 260,
+          "t": "edición 1"
+        },
+        {
+          "p": 281,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "Barones del Polvo (Horno)",
+          "pct": 70
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 30
+        }
+      ]
+    },
+    {
+      "name": "agua pura",
+      "origin": "hielo eterno",
+      "price": 159,
+      "prev": 150,
+      "history": [
+        {
+          "p": 150,
+          "t": "edición 1"
+        },
+        {
+          "p": 159,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "Cooperativa Hielo Eterno",
+          "pct": 60
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 40
+        }
+      ]
+    },
+    {
+      "name": "comida y biomasa",
+      "origin": "verdal",
+      "price": 189,
+      "prev": 180,
+      "history": [
+        {
+          "p": 180,
+          "t": "edición 1"
+        },
+        {
+          "p": 189,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "República de Verdal",
+          "pct": 55
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 45
+        }
+      ]
+    },
+    {
+      "name": "agua purificada",
+      "origin": "el manantial — erosión",
+      "price": 95,
+      "prev": 101,
+      "history": [
+        {
+          "p": 101,
+          "t": "edición 1"
+        },
+        {
+          "p": 95,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "cooperativa de El Manantial",
+          "pct": 75
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 25
+        }
+      ]
+    },
+    {
+      "name": "tecnología limpia anti-emp",
+      "origin": "el manantial — erosión",
+      "price": 620,
+      "prev": 619,
+      "history": [
+        {
+          "p": 619,
+          "t": "edición 1"
+        },
+        {
+          "p": 620,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "cooperativa de El Manantial",
+          "pct": 90
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 10
+        }
+      ]
+    },
+    {
+      "name": "hierro de veta secundaria",
+      "origin": "yesca — luna de viento rojo",
+      "price": 178,
+      "prev": 174,
+      "history": [
+        {
+          "p": 174,
+          "t": "edición 1"
+        },
+        {
+          "p": 178,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "señor local de Viento Rojo",
+          "pct": 60
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 40
+        }
+      ]
+    },
+    {
+      "name": "chatarra de guerra recuperada",
+      "origin": "sepulcro — erosión",
+      "price": 88,
+      "prev": 84,
+      "history": [
+        {
+          "p": 84,
+          "t": "edición 1"
+        },
+        {
+          "p": 88,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "Barones del Polvo",
+          "pct": 55
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 45
+        }
+      ]
+    },
+    {
+      "name": "savia cicatrizante",
+      "origin": "el manantial — erosión",
+      "price": 412,
+      "prev": 444,
+      "history": [
+        {
+          "p": 444,
+          "t": "edición 1"
+        },
+        {
+          "p": 412,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "cooperativa de El Manantial",
+          "pct": 65
+        },
+        {
+          "holder": "Hermandad de Santuario",
+          "pct": 20
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 15
+        }
+      ]
+    },
+    {
+      "name": "hielo de anillo",
+      "origin": "anillo de titán pardo — abismo",
+      "price": 61,
+      "prev": 63,
+      "history": [
+        {
+          "p": 63,
+          "t": "edición 1"
+        },
+        {
+          "p": 61,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "colonia de Marea Negra",
+          "pct": 50
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 50
+        }
+      ]
+    },
+    {
+      "name": "fragmentos tecnológicos no identificados",
+      "origin": "la boya — abismo",
+      "price": 890,
+      "prev": 961,
+      "history": [
+        {
+          "p": 961,
+          "t": "edición 1"
+        },
+        {
+          "p": 890,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "buscadores de La Boya",
+          "pct": 95
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 5
+        }
+      ]
+    },
+    {
+      "name": "vidrio volcánico resonante",
+      "origin": "vidriazote — abismo",
+      "price": 245,
+      "prev": 232,
+      "history": [
+        {
+          "p": 232,
+          "t": "edición 1"
+        },
+        {
+          "p": 245,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "exiliados de Vidriazote",
+          "pct": 80
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 20
+        }
+      ]
+    },
+    {
+      "name": "recurso exótico estacional",
+      "origin": "el errante — abismo",
+      "price": 1450,
+      "prev": 1401,
+      "history": [
+        {
+          "p": 1401,
+          "t": "edición 1"
+        },
+        {
+          "p": 1450,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "consorcios estacionales",
+          "pct": 100
+        }
+      ]
+    },
+    {
+      "name": "mineral inflamable en bruto",
+      "origin": "ascua negra — cárdeno",
+      "price": 530,
+      "prev": 578,
+      "history": [
+        {
+          "p": 578,
+          "t": "edición 1"
+        },
+        {
+          "p": 530,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "Barones del Polvo (fallido)",
+          "pct": 40
+        },
+        {
+          "holder": "sin explotar",
+          "pct": 60
+        }
+      ]
+    },
+    {
+      "name": "esquirlas de metal solidificado",
+      "origin": "grietardiente — cárdeno",
+      "price": 194,
+      "prev": 179,
+      "history": [
+        {
+          "p": 179,
+          "t": "edición 1"
+        },
+        {
+          "p": 194,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "mineros independientes",
+          "pct": 70
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 30
+        }
+      ]
+    },
+    {
+      "name": "hielo fósil",
+      "origin": "reliquia — cárdeno",
+      "price": 340,
+      "prev": 314,
+      "history": [
+        {
+          "p": 314,
+          "t": "edición 1"
+        },
+        {
+          "p": 340,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "expediciones científicas",
+          "pct": 85
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 15
+        }
+      ]
+    },
+    {
+      "name": "compuesto de esporas médicas",
+      "origin": "velo ciego — turbio",
+      "price": 705,
+      "prev": 686,
+      "history": [
+        {
+          "p": 686,
+          "t": "edición 1"
+        },
+        {
+          "p": 705,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "Hermandad de Santuario",
+          "pct": 85
+        },
+        {
+          "holder": "colonia de Velo Ciego",
+          "pct": 15
+        }
+      ]
+    },
+    {
+      "name": "materia orgánica comprimida",
+      "origin": "turbera — turbio",
+      "price": 143,
+      "prev": 140,
+      "history": [
+        {
+          "p": 140,
+          "t": "edición 1"
+        },
+        {
+          "p": 143,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "Santuario Orbital",
+          "pct": 60
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 40
+        }
+      ]
+    },
+    {
+      "name": "fango orgánico procesado",
+      "origin": "légamo / cieno — turbio",
+      "price": 76,
+      "prev": 81,
+      "history": [
+        {
+          "p": 81,
+          "t": "edición 1"
+        },
+        {
+          "p": 76,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "colonos de Pantano Gris",
+          "pct": 50
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 50
+        }
+      ]
+    },
+    {
+      "name": "sal cristalizada",
+      "origin": "cala — turbio",
+      "price": 54,
+      "prev": 59,
+      "history": [
+        {
+          "p": 59,
+          "t": "edición 1"
+        },
+        {
+          "p": 54,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "mercado libre",
+          "pct": 100
+        }
+      ]
+    },
+    {
+      "name": "aleación de raíles fundidos",
+      "origin": "horno — abrasador",
+      "price": 267,
+      "prev": 266,
+      "history": [
+        {
+          "p": 266,
+          "t": "edición 1"
+        },
+        {
+          "p": 267,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "ciudad móvil de Horno",
+          "pct": 70
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 30
+        }
+      ]
+    },
+    {
+      "name": "compuesto silenciador mineral",
+      "origin": "sordina — abrasador",
+      "price": 388,
+      "prev": 421,
+      "history": [
+        {
+          "p": 421,
+          "t": "edición 1"
+        },
+        {
+          "p": 388,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "Tecnocracia de Forja Muerta",
+          "pct": 55
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 45
+        }
+      ]
+    },
+    {
+      "name": "muestra de acreción mineral",
+      "origin": "el osario — pálido",
+      "price": 512,
+      "prev": 542,
+      "history": [
+        {
+          "p": 542,
+          "t": "edición 1"
+        },
+        {
+          "p": 512,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "coleccionistas y científicos",
+          "pct": 90
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 10
+        }
+      ]
+    },
+    {
+      "name": "compuesto carbonoso absorbente",
+      "origin": "vela negra — pálido",
+      "price": 299,
+      "prev": 314,
+      "history": [
+        {
+          "p": 314,
+          "t": "edición 1"
+        },
+        {
+          "p": 299,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "expediciones privadas",
+          "pct": 100
+        }
+      ]
+    },
+    {
+      "name": "fragmento de restos artificiales",
+      "origin": "colosario — pálido",
+      "price": 1780,
+      "prev": 1944,
+      "history": [
+        {
+          "p": 1944,
+          "t": "edición 1"
+        },
+        {
+          "p": 1780,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "mercado negro",
+          "pct": 100
+        }
+      ]
+    },
+    {
+      "name": "cristal de resonancia",
+      "origin": "resonancia cristalina — mudo",
+      "price": 221,
+      "prev": 222,
+      "history": [
+        {
+          "p": 222,
+          "t": "edición 1"
+        },
+        {
+          "p": 221,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "colonos de Tundra Silenciosa",
+          "pct": 60
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 40
+        }
+      ]
+    },
+    {
+      "name": "extracto micelial",
+      "origin": "colmena — mudo",
+      "price": 356,
+      "prev": 360,
+      "history": [
+        {
+          "p": 360,
+          "t": "edición 1"
+        },
+        {
+          "p": 356,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "expediciones médicas",
+          "pct": 75
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 25
+        }
+      ]
+    },
+    {
+      "name": "fibra de espina endurecida",
+      "origin": "espinar — mudo",
+      "price": 118,
+      "prev": 111,
+      "history": [
+        {
+          "p": 111,
+          "t": "edición 1"
+        },
+        {
+          "p": 118,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "abundante",
+      "controllers": [
+        {
+          "holder": "mercado libre",
+          "pct": 100
+        }
+      ]
+    },
+    {
+      "name": "cristal alucinógeno bruto",
+      "origin": "cristal roto — prisma",
+      "price": 480,
+      "prev": 478,
+      "history": [
+        {
+          "p": 478,
+          "t": "edición 1"
+        },
+        {
+          "p": 480,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "Consorcio Bajío de Coral",
+          "pct": 50
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 50
+        }
+      ]
+    },
+    {
+      "name": "coral tallado",
+      "origin": "bajío de coral — prisma",
+      "price": 265,
+      "prev": 258,
+      "history": [
+        {
+          "p": 258,
+          "t": "edición 1"
+        },
+        {
+          "p": 265,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "normal",
+      "controllers": [
+        {
+          "holder": "Consorcio Bajío de Coral",
+          "pct": 80
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 20
+        }
+      ]
+    },
+    {
+      "name": "metal resistente a la roya",
+      "origin": "roya — prisma",
+      "price": 1120,
+      "prev": 1120,
+      "history": [
+        {
+          "p": 1120,
+          "t": "edición 1"
+        },
+        {
+          "p": 1120,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "Compañía Roya (monopolio)",
+          "pct": 95
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 5
+        }
+      ]
+    },
+    {
+      "name": "aleación de remache",
+      "origin": "remache — titán",
+      "price": 640,
+      "prev": 622,
+      "history": [
+        {
+          "p": 622,
+          "t": "edición 1"
+        },
+        {
+          "p": 640,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "escaso",
+      "controllers": [
+        {
+          "holder": "Tecnocracia de Forja Muerta",
+          "pct": 70
+        },
+        {
+          "holder": "mercado libre",
+          "pct": 30
+        }
+      ]
+    },
+    {
+      "name": "chatarra catalogada de el casco",
+      "origin": "el casco — titán",
+      "price": 2100,
+      "prev": 2116,
+      "history": [
+        {
+          "p": 2116,
+          "t": "edición 1"
+        },
+        {
+          "p": 2100,
+          "t": "edición 2"
+        }
+      ],
+      "availability": "crítico",
+      "controllers": [
+        {
+          "holder": "Forjaguardia (custodia)",
+          "pct": 100
+        }
+      ]
+    }
+  ],
+  "empresas": [
+    {
+      "name": "Tecnocracia de Forja Muerta",
+      "origin": "forja muerta — CIGÜ",
+      "price": 738,
+      "prev": 842,
+      "history": [
+        {
+          "p": 842,
+          "t": "edición 1"
+        },
+        {
+          "p": 738,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 80000,
+      "sharesFloating": 15000,
+      "majorityHolder": "Tecnocracia de Forja Muerta"
+    },
+    {
+      "name": "Consorcio de Mercaderes",
+      "origin": "el nexo — MRCD",
+      "price": 1264,
+      "prev": 1204,
+      "history": [
+        {
+          "p": 1204,
+          "t": "edición 1"
+        },
+        {
+          "p": 1264,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 60000,
+      "sharesFloating": 25000,
+      "majorityHolder": "Consorcio de Mercaderes"
+    },
+    {
+      "name": "República de Verdal Agro-Exportaciones",
+      "origin": "verdal — VRDT",
+      "price": 628,
+      "prev": 615,
+      "history": [
+        {
+          "p": 615,
+          "t": "edición 1"
+        },
+        {
+          "p": 628,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 70000,
+      "sharesFloating": 40000,
+      "majorityHolder": "República de Verdal"
+    },
+    {
+      "name": "Kartha Armamento",
+      "origin": "sede itinerante — KRTH",
+      "price": 2525,
+      "prev": 2310,
+      "history": [
+        {
+          "p": 2310,
+          "t": "edición 1"
+        },
+        {
+          "p": 2525,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 20000,
+      "sharesFloating": 3000,
+      "majorityHolder": "Familia Kartha"
+    },
+    {
+      "name": "Hermandad de Santuario Médica",
+      "origin": "santuario orbital — SNTR",
+      "price": 1033,
+      "prev": 998,
+      "history": [
+        {
+          "p": 998,
+          "t": "edición 1"
+        },
+        {
+          "p": 1033,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 45000,
+      "sharesFloating": 20000,
+      "majorityHolder": "Hermandad de Santuario"
+    },
+    {
+      "name": "Cooperativa Hielo Eterno",
+      "origin": "hielo eterno — HELO",
+      "price": 508,
+      "prev": 540,
+      "history": [
+        {
+          "p": 540,
+          "t": "edición 1"
+        },
+        {
+          "p": 508,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 90000,
+      "sharesFloating": 70000,
+      "majorityHolder": "Cooperativa Hielo Eterno"
+    },
+    {
+      "name": "La Esfinge Carmesí Producciones",
+      "origin": "nave-teatro itinerante — ESFN",
+      "price": 349,
+      "prev": 412,
+      "history": [
+        {
+          "p": 412,
+          "t": "edición 1"
+        },
+        {
+          "p": 349,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 15000,
+      "sharesFloating": 4000,
+      "majorityHolder": "Consorte Valerius Kaine"
+    },
+    {
+      "name": "Barones del Polvo Holdings",
+      "origin": "sector disperso — PLVO",
+      "price": 211,
+      "prev": 203,
+      "history": [
+        {
+          "p": 203,
+          "t": "edición 1"
+        },
+        {
+          "p": 211,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 100000,
+      "sharesFloating": 82000,
+      "majorityHolder": "Barones del Polvo (fragmentado)"
+    },
+    {
+      "name": "Viverías Umbraluz",
+      "origin": "umbraluz — edén — VMBR",
+      "price": 415,
+      "prev": 450,
+      "history": [
+        {
+          "p": 450,
+          "t": "edición 1"
+        },
+        {
+          "p": 415,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 40000,
+      "sharesFloating": 12000,
+      "majorityHolder": "República de Verdal"
+    },
+    {
+      "name": "Cantera Yermo S.A.",
+      "origin": "yermo — edén — YRMO",
+      "price": 302,
+      "prev": 288,
+      "history": [
+        {
+          "p": 288,
+          "t": "edición 1"
+        },
+        {
+          "p": 302,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 55000,
+      "sharesFloating": 22000,
+      "majorityHolder": "República de Verdal"
+    },
+    {
+      "name": "Baluarte Defensas",
+      "origin": "baluarte — edén — BLRT",
+      "price": 588,
+      "prev": 599,
+      "history": [
+        {
+          "p": 599,
+          "t": "edición 1"
+        },
+        {
+          "p": 588,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 25000,
+      "sharesFloating": 4000,
+      "majorityHolder": "República de Verdal"
+    },
+    {
+      "name": "Forjaguardia Sistemas",
+      "origin": "forjaguardia — titán — FRJG",
+      "price": 940,
+      "prev": 885,
+      "history": [
+        {
+          "p": 885,
+          "t": "edición 1"
+        },
+        {
+          "p": 940,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 18000,
+      "sharesFloating": 2500,
+      "majorityHolder": "Tecnocracia de Forja Muerta"
+    },
+    {
+      "name": "Remache Extracción",
+      "origin": "remache — titán — RMCH",
+      "price": 812,
+      "prev": 829,
+      "history": [
+        {
+          "p": 829,
+          "t": "edición 1"
+        },
+        {
+          "p": 812,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 30000,
+      "sharesFloating": 9000,
+      "majorityHolder": "Tecnocracia de Forja Muerta"
+    },
+    {
+      "name": "Manufacturas Titán Azul",
+      "origin": "titán azul — MFTA",
+      "price": 675,
+      "prev": 624,
+      "history": [
+        {
+          "p": 624,
+          "t": "edición 1"
+        },
+        {
+          "p": 675,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 60000,
+      "sharesFloating": 30000,
+      "majorityHolder": "Tecnocracia de Forja Muerta"
+    },
+    {
+      "name": "Profundidad Perforaciones",
+      "origin": "hielo eterno — pálido — PRFD",
+      "price": 720,
+      "prev": 678,
+      "history": [
+        {
+          "p": 678,
+          "t": "edición 1"
+        },
+        {
+          "p": 720,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 35000,
+      "sharesFloating": 14000,
+      "majorityHolder": "Señores del Hielo"
+    },
+    {
+      "name": "Yóvide Energía",
+      "origin": "yóvide — pálido — YVDE",
+      "price": 1050,
+      "prev": 1154,
+      "history": [
+        {
+          "p": 1154,
+          "t": "edición 1"
+        },
+        {
+          "p": 1050,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 22000,
+      "sharesFloating": 5000,
+      "majorityHolder": "Señores del Hielo"
+    },
+    {
+      "name": "Naviera Deriva",
+      "origin": "deriva — pálido — NVDR",
+      "price": 260,
+      "prev": 274,
+      "history": [
+        {
+          "p": 274,
+          "t": "edición 1"
+        },
+        {
+          "p": 260,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 45000,
+      "sharesFloating": 26000,
+      "majorityHolder": "Señores del Hielo"
+    },
+    {
+      "name": "Velo Ciego Extracción Médica",
+      "origin": "velo ciego — turbio — VLCM",
+      "price": 980,
+      "prev": 913,
+      "history": [
+        {
+          "p": 913,
+          "t": "edición 1"
+        },
+        {
+          "p": 980,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 20000,
+      "sharesFloating": 4500,
+      "majorityHolder": "Hermandad de Santuario"
+    },
+    {
+      "name": "Farmacéutica Santuario",
+      "origin": "santuario orbital — turbio — FSNT",
+      "price": 1340,
+      "prev": 1347,
+      "history": [
+        {
+          "p": 1347,
+          "t": "edición 1"
+        },
+        {
+          "p": 1340,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 28000,
+      "sharesFloating": 9000,
+      "majorityHolder": "Hermandad de Santuario"
+    },
+    {
+      "name": "Atalaya Naviera",
+      "origin": "atalaya del velo — turbio — ATLN",
+      "price": 405,
+      "prev": 373,
+      "history": [
+        {
+          "p": 373,
+          "t": "edición 1"
+        },
+        {
+          "p": 405,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 32000,
+      "sharesFloating": 18000,
+      "majorityHolder": "Hermandad de Santuario"
+    },
+    {
+      "name": "Espina Vertederos",
+      "origin": "espina — erosión — ESPV",
+      "price": 168,
+      "prev": 171,
+      "history": [
+        {
+          "p": 171,
+          "t": "edición 1"
+        },
+        {
+          "p": 168,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 50000,
+      "sharesFloating": 38000,
+      "majorityHolder": "Barones del Polvo"
+    },
+    {
+      "name": "Barones Prospección",
+      "origin": "ascua negra — cárdeno — BRPR",
+      "price": 95,
+      "prev": 103,
+      "history": [
+        {
+          "p": 103,
+          "t": "edición 1"
+        },
+        {
+          "p": 95,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 20000,
+      "sharesFloating": 15000,
+      "majorityHolder": "Barones del Polvo"
+    },
+    {
+      "name": "Tolvanera Minería",
+      "origin": "tolvanera — erosión — TLVM",
+      "price": 142,
+      "prev": 139,
+      "history": [
+        {
+          "p": 139,
+          "t": "edición 1"
+        },
+        {
+          "p": 142,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 33000,
+      "sharesFloating": 24000,
+      "majorityHolder": "Barones del Polvo"
+    },
+    {
+      "name": "Casa de Empeños Fárrago",
+      "origin": "el nexo — CDEF",
+      "price": 1520,
+      "prev": 1447,
+      "history": [
+        {
+          "p": 1447,
+          "t": "edición 1"
+        },
+        {
+          "p": 1520,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 15000,
+      "sharesFloating": 2000,
+      "majorityHolder": "Credo del Intercambio"
+    },
+    {
+      "name": "Correduría del Umbral",
+      "origin": "el nexo — CRDU",
+      "price": 1890,
+      "prev": 1972,
+      "history": [
+        {
+          "p": 1972,
+          "t": "edición 1"
+        },
+        {
+          "p": 1890,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 12000,
+      "sharesFloating": 1500,
+      "majorityHolder": "Credo del Intercambio"
+    },
+    {
+      "name": "Auditores del Credo",
+      "origin": "el nexo — ADCR",
+      "price": 2240,
+      "prev": 2420,
+      "history": [
+        {
+          "p": 2420,
+          "t": "edición 1"
+        },
+        {
+          "p": 2240,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 8000,
+      "sharesFloating": 700,
+      "majorityHolder": "Credo del Intercambio"
+    },
+    {
+      "name": "Naviera Von Drevan",
+      "origin": "el nexo — NVVD",
+      "price": 1680,
+      "prev": 1732,
+      "history": [
+        {
+          "p": 1732,
+          "t": "edición 1"
+        },
+        {
+          "p": 1680,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 18000,
+      "sharesFloating": 3000,
+      "majorityHolder": "Casa Von Drevan"
+    },
+    {
+      "name": "Ópera Itinerante Hellena",
+      "origin": "nave-teatro itinerante — OIHL",
+      "price": 390,
+      "prev": 360,
+      "history": [
+        {
+          "p": 360,
+          "t": "edición 1"
+        },
+        {
+          "p": 390,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 10000,
+      "sharesFloating": 3500,
+      "majorityHolder": "Casa Von Drevan"
+    },
+    {
+      "name": "Aseguradora Drevan-Kaine",
+      "origin": "el nexo — ADKN",
+      "price": 1210,
+      "prev": 1156,
+      "history": [
+        {
+          "p": 1156,
+          "t": "edición 1"
+        },
+        {
+          "p": 1210,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 24000,
+      "sharesFloating": 6000,
+      "majorityHolder": "Casa Von Drevan / Consorte Valerius Kaine"
+    },
+    {
+      "name": "Consorcio Bajío de Coral",
+      "origin": "bajío de coral — prisma — CBDC",
+      "price": 705,
+      "prev": 757,
+      "history": [
+        {
+          "p": 757,
+          "t": "edición 1"
+        },
+        {
+          "p": 705,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 26000,
+      "sharesFloating": 9000,
+      "majorityHolder": "independiente"
+    },
+    {
+      "name": "Naviera Cristal Roto",
+      "origin": "cristal roto — prisma — NVCR",
+      "price": 330,
+      "prev": 346,
+      "history": [
+        {
+          "p": 346,
+          "t": "edición 1"
+        },
+        {
+          "p": 330,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 15000,
+      "sharesFloating": 6000,
+      "majorityHolder": "independiente"
+    },
+    {
+      "name": "Kartha Municiones Ligeras",
+      "origin": "sede itinerante — KRTM",
+      "price": 890,
+      "prev": 959,
+      "history": [
+        {
+          "p": 959,
+          "t": "edición 1"
+        },
+        {
+          "p": 890,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 12000,
+      "sharesFloating": 2000,
+      "majorityHolder": "Familia Kartha"
+    },
+    {
+      "name": "Prospectores de La Boya",
+      "origin": "la boya — abismo — PRLB",
+      "price": 455,
+      "prev": 494,
+      "history": [
+        {
+          "p": 494,
+          "t": "edición 1"
+        },
+        {
+          "p": 455,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 9000,
+      "sharesFloating": 4000,
+      "majorityHolder": "buscadores independientes"
+    },
+    {
+      "name": "Salvamento Vidriazote",
+      "origin": "vidriazote — abismo — SLVZ",
+      "price": 210,
+      "prev": 199,
+      "history": [
+        {
+          "p": 199,
+          "t": "edición 1"
+        },
+        {
+          "p": 210,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 17000,
+      "sharesFloating": 11000,
+      "majorityHolder": "exiliados de Vidriazote"
+    },
+    {
+      "name": "Cooperativa de Vagaluna",
+      "origin": "vagaluna — abrasador — CPVG",
+      "price": 165,
+      "prev": 175,
+      "history": [
+        {
+          "p": 175,
+          "t": "edición 1"
+        },
+        {
+          "p": 165,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 20000,
+      "sharesFloating": 16000,
+      "majorityHolder": "independiente"
+    },
+    {
+      "name": "Compañía Roya",
+      "origin": "roya — prisma — CPRY",
+      "price": 2680,
+      "prev": 2652,
+      "history": [
+        {
+          "p": 2652,
+          "t": "edición 1"
+        },
+        {
+          "p": 2680,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 9000,
+      "sharesFloating": 900,
+      "majorityHolder": "monopolio — Compañía Roya"
+    },
+    {
+      "name": "Naviera de los Faroleros",
+      "origin": "el susurro — erosión — NVFR",
+      "price": 580,
+      "prev": 586,
+      "history": [
+        {
+          "p": 586,
+          "t": "edición 1"
+        },
+        {
+          "p": 580,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 11000,
+      "sharesFloating": 5000,
+      "majorityHolder": "Faroleros"
+    },
+    {
+      "name": "Exóticos de El Errante",
+      "origin": "el errante — abismo — EXER",
+      "price": 1980,
+      "prev": 2097,
+      "history": [
+        {
+          "p": 2097,
+          "t": "edición 1"
+        },
+        {
+          "p": 1980,
+          "t": "edición 2"
+        }
+      ],
+      "sharesIssued": 6000,
+      "sharesFloating": 800,
+      "majorityHolder": "consorcios estacionales"
+    }
+  ]
+}

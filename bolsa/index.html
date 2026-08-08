@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bolsa de La Cicatriz</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bolsa-styles.css">
+</head>
+<body>
+<div class="scanlines"></div>
+
+<a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>
+  <span>el observador</span>
+</a>
+
+<header>
+  <h1 class="flicker">bolsa <span>de la cicatriz</span></h1>
+  <div class="subtitle">consejo del nexo // canal de cotización en vivo</div>
+</header>
+
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker"></div>
+</div>
+
+<div class="market-health">
+  <span class="health-label">pulso del mercado</span>
+  <div class="ecg-box">
+    <svg viewBox="0 0 600 44" preserveAspectRatio="none">
+      <polyline class="ecg-line" id="ecgLine" points="" style="color:var(--neon-cyan)" />
+    </svg>
+  </div>
+  <span class="health-pct flat" id="healthPct">0%</span>
+</div>
+
+<div class="market-tabs">
+  <button class="market-tab active" id="tabRecursos" onclick="switchTab('recursos')">mercado de recursos</button>
+  <button class="market-tab" id="tabEmpresas" onclick="switchTab('empresas')">mercado de valores</button>
+</div>
+
+<div class="dashboard">
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="panelTitle">libro de precios — recursos</h2>
+      <span class="status" id="statusLabel">enlace activo</span>
+    </div>
+    <table>
+      <thead id="tableHead"></thead>
+      <tbody id="assets"></tbody>
+    </table>
+    <div class="controls">
+      <button class="cyber-btn" onclick="simulateTick()">▲ simular fluctuación</button>
+    </div>
+  </div>
+
+  <div class="side-panels">
+    <div class="mini-panel">
+      <div class="mini-panel-head">sentimiento del mercado</div>
+      <div class="gauge-wrap">
+        <svg viewBox="0 0 120 70" class="gauge-svg">
+          <path d="M10,65 A50,50 0 0,1 110,65" class="gauge-track" />
+          <path d="M10,65 A50,50 0 0,1 110,65" class="gauge-fill" id="gaugeFill" />
+        </svg>
+        <div class="gauge-value" id="gaugeValue">50</div>
+        <div class="gauge-label" id="gaugeLabel">neutral</div>
+      </div>
+    </div>
+
+    <div class="mini-panel">
+      <div class="mini-panel-head" id="moversHead">mayores movimientos — recursos</div>
+      <div id="moversUp" class="movers-block"></div>
+      <div id="moversDown" class="movers-block"></div>
+    </div>
+  </div>
+</div>
+
+<footer>señal retransmitida desde el nexo // no se garantiza la integridad de los datos</footer>
+
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <h3 id="modalName"></h3>
+    <div class="origin" id="modalOrigin"></div>
+    <div class="chart-box" id="chartBox"></div>
+    <div id="calcBox"></div>
+    <div class="stat-grid" id="statGrid"></div>
+  </div>
+</div>
+
+<script src="bolsa-app.js"></script>
+</body>
+</html>
