@@ -537,6 +537,271 @@ const ediciones = {
       },
     ],
   },
+
+  3: {
+    numero: "LC-0003",
+    fecha: "Año 1050 P.E. | Día 316 | 09:15 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "HITO HISTÓRICO",
+      titulo:
+        "SANTUARIO ORBITAL REABRE LA PUERTA DE SALTO A SINAIRE TRAS 150 AÑOS DE SILENCIO",
+      subtitulo:
+        "» La Hermandad confirma el primer contacto con Espesura Roja — una biosfera sin precedente alguno en todo el sector",
+      contenido: [
+        "Por primera vez en siglo y medio, una puerta de Salto del extremo del sector ha vuelto a abrirse. La Hermandad de Santuario confirmó ayer la reactivación completa del enlace hacia el sistema Sinaire, sellado desde antes de que ninguna generación viva pudiera recordarlo, y restableció contacto con Espesura Roja, el mundo que en su día dio nombre a toda la región antes de perderse en el silencio.",
+        "Sinaire formó parte de las rutas conectadas del sector hasta hace 150 años, cuando el enlace se cerró y toda comunicación con Espesura Roja se interrumpió sin que trascendiera entonces —ni haya trascendido desde— una explicación oficial. La reapertura ha llegado como una sorpresa casi total incluso dentro de la propia Hermandad: ningún comunicado ha aclarado qué motivó retomar el enlace precisamente ahora, y el Primado Científico se ha limitado a calificarlo de 'un paso que llevábamos demasiado tiempo postergando', sin entrar en más detalle.",
+        "Las primeras sondas enviadas a través del enlace describen un mundo teñido de un rojo intenso de un extremo a otro: la vegetación exuberante que cubre Espesura Roja no conserva nada del verde habitual, sino un carmesí que se extiende desde el dosel de la jungla hasta el fluido que corre por sus ríos. Prácticamente toda esa vegetación es depredadora en algún grado, desde plantas que atrapan insectos hasta enredaderas capaces de inmovilizar animales grandes por constricción. Más inquietante aún, los informes preliminares describen un único fluido circulatorio compartido por toda la biosfera, que corre por ríos y lagos con apariencia de agua corriente sin serlo en absoluto.",
+        "El Primado Científico de la Hermandad ha pedido calma y prudencia: 'Hemos abierto una puerta, no un mercado. Lo que hay al otro lado no se parece a nada que conozcamos, y trataremos cada paso con el cuidado que exige'. Por ahora no existe explotación comercial de ningún tipo, y el acceso permanece restringido a personal autorizado de la propia Hermandad.",
+        "Sinaire alberga varios cuerpos más además de Espesura Roja, según los primeros barridos orbitales, cada uno con una química radicalmente distinta a cualquier otra conocida en La Cicatriz. Ninguno ha sido explorado todavía. El Observador seguirá esta historia de cerca en las próximas semanas.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[LOS CINCO CAPOS] Pugna silenciosa por el control del acceso a Sinaire",
+          contenido: [
+            "La reactivación de la puerta no ha tardado ni un día en convertirse en asunto de facciones. La Hermandad de Santuario reclama derecho preferente sobre el enlace por haberlo reabierto con medios y personal propios, una postura que no todos en el Consejo de la Cicatriz están dispuestos a aceptar sin más. La Tecnocracia de Forja Muerta ha solicitado formalmente acceso a Silicial, uno de los mundos del sistema, alegando interés científico en su vida basada en silicio y en las posibles aplicaciones industriales de un caparazón cristalino prácticamente indestructible.",
+            "El Consorcio de Mercaderes, por su parte, presiona por que cualquier acuerdo de acceso pase por El Nexo como intermediario neutral, temiendo quedar excluido si la Hermandad y la Tecnocracia cierran un pacto bilateral a sus espaldas. Ninguna de las partes ha llegado a amenaza abierta, pero varios asistentes al último Consejo describen un ambiente 'tenso como cuerda de arpa'. Nadie quiere ser el último en sentarse a la mesa cuando se reparta Sinaire.",
+          ],
+        },
+        {
+          titulo:
+            "[SANIDAD] La savia de Espesura Roja: primeros informes advierten de riesgo letal",
+          contenido: [
+            "El equipo médico desplegado junto a la primera expedición de la Hermandad ha remitido un informe preliminar que ya circula, filtrado, entre el personal de Santuario Orbital: el fluido circulatorio que recorre Espesura Roja —producido y reabsorbido constantemente por la propia vegetación del planeta— puede resultar nutritivo, tóxico o abiertamente narcótico según qué especie domine el punto exacto donde se extraiga, sin que exista todavía forma fiable de distinguir un caso de otro a simple vista.",
+            "Más preocupante para cualquier futura operación de extracción: retirar el fluido provoca una reacción de 'cicatrización' agresiva en la vegetación circundante, cuya naturaleza exacta aún no se comprende. La Hermandad ha impuesto cuarentena provisional a todo el personal que regrese de Espesura Roja y recomienda encarecidamente que nadie ajeno a la expedición oficial intente replicar el contacto por su cuenta, al menos hasta que existan protocolos claros de manejo del fluido.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[SISTEMA CARMESÍ] Una semana después: los fragmentos de Venas Rojas no revelan nada",
+          contenido: [
+            "Siete días después de que Venas Rojas dejara de existir, la recompensa por fragmentos identificables ofrecida por este periódico y otras partes interesadas ha dado sus primeros frutos: varios cazadores independientes han entregado restos recuperados en el borde de la nube de escombros. El análisis preliminar, lejos de aclarar nada, ha añadido más preguntas. Los técnicos consultados hablan de composiciones minerales que no encajan con la geología conocida del planeta, y de al menos un fragmento cuya estructura interna 'no debería ser posible' según los estándares de metalurgia del sector.",
+            "El Consejo de la Cicatriz mantiene la zona de exclusión sin cambios y se ha negado a hacer declaraciones más allá de un escueto comunicado reconociendo que 'la investigación continúa'. Ese silencio, lejos de calmar los ánimos, alimenta cada vez más teorías entre la población de El Nexo, donde ya circula la sospecha de que las autoridades saben más de lo que admiten.",
+          ],
+        },
+        {
+          titulo:
+            "[ECONOMÍA] Doble sacudida: el vacío de Venas Rojas choca con la fiebre especulativa de Sinaire",
+          contenido: [
+            "El mercado del sector encaja esta semana dos golpes en direcciones opuestas. Por un lado, la cancelación formal de los contratos de futuros de Hematón vinculados a Venas Rojas ha dejado a varias correduras de El Nexo con pérdidas que no pueden maquillar por mucho tiempo: la Correduría del Umbral, la más expuesta, ha visto caer su cotización con fuerza esta semana, y no es la única entidad financiera que empieza a sudar frío ante la revisión de su cartera de contratos.",
+            "Por otro lado, la noticia de Sinaire ha disparado la especulación en la dirección contraria: el equipo de exploración y protección química se vende por encima de su valor habitual pese a que ni una sola nave comercial tiene aún permiso para cruzar la puerta, y ya circulan en El Nexo los primeros papeles especulativos sobre un silicio de Silicial que todavía nadie ha extraído. Los analistas más cautos advierten de que ambos movimientos —el pánico financiero y la euforia especulativa— podrían estar alimentándose mutuamente, y que el sector podría estar sentando las bases de una corrección brusca si Sinaire tarda en dar resultados tangibles.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de El Barón (Venas Rojas)",
+          variacion: "SUSPENDIDA",
+          texto:
+            "Séptimo día sin cotización. El mercado ya empieza a asumir que la suspensión es definitiva.",
+        },
+        {
+          recurso: "Contratos de futuros de Hematón (El Nexo)",
+          variacion: "CANCELADOS",
+          texto:
+            "Los contratos aún pendientes sobre entregas futuras de Hematón se declaran oficialmente sin valor. Varias correduras de El Nexo asumen pérdidas directas.",
+        },
+        {
+          recurso: "Servicios de correduría y crédito (El Nexo)",
+          variacion: "▼ -7%",
+          texto:
+            "La Correduría del Umbral encabeza la caída del sector financiero por su exposición directa a los contratos de Hematón ahora sin valor.",
+        },
+        {
+          recurso: "Equipo de exploración y protección química (general)",
+          variacion: "▲ +21%",
+          texto:
+            "La fiebre por Sinaire dispara la demanda especulativa de trajes de aislamiento y sensores de campo, pese a que aún no existe comercio oficial con el sistema.",
+        },
+        {
+          recurso: "Contratos especulativos sobre silicio de Silicial (sin extraer)",
+          variacion: "▲ +38%",
+          texto:
+            "Papel puramente especulativo: nadie ha extraído todavía un solo gramo, pero los inversores ya se pelean por reservar cupo antes de que se abra la explotación.",
+        },
+        {
+          recurso: "Savia cicatrizante (El Manantial)",
+          variacion: "▲ +4.5%",
+          texto:
+            "La Hermandad consulta a la cooperativa de El Manantial por su experiencia en extracción de savia, ante los retos que plantea el fluido de Espesura Roja.",
+        },
+        {
+          recurso: "Compuesto de esporas médicas (Velo Ciego)",
+          variacion: "▲ +5.5%",
+          texto:
+            "El prestigio de la Hermandad de Santuario tras la reapertura de la puerta arrastra al alza toda su cartera médica.",
+        },
+        {
+          recurso: "Cristales de Azufre (Ceniza Prima)",
+          variacion: "▲ +1%",
+          texto: "Semana tranquila, sin sobresaltos en la producción.",
+        },
+        {
+          recurso: "Hierro de alta pureza (Viento Rojo)",
+          variacion: "▼ -1.6%",
+          texto:
+            "Ligero ajuste técnico tras varias semanas de subidas consecutivas.",
+        },
+        {
+          recurso: "Tecnología limpia anti-EMP (El Manantial)",
+          variacion: "▼ -2.9%",
+          texto:
+            "La atención del mercado se desvía hacia el equipo de exploración de Sinaire, en detrimento de otras líneas tecnológicas.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "La puerta ya hablaba antes de abrirse",
+          texto:
+            "Un técnico de Santuario Orbital, bajo anonimato estricto, asegura que los sensores del enlace llevaban semanas registrando actividad al otro lado antes del anuncio oficial, y que la 'reactivación' fue en realidad una respuesta apresurada a algo que la Hermandad ya había detectado. La Hermandad no ha respondido a las preguntas de este periódico sobre el asunto.",
+        },
+        {
+          titulo: "Los archivos que faltan",
+          texto:
+            "Se rumorea que los registros de la Hermandad sobre Sinaire, previos al cierre de la puerta hace 150 años, están incompletos de forma 'demasiado conveniente', y que alguien los depuró antes de que el anuncio se hiciera público.",
+        },
+        {
+          titulo: "Restos que siguen sin encajar",
+          texto:
+            "Un segundo analista independiente, contratado por un comprador anónimo para revisar los fragmentos de Venas Rojas, coincide con el primer informe: la composición 'no debería existir' según ningún catálogo conocido del sector.",
+        },
+        {
+          titulo: "El Barón, en paradero desconocido",
+          texto:
+            "Una semana después, sigue sin haber rastro público de El Barón ni de su círculo cercano. Algunos apuntan a que nunca regresará a El Nexo; otros insisten en que solo espera el momento adecuado para reaparecer.",
+        },
+        {
+          titulo: "Voluntarios que no quieren ser voluntarios",
+          texto:
+            "Circula la queja, no confirmada, de que parte del 'personal autorizado' que la Hermandad envió a Espesura Roja no se ofreció exactamente de forma voluntaria. Santuario Orbital lo niega tajantemente.",
+        },
+        {
+          titulo: "Cuentas que tampoco cuadran aquí",
+          texto:
+            "Un empleado despedido de la Correduría del Umbral asegura que la exposición real a los contratos de Hematón cancelados es bastante mayor de lo que la empresa ha reconocido públicamente esta semana.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "768 CR",
+        variacion: "+4.1%",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "1.221 CR",
+        variacion: "-3.4%",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "629 CR",
+        variacion: "+0.2%",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.597 CR",
+        variacion: "+2.8%",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR",
+        variacion: "+6.8%",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR",
+        variacion: "-0.7%",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "350 CR",
+        variacion: "+0.3%",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR",
+        variacion: "+2.0%",
+      },
+      {
+        simbolo: "BARN",
+        nombre: "El Barón — Operaciones Venas Rojas",
+        valor: "— CR",
+        variacion: "SUSPENDIDA",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Tripulación experimentada para expedición no oficial a Sinaire, antes de que se regulen los permisos de acceso. Riesgo alto, reparto de beneficios a negociar. Preguntar discretamente, Módulo 9.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier dato, mapa o registro previo a la Escisión sobre el sistema Sinaire, verificado o no. Pago generoso y discreción garantizada. Canal #ARCH-03.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal médico con experiencia en toxicología de campo para contrato temporal en cuarentena de Santuario Orbital. No se requiere experiencia previa con biología no catalogada. Módulo 4, Ala Médica.",
+        },
+        {
+          tipo: "RECOMPENSA",
+          texto:
+            "Se mantiene la recompensa de 500 CR por fragmentos identificables de la explosión de Venas Rojas para análisis independiente. Discreción garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se necesitan inspectores adicionales de carga tras la cancelación de los contratos de futuros de Hematón. Experiencia en auditoría financiera valorada. Módulo 2, La Bolsa.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "El acceso a la puerta de Salto de Sinaire queda restringido exclusivamente a personal autorizado de la Hermandad de Santuario hasta nuevo aviso. Cualquier nave no autorizada que intente el cruce será interceptada.",
+      },
+      {
+        tipo: "SANIDAD",
+        texto:
+          "Se declara cuarentena provisional obligatoria para todo el personal que regrese de Espesura Roja. Queda prohibido el contacto directo con el fluido circulatorio del planeta fuera de protocolos autorizados.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "El Consejo de la Cicatriz mantiene sin cambios la zona de exclusión alrededor de Venas Rojas, a la espera de resultados concluyentes del análisis de fragmentos recuperados.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se recuerda que todo contrato de futuros vinculado a Hematón de Venas Rojas queda formalmente anulado. Las reclamaciones deben tramitarse a través de los cauces habituales en El Nexo.",
+      },
+    ],
+  },
 };
 
 let edicionActual = 1;

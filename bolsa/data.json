@@ -3,7 +3,7 @@
     {
       "name": "cristales de azufre",
       "origin": "ceniza prima",
-      "price": 340,
+      "price": 343,
       "prev": 340,
       "history": [
         {
@@ -13,6 +13,10 @@
         {
           "p": 340,
           "t": "edición 2"
+        },
+        {
+          "p": 343,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -30,8 +34,8 @@
     {
       "name": "fletes clase cigüeña",
       "origin": "forja muerta",
-      "price": 210,
-      "prev": 300,
+      "price": 203,
+      "prev": 210,
       "history": [
         {
           "p": 300,
@@ -40,6 +44,10 @@
         {
           "p": 210,
           "t": "edición 2"
+        },
+        {
+          "p": 203,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -57,8 +65,8 @@
     {
       "name": "hierro de alta pureza",
       "origin": "viento rojo",
-      "price": 314,
-      "prev": 280,
+      "price": 309,
+      "prev": 314,
       "history": [
         {
           "p": 280,
@@ -67,6 +75,10 @@
         {
           "p": 314,
           "t": "edición 2"
+        },
+        {
+          "p": 309,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -84,8 +96,8 @@
     {
       "name": "metales refractarios",
       "origin": "horno",
-      "price": 281,
-      "prev": 260,
+      "price": 276,
+      "prev": 281,
       "history": [
         {
           "p": 260,
@@ -94,6 +106,10 @@
         {
           "p": 281,
           "t": "edición 2"
+        },
+        {
+          "p": 276,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -111,8 +127,8 @@
     {
       "name": "agua pura",
       "origin": "hielo eterno",
-      "price": 159,
-      "prev": 150,
+      "price": 162,
+      "prev": 159,
       "history": [
         {
           "p": 150,
@@ -121,6 +137,10 @@
         {
           "p": 159,
           "t": "edición 2"
+        },
+        {
+          "p": 162,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -138,8 +158,8 @@
     {
       "name": "comida y biomasa",
       "origin": "verdal",
-      "price": 189,
-      "prev": 180,
+      "price": 191,
+      "prev": 189,
       "history": [
         {
           "p": 180,
@@ -148,6 +168,10 @@
         {
           "p": 189,
           "t": "edición 2"
+        },
+        {
+          "p": 191,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -165,8 +189,8 @@
     {
       "name": "agua purificada",
       "origin": "el manantial — erosión",
-      "price": 95,
-      "prev": 101,
+      "price": 98,
+      "prev": 95,
       "history": [
         {
           "p": 101,
@@ -175,6 +199,10 @@
         {
           "p": 95,
           "t": "edición 2"
+        },
+        {
+          "p": 98,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -192,8 +220,8 @@
     {
       "name": "tecnología limpia anti-emp",
       "origin": "el manantial — erosión",
-      "price": 620,
-      "prev": 619,
+      "price": 602,
+      "prev": 620,
       "history": [
         {
           "p": 619,
@@ -202,6 +230,10 @@
         {
           "p": 620,
           "t": "edición 2"
+        },
+        {
+          "p": 602,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -219,8 +251,8 @@
     {
       "name": "hierro de veta secundaria",
       "origin": "yesca — luna de viento rojo",
-      "price": 178,
-      "prev": 174,
+      "price": 177,
+      "prev": 178,
       "history": [
         {
           "p": 174,
@@ -229,6 +261,10 @@
         {
           "p": 178,
           "t": "edición 2"
+        },
+        {
+          "p": 177,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -246,8 +282,8 @@
     {
       "name": "chatarra de guerra recuperada",
       "origin": "sepulcro — erosión",
-      "price": 88,
-      "prev": 84,
+      "price": 85,
+      "prev": 88,
       "history": [
         {
           "p": 84,
@@ -256,6 +292,10 @@
         {
           "p": 88,
           "t": "edición 2"
+        },
+        {
+          "p": 85,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -273,8 +313,8 @@
     {
       "name": "savia cicatrizante",
       "origin": "el manantial — erosión",
-      "price": 412,
-      "prev": 444,
+      "price": 431,
+      "prev": 412,
       "history": [
         {
           "p": 444,
@@ -283,6 +323,10 @@
         {
           "p": 412,
           "t": "edición 2"
+        },
+        {
+          "p": 431,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -304,8 +348,8 @@
     {
       "name": "hielo de anillo",
       "origin": "anillo de titán pardo — abismo",
-      "price": 61,
-      "prev": 63,
+      "price": 60,
+      "prev": 61,
       "history": [
         {
           "p": 63,
@@ -314,6 +358,10 @@
         {
           "p": 61,
           "t": "edición 2"
+        },
+        {
+          "p": 60,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -332,7 +380,7 @@
       "name": "fragmentos tecnológicos no identificados",
       "origin": "la boya — abismo",
       "price": 890,
-      "prev": 961,
+      "prev": 890,
       "history": [
         {
           "p": 961,
@@ -341,6 +389,10 @@
         {
           "p": 890,
           "t": "edición 2"
+        },
+        {
+          "p": 890,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -358,8 +410,8 @@
     {
       "name": "vidrio volcánico resonante",
       "origin": "vidriazote — abismo",
-      "price": 245,
-      "prev": 232,
+      "price": 237,
+      "prev": 245,
       "history": [
         {
           "p": 232,
@@ -368,6 +420,10 @@
         {
           "p": 245,
           "t": "edición 2"
+        },
+        {
+          "p": 237,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -385,8 +441,8 @@
     {
       "name": "recurso exótico estacional",
       "origin": "el errante — abismo",
-      "price": 1450,
-      "prev": 1401,
+      "price": 1419,
+      "prev": 1450,
       "history": [
         {
           "p": 1401,
@@ -395,6 +451,10 @@
         {
           "p": 1450,
           "t": "edición 2"
+        },
+        {
+          "p": 1419,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -408,8 +468,8 @@
     {
       "name": "mineral inflamable en bruto",
       "origin": "ascua negra — cárdeno",
-      "price": 530,
-      "prev": 578,
+      "price": 536,
+      "prev": 530,
       "history": [
         {
           "p": 578,
@@ -418,6 +478,10 @@
         {
           "p": 530,
           "t": "edición 2"
+        },
+        {
+          "p": 536,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -435,8 +499,8 @@
     {
       "name": "esquirlas de metal solidificado",
       "origin": "grietardiente — cárdeno",
-      "price": 194,
-      "prev": 179,
+      "price": 195,
+      "prev": 194,
       "history": [
         {
           "p": 179,
@@ -445,6 +509,10 @@
         {
           "p": 194,
           "t": "edición 2"
+        },
+        {
+          "p": 195,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -462,8 +530,8 @@
     {
       "name": "hielo fósil",
       "origin": "reliquia — cárdeno",
-      "price": 340,
-      "prev": 314,
+      "price": 333,
+      "prev": 340,
       "history": [
         {
           "p": 314,
@@ -472,6 +540,10 @@
         {
           "p": 340,
           "t": "edición 2"
+        },
+        {
+          "p": 333,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -489,8 +561,8 @@
     {
       "name": "compuesto de esporas médicas",
       "origin": "velo ciego — turbio",
-      "price": 705,
-      "prev": 686,
+      "price": 744,
+      "prev": 705,
       "history": [
         {
           "p": 686,
@@ -499,6 +571,10 @@
         {
           "p": 705,
           "t": "edición 2"
+        },
+        {
+          "p": 744,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -516,8 +592,8 @@
     {
       "name": "materia orgánica comprimida",
       "origin": "turbera — turbio",
-      "price": 143,
-      "prev": 140,
+      "price": 147,
+      "prev": 143,
       "history": [
         {
           "p": 140,
@@ -526,6 +602,10 @@
         {
           "p": 143,
           "t": "edición 2"
+        },
+        {
+          "p": 147,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -544,7 +624,7 @@
       "name": "fango orgánico procesado",
       "origin": "légamo / cieno — turbio",
       "price": 76,
-      "prev": 81,
+      "prev": 76,
       "history": [
         {
           "p": 81,
@@ -553,6 +633,10 @@
         {
           "p": 76,
           "t": "edición 2"
+        },
+        {
+          "p": 76,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -570,8 +654,8 @@
     {
       "name": "sal cristalizada",
       "origin": "cala — turbio",
-      "price": 54,
-      "prev": 59,
+      "price": 55,
+      "prev": 54,
       "history": [
         {
           "p": 59,
@@ -580,6 +664,10 @@
         {
           "p": 54,
           "t": "edición 2"
+        },
+        {
+          "p": 55,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -593,8 +681,8 @@
     {
       "name": "aleación de raíles fundidos",
       "origin": "horno — abrasador",
-      "price": 267,
-      "prev": 266,
+      "price": 258,
+      "prev": 267,
       "history": [
         {
           "p": 266,
@@ -603,6 +691,10 @@
         {
           "p": 267,
           "t": "edición 2"
+        },
+        {
+          "p": 258,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -620,8 +712,8 @@
     {
       "name": "compuesto silenciador mineral",
       "origin": "sordina — abrasador",
-      "price": 388,
-      "prev": 421,
+      "price": 396,
+      "prev": 388,
       "history": [
         {
           "p": 421,
@@ -630,6 +722,10 @@
         {
           "p": 388,
           "t": "edición 2"
+        },
+        {
+          "p": 396,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -647,8 +743,8 @@
     {
       "name": "muestra de acreción mineral",
       "origin": "el osario — pálido",
-      "price": 512,
-      "prev": 542,
+      "price": 519,
+      "prev": 512,
       "history": [
         {
           "p": 542,
@@ -657,6 +753,10 @@
         {
           "p": 512,
           "t": "edición 2"
+        },
+        {
+          "p": 519,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -674,8 +774,8 @@
     {
       "name": "compuesto carbonoso absorbente",
       "origin": "vela negra — pálido",
-      "price": 299,
-      "prev": 314,
+      "price": 296,
+      "prev": 299,
       "history": [
         {
           "p": 314,
@@ -684,6 +784,10 @@
         {
           "p": 299,
           "t": "edición 2"
+        },
+        {
+          "p": 296,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -697,8 +801,8 @@
     {
       "name": "fragmento de restos artificiales",
       "origin": "colosario — pálido",
-      "price": 1780,
-      "prev": 1944,
+      "price": 1737,
+      "prev": 1780,
       "history": [
         {
           "p": 1944,
@@ -707,6 +811,10 @@
         {
           "p": 1780,
           "t": "edición 2"
+        },
+        {
+          "p": 1737,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -720,8 +828,8 @@
     {
       "name": "cristal de resonancia",
       "origin": "resonancia cristalina — mudo",
-      "price": 221,
-      "prev": 222,
+      "price": 228,
+      "prev": 221,
       "history": [
         {
           "p": 222,
@@ -730,6 +838,10 @@
         {
           "p": 221,
           "t": "edición 2"
+        },
+        {
+          "p": 228,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -747,8 +859,8 @@
     {
       "name": "extracto micelial",
       "origin": "colmena — mudo",
-      "price": 356,
-      "prev": 360,
+      "price": 352,
+      "prev": 356,
       "history": [
         {
           "p": 360,
@@ -757,6 +869,10 @@
         {
           "p": 356,
           "t": "edición 2"
+        },
+        {
+          "p": 352,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -774,8 +890,8 @@
     {
       "name": "fibra de espina endurecida",
       "origin": "espinar — mudo",
-      "price": 118,
-      "prev": 111,
+      "price": 115,
+      "prev": 118,
       "history": [
         {
           "p": 111,
@@ -784,6 +900,10 @@
         {
           "p": 118,
           "t": "edición 2"
+        },
+        {
+          "p": 115,
+          "t": "edición 3"
         }
       ],
       "availability": "abundante",
@@ -797,8 +917,8 @@
     {
       "name": "cristal alucinógeno bruto",
       "origin": "cristal roto — prisma",
-      "price": 480,
-      "prev": 478,
+      "price": 466,
+      "prev": 480,
       "history": [
         {
           "p": 478,
@@ -807,6 +927,10 @@
         {
           "p": 480,
           "t": "edición 2"
+        },
+        {
+          "p": 466,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -824,8 +948,8 @@
     {
       "name": "coral tallado",
       "origin": "bajío de coral — prisma",
-      "price": 265,
-      "prev": 258,
+      "price": 271,
+      "prev": 265,
       "history": [
         {
           "p": 258,
@@ -834,6 +958,10 @@
         {
           "p": 265,
           "t": "edición 2"
+        },
+        {
+          "p": 271,
+          "t": "edición 3"
         }
       ],
       "availability": "normal",
@@ -851,7 +979,7 @@
     {
       "name": "metal resistente a la roya",
       "origin": "roya — prisma",
-      "price": 1120,
+      "price": 1128,
       "prev": 1120,
       "history": [
         {
@@ -861,6 +989,10 @@
         {
           "p": 1120,
           "t": "edición 2"
+        },
+        {
+          "p": 1128,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -878,8 +1010,8 @@
     {
       "name": "aleación de remache",
       "origin": "remache — titán",
-      "price": 640,
-      "prev": 622,
+      "price": 654,
+      "prev": 640,
       "history": [
         {
           "p": 622,
@@ -888,6 +1020,10 @@
         {
           "p": 640,
           "t": "edición 2"
+        },
+        {
+          "p": 654,
+          "t": "edición 3"
         }
       ],
       "availability": "escaso",
@@ -905,8 +1041,8 @@
     {
       "name": "chatarra catalogada de el casco",
       "origin": "el casco — titán",
-      "price": 2100,
-      "prev": 2116,
+      "price": 2134,
+      "prev": 2100,
       "history": [
         {
           "p": 2116,
@@ -915,6 +1051,10 @@
         {
           "p": 2100,
           "t": "edición 2"
+        },
+        {
+          "p": 2134,
+          "t": "edición 3"
         }
       ],
       "availability": "crítico",
@@ -930,8 +1070,8 @@
     {
       "name": "Tecnocracia de Forja Muerta",
       "origin": "forja muerta — CIGÜ",
-      "price": 738,
-      "prev": 842,
+      "price": 768,
+      "prev": 738,
       "history": [
         {
           "p": 842,
@@ -940,6 +1080,10 @@
         {
           "p": 738,
           "t": "edición 2"
+        },
+        {
+          "p": 768,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 80000,
@@ -949,8 +1093,8 @@
     {
       "name": "Consorcio de Mercaderes",
       "origin": "el nexo — MRCD",
-      "price": 1264,
-      "prev": 1204,
+      "price": 1221,
+      "prev": 1264,
       "history": [
         {
           "p": 1204,
@@ -959,6 +1103,10 @@
         {
           "p": 1264,
           "t": "edición 2"
+        },
+        {
+          "p": 1221,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 60000,
@@ -968,8 +1116,8 @@
     {
       "name": "República de Verdal Agro-Exportaciones",
       "origin": "verdal — VRDT",
-      "price": 628,
-      "prev": 615,
+      "price": 629,
+      "prev": 628,
       "history": [
         {
           "p": 615,
@@ -978,6 +1126,10 @@
         {
           "p": 628,
           "t": "edición 2"
+        },
+        {
+          "p": 629,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 70000,
@@ -987,8 +1139,8 @@
     {
       "name": "Kartha Armamento",
       "origin": "sede itinerante — KRTH",
-      "price": 2525,
-      "prev": 2310,
+      "price": 2597,
+      "prev": 2525,
       "history": [
         {
           "p": 2310,
@@ -997,6 +1149,10 @@
         {
           "p": 2525,
           "t": "edición 2"
+        },
+        {
+          "p": 2597,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 20000,
@@ -1006,8 +1162,8 @@
     {
       "name": "Hermandad de Santuario Médica",
       "origin": "santuario orbital — SNTR",
-      "price": 1033,
-      "prev": 998,
+      "price": 1103,
+      "prev": 1033,
       "history": [
         {
           "p": 998,
@@ -1016,6 +1172,10 @@
         {
           "p": 1033,
           "t": "edición 2"
+        },
+        {
+          "p": 1103,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 45000,
@@ -1025,8 +1185,8 @@
     {
       "name": "Cooperativa Hielo Eterno",
       "origin": "hielo eterno — HELO",
-      "price": 508,
-      "prev": 540,
+      "price": 504,
+      "prev": 508,
       "history": [
         {
           "p": 540,
@@ -1035,6 +1195,10 @@
         {
           "p": 508,
           "t": "edición 2"
+        },
+        {
+          "p": 504,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 90000,
@@ -1044,8 +1208,8 @@
     {
       "name": "La Esfinge Carmesí Producciones",
       "origin": "nave-teatro itinerante — ESFN",
-      "price": 349,
-      "prev": 412,
+      "price": 350,
+      "prev": 349,
       "history": [
         {
           "p": 412,
@@ -1054,6 +1218,10 @@
         {
           "p": 349,
           "t": "edición 2"
+        },
+        {
+          "p": 350,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 15000,
@@ -1063,8 +1231,8 @@
     {
       "name": "Barones del Polvo Holdings",
       "origin": "sector disperso — PLVO",
-      "price": 211,
-      "prev": 203,
+      "price": 215,
+      "prev": 211,
       "history": [
         {
           "p": 203,
@@ -1073,6 +1241,10 @@
         {
           "p": 211,
           "t": "edición 2"
+        },
+        {
+          "p": 215,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 100000,
@@ -1082,8 +1254,8 @@
     {
       "name": "Viverías Umbraluz",
       "origin": "umbraluz — edén — VMBR",
-      "price": 415,
-      "prev": 450,
+      "price": 418,
+      "prev": 415,
       "history": [
         {
           "p": 450,
@@ -1092,6 +1264,10 @@
         {
           "p": 415,
           "t": "edición 2"
+        },
+        {
+          "p": 418,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 40000,
@@ -1101,8 +1277,8 @@
     {
       "name": "Cantera Yermo S.A.",
       "origin": "yermo — edén — YRMO",
-      "price": 302,
-      "prev": 288,
+      "price": 309,
+      "prev": 302,
       "history": [
         {
           "p": 288,
@@ -1111,6 +1287,10 @@
         {
           "p": 302,
           "t": "edición 2"
+        },
+        {
+          "p": 309,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 55000,
@@ -1120,8 +1300,8 @@
     {
       "name": "Baluarte Defensas",
       "origin": "baluarte — edén — BLRT",
-      "price": 588,
-      "prev": 599,
+      "price": 591,
+      "prev": 588,
       "history": [
         {
           "p": 599,
@@ -1130,6 +1310,10 @@
         {
           "p": 588,
           "t": "edición 2"
+        },
+        {
+          "p": 591,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 25000,
@@ -1139,8 +1323,8 @@
     {
       "name": "Forjaguardia Sistemas",
       "origin": "forjaguardia — titán — FRJG",
-      "price": 940,
-      "prev": 885,
+      "price": 964,
+      "prev": 940,
       "history": [
         {
           "p": 885,
@@ -1149,6 +1333,10 @@
         {
           "p": 940,
           "t": "edición 2"
+        },
+        {
+          "p": 964,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 18000,
@@ -1158,8 +1346,8 @@
     {
       "name": "Remache Extracción",
       "origin": "remache — titán — RMCH",
-      "price": 812,
-      "prev": 829,
+      "price": 827,
+      "prev": 812,
       "history": [
         {
           "p": 829,
@@ -1168,6 +1356,10 @@
         {
           "p": 812,
           "t": "edición 2"
+        },
+        {
+          "p": 827,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 30000,
@@ -1177,8 +1369,8 @@
     {
       "name": "Manufacturas Titán Azul",
       "origin": "titán azul — MFTA",
-      "price": 675,
-      "prev": 624,
+      "price": 690,
+      "prev": 675,
       "history": [
         {
           "p": 624,
@@ -1187,6 +1379,10 @@
         {
           "p": 675,
           "t": "edición 2"
+        },
+        {
+          "p": 690,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 60000,
@@ -1196,8 +1392,8 @@
     {
       "name": "Profundidad Perforaciones",
       "origin": "hielo eterno — pálido — PRFD",
-      "price": 720,
-      "prev": 678,
+      "price": 729,
+      "prev": 720,
       "history": [
         {
           "p": 678,
@@ -1206,6 +1402,10 @@
         {
           "p": 720,
           "t": "edición 2"
+        },
+        {
+          "p": 729,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 35000,
@@ -1215,8 +1415,8 @@
     {
       "name": "Yóvide Energía",
       "origin": "yóvide — pálido — YVDE",
-      "price": 1050,
-      "prev": 1154,
+      "price": 1021,
+      "prev": 1050,
       "history": [
         {
           "p": 1154,
@@ -1225,6 +1425,10 @@
         {
           "p": 1050,
           "t": "edición 2"
+        },
+        {
+          "p": 1021,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 22000,
@@ -1234,8 +1438,8 @@
     {
       "name": "Naviera Deriva",
       "origin": "deriva — pálido — NVDR",
-      "price": 260,
-      "prev": 274,
+      "price": 256,
+      "prev": 260,
       "history": [
         {
           "p": 274,
@@ -1244,6 +1448,10 @@
         {
           "p": 260,
           "t": "edición 2"
+        },
+        {
+          "p": 256,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 45000,
@@ -1253,8 +1461,8 @@
     {
       "name": "Velo Ciego Extracción Médica",
       "origin": "velo ciego — turbio — VLCM",
-      "price": 980,
-      "prev": 913,
+      "price": 1020,
+      "prev": 980,
       "history": [
         {
           "p": 913,
@@ -1263,6 +1471,10 @@
         {
           "p": 980,
           "t": "edición 2"
+        },
+        {
+          "p": 1020,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 20000,
@@ -1272,8 +1484,8 @@
     {
       "name": "Farmacéutica Santuario",
       "origin": "santuario orbital — turbio — FSNT",
-      "price": 1340,
-      "prev": 1347,
+      "price": 1410,
+      "prev": 1340,
       "history": [
         {
           "p": 1347,
@@ -1282,6 +1494,10 @@
         {
           "p": 1340,
           "t": "edición 2"
+        },
+        {
+          "p": 1410,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 28000,
@@ -1291,8 +1507,8 @@
     {
       "name": "Atalaya Naviera",
       "origin": "atalaya del velo — turbio — ATLN",
-      "price": 405,
-      "prev": 373,
+      "price": 418,
+      "prev": 405,
       "history": [
         {
           "p": 373,
@@ -1301,6 +1517,10 @@
         {
           "p": 405,
           "t": "edición 2"
+        },
+        {
+          "p": 418,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 32000,
@@ -1310,8 +1530,8 @@
     {
       "name": "Espina Vertederos",
       "origin": "espina — erosión — ESPV",
-      "price": 168,
-      "prev": 171,
+      "price": 166,
+      "prev": 168,
       "history": [
         {
           "p": 171,
@@ -1320,6 +1540,10 @@
         {
           "p": 168,
           "t": "edición 2"
+        },
+        {
+          "p": 166,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 50000,
@@ -1329,8 +1553,8 @@
     {
       "name": "Barones Prospección",
       "origin": "ascua negra — cárdeno — BRPR",
-      "price": 95,
-      "prev": 103,
+      "price": 93,
+      "prev": 95,
       "history": [
         {
           "p": 103,
@@ -1339,6 +1563,10 @@
         {
           "p": 95,
           "t": "edición 2"
+        },
+        {
+          "p": 93,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 20000,
@@ -1348,8 +1576,8 @@
     {
       "name": "Tolvanera Minería",
       "origin": "tolvanera — erosión — TLVM",
-      "price": 142,
-      "prev": 139,
+      "price": 140,
+      "prev": 142,
       "history": [
         {
           "p": 139,
@@ -1358,6 +1586,10 @@
         {
           "p": 142,
           "t": "edición 2"
+        },
+        {
+          "p": 140,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 33000,
@@ -1367,8 +1599,8 @@
     {
       "name": "Casa de Empeños Fárrago",
       "origin": "el nexo — CDEF",
-      "price": 1520,
-      "prev": 1447,
+      "price": 1447,
+      "prev": 1520,
       "history": [
         {
           "p": 1447,
@@ -1377,6 +1609,10 @@
         {
           "p": 1520,
           "t": "edición 2"
+        },
+        {
+          "p": 1447,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 15000,
@@ -1386,8 +1622,8 @@
     {
       "name": "Correduría del Umbral",
       "origin": "el nexo — CRDU",
-      "price": 1890,
-      "prev": 1972,
+      "price": 1756,
+      "prev": 1890,
       "history": [
         {
           "p": 1972,
@@ -1396,6 +1632,10 @@
         {
           "p": 1890,
           "t": "edición 2"
+        },
+        {
+          "p": 1756,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 12000,
@@ -1405,8 +1645,8 @@
     {
       "name": "Auditores del Credo",
       "origin": "el nexo — ADCR",
-      "price": 2240,
-      "prev": 2420,
+      "price": 2177,
+      "prev": 2240,
       "history": [
         {
           "p": 2420,
@@ -1415,6 +1655,10 @@
         {
           "p": 2240,
           "t": "edición 2"
+        },
+        {
+          "p": 2177,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 8000,
@@ -1424,8 +1668,8 @@
     {
       "name": "Naviera Von Drevan",
       "origin": "el nexo — NVVD",
-      "price": 1680,
-      "prev": 1732,
+      "price": 1640,
+      "prev": 1680,
       "history": [
         {
           "p": 1732,
@@ -1434,6 +1678,10 @@
         {
           "p": 1680,
           "t": "edición 2"
+        },
+        {
+          "p": 1640,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 18000,
@@ -1443,8 +1691,8 @@
     {
       "name": "Ópera Itinerante Hellena",
       "origin": "nave-teatro itinerante — OIHL",
-      "price": 390,
-      "prev": 360,
+      "price": 385,
+      "prev": 390,
       "history": [
         {
           "p": 360,
@@ -1453,6 +1701,10 @@
         {
           "p": 390,
           "t": "edición 2"
+        },
+        {
+          "p": 385,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 10000,
@@ -1462,8 +1714,8 @@
     {
       "name": "Aseguradora Drevan-Kaine",
       "origin": "el nexo — ADKN",
-      "price": 1210,
-      "prev": 1156,
+      "price": 1220,
+      "prev": 1210,
       "history": [
         {
           "p": 1156,
@@ -1472,6 +1724,10 @@
         {
           "p": 1210,
           "t": "edición 2"
+        },
+        {
+          "p": 1220,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 24000,
@@ -1481,8 +1737,8 @@
     {
       "name": "Consorcio Bajío de Coral",
       "origin": "bajío de coral — prisma — CBDC",
-      "price": 705,
-      "prev": 757,
+      "price": 699,
+      "prev": 705,
       "history": [
         {
           "p": 757,
@@ -1491,6 +1747,10 @@
         {
           "p": 705,
           "t": "edición 2"
+        },
+        {
+          "p": 699,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 26000,
@@ -1500,8 +1760,8 @@
     {
       "name": "Naviera Cristal Roto",
       "origin": "cristal roto — prisma — NVCR",
-      "price": 330,
-      "prev": 346,
+      "price": 327,
+      "prev": 330,
       "history": [
         {
           "p": 346,
@@ -1510,6 +1770,10 @@
         {
           "p": 330,
           "t": "edición 2"
+        },
+        {
+          "p": 327,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 15000,
@@ -1519,8 +1783,8 @@
     {
       "name": "Kartha Municiones Ligeras",
       "origin": "sede itinerante — KRTM",
-      "price": 890,
-      "prev": 959,
+      "price": 874,
+      "prev": 890,
       "history": [
         {
           "p": 959,
@@ -1529,6 +1793,10 @@
         {
           "p": 890,
           "t": "edición 2"
+        },
+        {
+          "p": 874,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 12000,
@@ -1538,8 +1806,8 @@
     {
       "name": "Prospectores de La Boya",
       "origin": "la boya — abismo — PRLB",
-      "price": 455,
-      "prev": 494,
+      "price": 449,
+      "prev": 455,
       "history": [
         {
           "p": 494,
@@ -1548,6 +1816,10 @@
         {
           "p": 455,
           "t": "edición 2"
+        },
+        {
+          "p": 449,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 9000,
@@ -1557,8 +1829,8 @@
     {
       "name": "Salvamento Vidriazote",
       "origin": "vidriazote — abismo — SLVZ",
-      "price": 210,
-      "prev": 199,
+      "price": 216,
+      "prev": 210,
       "history": [
         {
           "p": 199,
@@ -1567,6 +1839,10 @@
         {
           "p": 210,
           "t": "edición 2"
+        },
+        {
+          "p": 216,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 17000,
@@ -1576,8 +1852,8 @@
     {
       "name": "Cooperativa de Vagaluna",
       "origin": "vagaluna — abrasador — CPVG",
-      "price": 165,
-      "prev": 175,
+      "price": 166,
+      "prev": 165,
       "history": [
         {
           "p": 175,
@@ -1586,6 +1862,10 @@
         {
           "p": 165,
           "t": "edición 2"
+        },
+        {
+          "p": 166,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 20000,
@@ -1595,8 +1875,8 @@
     {
       "name": "Compañía Roya",
       "origin": "roya — prisma — CPRY",
-      "price": 2680,
-      "prev": 2652,
+      "price": 2698,
+      "prev": 2680,
       "history": [
         {
           "p": 2652,
@@ -1605,6 +1885,10 @@
         {
           "p": 2680,
           "t": "edición 2"
+        },
+        {
+          "p": 2698,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 9000,
@@ -1614,8 +1898,8 @@
     {
       "name": "Naviera de los Faroleros",
       "origin": "el susurro — erosión — NVFR",
-      "price": 580,
-      "prev": 586,
+      "price": 569,
+      "prev": 580,
       "history": [
         {
           "p": 586,
@@ -1624,6 +1908,10 @@
         {
           "p": 580,
           "t": "edición 2"
+        },
+        {
+          "p": 569,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 11000,
@@ -1633,8 +1921,8 @@
     {
       "name": "Exóticos de El Errante",
       "origin": "el errante — abismo — EXER",
-      "price": 1980,
-      "prev": 2097,
+      "price": 2007,
+      "prev": 1980,
       "history": [
         {
           "p": 2097,
@@ -1643,6 +1931,10 @@
         {
           "p": 1980,
           "t": "edición 2"
+        },
+        {
+          "p": 2007,
+          "t": "edición 3"
         }
       ],
       "sharesIssued": 6000,
