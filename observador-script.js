@@ -804,12 +804,75 @@ const ediciones = {
   },
 };
 
+// Ediciones especiales: fuera de la numeración semanal normal (no son "3.5" ni similar).
+// Usan un layout distinto (sin mercados/rumores/tablón/edictos) y pueden incluir
+// imágenes de una retransmisión en directo con el presentador Arcturus Morn,
+// reservado exclusivamente para hechos de esta magnitud.
+const especiales = {
+  esp1: {
+    numero: "ESP-01",
+    fecha: "Año 1050 P.E. | Día 320 | 22:10 HST — EMISIÓN EN DIRECTO",
+    etiqueta: "EDICIÓN ESPECIAL",
+    programa: "EL OBSERVADOR DEL NEXO — CON ARCTURUS MORN",
+    lema: "LA VERDAD TRASCIENDE. EL PODER CORROMPE.",
+    destacada: {
+      alerta: "TRANSMISIÓN DE EMERGENCIA",
+      titulo:
+        "HADRIA VON DREVAN ROMPE EL SILENCIO: «LA CASA VON DREVAN DECLARA LA GUERRA»",
+      subtitulo:
+        "» Lo que debía ser una entrevista de rutina con Arcturus Morn se convirtió en la transmisión más vista del sector: un heredero al que se daba por perdido reaparece armado, acompañado por Orfeo, y promete incendiar el orden establecido",
+      imagen: "especial-hadria-01.png",
+      contenido: [
+        "El plató de Arcturus Morn está acostumbrado a nobles calculadores, comerciantes evasivos y militares que responden con monosílabos. No estaba preparado para esto. La emisión de esta noche se anunció como una entrevista más — perfil de sociedad, quizá una nota sobre la Casa Von Drevan tras años sin apariciones públicas de su heredero bastardo. En su lugar, El Nexo entero ha presenciado en directo una declaración de guerra.",
+        "Arcturus Morn apenas alcanzó a formular su primera pregunta. Hadria Von Drevan, de pie junto al sillón que se suponía debía ocupar, con la armadura ceremonial de su casa y una espada en alto, levantó una mano y cortó la entrevista antes de que empezara: «No comencemos con una pregunta». Lo que siguió fue un monólogo ininterrumpido de más de veinte minutos que este periódico ha podido registrar íntegro.",
+        "A su lado, en silencio durante toda la emisión, estaba sentado Orfeo — la voz más célebre del sector, desaparecida de los escenarios desde hace meses. La cicatriz en su garganta, allí donde le seccionaron las cuerdas vocales, quedó perfectamente visible ante las cámaras. No pronunció una sola palabra. No hizo falta: Hadria habló también por él.",
+        "El contenido de la emisión —una acusación directa contra los Barones, la reivindicación de la destrucción de Venas Rojas y una declaración de guerra formal en nombre de la Casa Von Drevan sin confirmación alguna de su patriarca, Aldric— desborda con mucho el formato habitual de este periódico. Por eso, y solo por eso, El Observador del Nexo rompe su numeración semanal para dedicar esta edición especial, íntegramente, a lo ocurrido esta noche.",
+      ],
+    },
+    piezas: [
+      {
+        titulo: "QUIÉN ES HADRIA VON DREVAN",
+        contenido: [
+          "Hijo bastardo reconocido de Aldric Von Drevan, «el León del Nexo», y de Hellena, una de las cantantes más célebres que ha dado la estación, Hadria perdió a su madre cuando tenía dieciséis años, en un accidente de vehículo que los registros oficiales de El Nexo nunca llegaron a esclarecer del todo. Poco se sabe con certeza de lo que ocurrió en los años siguientes dentro de la Casa.",
+          "Este periódico ha intentado sin éxito acceder al expediente completo de aquel accidente; las pocas fuentes que han accedido a hablar, siempre bajo anonimato, coinciden en un detalle: nadie en la Casa Von Drevan quiso que se investigara demasiado a fondo.",
+          "Según su propio relato de anoche, sirvió ocho años al Credo del Intercambio — el templo-orden de acreedores de El Nexo — hasta alcanzar el cargo de Mediador de Corporaciones. En su primera misión oficial fue secuestrado por piratas y vendido como esclavo a Venas Rojas, donde pasó los años siguientes.",
+        ],
+      },
+      {
+        titulo: "LA EMISIÓN, MINUTO A MINUTO",
+        imagen: "especial-hadria-02.png",
+        contenido: [
+          "Hadria se presentó a sí mismo con títulos que ninguna casa le ha concedido oficialmente: «Verdugo de Venas Rojas», «Portador del Último Fuego». Relató sin pudor su propia caída — el secuestro, la venta, los años en las minas — antes de girar hacia la acusación central de la noche: que la destrucción de Venas Rojas, el suceso que ha ocupado nuestras portadas durante dos semanas, fue obra suya. Sin detallar el mecanismo ni reconocer cómplices, lanzó un aviso que ya corre por todo el sector: «Venas Rojas no era la única».",
+          "A partir de ahí, la declaración formal: la Casa Von Drevan exige a todo Barón que posea esclavos la renuncia de sus títulos, la liberación de sus trabajadores forzados, la apertura de sus registros y la disolución de sus ejércitos privados. Quien no lo haga «por las buenas», advirtió, lo hará por las malas. Anunció además la publicación esta misma noche de un «Manifiesto de la Cuenta Final» con los procedimientos exactos.",
+          "Cerró dirigiéndose directamente a su propia familia, adelantándose a cualquier intento de desacreditarlo con los escándalos de su juventud: «¿Devuelve eso la voz a Orfeo?». Ni la Casa Von Drevan ni Aldric han emitido comunicado alguno hasta el cierre de esta edición.",
+        ],
+      },
+      {
+        titulo: "LOS OTROS ROSTROS DEL DISCURSO",
+        contenido: [
+          "Hadria no habló solo en su propio nombre. Citó reiteradamente a tres personas más como «adalides» de lo que llamó una revolución: Kael «53» Vostok, técnico de Horno señalado como responsable de la catástrofe que intentó evitar; Radjem, buscador de agua de Viento Rojo esclavizado por reclamar un recurso básico; y Thomas Marrow — más conocido en ciertos círculos como «Nikola» —, científico de Santuario Orbital y sobrino del Magíster Elían Marrow, cabeza de la Orden de la Carne, que demostró que el llamado «gen aristocrático» de la élite de la estación no existe, antes de presenciar la represión sangrienta conocida como La Larga Noche.",
+          "Ninguno de los tres apareció en el plató. Solo Orfeo, sentado junto a Hadria durante toda la emisión, puso rostro visible a las palabras del heredero — un silencio que, según coinciden varios analistas consultados por este periódico, pesó tanto como cualquiera de sus frases.",
+        ],
+      },
+      {
+        titulo: "PRIMERAS REACCIONES",
+        contenido: [
+          "El Nexo amaneció esta noche sin saber muy bien qué acaba de presenciar. Fuentes cercanas a Los Cinco Capos hablan de una reunión de urgencia convocada antes incluso de que terminara la transmisión. Los Barones, por su parte, guardan un silencio que este periódico no sabe interpretar todavía como prudencia o como pánico. De la Casa Von Drevan, ni una palabra.",
+          "El Observador del Nexo seguirá esta historia en las próximas horas y días, según se conozcan más detalles y reacciones oficiales.",
+        ],
+      },
+    ],
+  },
+};
+
 let edicionActual = 1;
+let modoEspecial = false;
 
 function renderizarEdicion(numeroEdicion) {
   const edicion = ediciones[numeroEdicion];
   if (!edicion) return;
 
+  modoEspecial = false;
   edicionActual = numeroEdicion;
 
   document.getElementById("editionInfo").textContent =
@@ -824,7 +887,7 @@ function renderizarEdicion(numeroEdicion) {
   renderizarTicker(edicion.acciones);
   renderizarTablon(edicion.tablon);
   renderizarEdictos(edicion.edictos);
-  renderizarSelectorEdiciones();
+  renderizarSelector();
 }
 
 function renderizarDestacada(destacada) {
@@ -840,6 +903,71 @@ function renderizarDestacada(destacada) {
   });
   html += `</div>`;
   section.innerHTML = html;
+}
+
+// --- EDICIONES ESPECIALES ---
+// Layout reducido: portada con imagen + piezas en profundidad a ancho completo.
+// Sin mercados, rumores, tablón ni edictos — se limpian esas secciones para que
+// no quede contenido residual de la última edición semanal visitada.
+function renderizarEdicionEspecial(clave) {
+  const especial = especiales[clave];
+  if (!especial) return;
+
+  modoEspecial = true;
+  edicionActual = clave;
+
+  document.getElementById("editionInfo").textContent =
+    `${especial.etiqueta} ${especial.numero}`;
+  document.getElementById("dateInfo").textContent = especial.fecha;
+  document.querySelector(".price-info").textContent = especial.programa;
+
+  renderizarDestacadaEspecial(especial.destacada, especial.lema);
+  renderizarPiezasEspecial(especial.piezas);
+
+  // Limpieza de secciones que no aplican a un especial
+  const ticker = document.getElementById("tickerTrack");
+  if (ticker) ticker.innerHTML = "";
+  const marketRumor = document.getElementById("marketRumorSection");
+  if (marketRumor) marketRumor.innerHTML = "";
+  const tablon = document.getElementById("tablonSection");
+  if (tablon) tablon.innerHTML = "";
+  const oficial = document.querySelector(".official-notices .official-content");
+  if (oficial) oficial.innerHTML = "";
+
+  renderizarSelector();
+}
+
+function renderizarDestacadaEspecial(destacada, lema) {
+  const section = document.getElementById("featuredNews");
+  let html = destacada.alerta
+    ? `<div class="alert-banner">${destacada.alerta}</div>`
+    : "";
+  if (lema) html += `<p class="especial-lema">${lema}</p>`;
+  html += `<h2 class="featured-title">${destacada.titulo}</h2>
+             <p class="featured-subtitle">${destacada.subtitulo}</p>`;
+  if (destacada.imagen) {
+    html += `<img class="especial-portada-img" src="${destacada.imagen}" alt="${destacada.titulo}">`;
+  }
+  html += `<div class="featured-content">`;
+  destacada.contenido.forEach((p, i) => {
+    html += `<p${i === 0 ? ' class="dropcap"' : ""}>${p}</p>`;
+  });
+  html += `</div>`;
+  section.innerHTML = html;
+}
+
+function renderizarPiezasEspecial(piezas) {
+  const container = document.querySelector(".news-columns");
+  if (!container) return;
+  const html = piezas
+    .map((pieza) => {
+      const imagenHtml = pieza.imagen
+        ? `<img class="especial-pieza-img" src="${pieza.imagen}" alt="${pieza.titulo}">`
+        : "";
+      return `<article class="news-article especial-pieza"><h3>${pieza.titulo}</h3>${imagenHtml}${pieza.contenido.map((p) => `<p>${p}</p>`).join("")}</article>`;
+    })
+    .join("");
+  container.innerHTML = `<div class="column especial-columna-unica">${html}</div>`;
 }
 
 function renderizarColumnas(columnas) {
@@ -930,48 +1058,78 @@ function renderizarEdictos(edictos) {
       .join("");
 }
 
-// Genera automáticamente un botón por cada edición existente en el objeto `ediciones`.
-// Añadir una edición nueva al objeto es suficiente para que aparezca aquí sin tocar el HTML.
-function renderizarSelectorEdiciones() {
+// Genera automáticamente un botón por cada edición normal Y por cada especial.
+// Añadir una edición o un especial a sus objetos respectivos es suficiente para
+// que aparezca aquí sin tocar el HTML. Los especiales se distinguen con su propia
+// clase visual, y no ocupan hueco en la numeración semanal (no son "3.5").
+function renderizarSelector() {
   const selector = document.getElementById("editionSelector");
   if (!selector) return;
 
   const numeros = Object.keys(ediciones)
     .map(Number)
     .sort((a, b) => a - b);
+  const clavesEspeciales = Object.keys(especiales);
 
-  if (numeros.length <= 1) {
+  if (numeros.length <= 1 && clavesEspeciales.length === 0) {
     selector.innerHTML = "";
     return;
   }
 
-  selector.innerHTML = numeros
+  const botonesNormales = numeros
     .map((n) => {
-      const activa = n === edicionActual ? " active" : "";
+      const activa = !modoEspecial && n === edicionActual ? " active" : "";
       return `<button class="edition-btn${activa}" data-edicion="${n}">${n}</button>`;
     })
     .join("");
 
-  selector.querySelectorAll(".edition-btn").forEach((btn) => {
+  const botonesEspeciales = clavesEspeciales
+    .map((clave) => {
+      const activa = modoEspecial && clave === edicionActual ? " active" : "";
+      return `<button class="edition-btn edition-btn-especial${activa}" data-especial="${clave}">${especiales[clave].numero}</button>`;
+    })
+    .join("");
+
+  selector.innerHTML = botonesNormales + botonesEspeciales;
+
+  selector.querySelectorAll(".edition-btn[data-edicion]").forEach((btn) => {
     btn.addEventListener("click", () =>
       cambiarEdicion(Number(btn.dataset.edicion)),
+    );
+  });
+  selector.querySelectorAll(".edition-btn[data-especial]").forEach((btn) => {
+    btn.addEventListener("click", () =>
+      cambiarAEspecial(btn.dataset.especial),
     );
   });
 }
 
 function cambiarEdicion(n) {
   if (ediciones[n]) {
+    modoEspecial = false;
     renderizarEdicion(n);
-    localStorage.setItem("edicionActual", n);
+    localStorage.setItem("edicionActual", String(n));
+  }
+}
+
+function cambiarAEspecial(clave) {
+  if (especiales[clave]) {
+    renderizarEdicionEspecial(clave);
+    localStorage.setItem("edicionActual", clave);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const guardada = parseInt(localStorage.getItem("edicionActual"), 10);
-  const inicial = ediciones[guardada]
-    ? guardada
+  const guardada = localStorage.getItem("edicionActual");
+  if (guardada && especiales[guardada]) {
+    renderizarEdicionEspecial(guardada);
+    return;
+  }
+  const numeroGuardado = parseInt(guardada, 10);
+  const inicial = ediciones[numeroGuardado]
+    ? numeroGuardado
     : Math.min(...Object.keys(ediciones).map(Number));
   renderizarEdicion(inicial);
 });
 
-window.observadorDelNexo = { cambiarEdicion, ediciones };
+window.observadorDelNexo = { cambiarEdicion, cambiarAEspecial, ediciones, especiales };
