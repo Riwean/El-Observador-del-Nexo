@@ -823,7 +823,7 @@ const ediciones = {
       [
         {
           titulo:
-            "[MECENAZGO] Míriam Ashental rompe el contrato de Orfeo y declara la guerra a los Cinco Capos",
+            "[ASHENTAL] Míriam Ashental rompe el contrato de Orfeo y declara la guerra a los Cinco Capos",
           contenido: [
             "En uno de los gestos más audaces de la semana, Lady Míriam Ashental ha anunciado públicamente la ruptura unilateral del contrato que la unía al cantante Orfeo. «Lo que le hicieron no fue parte de ningún trato que yo firmara», ha declarado, en una intervención breve pero cargada de una furia que pocos recuerdan haberle visto antes.",
             "Ashental no se ha quedado en la ruptura. Ha acusado abiertamente a uno o varios de los Cinco Capos de El Nexo de complicidad o encubrimiento en lo ocurrido a Orfeo, sin ofrecer nombres — de momento. En los últimos días se han reportado ya varios incidentes violentos en zonas bajo influencia de los Capos: un almacén incendiado en el sector portuario, un enfrentamiento entre guardia privada de Ashental y hombres no identificados, y al menos un cadáver hallado en circunstancias que las autoridades locales prefieren no detallar.",
@@ -1090,6 +1090,278 @@ const ediciones = {
         tipo: "SEGURIDAD",
         texto:
           "Se recomienda a la población de El Nexo evitar las zonas portuarias bajo influencia de los Cinco Capos hasta que se aclaren los recientes incidentes violentos.",
+      },
+    ],
+  },
+  5: {
+    numero: "LC-0005",
+    fecha: "Año 1050 P.E. | Día 330 | 10:05 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "EL GRANERO ABRE SUS PUERTAS",
+      titulo: "VERDAL APRUEBA POR MAYORÍA ABRUMADORA LA PROPUESTA DE HADRIA VON DREVAN",
+      subtitulo:
+        "» El Consejo de Agricultores vota 10 contra 2 a favor de destinar sus excedentes a las comunidades que se levantan contra los Barones — un resultado que ha sorprendido incluso a los propios consejeros",
+      contenido: [
+        "El Consejo de Agricultores de Verdal ha aprobado esta semana, por una mayoría mucho más amplia de lo que este periódico y buena parte del sector anticipaban, poner parte de sus excedentes al servicio de las comunidades que hoy rompen con la esclavitud y el dominio de los Barones. La votación, 10 votos a favor y solo 2 en contra, se produjo tras una sesión cerrada a la que este periódico no tuvo acceso.",
+        "El resultado ha causado sorpresa entre observadores del sector. La postura pública conocida de buena parte del Consejo, mantenida durante meses, había sido siempre conservadora en materia de reservas: priorizar el mercado y evitar comprometer excedentes en causas ajenas a Verdal. Nadie, ni dentro ni fuera de la sala, conocía de antemano el contenido exacto de la propuesta que Hadria Von Drevan iba a presentar. Lo insólito, según coinciden varias fuentes, es la rapidez con la que esa postura se invirtió durante la propia sesión.",
+        "Según al menos tres fuentes presentes en la sala, consultadas por separado y bajo condición de anonimato, Hadria Von Drevan compareció ante el Consejo sin escolta armada ni gesto de amenaza — algo que sorprendió a varios consejeros tras su discurso de hace dos semanas. Se dirigió a ellos, según estas fuentes, apelando no a la caridad sino al interés a largo plazo de Verdal: pidió específicamente los excedentes que se pudren en almacenes por motivos de precio, no las reservas estratégicas ni la cosecha destinada a sus propias comunidades, y propuso condiciones estrictas de registro y trazabilidad para cada cargamento.",
+        "Este periódico no puede confirmar con exactitud qué se dijo dentro de la sala, ni qué llevó a un margen tan holgado. Contamos, eso sí, con una imagen fija de origen no oficial —posiblemente tomada por personal de servicio presente durante la sesión— que acompaña esta pieza, y con la declaración pública que el propio Hadria ofreció ante las cámaras minutos después de conocerse el resultado.",
+        "«Esta tarde, el Consejo de Verdal ha aprobado la puesta a disposición de parte de sus excedentes para sostener a las comunidades que están rompiendo con la esclavitud, la coerción y el dominio de los Barones», declaró Hadria Von Drevan ante los periodistas congregados a las puertas del Consejo. «Les felicito. No por generosidad — la generosidad es admirable, pero rara vez cambia una galaxia. Les felicito por haber comprendido algo mucho más importante: que sus graneros no servirán únicamente para mantener mercados, sino también para sostener hombres libres.»",
+        "«Quiero que recuerden de dónde llegó el primer cargamento», añadió. «De Verdal. Del Granero de la Cicatriz. Cuando esta guerra termine, habrá pueblos que recuerden durante generaciones quién les ordenó obedecer... y quién les dio de comer.»",
+        "El Consejo no ha detallado aún volúmenes, rutas ni calendario de los primeros envíos. Este periódico seguirá informando.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[MESA FRAGMENTADA] Santigua, sede por primera vez en la historia",
+          contenido: [
+            "La sesión extraordinaria convocada por Aldric Von Drevan se celebrará en Santigua, según ha podido confirmar este periódico. Es la primera vez, en toda la documentación disponible de este periódico, que la Mesa Fragmentada se reúne fuera de El Nexo.",
+            "Ni la Casa Von Drevan ni el Consejo de la Cicatriz han explicado el motivo del cambio de sede. Analistas consultados por este periódico se dividen entre quienes lo interpretan como un gesto de neutralidad hacia los Barones convocados y quienes creen que es, precisamente, lo contrario: una forma de recordarles en terreno ajeno quién dicta ahora los términos.",
+          ],
+        },
+        {
+          titulo:
+            "[LOS CINCO CAPOS] La guerra de Ashental se cobra sus primeras bajas de peso",
+          contenido: [
+            "La disputa abierta por Lady Míriam Ashental contra los Cinco Capos ha dejado esta semana sus primeras víctimas de rango medio-alto confirmadas. Zaviel Cortenz, mano derecha de Shen el Susurro desde hace más de una década, ha sido hallado muerto en circunstancias que ninguna fuente ha querido detallar. Nadie ha reclamado responsabilidad. Nadie la ha negado tampoco.",
+            "Los Gemelos Vex, por su parte, lamentan la pérdida de tres de sus cargos de mayor confianza: Orelyen Bofort, Katrin Vornhov y Livia Cavaljeri, muertos en circunstancias distintas y hasta ahora sin relación aparente entre sí, aunque coincidentes en el tiempo con la escalada abierta por Ashental. Ninguno de los Cinco Capos ha ofrecido declaración oficial.",
+          ],
+        },
+        {
+          titulo:
+            "[SANTIGUA] La Duquesa Castalvor exige explicaciones por la sede de la Mesa",
+          contenido: [
+            "No todas las voces de Santigua han recibido con entusiasmo la noticia de acoger la Mesa Fragmentada. La Duquesa Irenne Castalvor ha exigido públicamente explicaciones a Aldric Von Drevan por lo que califica de «traer la guerra de los Barones hasta nuestras propias puertas».",
+            "«Observar desde la distancia era, hasta ahora, el único privilegio real que nos quedaba», habría declarado la Duquesa ante allegados, según una fuente cercana a su casa. Su postura contrasta abiertamente con la de otros nobles menores que han optado por el silencio o la retórica vacía en semanas anteriores, y deja entrever una fractura cada vez más visible dentro de la propia Santigua.",
+          ],
+        },
+        {
+          titulo: "[RUTAS COMERCIALES] Repunte de ataques piratas",
+          contenido: [
+            "Varios convoyes de carga menor han sido atacados esta semana en rutas secundarias del sector, en incidentes que este periódico no vincula, por el momento, a ninguna facción organizada. Con la atención de las principales potencias del sector puesta en la crisis política, varias tripulaciones independientes advierten de un repunte claro de la actividad pirata oportunista.",
+            "Se recomienda precaución a cualquier nave que opere fuera de las rutas principales vigiladas.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo: "[SOCIEDAD] La Esfinge Carmesí, sin rumbo",
+          contenido: [
+            "La nave-teatro La Esfinge Carmesí ha cancelado la temporada completa, según ha podido confirmar este periódico, agravando el declive iniciado semanas atrás. Varios artistas de «La Colección» han abandonado ya la nave rumbo a mecenas menores, y el Consorte Valerius Kaine continúa sin ofrecer declaración pública alguna desde la emisión de Hadria Von Drevan.",
+            "Fuentes del entorno portuario de El Nexo aseguran que al menos un mecenas menor de la nave ha empezado a mover conversaciones discretas para adquirir participación adicional a precio reducido, ante lo que interpreta como una quiebra inminente. La propia Esfinge no ha respondido a las preguntas de este periódico.",
+          ],
+        },
+        {
+          titulo:
+            "[TRABAJO] Descontento y revuelta se extienden por varios mundos industriales",
+          contenido: [
+            "El malestar que Hadria Von Drevan prometió despertar hace semanas sigue extendiéndose, aunque de forma desigual. En Ceniza y en Pantano Gris, trabajadores han detenido la producción en enfrentamientos abiertos con capataces y guardia privada, con al menos varios heridos reportados en ambos casos.",
+            "En Horno, la situación es distinta: fuentes locales describen asambleas, pintadas y paros parciales, pero ninguna revuelta abierta. Varios trabajadores consultados, bajo anonimato, coinciden en una misma idea: levantarse sin plan ni respaldo externo, en un planeta donde depender del patrón equivale a depender del aire que se respira, es sencillamente firmar una sentencia de muerte.",
+            "También se han reportado disturbios en Viento Rojo, en El Manantial y en su luna Yesca, todos bajo dominio del Barón Skarr. Este periódico, sin embargo, advierte de que varios relatos que circulan sobre la magnitud de lo ocurrido en Viento Rojo parecen notablemente exagerados frente a lo que describen fuentes sobre el terreno, y recomienda cautela a sus lectores hasta que se confirme una versión fiable.",
+          ],
+        },
+        {
+          titulo:
+            "[SEGURIDAD PRIVADA] Los precios de la protección se disparan",
+          contenido: [
+            "La demanda de mercenarios y «consultores de seguridad» ha crecido de forma notable en las últimas dos semanas, según varias correduras de contratos consultadas por este periódico. Barones, nobles y hasta algún mecenas particular buscan blindar reactores, factorías y residencias privadas ante un clima que ya nadie se atreve a calificar de pasajero.",
+            "Los precios de contratación a corto plazo han subido con fuerza, y varias compañías de seguridad de mediana entidad reportan listas de espera por primera vez en años.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "Se mantiene la suspensión de cotización decretada la semana pasada. Sin fecha de reapertura confirmada.",
+        },
+        {
+          recurso: "Mercenarios y contratos de seguridad privada (general)",
+          variacion: "▲ +34%",
+          texto:
+            "Disparada la demanda entre Barones, nobles y mecenas particulares ante el clima de inestabilidad general.",
+        },
+        {
+          recurso: "Seguros de carga en rutas secundarias (general)",
+          variacion: "▲ +22%",
+          texto:
+            "El repunte de actividad pirata encarece con fuerza cualquier póliza fuera de las rutas principales vigiladas.",
+        },
+        {
+          recurso: "Grano y excedentes agrícolas (Verdal)",
+          variacion: "▲ +6%",
+          texto:
+            "Primeras reacciones especulativas tras la aprobación del Consejo de Agricultores, aún sin volúmenes ni calendario confirmados.",
+        },
+        {
+          recurso: "Contratos de La Esfinge Carmesí Producciones",
+          variacion: "▼ -30%",
+          texto:
+            "La cancelación de la temporada completa hunde aún más la confianza del mercado en la nave-teatro.",
+        },
+        {
+          recurso: "Hierro de alta pureza (Viento Rojo)",
+          variacion: "▼ -4%",
+          texto:
+            "Los disturbios reportados en el territorio del Barón Skarr introducen incertidumbre en la producción, pese a la falta de confirmación sobre su verdadero alcance.",
+        },
+        {
+          recurso: "Savia cicatrizante (El Manantial)",
+          variacion: "▼ -9%",
+          texto:
+            "La producción se resiente ante los disturbios reportados en el propio oasis.",
+        },
+        {
+          recurso: "Kartha Armamento",
+          variacion: "▲ +5%",
+          texto:
+            "La incertidumbre general sigue sosteniendo la demanda de armamento entre facciones del sector.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "El otro hermano",
+          texto:
+            "Circula el rumor, sin ninguna confirmación, de que Theron Von Drevan se comporta de forma extraña desde la convocatoria de la Mesa Fragmentada: reuniones a puerta cerrada, ausencias sin explicar, y un silencio público que contrasta con su papel habitual al frente de la gestión cotidiana de la Casa en El Nexo.",
+        },
+        {
+          titulo: "Dos votos que no cuadran",
+          texto:
+            "Al menos dos de los consejeros que finalmente votaron a favor de la propuesta de Hadria eran conocidos, por su postura pública sostenida durante meses, como firmes defensores de conservar las reservas de Verdal. Ninguno ha querido explicar públicamente qué le hizo cambiar de posición durante la propia sesión, y ambos han rechazado hasta ahora cualquier entrevista con este periódico.",
+        },
+        {
+          titulo: "El silencio de la Viuda",
+          texto:
+            "Kartha «La Viuda» continúa sin pronunciarse sobre las muertes de Zaviel Cortenz ni de los cargos de los Gemelos Vex, pese a mantener intereses propios en el mismo círculo golpeado por la guerra de Ashental. Ese silencio, cada semana más largo, empieza a llamar la atención de más de un analista del sector.",
+        },
+        {
+          titulo: "Compradores discretos",
+          texto:
+            "Se apunta a que el mecenas menor interesado en ampliar su participación en La Esfinge Carmesí podría no estar actuando solo, sino en representación de un tercero que prefiere permanecer, de momento, fuera de todo registro público.",
+        },
+        {
+          titulo: "Lo que de verdad pasó en Viento Rojo",
+          texto:
+            "Al menos dos tripulaciones independientes que operan en la zona aseguran que lo ocurrido en Viento Rojo dista mucho de la versión que circula por el resto del sector — aunque, según ellas mismas reconocen, en direcciones opuestas: unas hablan de una revuelta mucho más contenida de lo que se cuenta, otras de una represión mucho más dura de lo que el Barón Skarr admite.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "775 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "629 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.597 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "350 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "2.240 CR",
+        variacion: "+15.5%",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Escoltas armados para convoyes de carga en rutas secundarias. Pago por trayecto, riesgo alto. Preguntar en Módulo 6.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Personal de seguridad con experiencia en instalaciones industriales, contrato temporal renovable. Discreción absoluta. Interesados presentarse en Módulo 6.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre lo ocurrido esta semana en Viento Rojo. Pago generoso, discreción garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se buscan tripulaciones con experiencia para escolta de los primeros cargamentos agrícolas de Verdal hacia comunidades en revuelta. Consultar condiciones en Puerto Raíz.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal técnico y artístico de sustitución en La Esfinge Carmesí Producciones. Consultar condiciones a bordo — urgente.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se confirma que la sesión extraordinaria de la Mesa Fragmentada se celebrará en Santigua. Fecha exacta pendiente de anuncio oficial.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recomienda extremar la precaución en rutas secundarias del sector ante el repunte de actividad pirata reportado esta semana.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se mantiene la suspensión de cotización en La Bolsa del Consorcio de Mercaderes hasta nuevo aviso.",
+      },
+      {
+        tipo: "TRABAJO",
+        texto:
+          "El Consejo de Agricultores de Verdal anunciará en los próximos días el procedimiento de registro y trazabilidad para los cargamentos de ayuda a comunidades en revuelta.",
       },
     ],
   },
