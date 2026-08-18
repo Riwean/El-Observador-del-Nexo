@@ -802,6 +802,297 @@ const ediciones = {
       },
     ],
   },
+  4: {
+    numero: "LC-0004",
+    fecha: "Año 1050 P.E. | Día 323 | 08:40 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "CONVOCATORIA EXTRAORDINARIA",
+      titulo:
+        "EL LEÓN DEL NEXO ROMPE SU SILENCIO: CONVOCA A TODA LA CICATRIZ",
+      subtitulo:
+        "» Aldric Von Drevan exige, por primera vez en memoria reciente, presencia formal de los Barones del Polvo en la Mesa Fragmentada",
+      contenido: [
+        "Aldric Von Drevan ha roto esta semana un silencio que se prolongaba desde la emisión de su hijo Hadria, convocando una sesión extraordinaria de la Mesa Fragmentada al completo. Por primera vez en memoria reciente, la citación exige presencia formal de los Barones del Polvo junto al resto de facciones del sector.",
+        "Ningún archivo de este periódico recoge la última vez que la Mesa se reunió en pleno con carácter de urgencia. Ni los archiveros más veteranos de El Nexo logran precisar la fecha con exactitud — algunos aseguran, sin poder confirmarlo, que fue antes de que naciera la mayoría de nuestros lectores.",
+        "La convocatoria no viene acompañada de declaración de intenciones. Aldric no ha desmentido a su hijo. Tampoco lo ha respaldado. Su silencio, cuidadosamente medido, se ha convertido en la noticia en sí misma.",
+        "La Cicatriz entera espera ahora una fecha, un lugar, y sobre todo, una explicación.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[MECENAZGO] Míriam Ashental rompe el contrato de Orfeo y declara la guerra a los Cinco Capos",
+          contenido: [
+            "En uno de los gestos más audaces de la semana, Lady Míriam Ashental ha anunciado públicamente la ruptura unilateral del contrato que la unía al cantante Orfeo. «Lo que le hicieron no fue parte de ningún trato que yo firmara», ha declarado, en una intervención breve pero cargada de una furia que pocos recuerdan haberle visto antes.",
+            "Ashental no se ha quedado en la ruptura. Ha acusado abiertamente a uno o varios de los Cinco Capos de El Nexo de complicidad o encubrimiento en lo ocurrido a Orfeo, sin ofrecer nombres — de momento. En los últimos días se han reportado ya varios incidentes violentos en zonas bajo influencia de los Capos: un almacén incendiado en el sector portuario, un enfrentamiento entre guardia privada de Ashental y hombres no identificados, y al menos un cadáver hallado en circunstancias que las autoridades locales prefieren no detallar.",
+            "Nunca antes una mecenas del sector había declarado la guerra a un Capo en público. La pregunta que recorre El Nexo esta semana no es si habrá represalia, sino cuál de los cinco la ejecutará primero.",
+          ],
+        },
+        {
+          titulo:
+            "[CASA VON DREVAN] La orden partió del propio patriarca, según testigos",
+          contenido: [
+            "Fuentes próximas a los muelles privados de la Casa Von Drevan aseguran que la orden de convocatoria partió directamente del propio Aldric, sin pasar por consejero alguno ni por su hijo Theron, encargado hasta ahora de la gestión cotidiana de la casa en El Nexo.",
+            "La citación, según estas mismas fuentes, no llegó por los canales administrativos habituales, sino en persona, por mensajero de la propia casa — un gesto que varios analistas consultados por este periódico interpretan como deliberadamente solemne.",
+          ],
+        },
+        {
+          titulo:
+            "[SINAIRE] Exploración en pausa: la Hermandad choca con la Tecnocracia",
+          contenido: [
+            "La Hermandad de Santuario ha suspendido temporalmente las expediciones hacia el sistema Sinaire, citando «reorganización de prioridades tras los sucesos recientes». La Tecnocracia de Forja Muerta, que había solicitado formalmente acceso a Silicial hace apenas dos semanas, ha protestado ante el Consejo de la Cicatriz, acusando a la Hermandad de utilizar la crisis actual como excusa para retener en exclusiva el control del enlace.",
+            "Fuentes internas de la Hermandad, consultadas bajo anonimato, no ocultan cierto alivio ante la pausa. Este periódico no puede evitar preguntarse si ese alivio tiene algo que ver con lo que la Hermandad lleva semanas sin explicar sobre sus propios sensores.",
+          ],
+        },
+        {
+          titulo:
+            "[LOS CINCO CAPOS] División interna ante el caos general",
+          contenido: [
+            "Fuentes internas describen una reunión de urgencia entre los Cinco Capos, convocada en paralelo a la Mesa Fragmentada pero mantenida, como es habitual, fuera del alcance de este periódico. Al menos dos de ellos verían con buenos ojos aprovechar el caos generalizado —Hadria, los Barones, ahora Ashental— para expandir territorio propio. Otros, sin embargo, temen que la «Cuenta Final» prometida por Hadria acabe salpicando también a quienes mantienen tratos con esclavistas del sector.",
+            "Entre los cinco, el silencio de Kartha «La Viuda» resulta especialmente notorio esta semana. Ni una declaración, ni un desmentido, ni una palabra sobre la acusación de Ashental.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[BARONES DEL POLVO] Tregua entre Viento Rojo y Horno: un miedo que nadie nombra",
+          contenido: [
+            "El Barón Skarr, de Viento Rojo, y su homólogo de Horno han anunciado una tregua temporal, presentada oficialmente como «cooperación ante amenazas externas comunes». Ambos han ordenado, según fuentes internas de sus respectivos territorios, inspecciones exhaustivas de reactores, factorías y sistemas de soporte — una paranoia que ninguno de los dos ha sabido, o querido, justificar en público.",
+            "Rivales durante generaciones, ambos Barones se encuentran ahora unidos por un miedo que ninguno de los dos se atreve a nombrar en voz alta: la advertencia de Hadria Von Drevan de que «Venas Rojas no era la única» sigue resonando esta semana en cada reactor de la Cicatriz.",
+          ],
+        },
+        {
+          titulo:
+            "[SANTIGUA] La declaración de un noble menor: mucho honor, ningún compromiso",
+          contenido: [
+            "Desde Santigua, el Duque Bellamiro Osvent ha emitido esta semana una extensa declaración sobre «el deber ancestral de las casas nobles con el pueblo de la Cicatriz», cargada de referencias al honor heredado y la protección debida a los débiles. La declaración no incluye, en ninguno de sus párrafos, un solo compromiso concreto de flotas, recursos o intervención directa.",
+            "Su declaración se ha hecho pública. Sus flotas, de momento, no.",
+          ],
+        },
+        {
+          titulo:
+            "[ECONOMÍA] La Bolsa cierra cautelarmente ante la volatilidad",
+          contenido: [
+            "El Consorcio de Mercaderes ha decretado la suspensión de cotización en La Bolsa (Módulo 2 de El Nexo) ante la volatilidad extrema registrada desde la emisión de Hadria Von Drevan. Los activos vinculados a instalaciones de los Barones han caído en picado en cuestión de días, mientras inversores nerviosos retiran capital sin que nadie en el sector sepa todavía cómo valorar el riesgo real de una guerra abierta.",
+            "El Consorcio no ha ofrecido fecha de reapertura. Este periódico seguirá informando en cuanto la haya.",
+          ],
+        },
+        {
+          titulo:
+            "[SOCIEDAD] La Esfinge Carmesí, a la deriva",
+          contenido: [
+            "La nave-teatro La Esfinge Carmesí atraviesa la peor semana de su historia reciente. Al menos cuatro funciones han sido canceladas sin explicación oficial, y varios de sus artistas de «La Colección» han sido trasladados discretamente a otras naves de mecenas menores, según fuentes del entorno portuario de El Nexo.",
+            "El Consorte Valerius Kaine, propietario nominal de la nave y habitualmente pródigo en apariciones públicas, no ha hecho declaración alguna desde la emisión de Hadria — algo que, en sí mismo, ya empieza a comentarse en los salones del sector como una ausencia elocuente. Fuentes cercanas a la tripulación hablan de tensión creciente entre Kaine y el Maestro Kaine, director musical de la nave, aunque ninguna de las dos partes ha confirmado nada al respecto.",
+            "Con Orfeo fuera de contrato y Madame Vesper reduciendo sus apariciones en escena semana tras semana, algunos en El Nexo empiezan a preguntarse en voz baja si «el símbolo de que la belleza sobrevive en la Cicatriz» no estará, también él, a punto de irse a pique.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "El Consorcio de Mercaderes decreta la suspensión de cotización ante la volatilidad extrema registrada desde la emisión de Hadria Von Drevan. Sin fecha de reapertura.",
+        },
+        {
+          recurso: "Activos vinculados a los Barones del Polvo (general)",
+          variacion: "▼ -19%",
+          texto:
+            "Caída generalizada mientras los inversores no encuentran forma de valorar el riesgo de una guerra abierta contra los Barones.",
+        },
+        {
+          recurso: "Contratos de La Esfinge Carmesí Producciones",
+          variacion: "▼ -12%",
+          texto:
+            "Cuatro funciones canceladas esta semana y ningún artista de renombre en cartel. El mercado empieza a dudar de la solvencia de la nave-teatro.",
+        },
+        {
+          recurso: "Seguros y protección privada (general)",
+          variacion: "▲ +26%",
+          texto:
+            "Disparada la demanda de servicios de protección anti-sabotaje entre instalaciones de los Barones, tras la advertencia de Hadria sobre reactores y factorías.",
+        },
+        {
+          recurso: "Equipo de exploración y protección química (general)",
+          variacion: "▼ -8%",
+          texto:
+            "La pausa de la Hermandad en Sinaire enfría de golpe la fiebre especulativa de la semana pasada.",
+        },
+        {
+          recurso: "Contratos especulativos sobre silicio de Silicial (sin extraer)",
+          variacion: "▼ -11%",
+          texto:
+            "Sin expediciones activas, el papel especulativo pierde parte del brillo que tuvo la semana anterior.",
+        },
+        {
+          recurso: "Kartha Armamento",
+          variacion: "▲ +9%",
+          texto:
+            "La incertidumbre general dispara la demanda de armamento entre facciones que prefieren no llegar desarmadas a lo que venga.",
+        },
+        {
+          recurso: "Hierro de alta pureza (Viento Rojo)",
+          variacion: "▲ +3.1%",
+          texto:
+            "La tregua con Horno estabiliza las rutas de exportación tras semanas de tensión.",
+        },
+        {
+          recurso: "Savia cicatrizante (El Manantial)",
+          variacion: "▲ +2%",
+          texto: "Semana estable, sin sobresaltos en la producción.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "Un mensajero, no un canal",
+          texto:
+            "Se insiste en que Aldric eligió deliberadamente el gesto formal del mensajero en persona en vez de la vía administrativa habitual — algunos lo leen como preparación de algo mayor que una simple reunión de facciones.",
+        },
+        {
+          titulo: "Rumbo a Santigua",
+          texto:
+            "Testigos en los muelles de El Nexo aseguran que una nave con distintivo parcialmente oculto de la Casa Von Drevan partió hacia Santigua horas después de la emisión de Hadria, con el propio Hadria a bordo. Nadie ha confirmado si viaja como invitado, como protegido o como algo distinto de ambas cosas.",
+        },
+        {
+          titulo: "Los sensores que no callan",
+          texto:
+            "Vuelve a circular la sospecha, ya apuntada la semana pasada, de que la Hermandad sabía más de lo que ha admitido sobre la actividad al otro lado de la puerta de Sinaire — y que la pausa actual tiene menos que ver con «prioridades» y más con contener lo que sea que encontraron.",
+        },
+        {
+          titulo: "El nombre que Ashental no dice",
+          texto:
+            "Varias fuentes dan por hecho que la acusación de Lady Míriam Ashental contra los Cinco Capos apunta a uno en concreto, aunque nadie se atreve a nombrarlo en público. El silencio de Kartha «La Viuda» esta semana no ayuda a despejar la duda.",
+        },
+        {
+          titulo: "Una nave que se hunde en silencio",
+          texto:
+            "Se comenta en los salones de El Nexo que la tensión entre el Consorte Valerius Kaine y el Maestro Kaine, director musical de La Esfinge Carmesí, ya no es solo profesional. Ninguno de los dos ha querido hacer declaraciones.",
+        },
+        {
+          titulo: "Reactores bajo la lupa",
+          texto:
+            "Se rumorea que no solo Viento Rojo y Horno han ordenado inspecciones internas tras la advertencia de Hadria: al menos otros dos Barones habrían solicitado, en privado, servicios de detección de sabotaje a contratistas de fuera del sector.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "768 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "629 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.597 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "350 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "1.940 CR",
+        variacion: "+15.4%",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal de seguridad con experiencia en detección de sabotaje e inspección de reactores. Contrato temporal, pago en efectivo, discreción absoluta. Preguntar en Módulo 6.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se necesita personal de escolta para la guardia privada de Lady Míriam Ashental. Riesgo alto, compensación acorde. Interesados presentarse en las oficinas de La Esfinge Carmesí.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre la reunión de urgencia de los Cinco Capos. Pago generoso y discreción garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Auditores financieros para revisar carteras expuestas al cierre cautelar de La Bolsa. Experiencia en correduría valorada. Módulo 2, La Bolsa.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "La Esfinge Carmesí Producciones busca personal técnico y artístico de sustitución tras varias bajas recientes. Consultar condiciones a bordo.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se convoca sesión extraordinaria de la Mesa Fragmentada, con presencia obligatoria de todas las facciones reconocidas del Consejo de la Cicatriz, incluidos los Barones del Polvo. Fecha y lugar se comunicarán a través de los canales oficiales.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Queda suspendida la cotización en La Bolsa del Consorcio de Mercaderes hasta nuevo aviso. Toda operación pendiente queda congelada.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Se mantiene la restricción de acceso a la puerta de Salto de Sinaire, ahora también sin actividad de expedición autorizada por parte de la Hermandad de Santuario.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recomienda a la población de El Nexo evitar las zonas portuarias bajo influencia de los Cinco Capos hasta que se aclaren los recientes incidentes violentos.",
+      },
+    ],
+  },
 };
 
 // Ediciones especiales: fuera de la numeración semanal normal (no son "3.5" ni similar).
@@ -1076,21 +1367,44 @@ function renderizarSelector() {
     return;
   }
 
-  const botonesNormales = numeros
-    .map((n) => {
-      const activa = !modoEspecial && n === edicionActual ? " active" : "";
-      return `<button class="edition-btn${activa}" data-edicion="${n}">${n}</button>`;
+  // Orden de publicación real: cada edición normal y cada especial lleva un
+  // número de "día" en su campo fecha. Los combinamos y ordenamos por ese día
+  // para que el selector siga el orden cronológico en el que se publicaron,
+  // en vez de mostrar siempre primero todas las normales y luego los especiales.
+  const extraerDia = (fecha) => {
+    const match = fecha.match(/Día (\d+)/);
+    return match ? Number(match[1]) : 0;
+  };
+
+  const itemsNormales = numeros.map((n) => ({
+    tipo: "normal",
+    clave: n,
+    dia: extraerDia(ediciones[n].fecha),
+  }));
+  const itemsEspeciales = clavesEspeciales.map((clave) => ({
+    tipo: "especial",
+    clave,
+    dia: extraerDia(especiales[clave].fecha),
+  }));
+
+  const itemsOrdenados = [...itemsNormales, ...itemsEspeciales].sort(
+    (a, b) => a.dia - b.dia,
+  );
+
+  const html = itemsOrdenados
+    .map((item) => {
+      if (item.tipo === "normal") {
+        const activa =
+          !modoEspecial && item.clave === edicionActual ? " active" : "";
+        return `<button class="edition-btn${activa}" data-edicion="${item.clave}">${item.clave}</button>`;
+      }
+      const activa =
+        modoEspecial && item.clave === edicionActual ? " active" : "";
+      return `<button class="edition-btn edition-btn-especial${activa}" data-especial="${item.clave}">${especiales[item.clave].numero}</button>`;
     })
     .join("");
 
-  const botonesEspeciales = clavesEspeciales
-    .map((clave) => {
-      const activa = modoEspecial && clave === edicionActual ? " active" : "";
-      return `<button class="edition-btn edition-btn-especial${activa}" data-especial="${clave}">${especiales[clave].numero}</button>`;
-    })
-    .join("");
-
-  selector.innerHTML = botonesNormales + botonesEspeciales;
+  selector.innerHTML = html;
 
   selector.querySelectorAll(".edition-btn[data-edicion]").forEach((btn) => {
     btn.addEventListener("click", () =>
