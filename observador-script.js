@@ -1365,6 +1365,265 @@ const ediciones = {
       },
     ],
   },
+  6: {
+    numero: "LC-0006",
+    fecha: "Año 1050 P.E. | Día 337 | 09:15 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "CUENTA ATRÁS PARA LA MESA",
+      titulo: "A UNA SEMANA DE LA MESA, EL HEREDERO SIGUE SIN APARECER",
+      subtitulo:
+        "» Los Barones del Polvo envían representantes a Santigua. Theron Von Drevan, no",
+      contenido: [
+        "Con apenas siete días para la sesión extraordinaria de la Mesa Fragmentada en Santigua, la mayoría de los convocados ya se encuentran presentes o han confirmado su llegada inminente. Los Barones del Polvo, fieles a su costumbre de no exponerse en persona, han optado por enviar representantes de confianza en su lugar — una práctica habitual que nadie en el Consejo ha cuestionado hasta ahora.",
+        "Quien sí genera preguntas con su ausencia es Theron Von Drevan. A una semana de la sesión, el hijo legítimo de Aldric Von Drevan no se ha presentado en Santigua, ni ha confirmado fecha de llegada, según fuentes de la organización consultadas por este periódico.",
+        "La ausencia no es un detalle menor. Según el protocolo nobiliario vigente, toda convocatoria formal de la Casa exige la presencia física del heredero legítimo — o, en su defecto, la renuncia pública y expresa a sus derechos de sucesión. Ningún jurista consultado por este periódico ha sabido precisar qué ocurre exactamente si Theron opta, simplemente, por no presentarse sin renunciar tampoco.",
+        "Fuentes cercanas a la Casa Von Drevan, que piden mantener el anonimato, describen un ambiente de tensión creciente en El Nexo. Ni Theron ni su entorno han respondido a las preguntas de este periódico. Aldric Von Drevan, por su parte, tampoco ha hecho declaración alguna al respecto.",
+        "Quedan siete días. La Cicatriz entera espera ahora saber si el heredero de la Casa Von Drevan se presentará ante su padre — o si, por primera vez en generaciones, un heredero legítimo dejará pasar su propio nombre sin decir una palabra.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo: "[LEYENDA] Los Hijos de la Oscuridad: el mito, otra vez",
+          contenido: [
+            "Cuatro naves. Cuatro rutas distintas. Ningún superviviente. En apenas una semana, este periódico ha podido confirmar al menos cuatro incidentes con un mismo patrón inquietante: una nave de suministro vinculada a uno de los Barones del Polvo, un carguero del Sindicato de El Nexo, el yate privado de una casa noble menor y un transporte de mercenarios contratados han desaparecido sin dejar rastro de combate, saqueo convencional, ni señal de socorro registrada.",
+            "El patrón, familiar para cualquiera que lleve suficiente tiempo en rutas secundarias del sector, tiene nombre desde hace generaciones: Los Hijos de la Oscuridad. Casi nadie en El Nexo cree que sean reales — la explicación favorita sigue siendo la de siempre, una leyenda útil para contrabandistas y aseguradoras por igual.",
+            "Lo que empieza a inquietar a algunos analistas no es el mito en sí, sino la variedad. Barones, Sindicato, nobleza, mercenarios: cuatro tipos de víctima completamente distintos, unidos únicamente por el modo exacto en que desaparecieron. Este periódico no encuentra, de momento, ningún patrón que explique a quién eligen. Solo cómo.",
+          ],
+        },
+        {
+          titulo: "[VERDAL] Primeros cargamentos de ayuda, ya en ruta",
+          contenido: [
+            "Los primeros convoyes agrícolas aprobados por el Consejo de Agricultores de Verdal han comenzado a moverse esta semana hacia las comunidades en revuelta, según ha podido confirmar este periódico. No se han detallado públicamente rutas ni volúmenes exactos, aunque fuentes del sector no descartan que alguna de las escoltas haya sufrido ya algún incidente menor, en un contexto de repunte general de actividad pirata en rutas secundarias.",
+          ],
+        },
+        {
+          titulo:
+            "[BARONES DEL POLVO] Tanteos de última hora antes de sentarse a la misma mesa",
+          contenido: [
+            "Con la mayoría de representantes ya en Santigua, fuentes cercanas a la organización de la Mesa describen una semana de reuniones informales y tanteos de alianza entre distintos Barones, antes de verse obligados a compartir sala por primera vez en memoria reciente. Ninguno ha hecho declaración pública. El contraste con la ausencia de Theron Von Drevan no ha pasado desapercibido entre los presentes.",
+          ],
+        },
+        {
+          titulo:
+            "[VIENTO ROJO] El Barón Skarr refuerza el orden tras las revueltas",
+          contenido: [
+            "Tras los disturbios de la semana pasada en Viento Rojo, El Manantial y la luna Yesca, el Barón Skarr ha anunciado medidas de «restablecimiento del orden» que, según fuentes locales, incluyen toque de queda parcial y refuerzo notable de la guardia privada en varios puntos del territorio. No se han reportado nuevos incidentes desde la implementación de las medidas, aunque tampoco se ha confirmado calma real más allá de la ausencia de noticias.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo: "[SOCIEDAD] La Esfinge Carmesí, ¿venta a la vista?",
+          contenido: [
+            "Fuentes del entorno portuario de El Nexo aseguran que el mecenas menor interesado en ampliar su participación en La Esfinge Carmesí ha formalizado ya una primera oferta de compra dirigida al Consorte Valerius Kaine. Ni la nave ni el propio Kaine han confirmado ni desmentido la información hasta el cierre de esta edición.",
+          ],
+        },
+        {
+          titulo: "[ECONOMÍA] Crece la presión para reabrir La Bolsa",
+          contenido: [
+            "Gremios y comerciantes de El Nexo presionan al Consorcio de Mercaderes para que fije una fecha concreta de reapertura de La Bolsa, cerrada cautelarmente desde hace semanas. El Consorcio insiste en que la decisión «se tomará cuando las condiciones lo permitan», sin ofrecer plazo alguno.",
+          ],
+        },
+        {
+          titulo:
+            "[TRABAJO] El nombre de Kael Vostok, ya fuera de su propio control",
+          contenido: [
+            "El caso de Kael «53» Vostok sigue citándose esta semana en asambleas de trabajadores de varios planetas industriales, convertido ya en referencia habitual del movimiento de descontento que se extiende por el sector. Fuentes consultadas por este periódico coinciden en que el propio Vostok no ha hecho declaración pública alguna desde hace tiempo — su nombre, sin embargo, sigue circulando con vida propia.",
+          ],
+        },
+        {
+          titulo: "[EL NEXO] La Mansión Von Drevan, cada vez más vacía",
+          contenido: [
+            "Buena parte del personal y la guardia de la Casa Von Drevan en El Nexo ha abandonado la mansión familiar en las últimas semanas, según fuentes del entorno doméstico consultadas por este periódico, en lo que varios describen como un éxodo silencioso hacia Santigua. Quienes permanecen mantienen un silencio absoluto sobre el paradero de Theron Von Drevan.",
+            "Un vecino del Módulo residencial, que pide no ser identificado, resume el sentir general: «Antes había vida ahí dentro. Ahora solo hay guardias que ya no sé para quién trabajan.»",
+          ],
+        },
+        {
+          titulo: "[SEGURIDAD] Kartha Armamento refuerza su propia flota",
+          contenido: [
+            "Kartha «La Viuda» ha ampliado en las últimas semanas la escolta armada de sus propias operaciones, según fuentes del sector, en lo que varios interpretan como una medida de precaución más que como respuesta directa a ningún incidente concreto. La propia Kartha no ha hecho declaración alguna al respecto.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "Se mantiene la suspensión de cotización. Crece la presión de gremios y comerciantes para fijar fecha de reapertura.",
+        },
+        {
+          recurso: "Grano y excedentes agrícolas (Verdal)",
+          variacion: "▲ +11%",
+          texto:
+            "Repunta con la confirmación de que los primeros cargamentos ya se han puesto en marcha.",
+        },
+        {
+          recurso: "Seguros de carga en rutas secundarias (general)",
+          variacion: "▲ +18%",
+          texto:
+            "Vuelve a dispararse tras los cuatro incidentes atribuidos a Los Hijos de la Oscuridad, sumados al repunte pirata ya reportado.",
+        },
+        {
+          recurso: "Mercenarios y contratos de seguridad privada (general)",
+          variacion: "▲ +9%",
+          texto:
+            "La demanda sigue al alza, ahora también entre tripulaciones que operan en rutas secundarias.",
+        },
+        {
+          recurso: "Contratos de La Esfinge Carmesí Producciones",
+          variacion: "▼ -14%",
+          texto:
+            "El mercado reacciona a los rumores de una oferta de compra sobre la nave-teatro.",
+        },
+        {
+          recurso: "Hierro de alta pureza (Viento Rojo)",
+          variacion: "▼ -2%",
+          texto:
+            "Estabilidad relativa tras el refuerzo de seguridad anunciado por el Barón Skarr.",
+        },
+        {
+          recurso: "Kartha Armamento",
+          variacion: "▲ +4%",
+          texto:
+            "La incertidumbre general sigue sosteniendo la demanda de armamento en el sector.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "Santigua, más nerviosa de lo que aparenta",
+          texto:
+            "Según fuentes próximas a varias casas menores, la postura de alarma pública de la Duquesa Irenne Castalvor sobre la sede de la Mesa Fragmentada cuenta ya con más apoyos privados de los que se reconocen en público. Ninguna otra casa se ha sumado abiertamente a su posición — pero el silencio, esta semana, empieza a sonar distinto.",
+        },
+        {
+          titulo: "El otro hermano, ¿rumbo a dónde?",
+          texto:
+            "Vuelve a circular el rumor sobre el paradero de Theron Von Drevan. Al menos dos fuentes coinciden en que sí abandonó El Nexo hace días — lo extraño, insisten, es que ninguna ruta conocida lo sitúa camino de Santigua. Nadie ha sabido explicar hacia dónde viaja el heredero, ni por qué.",
+        },
+        {
+          titulo: "¿Y si no eligen?",
+          texto:
+            "Circula la teoría, sin ninguna confirmación, de que Los Hijos de la Oscuridad no seleccionan a sus víctimas en absoluto — que el patrón que todos buscan simplemente no existe, y que cualquiera que cruce cierta ruta en cierto momento corre la misma suerte, sin distinción de bando, casa o fortuna.",
+        },
+        {
+          titulo: "¿Capturado Shen el Susurro?",
+          texto:
+            "Circula sin confirmar, aunque cada vez con más insistencia, que Lady Míriam Ashental habría logrado capturar con vida a Shen el Susurro. Ninguna fuente ha podido precisar dónde ni en qué condiciones. Ni Ashental ni ningún representante de los Cinco Capos han hecho declaración alguna al respecto.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "775 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "651 CR",
+        variacion: "+3.5%",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.702 CR",
+        variacion: "+4.0%",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "301 CR",
+        variacion: "-14.0%",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "2.115 CR",
+        variacion: "-5.6%",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Escoltas con experiencia verificable para convoyes agrícolas de Verdal. Pago por trayecto, riesgo alto. Consultar condiciones en Puerto Raíz.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre los cuatro incidentes atribuidos a Los Hijos de la Oscuridad. Pago muy generoso, discreción absoluta garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Personal de seguridad con experiencia en rutas secundarias, contrato inmediato. Se valorará experiencia previa en incidentes de desaparición de naves. Módulo 6.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal técnico y artístico de sustitución en La Esfinge Carmesí Producciones. Se valorará experiencia previa en naves de entretenimiento. Consultar condiciones a bordo.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se recuerda a todas las facciones convocadas que la sesión extraordinaria de la Mesa Fragmentada se celebrará en Santigua en un plazo de siete días. Se ruega confirmación de asistencia a la mayor brevedad.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recomienda extremar la precaución en cualquier ruta secundaria del sector ante el repunte de incidentes de desaparición de naves sin explicación confirmada.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se mantiene la suspensión de cotización en La Bolsa del Consorcio de Mercaderes. Sin fecha de reapertura confirmada.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Viento Rojo notifica restricciones temporales de movimiento nocturno en varias zonas de su territorio, por orden del Barón Skarr.",
+      },
+    ],
+  },
 };
 
 // Ediciones especiales: fuera de la numeración semanal normal (no son "3.5" ni similar).
