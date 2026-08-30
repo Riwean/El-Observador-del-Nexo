@@ -1373,7 +1373,7 @@ const ediciones = {
       alerta: "CUENTA ATRÁS PARA LA MESA",
       titulo: "A UNA SEMANA DE LA MESA, EL HEREDERO SIGUE SIN APARECER",
       subtitulo:
-        "» Los Barones del Polvo envían representantes a Santigua. Theron Von Drevan, no",
+        "» Los Barones del Polvo envían representantes a Santigua. Theron Von Drevan, no.",
       contenido: [
         "Con apenas siete días para la sesión extraordinaria de la Mesa Fragmentada en Santigua, la mayoría de los convocados ya se encuentran presentes o han confirmado su llegada inminente. Los Barones del Polvo, fieles a su costumbre de no exponerse en persona, han optado por enviar representantes de confianza en su lugar — una práctica habitual que nadie en el Consejo ha cuestionado hasta ahora.",
         "Quien sí genera preguntas con su ausencia es Theron Von Drevan. A una semana de la sesión, el hijo legítimo de Aldric Von Drevan no se ha presentado en Santigua, ni ha confirmado fecha de llegada, según fuentes de la organización consultadas por este periódico.",
@@ -1681,6 +1681,67 @@ const especiales = {
         contenido: [
           "El Nexo amaneció esta noche sin saber muy bien qué acaba de presenciar. Fuentes cercanas a Los Cinco Capos hablan de una reunión de urgencia convocada antes incluso de que terminara la transmisión. Los Barones, por su parte, guardan un silencio que este periódico no sabe interpretar todavía como prudencia o como pánico. De la Casa Von Drevan, ni una palabra.",
           "El Observador del Nexo seguirá esta historia en las próximas horas y días, según se conozcan más detalles y reacciones oficiales.",
+        ],
+      },
+    ],
+  },
+  esp2: {
+    numero: "ESP-02",
+    fecha: "Año 1050 P.E. | Día 341 | 06:30 HST — BLOQUEO ACTIVO",
+    etiqueta: "EDICIÓN ESPECIAL",
+    programa: "EL OBSERVADOR DEL NEXO — EDICIÓN DE ÚLTIMA HORA",
+    lema: "CUANDO BAJO FONDO CALLA, ALGUIEN HA GANADO.",
+    destacada: {
+      alerta: "BLOQUEO TOTAL",
+      titulo:
+        "MÍRIAM ASHENTAL CIERRA EL MÓDULO 3 POR COMPLETO: SHEN EL SUSURRO, MUERTO",
+      subtitulo:
+        "» Bajo Fondo permanece sellado desde hace horas. El Observador estima ya varios cientos de muertos entre las cinco facciones que gobiernan el mercado negro de El Nexo",
+      imagen: "especial-ashental-01.png",
+      contenido: [
+        "Bajo Fondo lleva más de doce horas completamente sellado. Los accesos al Módulo 3 permanecen bloqueados desde el exterior, las comunicaciones internas están cortadas, y la guardia privada de Lady Míriam Ashental controla cada entrada conocida al laberinto vertical que durante generaciones ha gobernado el mercado negro de El Nexo. Ni el Sindicato, ni las autoridades habituales de la estación, ni este periódico han logrado establecer contacto con nadie en el interior.",
+        "Lo único confirmado hasta el cierre de esta edición: Shen el Susurro, uno de los Cinco Capos que gobiernan Bajo Fondo desde hace décadas, está muerto. Este periódico no ha podido determinar con exactitud las circunstancias, aunque múltiples fuentes coinciden en señalar a Ashental como responsable directa, culminando así la guerra abierta que ella misma declaró hace semanas tras la ruptura de su relación contractual con Orfeo.",
+        "Lo que ha ocurrido después desborda con mucho cualquier antecedente reciente. Fuentes que han logrado salir del módulo en las últimas horas —muy pocas, y ninguna dispuesta a dar su nombre— describen algo que ya no se parece a una represalia selectiva, sino a una purga sistemática. El Observador estima, a partir de estos testimonios y de la escala del bloqueo, que la cifra de muertos asciende ya a varios cientos, repartidos entre las cinco facciones que gobiernan Bajo Fondo, muchas de ellas sin relación directa alguna con lo ocurrido a Orfeo.",
+        "Nadie sabe con certeza qué información obtuvo Ashental de Shen antes de su muerte. Lo único evidente desde fuera del módulo es la magnitud de la respuesta.",
+      ],
+    },
+    piezas: [
+      {
+        titulo: "QUÉ SE SABE DEL CIERRE",
+        contenido: [
+          "Testigos situados en los límites del Módulo 3 describen un despliegue repentino y coordinado de la guardia privada de Ashental hace poco más de doce horas: sellado simultáneo de todos los accesos conocidos, corte de comunicaciones internas, y un silencio absoluto que ni el propio Sindicato del Nexo ha logrado romper. Ni las autoridades habituales de la estación —tan limitadas siempre en Bajo Fondo— ni ninguna facción ajena al conflicto han conseguido entrar.",
+          "Los pocos residentes que lograron salir antes del cierre hablan de disparos constantes durante horas, de calles enteras del módulo —porque Bajo Fondo, pese a su nombre, es una ciudad vertical completa, no un simple pasillo de contrabando— convertidas en zona de combate abierto, con la gravedad reducida del módulo convirtiendo cada intercambio de disparos en algo tan lento como letal: cuerpos y munición cayendo despacio en plena calle, sin ninguna prisa por tocar el suelo.",
+          "Uno de estos testigos, comerciante habitual de El Jardín de Humo que pide mantener el anonimato, describe la escena con una sola frase: «Vi cuerpos cayendo despacio entre los pisos, como si el propio módulo se hubiera olvidado de cuánto pesa la gente». Este periódico no ha podido verificar de forma independiente el relato, pero coincide con al menos otros tres testimonios recogidos por separado.",
+        ],
+      },
+      {
+        titulo: "LA CAZA POR FACCIONES",
+        imagen: "especial-ashental-02.png",
+        contenido: [
+          "Territorio de Kartha «La Viuda»: varios de sus hombres de confianza figuran entre las víctimas confirmadas por testigos, en el sector norte del módulo. Kartha, que ya guardaba un silencio muy comentado desde el inicio del conflicto, no ha hecho declaración alguna. Su vinculación —aunque menor— con La Esfinge Carmesí no ha pasado desapercibida para quienes buscan explicar el alcance de esta escalada.",
+          "Territorio de Grox: El Foso de las Apuestas, la arena clandestina que Grox gestiona desde hace años, ha quedado reducida a lo que un testigo describe como «un cementerio flotante». Decenas de muertos, según las estimaciones más conservadoras. No está claro si Grox sigue con vida.",
+          "Los Gemelos Vex: ya venían sufriendo bajas de peso en las últimas semanas. Lo ocurrido esta noche parece haber cruzado una línea distinta: fuentes hablan de un asedio total a Los Compartimentos, su territorio sellado y tradicionalmente impenetrable. Si queda alguien al mando de la facción, no lo sabe nadie fuera del módulo.",
+          "El Tasador: ninguna baja confirmada — nadie, ni siquiera dentro del propio Bajo Fondo, ha sabido nunca con certeza quién es. Su red de intermediarios, sin embargo, parece haber quedado completamente paralizada desde el inicio del cierre.",
+        ],
+      },
+      {
+        titulo: "EL SILENCIO DE LOS OTROS CAPOS",
+        contenido: [
+          "Ninguna de las facciones afectadas ha emitido comunicado alguno. El propio Sindicato del Nexo, que depende en gran medida de la estabilidad de Bajo Fondo para buena parte de su economía informal, mantiene igualmente silencio. Este periódico interpreta esa falta de reacción de dos maneras posibles: parálisis genuina ante la magnitud de lo ocurrido, o el cálculo frío de que cualquier declaración pública ahora mismo equivaldría a convertirse en el siguiente objetivo.",
+          "Analistas consultados por este periódico señalan además un efecto colateral inmediato: con Bajo Fondo paralizado, buena parte de la economía informal de El Nexo —que representa, según estimaciones previas, en torno al 60% del total de transacciones de la estación— se encuentra esta noche efectivamente congelada.",
+        ],
+      },
+      {
+        titulo: "¿QUÉ SABÍA SHEN?",
+        contenido: [
+          "La pregunta que nadie ha podido responder hasta el cierre de esta edición es la más simple y la más inquietante: qué información llegó a poseer Shen el Susurro que pudiera justificar una respuesta de esta escala. Su red de espionaje era, según fuentes consultadas por este periódico en ediciones anteriores, la más extensa de todo El Nexo. Si Ashental obtuvo acceso a esa red antes de que Shen muriera, el propio bloqueo del módulo podría no ser el final de esta historia, sino apenas el principio.",
+        ],
+      },
+      {
+        titulo: "REACCIONES FUERA DE BAJO FONDO",
+        contenido: [
+          "El resto de El Nexo observa con una mezcla de fascinación y pánico contenido. Varios comercios de los módulos colindantes han cerrado temporalmente por precaución, y este periódico ha podido confirmar un repunte notable en las solicitudes de escolta privada registradas esta misma noche. En el Módulo 4, donde reside la nobleza de la estación, se comenta ya abiertamente en salones como El Observatorio que ninguna casa, por poderosa que sea, imaginaba a Ashental capaz de algo de esta magnitud.",
+          "Ni la Casa Ashental ni ningún representante de Lady Míriam han respondido a las preguntas de este periódico hasta el cierre de esta edición.",
         ],
       },
     ],
