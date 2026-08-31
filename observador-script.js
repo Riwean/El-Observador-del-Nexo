@@ -1746,6 +1746,79 @@ const especiales = {
       },
     ],
   },
+  esp3: {
+    numero: "ESP-03",
+    fecha: "Año 1050 P.E. | Día 343 | 23:50 HST — DECLARACIÓN EN DIRECTO",
+    etiqueta: "EDICIÓN ESPECIAL",
+    programa: "EL OBSERVADOR DEL NEXO — CON ARCTURUS MORN",
+    lema: "LA VERDAD TRASCIENDE. EL PODER CORROMPE.",
+    destacada: {
+      alerta: "ATENTADO CONTRA UN VON DREVAN",
+      titulo:
+        "HADRIA VON DREVAN SOBREVIVE A UN INTENTO DE ASESINATO: «SHEN EL SUSURRO NO ACTUABA SOLO»",
+      subtitulo:
+        "» Desde una camilla, el heredero bastardo de la Casa Von Drevan sobrevive a un intento de asesinato — y proclama a Kael Vostok, un simple trabajador de Horno, como el verdadero héroe de la noche",
+      imagen: "especial-hadria-atentado-01.png",
+      contenido: [
+        "Arcturus Morn ha presentado en directo, esta noche, la declaración más difícil de calificar de cuantas ha emitido nunca este medio. No hubo plató, ni preguntas, ni el formato habitual de entrevista. Hadria Von Drevan habló desde lo que parecía, por el fondo visible tras él, una sala médica improvisada — pálido, con signos visibles de haber sido tratado de urgencia hace apenas horas.",
+        "«Sé que muchos llevan horas preguntándose qué está ocurriendo en Bajo Fondo. También sé que circulan rumores acerca de mi ausencia», comenzó. «Por una vez, algunos son ciertos.»",
+        "Según su propio relato, Shen el Susurro intentó matarlo — y no actuaba únicamente por cuenta propia. «Lo que comenzó como una disputa entre Lady Míriam Ashental y determinados intereses de Bajo Fondo resultó ser algo considerablemente más amplio», afirmó Hadria. «Shen estaba implicado en una operación en la que participaban hombres pertenecientes a varias de las organizaciones que durante décadas han gobernado el Módulo 3 como si aquel lugar no formase parte del Nexo.»",
+        "Hadria confirmó haber sobrevivido «por poco», y quiso dejar un punto «absolutamente claro» antes de continuar: quien lo sacó con vida de allí no fue ningún oficial de la Casa Von Drevan, ni escolta de lujo alguna. «Kael», dijo. «Un trabajador de Horno, un hombre al que un sistema acusó, utilizó, y estuvo dispuesto a desechar cuando dejó de resultar conveniente. Uno de esos hombres a los que durante demasiado tiempo se les ha explicado que su función consiste en mantener funcionando las máquinas mientras otros deciden qué hacer con ellas.»",
+        "«Recuerden su nombre», pidió a la audiencia. «Porque si quieren saber qué clase de hombres necesita la Cicatriz para construir algo mejor, están mirando a uno. Yo puedo pronunciar discursos. Hay diferencias que conviene mantener presentes.» Un hombre sin nombre de casa, sin título ni fortuna, se jugó la vida por la mía sin dudarlo un instante — y esta noche estoy vivo gracias a él, no gracias a ningún Von Drevan.",
+        "Hadria confirmó también la muerte de Shen el Susurro, y afirmó que este «habló mucho» antes de morir bajo custodia de la Casa Ashental. «Sobre negocios, nombres, favores. Sobre personas que durante años han pagado para que determinadas cosas ocurriesen y para que otras jamás apareciesen en ningún registro.» No quiso revelar qué nombres proporcionó Shen. «Todavía no.» Sí lanzó una advertencia directa a quienes hicieron negocios con él: «probablemente deberían preguntarse ahora mismo cuánto consideraba él realmente confidencial».",
+        "Sobre la purga que mantiene Bajo Fondo sellado desde hace días, Hadria fue igual de tajante. «He oído describir sus acciones como una guerra privada, como una venganza, como una ruptura intolerable del equilibrio del Nexo», dijo. «Permítanme responder a eso. ¿El equilibrio por el cual cinco Capos gobiernan una ciudad dentro de nuestra estación? ¿El equilibrio por el cual mercancías, armas, personas e información cambian de manos bajo nuestros pies mientras todos fingimos que la palabra «orden» convierte el crimen organizado en una peculiaridad económica? Eso no es estabilidad. Es simplemente una guerra suficientemente antigua como para que hayamos aprendido a decorar sus ruinas.»",
+        "«Esta vez los Capos cometieron un error», continuó. «Atentaron contra mí, y con ello transformaron una de sus habituales trifulcas internas en algo completamente distinto.» Recordó que su padre se encuentra actualmente en Santigua, que su hermano permanece fuera de El Nexo, y que la estación atraviesa «uno de los momentos políticos más delicados que ha vivido en años» — y que, «justo ahora, determinadas organizaciones decidieron comprobar si podían derramar sangre Von Drevan y regresar después tranquilamente a sus mesas de apuestas. No.»",
+        "«Lady Míriam no está destruyendo el orden del Nexo», afirmó. «Está demostrando cuánto tiempo llevábamos confundiendo orden con cobardía. Y, en ese sentido, está haciendo un favor a mi familia.»",
+        "Pidió expresamente a los residentes de Bajo Fondo ajenos a los Capos que colaboren con las fuerzas de Ashental: que no mueran por ellos, no escondan sus arsenales, no protejan sus rutas ni destruyan registros «para hombres que, si la situación fuese inversa, venderían sus nombres antes de terminar de negociar el precio». Aseguró que el comercio legítimo y los acuerdos legítimos «continuarán» — que lo único que no puede continuar es «la ficción de que ciertas personas son demasiado necesarias, demasiado ricas o demasiado peligrosas para responder por lo que hacen».",
+        "Cerró la declaración con una reflexión personal. «He hablado mucho últimamente de revolución. Comprendo que para algunos resulte fácil escuchar a un Von Drevan hablar de sacrificio y pensar que el sacrificio siempre termina realizándolo alguien más. Pues aquí tienen mi contribución al argumento. No convierte mis ideas en correctas, pero quizá demuestre que estoy dispuesto a pagar parte de la factura.»",
+        "«Y no quiero que miren solamente esta camilla», añadió. «Quiero que miren a Kael. Porque mi revolución no puede consistir simplemente en sustituir a unos hombres poderosos por otros hombres poderosos. Si termina conmigo sentado encima de la misma estructura, únicamente con mejores modales y una capa más cara, entonces habremos perdido el tiempo. El cambio llegará cuando los trabajadores de Horno, los mineros, los mecánicos, los cargadores, los agricultores y todos aquellos cuya vida sostiene la Cicatriz comprendan algo muy sencillo. Los Capos lo olvidaron. Los Barones también. Yo recomiendo que nadie más cometa el mismo error.»",
+        "Terminó con una última advertencia: «A quienes todavía crean que esto puede resolverse esperando a que todo vuelva a ser como antes... no va a ocurrir. El Nexo ya ha cambiado. Y quizá sea mejor así. Porque esta noche un noble ha sangrado, un trabajador le ha salvado la vida, y unos hombres que se creían intocables han descubierto que también pueden caer. Acostúmbrense a ese orden.»",
+      ],
+    },
+    piezas: [
+      {
+        titulo: "KAEL VOSTOK: DE NOMBRE EN UNA ASAMBLEA A HÉROE DE EL NEXO",
+        contenido: [
+          "Hasta esta noche, Kael «53» Vostok era, para la mayor parte de El Nexo, poco más que un nombre citado en pancartas y asambleas de trabajadores — un símbolo del descontento que recorre los mundos industriales del sector, ajeno él mismo a ese reconocimiento. Este periódico ha logrado, en las horas posteriores a la declaración de Hadria Von Drevan, una breve conversación con Vostok. Lo que cuenta explica bastante bien por qué un noble decidió señalarlo como héroe delante de todo el sector.",
+          "Nacido en Alba Roja, una de las ciudades errantes de Horno, Kael no llegó a conocer nunca a su padre — un hombre del que solo sabe que trabajó en el Cuerpo de Extracción Helíaca, los mineros solares a los que en Horno llaman, sin ninguna ironía amable, «Carne Solar». Su madre, Liora Vostok, técnica de soporte vital, murió cuando él tenía once años en un fallo de reciclador atmosférico. «El metal siempre habla antes de morir», le enseñó — una frase que, según cuenta Kael, terminaría definiendo el resto de su vida.",
+          "Entró de adolescente en la Brigada Crepuscular de Mantenimiento, conocidos comúnmente como comeescoria: los equipos encargados de despejar las lluvias de metal fundido antes de que las ciudades errantes de Horno pasen por esas vías. La esperanza de vida en la Brigada, admite Kael sin rodeos, «no es alta». Ascendió a líder de equipo siendo muy joven — una rareza que él mismo atribuye no a ambición, sino a haber sobrevivido lo suficiente para heredar lo que le enseñaron compañeros que no corrieron la misma suerte. «Todo lo que aprendí de los que ya no están, intenté devolverlo. Cada turno, intentaba que volviera más gente de la que salía.»",
+          "Esa filosofía se puso a prueba de la forma más brutal posible. Kael detectó signos de fatiga estructural grave en los raíles de su ciudad antes de una aceleración forzada ordenada desde arriba. Avisó. Fue ignorado. El resultado, según su propio relato, fueron 4.107 muertos confirmados y varios centenares de desaparecidos — una de las peores catástrofes registradas jamás en Horno.",
+          "Lo que vino después es, para Kael, la parte de la historia que más rabia todavía le provoca. En lugar de investigar el error que causó el desastre, el Consejo de su ciudad lo convirtió a él en el responsable: el hombre que «sembró pánico» con sus advertencias. Fue expulsado, despojado de cualquier derecho, y vendido como esclavo a Venas Rojas por una deuda que, según él, «nunca existió hasta que alguien la inventó para taparse las espaldas».",
+          "De ese punto en adelante, la historia de Kael converge con la de Hadria Von Drevan y el resto del grupo que hoy se cuenta entre los nombres más comentados de la Cicatriz. Esta noche, ese mismo hombre al que un sistema entero decidió sacrificar para no señalar a nadie con apellido, ha sido señalado en directo por un noble como el verdadero héroe de un intento de asesinato.",
+          "En las horas posteriores a la declaración, imágenes de carteles de propaganda improvisados —algunos con el rostro de Vostok estilizado como icono revolucionario, otros directamente acuñando el término «superworker»— han empezado a circular por los canales informales de varios mundos industriales. Ningún gremio oficial se ha atribuido su autoría. Kael Vostok, según fuentes consultadas por este periódico, no ha visto ninguno de ellos todavía.",
+          "Este periódico no ha podido contactar de nuevo con Vostok tras esta breve conversación. Su nombre, sin embargo, ya no pertenece solo a las asambleas de Horno.",
+        ],
+      },
+      {
+        titulo: "LO QUE SHEN SE LLEVÓ A LA TUMBA — O NO",
+        contenido: [
+          "La afirmación de Hadria de que Shen el Susurro «habló mucho» antes de morir bajo custodia de la Casa Ashental añade una dimensión completamente nueva al bloqueo que mantiene sellado el Módulo 3 desde hace días. Si la red de información de Shen —la más extensa conocida de todo El Nexo, según fuentes de este periódico en ediciones anteriores— ha quedado ahora en manos de Ashental, la pregunta que Hadria ha dejado deliberadamente en el aire («todavía no» va a decir qué nombres proporcionó) podría convertirse en la amenaza más eficaz jamás lanzada desde una camilla. Más de una fortuna del sector, sospecha este periódico, habrá dormido peor esta noche.",
+        ],
+      },
+      {
+        titulo: "LA CASA VON DREVAN, EN EL CENTRO DE LA DIANA",
+        contenido: [
+          "El atentado llega en el momento más delicado que atraviesa la Casa Von Drevan en años. Aldric Von Drevan permanece en Santigua, ultimando —según todo indica— los preparativos de la Mesa Fragmentada convocada allí por primera vez en la historia. Theron Von Drevan continúa sin aparecer, su paradero exacto todavía sin confirmar por ninguna fuente consultada por este periódico. Y ahora, su otro hijo ha estado a punto de morir en pleno corazón del mercado negro de la estación.",
+          "Quienquiera que ordenara el atentado contra Hadria eligió, quizá sin saberlo del todo, el peor momento posible para hacerlo: una Casa dividida geográficamente, con su heredero legítimo desaparecido y su patriarca a semanas de distancia, ha respondido esta noche con la declaración pública más contundente de toda la crisis.",
+        ],
+      },
+      {
+        titulo: "LA OUTERNET SEÑALA A THERON",
+        contenido: [
+          "En paralelo a la declaración oficial, un rumor concreto ha empezado a extenderse con fuerza inusual por los canales menos regulados de la Outernet: la idea de que habría sido el propio Theron Von Drevan quien ordenó el atentado contra su hermano. Ninguna fuente citada por este periódico ha podido aportar prueba alguna que lo sostenga, y su propagación —simultánea, coordinada y sorprendentemente uniforme en su redacción a través de canales muy distintos entre sí— resulta, cuando menos, llamativa para cualquiera con experiencia rastreando este tipo de campañas.",
+          "Este periódico no ha podido determinar el origen del rumor, ni verificar ni descartar su contenido. Se limita, por tanto, a constatar su existencia y su velocidad de propagación, y recuerda a sus lectores que ni la ausencia de Theron Von Drevan ni la coincidencia temporal con el atentado constituyen, por sí solas, prueba de nada.",
+        ],
+      },
+      {
+        titulo: "REACCIONES INMEDIATAS",
+        imagen: "propaganda-horno-01.png",
+        contenido: [
+          "Los Barones han guardado, de momento, el mismo silencio que ya mantenían desde la purga de Bajo Fondo. Ningún representante de los Cinco Capos ha respondido a las preguntas de este periódico. Desde Santigua, tampoco hay declaración oficial de Aldric Von Drevan sobre el atentado contra su hijo, aunque fuentes cercanas a la organización de la Mesa Fragmentada describen «consternación genuina» entre los presentes.",
+          "El Sindicato del Nexo, por su parte, ha emitido un breve comunicado condenando «cualquier acto de violencia contra miembros de casas nobles reconocidas» — sin mencionar en ningún momento a los Capos ni a Bajo Fondo. Este periódico sigue recabando reacciones y actualizará esta pieza en cuanto haya novedades.",
+        ],
+      },
+    ],
+  },
 };
 
 let edicionActual = 1;
