@@ -622,7 +622,8 @@ const ediciones = {
             "La fiebre por Sinaire dispara la demanda especulativa de trajes de aislamiento y sensores de campo, pese a que aún no existe comercio oficial con el sistema.",
         },
         {
-          recurso: "Contratos especulativos sobre silicio de Silicial (sin extraer)",
+          recurso:
+            "Contratos especulativos sobre silicio de Silicial (sin extraer)",
           variacion: "▲ +38%",
           texto:
             "Papel puramente especulativo: nadie ha extraído todavía un solo gramo, pero los inversores ya se pelean por reservar cupo antes de que se abra la explotación.",
@@ -808,8 +809,7 @@ const ediciones = {
     precio: "5 CR (digital) | 10 CR (impreso)",
     destacada: {
       alerta: "CONVOCATORIA EXTRAORDINARIA",
-      titulo:
-        "EL LEÓN DEL NEXO ROMPE SU SILENCIO: CONVOCA A TODA LA CICATRIZ",
+      titulo: "EL LEÓN DEL NEXO ROMPE SU SILENCIO: CONVOCA A TODA LA CICATRIZ",
       subtitulo:
         "» Aldric Von Drevan exige, por primera vez en memoria reciente, presencia formal de los Barones del Polvo en la Mesa Fragmentada",
       contenido: [
@@ -847,8 +847,7 @@ const ediciones = {
           ],
         },
         {
-          titulo:
-            "[LOS CINCO CAPOS] División interna ante el caos general",
+          titulo: "[LOS CINCO CAPOS] División interna ante el caos general",
           contenido: [
             "Fuentes internas describen una reunión de urgencia entre los Cinco Capos, convocada en paralelo a la Mesa Fragmentada pero mantenida, como es habitual, fuera del alcance de este periódico. Al menos dos de ellos verían con buenos ojos aprovechar el caos generalizado —Hadria, los Barones, ahora Ashental— para expandir territorio propio. Otros, sin embargo, temen que la «Cuenta Final» prometida por Hadria acabe salpicando también a quienes mantienen tratos con esclavistas del sector.",
             "Entre los cinco, el silencio de Kartha «La Viuda» resulta especialmente notorio esta semana. Ni una declaración, ni un desmentido, ni una palabra sobre la acusación de Ashental.",
@@ -881,8 +880,7 @@ const ediciones = {
           ],
         },
         {
-          titulo:
-            "[SOCIEDAD] La Esfinge Carmesí, a la deriva",
+          titulo: "[SOCIEDAD] La Esfinge Carmesí, a la deriva",
           contenido: [
             "La nave-teatro La Esfinge Carmesí atraviesa la peor semana de su historia reciente. Al menos cuatro funciones han sido canceladas sin explicación oficial, y varios de sus artistas de «La Colección» han sido trasladados discretamente a otras naves de mecenas menores, según fuentes del entorno portuario de El Nexo.",
             "El Consorte Valerius Kaine, propietario nominal de la nave y habitualmente pródigo en apariciones públicas, no ha hecho declaración alguna desde la emisión de Hadria — algo que, en sí mismo, ya empieza a comentarse en los salones del sector como una ausencia elocuente. Fuentes cercanas a la tripulación hablan de tensión creciente entre Kaine y el Maestro Kaine, director musical de la nave, aunque ninguna de las dos partes ha confirmado nada al respecto.",
@@ -925,7 +923,8 @@ const ediciones = {
             "La pausa de la Hermandad en Sinaire enfría de golpe la fiebre especulativa de la semana pasada.",
         },
         {
-          recurso: "Contratos especulativos sobre silicio de Silicial (sin extraer)",
+          recurso:
+            "Contratos especulativos sobre silicio de Silicial (sin extraer)",
           variacion: "▼ -11%",
           texto:
             "Sin expediciones activas, el papel especulativo pierde parte del brillo que tuvo la semana anterior.",
@@ -1099,7 +1098,8 @@ const ediciones = {
     precio: "5 CR (digital) | 10 CR (impreso)",
     destacada: {
       alerta: "EL GRANERO ABRE SUS PUERTAS",
-      titulo: "VERDAL APRUEBA POR MAYORÍA ABRUMADORA LA PROPUESTA DE HADRIA VON DREVAN",
+      titulo:
+        "VERDAL APRUEBA POR MAYORÍA ABRUMADORA LA PROPUESTA DE HADRIA VON DREVAN",
       subtitulo:
         "» El Consejo de Agricultores vota 10 contra 2 a favor de destinar sus excedentes a las comunidades que se levantan contra los Barones — un resultado que ha sorprendido incluso a los propios consejeros",
       contenido: [
@@ -1782,7 +1782,7 @@ const especiales = {
           "Hasta esta noche, Kael «53» Vostok era, para la mayor parte de El Nexo, poco más que un nombre citado en pancartas y asambleas de trabajadores — un símbolo del descontento que recorre los mundos industriales del sector, ajeno él mismo a ese reconocimiento. Este periódico ha logrado, en las horas posteriores a la declaración de Hadria Von Drevan, una breve conversación con Vostok. Lo que cuenta explica bastante bien por qué un noble decidió señalarlo como héroe delante de todo el sector.",
           "Nacido en Alba Roja, una de las ciudades errantes de Horno, Kael no llegó a conocer nunca a su padre — un hombre del que solo sabe que trabajó en el Cuerpo de Extracción Helíaca, los mineros solares a los que en Horno llaman, sin ninguna ironía amable, «Carne Solar». Su madre, Liora Vostok, técnica de soporte vital, murió cuando él tenía once años en un fallo de reciclador atmosférico. «El metal siempre habla antes de morir», le enseñó — una frase que, según cuenta Kael, terminaría definiendo el resto de su vida.",
           "Entró de adolescente en la Brigada Crepuscular de Mantenimiento, conocidos comúnmente como comeescoria: los equipos encargados de despejar las lluvias de metal fundido antes de que las ciudades errantes de Horno pasen por esas vías. La esperanza de vida en la Brigada, admite Kael sin rodeos, «no es alta». Ascendió a líder de equipo siendo muy joven — una rareza que él mismo atribuye no a ambición, sino a haber sobrevivido lo suficiente para heredar lo que le enseñaron compañeros que no corrieron la misma suerte. «Todo lo que aprendí de los que ya no están, intenté devolverlo. Cada turno, intentaba que volviera más gente de la que salía.»",
-          "Esa filosofía se puso a prueba de la forma más brutal posible. Kael detectó signos de fatiga estructural grave en los raíles de su ciudad antes de una aceleración forzada ordenada desde arriba. Avisó. Fue ignorado. El resultado, según su propio relato, fueron 4.107 muertos confirmados y varios centenares de desaparecidos — una de las peores catástrofes registradas jamás en Horno.",
+          "Esa filosofía se puso a prueba de la forma más brutal posible. Kael detectó signos de fatiga estructural grave en los raíles de su ciudad antes de una aceleración forzada ordenada desde arriba. Avisó. Fue ignorado. El resultado, según su propio relato, fueron 4.127 muertos confirmados y varios centenares de desaparecidos — una de las peores catástrofes registradas jamás en Horno.",
           "Lo que vino después es, para Kael, la parte de la historia que más rabia todavía le provoca. En lugar de investigar el error que causó el desastre, el Consejo de su ciudad lo convirtió a él en el responsable: el hombre que «sembró pánico» con sus advertencias. Fue expulsado, despojado de cualquier derecho, y vendido como esclavo a Venas Rojas por una deuda que, según él, «nunca existió hasta que alguien la inventó para taparse las espaldas».",
           "De ese punto en adelante, la historia de Kael converge con la de Hadria Von Drevan y el resto del grupo que hoy se cuenta entre los nombres más comentados de la Cicatriz. Esta noche, ese mismo hombre al que un sistema entero decidió sacrificar para no señalar a nadie con apellido, ha sido señalado en directo por un noble como el verdadero héroe de un intento de asesinato.",
           "En las horas posteriores a la declaración, imágenes de carteles de propaganda improvisados —algunos con el rostro de Vostok estilizado como icono revolucionario, otros directamente acuñando el término «superworker»— han empezado a circular por los canales informales de varios mundos industriales. Ningún gremio oficial se ha atribuido su autoría. Kael Vostok, según fuentes consultadas por este periódico, no ha visto ninguno de ellos todavía.",
@@ -2077,9 +2077,7 @@ function renderizarSelector() {
     );
   });
   selector.querySelectorAll(".edition-btn[data-especial]").forEach((btn) => {
-    btn.addEventListener("click", () =>
-      cambiarAEspecial(btn.dataset.especial),
-    );
+    btn.addEventListener("click", () => cambiarAEspecial(btn.dataset.especial));
   });
 }
 
@@ -2111,4 +2109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarEdicion(inicial);
 });
 
-window.observadorDelNexo = { cambiarEdicion, cambiarAEspecial, ediciones, especiales };
+window.observadorDelNexo = {
+  cambiarEdicion,
+  cambiarAEspecial,
+  ediciones,
+  especiales,
+};
