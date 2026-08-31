@@ -1786,7 +1786,7 @@ const especiales = {
           "Lo que vino después es, para Kael, la parte de la historia que más rabia todavía le provoca. En lugar de investigar el error que causó el desastre, el Consejo de su ciudad lo convirtió a él en el responsable: el hombre que «sembró pánico» con sus advertencias. Fue expulsado, despojado de cualquier derecho, y vendido como esclavo a Venas Rojas por una deuda que, según él, «nunca existió hasta que alguien la inventó para taparse las espaldas».",
           "De ese punto en adelante, la historia de Kael converge con la de Hadria Von Drevan y el resto del grupo que hoy se cuenta entre los nombres más comentados de la Cicatriz. Esta noche, ese mismo hombre al que un sistema entero decidió sacrificar para no señalar a nadie con apellido, ha sido señalado en directo por un noble como el verdadero héroe de un intento de asesinato.",
           "En las horas posteriores a la declaración, imágenes de carteles de propaganda improvisados —algunos con el rostro de Vostok estilizado como icono revolucionario, otros directamente acuñando el término «superworker»— han empezado a circular por los canales informales de varios mundos industriales. Ningún gremio oficial se ha atribuido su autoría. Kael Vostok, según fuentes consultadas por este periódico, no ha visto ninguno de ellos todavía.",
-          "Este periódico no ha podido contactar de nuevo con Vostok tras esta breve conversación. Su nombre, sin embargo, ya no pertenece solo a las asambleas de Horno.",
+          "Su nombre, sin embargo, ya no pertenece solo a las asambleas de Horno.",
         ],
       },
       {
