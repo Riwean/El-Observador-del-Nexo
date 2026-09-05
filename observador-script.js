@@ -1624,6 +1624,239 @@ const ediciones = {
       },
     ],
   },
+  7: {
+    numero: "LC-0007",
+    fecha: "Año 1050 P.E. | Día 344 | 08:20 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "REVUELTA EN CENIZA PRIMA",
+      titulo:
+        "ARDE LA CUENCA DE KALDREK: LOS FUELLES CAEN AL GRITO DE KAEL VOSTOK",
+      subtitulo:
+        "» Los Fuelles y Cúpula Rencor caen en manos de sus trabajadores — y con ellos, el control del aire de toda la Cuenca de Kaldrek",
+      contenido: [
+        "La Cuenca de Kaldrek, uno de los principales complejos industriales del planeta volcánico Ceniza Prima, vive esta semana el episodio más grave desde el inicio de las revueltas que se extienden por el sector. Tras semanas de tensión creciente entre los turnos de procesamiento de azufre, el complejo industrial de Los Fuelles ha caído en manos de sus propios trabajadores. La revuelta se extendió esa misma noche a Cúpula Rencor, el asentamiento obrero contiguo donde vive la mayoría del personal de la planta — ambas zonas actúan ya como un único bloque liberado, aislado del resto de la Cuenca de Kaldrek.",
+        "La toma fue rápida en Los Fuelles, donde los propios trabajadores conocían mejor que nadie los puntos débiles del sistema de vigilancia baronial. En Cúpula Rencor fue menos ordenada: barricadas improvisadas, cortes de suministro, y al menos una decena de miembros de la guardia capturados que no llegaron a ver el amanecer, varios de ellos, según testigos, ya rendidos cuando fueron ajusticiados. Nadie en la cúpula lo llama justicia. Tampoco lo desmienten.",
+        "El nombre de Kael Vostok apareció pintado esa misma noche en los muros de acceso a Los Fuelles y en al menos dos puntos de Cúpula Rencor — ya no un símbolo abstracto de asamblea, sino el grito con el que los trabajadores justificaron ante sí mismos lo que estaban haciendo. No hay confirmación de que Vostok tuviera conocimiento directo de la operación.",
+        "Lo que hace de esta toma algo distinto a cualquier otra revuelta reciente en el sector es lo que ahora está en manos de los liberados: Los Fuelles no es solo una planta industrial, es el corazón del sistema de corrientes de aire que sostiene el equilibrio de toda la Cuenca de Kaldrek, incluido el Cerco de Vidrio, donde vive el grueso de la población que no se ha alzado. Los antiguos trabajadores tienen ahora, por primera vez, la capacidad técnica de cortar ese aire si decidieran usarla como arma de negociación. Hasta el momento, según fuentes dentro del bloque liberado, nadie lo ha propuesto en firme — pero la posibilidad pesa sobre cada decisión que toman.",
+        "Del Barón Kaldrek no hay rastro confirmado. Sigue controlando el resto de sus dominios en Ceniza Prima, incluido el Cerco de Vidrio, y ya ha comenzado, según se rumorea, una purga interna entre quienes pudieron haber avisado a los sublevados con antelación.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[MESA FRAGMENTADA] Los asientos se confirman en Santigua",
+          contenido: [
+            "La fase de recepción de la Mesa Fragmentada ha permitido a este periódico confirmar la nómina completa de representantes reunidos: Edén (dos asientos, Verdal y El Nexo), Abismo (Marea Negra), Titán (Tecnocracia de Forja Muerta), Turbio (Santuario Orbital), Pálido (Hielo Eterno), Mudo (dos asientos, Tundra Silenciosa y Colmena), Prisma (Bajío de Coral), Abrasador (Horno), Alcurnia (Santigua, sede anfitriona de esta sesión histórica por primera vez fuera de El Nexo) y el asiento colectivo de los Barones del Polvo — doce voces en total. El asiento de Refugio de Bruma Cálida sigue formalmente en disputa entre Verdal y la Hermandad de Santuario, sin resolver.",
+            "Que la propia Alcurnia acoja esta sesión no es casualidad: el sistema de acceso restringido a la nobleza cuenta, como el resto, con voz plena en el consejo — un detalle que varios analistas señalan como parte del cálculo político detrás de la elección de sede.",
+          ],
+        },
+        {
+          titulo: "[CASA VON DREVAN] Theron, camino del desheredamiento",
+          contenido: [
+            "Con Theron Von Drevan aún sin aparecer en Santigua, fuentes cercanas a la Casa aseguran que el propio Consejo de la familia está a la espera del desenlace de la Mesa Fragmentada antes de tomar una decisión formal sobre su situación. Según estas mismas fuentes, se da por probable que, una vez concluida la sesión, se declare oficialmente su desheredamiento.",
+            "La Mansión Von Drevan en El Nexo permanece casi vacía, con apenas un puñado de personal de confianza al cuidado de una residencia que hasta hace pocas semanas alojaba a decenas de personas.",
+          ],
+        },
+        {
+          titulo:
+            "[TITÁN] La Tecnocracia detecta una señal que no logra explicar",
+          contenido: [
+            "Fuentes técnicas de Forja Muerta confirman que los observatorios de la Tecnocracia registraron, hace varios días, una señal de origen no identificado procedente de las regiones exteriores del sector — fuera de cualquier ruta comercial o zona habitada conocida. La propia Tecnocracia, poco dada a reconocer públicamente lagunas en su conocimiento, ha calificado el fenómeno de «anómalo» sin ofrecer más detalles. No hay, de momento, ninguna relación conocida con la actividad política o militar del sector.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[BAJO FONDO] Segundo Capo confirmado muerto: Grox no sobrevivió a la purga",
+          contenido: [
+            "Este periódico puede confirmar, varios días después del cierre del Módulo 3, que Grox — uno de los Cinco Capos que gobernaban Bajo Fondo, responsable durante más de una década de El Foso de las Apuestas — no sobrevivió a la purga desatada por Lady Míriam Ashental. Es la segunda baja confirmada al más alto nivel, tras la muerte de Shen el Susurro.",
+            "La cifra total de víctimas de la purga asciende ya, según las estimaciones más conservadoras manejadas por este periódico, a varios miles. Entre los nombres que han podido confirmarse: Brenna Kastelloc, Ivo Marchenn y Dessa Rouvant, de la red de Kartha «La Viuda»; Talvor Ossenmark, Yria Kesh y Bruun Alvedrik, de la organización de Grox; Norrin Faelsted y Camya Drossek, vinculados a los Gemelos Vex; y Ehren Vosk y Lira Camborne, intermediarios sin bando confirmado.",
+            "El Foso de las Apuestas, feudo de Grox durante más de una década, ha quedado sin dueño. Ninguna facción ha reclamado públicamente el territorio todavía.",
+          ],
+        },
+        {
+          titulo: "[SOCIEDAD] Estreno de «El Secreto de Puente Nexo»",
+          contenido: [
+            "NEXO TV ha estrenado esta semana su nueva producción dramática, «El Secreto de Puente Nexo», centrada en las intrigas amorosas y familiares de una casa noble ficticia. La serie ha generado comentarios inmediatos en los círculos habituales de entretenimiento del sector, aunque este periódico no ha podido confirmar quién financia la producción.",
+          ],
+        },
+        {
+          titulo:
+            "[MAREA NEGRA] Brote sin explicación en los muelles bajos",
+          contenido: [
+            "Fuentes médicas de Marea Negra reportan un repunte inusual de casos de una dolencia respiratoria no identificada, concentrada en los muelles bajos de la estación, la zona de mayor densidad poblacional del sistema Abismo. El Consejo local ha evitado hasta ahora declarar cuarentena formal, aunque varias secciones del muelle permanecen cerradas «por mantenimiento», según el comunicado oficial. La Hermandad de Santuario, presente en la Mesa Fragmentada a través de su propio asiento, no ha ofrecido asistencia médica pública todavía — algo que empieza a llamar la atención de varios sectores, dado que suele ser la primera en intervenir ante crisis sanitarias del sector.",
+            "Este periódico no ha podido determinar el origen del brote ni confirmar cifras reales de afectados.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "Se mantiene la suspensión de cotización. Sin fecha de reapertura confirmada.",
+        },
+        {
+          recurso: "Cristales de azufre (Ceniza Prima)",
+          variacion: "▼ -21%",
+          texto:
+            "La toma de Los Fuelles paraliza buena parte de la exportación habitual del complejo industrial.",
+        },
+        {
+          recurso: "Seguros de carga en rutas secundarias (general)",
+          variacion: "▲ +9%",
+          texto:
+            "Sigue al alza, sostenido por la inestabilidad general del sector.",
+        },
+        {
+          recurso: "Mercenarios y contratos de seguridad privada (general)",
+          variacion: "▲ +14%",
+          texto:
+            "Nuevo repunte tras la confirmación de la muerte de Grox y la purga interna atribuida al Barón Kaldrek.",
+        },
+        {
+          recurso: "Kartha Armamento",
+          variacion: "▲ +7%",
+          texto:
+            "La incertidumbre general sigue sosteniendo la demanda de armamento en el sector.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "¿Quién avisó a Los Fuelles?",
+          texto:
+            "Circula la teoría de que la revuelta de Los Fuelles no fue del todo espontánea, sino que alguien con acceso a los turnos de vigilancia baronial filtró información clave en las semanas previas. La purga interna que se atribuye al Barón Kaldrek parecería confirmar que él mismo sospecha lo mismo.",
+        },
+        {
+          titulo: "El otro hermano, ¿rumbo a dónde?",
+          texto:
+            "Sigue sin resolverse el paradero de Theron Von Drevan. Ninguna fuente ha sabido precisar hacia dónde viajó tras abandonar El Nexo, ni si su ausencia en Santigua es voluntaria.",
+        },
+        {
+          titulo: "¿Quién se queda con El Foso?",
+          texto:
+            "Con Grox confirmado muerto y su territorio sin dueño, se apunta a que tanto Kartha «La Viuda» como los Gemelos Vex habrían iniciado ya movimientos discretos para hacerse con El Foso de las Apuestas, aunque ninguna de las dos facciones lo ha reconocido públicamente.",
+        },
+        {
+          titulo: "¿Un asiento para Ceniza liberada?",
+          texto:
+            "Circula entre los círculos diplomáticos de Santigua la pregunta de si Los Fuelles y Cúpula Rencor, la zona liberada del control del Barón Kaldrek en Ceniza Prima, podría algún día aspirar a representación propia en la Mesa Fragmentada — algo sin precedente para un territorio nacido de una revuelta contra un Barón todavía con vida. Ninguna fuente ha confirmado que el tema se haya planteado formalmente dentro de la sesión.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "775 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "651 CR",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.891 CR",
+        variacion: "+7.0%",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "301 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "2.115 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal técnico con experiencia en sistemas de ventilación industrial. Contrato inmediato, ubicación reservada. Preguntar en Puerto Raíz.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre el paradero de Theron Von Drevan. Pago muy generoso, discreción absoluta garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Escoltas con experiencia verificable para operaciones en territorios sin dueño claro. Riesgo alto, pago acorde. Módulo 6.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal técnico y artístico para producciones de NEXO TV. Consultar condiciones en las oficinas de Puente Nexo Media.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se confirma el inicio de la fase de recepción de la Mesa Fragmentada en Santigua. El calendario completo del proceso no ha sido publicado.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recomienda evitar la Cuenca de Kaldrek, en Ceniza Prima, hasta que se aclare la situación en Los Fuelles y Cúpula Rencor.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se mantiene la suspensión de cotización en La Bolsa del Consorcio de Mercaderes. Sin fecha de reapertura confirmada.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Se reportan restricciones de acceso a la zona de El Foso de las Apuestas, en Bajo Fondo, ante la ausencia de autoridad clara sobre el territorio.",
+      },
+    ],
+  },
 };
 
 // Ediciones especiales: fuera de la numeración semanal normal (no son "3.5" ni similar).
@@ -1687,7 +1920,7 @@ const especiales = {
   },
   esp2: {
     numero: "ESP-02",
-    fecha: "Año 1050 P.E. | Día 341 | 06:30 HST — BLOQUEO ACTIVO",
+    fecha: "Año 1050 P.E. | Día 339 | 06:30 HST — BLOQUEO ACTIVO",
     etiqueta: "EDICIÓN ESPECIAL",
     programa: "EL OBSERVADOR DEL NEXO — EDICIÓN DE ÚLTIMA HORA",
     lema: "CUANDO BAJO FONDO CALLA, ALGUIEN HA GANADO.",
@@ -1748,7 +1981,7 @@ const especiales = {
   },
   esp3: {
     numero: "ESP-03",
-    fecha: "Año 1050 P.E. | Día 343 | 23:50 HST — DECLARACIÓN EN DIRECTO",
+    fecha: "Año 1050 P.E. | Día 340 | 23:50 HST — DECLARACIÓN EN DIRECTO",
     etiqueta: "EDICIÓN ESPECIAL",
     programa: "EL OBSERVADOR DEL NEXO — CON ARCTURUS MORN",
     lema: "LA VERDAD TRASCIENDE. EL PODER CORROMPE.",
