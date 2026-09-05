@@ -107,7 +107,7 @@ const capitulos = {
         foto: "img/capitulo1-momento-escalera.png",
       },
       {
-        titulo: "El reencuentro con Orfredo",
+        titulo: "El encuentro con Orfredo",
         foto: "img/capitulo1-la-mirada.png",
       },
       {
