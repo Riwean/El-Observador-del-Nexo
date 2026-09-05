@@ -62,7 +62,7 @@ const capitulos = {
     ],
     cita: {
       texto: "Porque Orfredo ya está prometido.",
-      autor: "Lady María Alevanthal, Momento 5",
+      autor: "Lady María Alevanthal",
     },
     reparto: [
       {
