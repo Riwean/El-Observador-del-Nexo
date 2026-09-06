@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Rutas Comerciales — Vorago Ferrea</title>
+<link rel="stylesheet" href="tienda-styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>
+  <span>el observador</span>
+</a>
+
+<!-- =========== PANTALLA DE ENTRADA =========== -->
+<div id="bootScreen">
+  <div class="scan"></div>
+  <div class="term">
+    <div class="term-line">&gt; SINTONIZANDO BALIZA COMERCIAL...</div>
+    <div class="term-line">&gt; SEÑAL ENCONTRADA — RED DE FACTORES, LA CICATRIZ</div>
+    <div class="term-line hi">&gt; SELECCIONA MUNDO PARA CARGAR PRECIOS LOCALES<span class="cursor-blink"></span></div>
+    <h2>Terminal de Acceso</h2>
+    <div class="planet-picker" id="planetPicker"></div>
+    <div class="foot">// la señal se degrada con la distancia — algunos precios pueden no ser fiables //</div>
+  </div>
+</div>
+
+<!-- =========== SHELL PRINCIPAL =========== -->
+<div id="app">
+  <div class="wrap">
+
+    <div class="top-row">
+      <div class="brand-lockup">
+        <div class="ring-icon">
+          <svg viewBox="0 0 44 44"><ellipse cx="22" cy="22" rx="19" ry="7" transform="rotate(-18 22 22)"/><circle cx="22" cy="22" r="10"/></svg>
+        </div>
+        <div>
+          <h1>Catálogo de Rutas Comerciales</h1>
+          <div class="sub" id="subLine">RED DE FACTORES · SECTOR LA CICATRIZ</div>
+        </div>
+      </div>
+      <div class="status-chips">
+        <div class="status-chip"><span class="dot"></span>ENLACE ESTABLE</div>
+        <div class="status-chip change-world" id="changeWorldBtn"><span class="dot" style="background:#7fe6cf;"></span>CAMBIAR MUNDO</div>
+      </div>
+    </div>
+
+    <div class="planet-select" id="planetSelect"></div>
+    <div class="cat-nav" id="catNav"></div>
+    <div id="catContent"></div>
+
+    <div class="footer-wrap">
+      <footer>DATOS RETRANSMITIDOS DESDE EL FACTOR LOCAL — SIN GARANTÍA DE INTEGRIDAD TOTAL</footer>
+    </div>
+  </div>
+</div>
+
+<div id="itemModalOverlay">
+  <div id="itemModalCard"></div>
+</div>
+
+<script src="tienda-app.js"></script>
+</body>
+</html>
