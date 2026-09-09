@@ -10,13 +10,47 @@
 
 <div class="bg-grid"></div>
 
-<a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </svg>
-  <span>el observador</span>
-</a>
+<button class="corner-toggle corner-toggle-tl" id="tlToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="topLeftStack">☰</button>
+<div class="top-left-stack" id="topLeftStack">
+  <a class="nav-btn" href="../index.html" title="Volver a la consola">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <span>volver a la consola</span>
+  </a>
+  <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+</div>
+
+<button class="corner-toggle corner-toggle-bl" id="blToggle" aria-label="Abrir accesos" aria-expanded="false" aria-controls="bottomLeftStack">☰</button>
+<div class="bottom-left-stack" id="bottomLeftStack">
+  <a class="status-chip cross-link" href="../tienda/index.html" title="Ir a la tienda">
+    <span class="dot" style="background:#7fe6cf;"></span>🛒 IR A LA TIENDA
+  </a>
+</div>
+
+<script>
+(function(){
+  function wireToggle(btnId, panelId){
+    var btn = document.getElementById(btnId);
+    var panel = document.getElementById(panelId);
+    if (!btn || !panel) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn){
+        panel.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+  wireToggle('tlToggle', 'topLeftStack');
+  wireToggle('blToggle', 'bottomLeftStack');
+})();
+</script>
 
 <div id="app">
   <div class="wrap">
@@ -30,9 +64,6 @@
           <h1>Registro de la Nave</h1>
           <div class="sub">ASTERIÓN · BITÁCORA DE INTENDENCIA</div>
         </div>
-      </div>
-      <div class="status-chips">
-        <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
       </div>
     </div>
 

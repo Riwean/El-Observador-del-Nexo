@@ -10,13 +10,32 @@
   </head>
   <body>
     <div class="data-corruption"></div>
-    <a class="nav-btn" href="../index.html" title="Volver a la nave Asterión">
+    <button class="corner-toggle" id="tlToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navBtn">☰</button>
+    <a class="nav-btn" id="navBtn" href="../index.html" title="Volver a la consola">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 2L3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
         <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span>nave asterión</span>
+      <span>volver a la consola</span>
     </a>
+    <script>
+      (function(){
+        var btn = document.getElementById('tlToggle');
+        var link = document.getElementById('navBtn');
+        if (!btn || !link) return;
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          var open = link.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function(e){
+          if (link.classList.contains('open') && e.target !== link && !link.contains(e.target) && e.target !== btn){
+            link.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      })();
+    </script>
     <div class="newspaper-container">
       <!-- Cabecera del periódico -->
       <header class="newspaper-header">

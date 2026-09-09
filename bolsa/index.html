@@ -9,13 +9,23 @@
 <body>
 <div class="scanlines"></div>
 
-<a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
-    <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-  </svg>
-  <span>el observador</span>
-</a>
+<button class="corner-toggle corner-toggle-tl" id="tlToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="topLeftStack">☰</button>
+<div class="top-left-stack" id="topLeftStack">
+  <a class="nav-btn" href="../index.html" title="Volver a la consola">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <span>volver a la consola</span>
+  </a>
+  <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#ff2f5e;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+</div>
+
+<button class="corner-toggle corner-toggle-bl hidden" id="blToggle" aria-label="Abrir accesos de DJ" aria-expanded="false" aria-controls="adminRow">☰</button>
+<div class="admin-row hidden" id="adminRow">
+  <div class="status-chip admin-chip" id="tickBtn">▲ LANZAR TICK DE MERCADO</div>
+  <div class="status-chip admin-chip" id="pesosBtn">⚖ AJUSTAR PESOS</div>
+</div>
 
 <header>
   <h1 class="flicker">bolsa <span>de la cicatriz</span></h1>
@@ -39,10 +49,11 @@
 <div class="market-tabs">
   <button class="market-tab active" id="tabRecursos" onclick="switchTab('recursos')">mercado de recursos</button>
   <button class="market-tab" id="tabEmpresas" onclick="switchTab('empresas')">mercado de valores</button>
+  <button class="market-tab" id="tabPortfolio" onclick="switchTab('portfolio')">portfolio</button>
 </div>
 
 <div class="dashboard">
-  <div class="panel">
+  <div class="panel" id="marketPanel">
     <div class="panel-head">
       <h2 id="panelTitle">libro de precios — recursos</h2>
       <span class="status" id="statusLabel">enlace activo</span>
@@ -51,8 +62,29 @@
       <thead id="tableHead"></thead>
       <tbody id="assets"></tbody>
     </table>
-    <div class="controls">
-      <button class="cyber-btn" onclick="simulateTick()">▲ simular fluctuación</button>
+  </div>
+
+  <div class="panel hidden" id="portfolioPanel">
+    <div class="panel-head">
+      <h2>portfolio de inversión</h2>
+      <span class="status" id="portfolioWho">—</span>
+    </div>
+    <div id="portfolioLocked" class="no-history">inicia sesión con un personaje vinculado para ver y operar tu portfolio</div>
+    <div id="portfolioBody" class="hidden">
+      <div class="pay-toggle-row" id="payToggleRow">
+        <button class="pay-toggle-btn on" data-pay="personal">👤 PERSONAL</button>
+        <button class="pay-toggle-btn" data-pay="nave">🚀 NAVE</button>
+      </div>
+      <div class="portfolio-balance" id="portfolioBalance"></div>
+
+      <div class="portfolio-section-label">tus posiciones</div>
+      <div id="portfolioPersonalList" class="portfolio-list"></div>
+
+      <div class="portfolio-section-label">posiciones de la nave</div>
+      <div id="portfolioNaveList" class="portfolio-list"></div>
+
+      <div class="portfolio-section-label admin-label hidden" id="adminPortfolioLabel">todos los personajes — vista del dj</div>
+      <div id="portfolioAdminList" class="hidden"></div>
     </div>
   </div>
 
@@ -86,10 +118,70 @@
     <div class="origin" id="modalOrigin"></div>
     <div class="chart-box" id="chartBox"></div>
     <div id="calcBox"></div>
+    <div id="tradeBox"></div>
     <div class="stat-grid" id="statGrid"></div>
   </div>
 </div>
 
+<div class="modal-overlay" id="pesosOverlay" onclick="if(event.target===this) closePesos()">
+  <div class="modal">
+    <button class="close-btn" onclick="closePesos()">✕</button>
+    <h3>ajustar pesos del mercado</h3>
+    <div class="origin">DJ únicamente — controla la tendencia de precios</div>
+    <div id="pesosBody"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="loginOverlay" onclick="if(event.target===this) closeLogin()">
+  <div class="modal" style="max-width:380px;">
+    <button class="close-btn" onclick="closeLogin()">✕</button>
+    <h3>acceso de tripulación</h3>
+    <div class="login-field">
+      <label>CORREO</label>
+      <input type="email" id="loginEmail" autocomplete="username">
+    </div>
+    <div class="login-field">
+      <label>CONTRASEÑA</label>
+      <input type="password" id="loginPassword" autocomplete="current-password">
+    </div>
+    <div id="loginError" class="login-error"></div>
+    <button class="cyber-btn" id="loginSubmitBtn" style="width:100%; margin-top:10px;">INICIAR SESIÓN</button>
+  </div>
+</div>
+
+<div id="toastBox" class="cart-toast"></div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import {
+    getDatabase, ref, onValue, get, push, update, runTransaction
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+  import {
+    getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBQRvxwmmFzm8Oas-Hdq4B56iei0lI0jiU",
+    authDomain: "vorago-ferrea.firebaseapp.com",
+    databaseURL: "https://vorago-ferrea-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "vorago-ferrea",
+    storageBucket: "vorago-ferrea.firebasestorage.app",
+    messagingSenderId: "1007816245680",
+    appId: "1:1007816245680:web:af4144d646c717da47d675"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const auth = getAuth(app);
+
+  // Puente para que bolsa-app.js (script clásico, no módulo) pueda
+  // usar Firebase sin tener que convertir todo el proyecto a módulos.
+  window.fb = {
+    db, ref, onValue, get, push, update, runTransaction,
+    auth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  };
+  window.dispatchEvent(new Event('fb-ready'));
+</script>
 <script src="bolsa-app.js"></script>
 </body>
 </html>

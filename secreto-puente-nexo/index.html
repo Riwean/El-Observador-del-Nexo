@@ -14,15 +14,14 @@
 <div class="stage">
 
   <nav>
-    <div class="nav-left">
-      <a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>observador</span>
-      </a>
-      <div class="brand"><span class="heart">♥</span> NEXO TV</div>
-    </div>
+    <button class="nav-menu-toggle" id="navMenuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navChapters">☰</button>
+    <a class="nav-btn" href="../index.html" title="Volver a la consola">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>volver a la consola</span>
+    </a>
+    <div class="brand"><span class="heart">♥</span> NEXO TV</div>
     <div class="navlinks" id="navChapters"></div>
   </nav>
 
@@ -35,5 +34,30 @@
 </div>
 <script src="capitulos.js"></script>
 <script src="script.js"></script>
+<script>
+  (function(){
+    var btn = document.getElementById('navMenuToggle');
+    var nav = document.querySelector('nav');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = nav.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if (nav.classList.contains('menu-open') && !nav.contains(e.target)){
+        nav.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // al cambiar de capítulo, cerramos el menú para volver a ver el contenido
+    document.addEventListener('click', function(e){
+      if (e.target.closest && e.target.closest('.chapter-link')){
+        nav.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

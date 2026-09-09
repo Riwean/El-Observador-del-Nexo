@@ -38,9 +38,9 @@
     background:var(--gold);color:var(--wine-deep);
     box-shadow:0 0 16px rgba(201,162,74,0.45);
   }
-  @media (max-width:640px){
-    .nav-btn span{display:none;}
-    .nav-btn{padding:7px;}
+  @media (max-width:480px){
+    .nav-btn{font-size:0.82rem;padding:7px 11px;gap:6px;}
+    .nav-btn svg{width:13px;height:13px;}
   }
 
   .stage{
@@ -68,15 +68,34 @@
 
   /* ---------- NAV ---------- */
   nav{
-    display:flex;justify-content:space-between;align-items:center;
+    display:flex;justify-content:flex-start;align-items:center;
     padding:22px 40px;border-bottom:1px solid var(--line);
     gap:20px;flex-wrap:wrap;
   }
-  .nav-left{display:flex;align-items:center;gap:18px;}
+  .nav-menu-toggle{
+    display:none;
+    align-items:center;justify-content:center;
+    width:34px;height:34px;
+    background:rgba(18,1,6,0.6);border:1px solid var(--gold);color:var(--gold-bright);
+    font-size:15px;cursor:pointer;flex-shrink:0;
+  }
+  .nav-menu-toggle:hover{background:var(--gold);color:var(--wine-deep);}
   .brand{
     font-family:'Cormorant Garamond', serif;font-weight:600;font-size:1.7rem;
     letter-spacing:0.06em;color:var(--gold-bright);
     display:flex;align-items:center;gap:10px;
+  }
+  @media (max-width:640px){
+    .nav-menu-toggle{ display:flex; order:-1; }
+    nav .nav-btn{
+      display:none; width:100%; box-sizing:border-box; order:3; margin-left:0;
+    }
+    nav .navlinks{
+      display:none; width:100%; order:4; margin-left:0 !important;
+      flex-direction:column; align-items:flex-start; gap:8px;
+    }
+    nav.menu-open .nav-btn{ display:flex; }
+    nav.menu-open .navlinks{ display:flex; }
   }
   @keyframes heartbeat{
     0%,100%{transform:scale(1);}
@@ -85,7 +104,7 @@
   .brand .heart{color:var(--rose);font-size:1.3rem;display:inline-block;
     animation:heartbeat 2.6s ease-in-out infinite;}
   .nav-right{display:flex;align-items:center;gap:16px;}
-  .navlinks{display:flex;gap:14px;font-size:1.05rem;color:#d9b98c;flex-wrap:wrap;align-items:center;}
+  .navlinks{display:flex;gap:14px;font-size:1.05rem;color:#d9b98c;flex-wrap:wrap;align-items:center;margin-left:auto;}
   .navlinks span{cursor:default;opacity:0.75;transition:opacity 0.3s ease;}
   .navlinks span:hover{opacity:1;}
   .navlinks span.on{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:3px;}
