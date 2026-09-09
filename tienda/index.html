@@ -41,6 +41,37 @@
     }
   });
 })();
+
+(function(){
+  // Solo reservamos hueco vertical si el bloque de arriba-izquierda (stack o
+  // botón ☰) realmente invadiría la franja horizontal donde arranca el
+  // título — en pantallas anchas .wrap está centrado y ya hay de sobra
+  // margen a la izquierda, así que no hace falta empujar nada hacia abajo.
+  function ajustarEspacioSuperior(){
+    var wrap = document.querySelector('.wrap');
+    var topRow = document.querySelector('.top-row');
+    var toggle = document.getElementById('tlToggle');
+    var stack = document.getElementById('topLeftStack');
+    if (!wrap || !topRow) return;
+    var visible = (toggle && getComputedStyle(toggle).display !== 'none') ? toggle : stack;
+    if (!visible) { wrap.style.paddingTop = ''; return; }
+
+    wrap.style.paddingTop = ''; // medir la posición natural (sin hueco extra) primero
+    var stackRect = visible.getBoundingClientRect();
+    var rowRect = topRow.getBoundingClientRect();
+
+    var colisiona = rowRect.left < (stackRect.right + 16);
+    if (!colisiona) return; // ya hay hueco horizontal de sobra, no tocamos nada
+
+    var necesario = Math.ceil(stackRect.bottom + 14 - rowRect.top);
+    if (necesario > 0){
+      wrap.style.paddingTop = (26 + necesario) + 'px';
+    }
+  }
+  window.addEventListener('load', ajustarEspacioSuperior);
+  window.addEventListener('resize', ajustarEspacioSuperior);
+  document.addEventListener('DOMContentLoaded', ajustarEspacioSuperior);
+})();
 </script>
 
 <!-- =========== PANTALLA DE ENTRADA =========== -->

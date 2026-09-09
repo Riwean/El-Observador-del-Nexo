@@ -50,6 +50,37 @@
   wireToggle('tlToggle', 'topLeftStack');
   wireToggle('blToggle', 'bottomLeftStack');
 })();
+
+(function(){
+  // Mismo criterio que en la tienda: solo empujamos el contenido hacia abajo
+  // si el bloque de arriba-izquierda realmente invadiría la franja donde
+  // arranca el título. En pantallas anchas .wrap está centrado y ya sobra
+  // margen a la izquierda, así que no hace falta tocar nada.
+  function ajustarEspacioSuperior(){
+    var wrap = document.querySelector('.wrap');
+    var topRow = document.querySelector('.top-row');
+    var toggle = document.getElementById('tlToggle');
+    var stack = document.getElementById('topLeftStack');
+    if (!wrap || !topRow) return;
+    var visible = (toggle && getComputedStyle(toggle).display !== 'none') ? toggle : stack;
+    if (!visible) { wrap.style.paddingTop = ''; return; }
+
+    wrap.style.paddingTop = '';
+    var stackRect = visible.getBoundingClientRect();
+    var rowRect = topRow.getBoundingClientRect();
+
+    var colisiona = rowRect.left < (stackRect.right + 16);
+    if (!colisiona) return;
+
+    var necesario = Math.ceil(stackRect.bottom + 14 - rowRect.top);
+    if (necesario > 0){
+      wrap.style.paddingTop = (26 + necesario) + 'px';
+    }
+  }
+  window.addEventListener('load', ajustarEspacioSuperior);
+  window.addEventListener('resize', ajustarEspacioSuperior);
+  document.addEventListener('DOMContentLoaded', ajustarEspacioSuperior);
+})();
 </script>
 
 <div id="app">
