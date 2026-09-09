@@ -48,6 +48,7 @@
       <div class="status-chips">
         <div class="status-chip"><span class="dot"></span>ENLACE ESTABLE</div>
         <div class="status-chip change-world" id="changeWorldBtn"><span class="dot" style="background:#7fe6cf;"></span>CAMBIAR MUNDO</div>
+        <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
       </div>
     </div>
 
@@ -65,6 +66,90 @@
   <div id="itemModalCard"></div>
 </div>
 
+<!-- =========== CARRITO ============ -->
+<button id="cartFab" title="Ver carrito">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3 4h2l2.4 12.2a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="9.5" cy="20.5" r="1.4" fill="currentColor"/>
+    <circle cx="17" cy="20.5" r="1.4" fill="currentColor"/>
+  </svg>
+  <span id="cartCount" class="cart-count hidden">0</span>
+</button>
+
+<div id="cartOverlay">
+  <div id="cartPanel">
+    <div class="cart-head">
+      <span>&gt; MANIFIESTO DE CARGA</span>
+      <button id="cartCloseBtn" class="modal-close-flat">✕</button>
+    </div>
+    <div id="payToggleRow" class="pay-toggle-row hidden">
+      <button class="pay-toggle-btn on" data-pay="nave">🚀 NAVE</button>
+      <button class="pay-toggle-btn" data-pay="personal">👤 PERSONAL</button>
+    </div>
+    <div class="cart-credits-row">
+      <span id="cartCreditsLabel">CRÉDITOS DE LA NAVE</span>
+      <span id="cartShipCredits">— cr</span>
+    </div>
+    <div id="cartLines"></div>
+    <div id="cartEmptyNote" class="cart-empty-note">EL MANIFIESTO ESTÁ VACÍO</div>
+    <div class="cart-total-row">
+      <span>TOTAL</span>
+      <span id="cartTotal">0 cr</span>
+    </div>
+    <button id="cartBuyBtn" class="cart-buy-btn">CONFIRMAR COMPRA</button>
+    <div id="cartToast" class="cart-toast"></div>
+  </div>
+</div>
+
+<!-- =========== LOGIN ============ -->
+<div id="loginOverlay">
+  <div id="loginCard">
+    <button id="loginCloseBtn" class="modal-close-flat login-close">✕</button>
+    <div class="login-title">&gt; ACCESO DE TRIPULACIÓN</div>
+    <div class="login-field">
+      <label>CORREO</label>
+      <input type="email" id="loginEmail" autocomplete="username">
+    </div>
+    <div class="login-field">
+      <label>CONTRASEÑA</label>
+      <input type="password" id="loginPassword" autocomplete="current-password">
+    </div>
+    <div id="loginError" class="login-error"></div>
+    <button id="loginSubmitBtn" class="cart-buy-btn">INICIAR SESIÓN</button>
+  </div>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import {
+    getDatabase, ref, onValue, get, push, update, runTransaction
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+  import {
+    getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBQRvxwmmFzm8Oas-Hdq4B56iei0lI0jiU",
+    authDomain: "vorago-ferrea.firebaseapp.com",
+    databaseURL: "https://vorago-ferrea-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "vorago-ferrea",
+    storageBucket: "vorago-ferrea.firebasestorage.app",
+    messagingSenderId: "1007816245680",
+    appId: "1:1007816245680:web:af4144d646c717da47d675"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const auth = getAuth(app);
+
+  // Puente para que tienda-app.js (script clásico, no módulo) pueda
+  // usar Firebase sin tener que convertir todo el proyecto a módulos.
+  window.fb = {
+    db, ref, onValue, get, push, update, runTransaction,
+    auth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  };
+  window.dispatchEvent(new Event('fb-ready'));
+</script>
 <script src="tienda-app.js"></script>
 </body>
 </html>

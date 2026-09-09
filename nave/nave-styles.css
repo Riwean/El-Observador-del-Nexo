@@ -54,7 +54,7 @@ body{
 /* =========================================================
    SHELL PRINCIPAL
    ========================================================= */
-#app{position:relative;z-index:1;opacity:0;transition:opacity 0.7s ease 0.1s;}
+#app{position:relative;z-index:1;opacity:1;}
 #app.show{opacity:1;}
 .wrap{max-width:1400px;margin:0 auto;padding:26px 26px 60px;}
 
@@ -615,7 +615,7 @@ footer{text-align:center;font-size:10.9px;color:#3d5c54;letter-spacing:0.06em;}
 #cartShipCredits{font-family:'Orbitron',sans-serif;font-size:13.8px;color:#7fe6cf;letter-spacing:0;}
 #cartShipCredits.insufficient{color:#c94a2a;}
 
-#cartLines{flex:1;overflow-y:auto;padding:10px 20px 10px 14px;scrollbar-gutter:stable;}
+#cartLines{flex:1;overflow-y:auto;padding:10px 14px;}
 .cart-line{
   display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;
   padding:12px 4px;border-bottom:1px solid rgba(255,255,255,0.06);
@@ -736,12 +736,291 @@ footer{text-align:center;font-size:10.9px;color:#3d5c54;letter-spacing:0.06em;}
   min-height:16px;font-size:11.5px;color:#c94a2a;margin-bottom:10px;
 }
 
-/* selector de pago: nave / personal */
-.pay-toggle-row{display:flex;gap:8px;padding:12px 18px 0;}
-.pay-toggle-row.hidden{display:none;}
-.pay-toggle-btn{
-  flex:1;padding:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(45,230,192,0.25);
-  color:#5f8f83;font-family:'Orbitron',sans-serif;font-size:10.8px;letter-spacing:0.05em;
-  cursor:pointer;transition:all 0.15s ease;
+/* =========================================================
+   AJUSTES PROPIOS DE LA PÁGINA NAVE
+   ========================================================= */
+.hidden{display:none !important;}
+
+.tab-view{display:none;animation:fadeIn 0.3s ease;}
+.tab-view.active{display:block;}
+
+.footer-wrap{margin-top:10px;}
+.footer-wrap footer{
+  text-align:center;font-size:11px;color:#3d5c54;letter-spacing:0.08em;padding:14px 0;
 }
-.pay-toggle-btn.on{background:rgba(45,230,192,0.12);color:#eafff8;border-color:#2de6c0;box-shadow:0 0 8px rgba(45,230,192,0.15) inset;}
+
+/* saldo del bote */
+.ship-balance{
+  font-family:'Orbitron',sans-serif;font-size:34px;font-weight:700;color:#2de6c0;
+  text-shadow:0 0 14px rgba(45,230,192,0.4);letter-spacing:0.02em;
+}
+
+/* formulario de mover créditos */
+.move-locked{font-size:12.6px;color:#5f8f83;padding:6px 0;}
+.move-controls{display:flex;flex-direction:column;gap:12px;}
+.move-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;}
+.move-personaje-label{
+  font-family:'Orbitron',sans-serif;font-size:14.9px;color:#eafff8;letter-spacing:0.04em;
+}
+.move-personal-credits{font-size:12.6px;color:#7fe6cf;}
+.move-personal-credits b{color:#eafff8;}
+.move-row input[type="number"]{
+  width:140px;padding:9px 10px;background:rgba(255,255,255,0.03);
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13.8px;
+}
+.move-row input[type="number"]:focus{outline:none;border-color:#2de6c0;}
+button.cyber-btn{
+  background:transparent;border:1px solid #2de6c0;color:#7fe6cf;
+  font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:0.05em;text-transform:uppercase;
+  padding:9px 14px;cursor:pointer;transition:all 0.15s ease;
+}
+button.cyber-btn:hover:not(:disabled){background:#2de6c0;color:#040910;box-shadow:0 0 12px rgba(45,230,192,0.35);}
+button.cyber-btn.pink{border-color:#c94a2a;color:#e8934a;}
+button.cyber-btn.pink:hover:not(:disabled){background:#c94a2a;color:#040910;box-shadow:0 0 12px rgba(201,74,42,0.35);}
+button.cyber-btn:disabled{opacity:0.35;cursor:not-allowed;}
+.move-error{font-size:11.5px;color:#c94a2a;min-height:16px;}
+
+/* histórico de movimientos */
+.ledger-list{display:flex;flex-direction:column;gap:0;}
+.ledger-row{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:10px 4px;border-bottom:1px solid rgba(255,255,255,0.06);font-size:13.4px;
+}
+.ledger-row:last-child{border-bottom:none;}
+.ledger-who{color:#eafff8;font-weight:600;}
+.ledger-meta{color:#5f8f83;font-size:11.5px;}
+.ledger-amount{font-family:'Orbitron',sans-serif;font-size:14.5px;white-space:nowrap;}
+.ledger-amount.deposito{color:#2de6c0;text-shadow:0 0 6px rgba(45,230,192,0.3);}
+.ledger-amount.retirada{color:#e8934a;text-shadow:0 0 6px rgba(232,148,74,0.3);}
+.empty-note{display:none;font-size:12.6px;color:#4a6a63;padding:14px 4px;}
+
+/* inventario por personaje */
+.inventario-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:16px;}
+.personaje-card{
+  border:1px solid rgba(45,230,192,0.28);
+  background:linear-gradient(180deg, rgba(10,25,30,0.6), rgba(5,14,18,0.75));
+  padding:16px 18px;position:relative;
+}
+.personaje-card::before, .personaje-card::after{content:"";position:absolute;width:12px;height:12px;border:1.5px solid #2de6c0;}
+.personaje-card::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.personaje-card::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+.personaje-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+.personaje-name{font-family:'Orbitron',sans-serif;font-size:15.5px;color:#eafff8;letter-spacing:0.03em;}
+.personaje-credits{font-family:'Orbitron',sans-serif;font-size:14px;color:#2de6c0;}
+.personaje-items{display:flex;flex-direction:column;gap:0;}
+.pi-row{
+  display:flex;justify-content:space-between;gap:8px;padding:7px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);font-size:12.6px;
+}
+.pi-row:last-child{border-bottom:none;}
+.pi-name{color:#d8e8e0;}
+.pi-qty{color:#5f8f83;white-space:nowrap;}
+.personaje-empty{font-size:11.5px;color:#4a6a63;padding:6px 0;}
+
+/* toast reutilizado, posición fija abajo en vez de dentro de un panel */
+#toastBox{
+  position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(6px);
+  min-width:260px;max-width:90vw;padding:12px 18px;
+  background:rgba(45,230,192,0.15);border:1px solid #2de6c0;color:#eafff8;
+  font-size:12.6px;text-align:center;opacity:0;
+  transition:all 0.25s ease;pointer-events:none;z-index:300;
+}
+#toastBox.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* inventario por categorías (nueva versión) */
+.cat-nav button.empty{
+  background:#0a0c0b;color:#2a3530;border-color:#1a201d;cursor:not-allowed;
+  opacity:0.6;
+}
+.cat-nav button.empty:hover{background:#0a0c0b;color:#2a3530;}
+.pi-peticion{color:#5f8f83;font-size:11px;font-style:italic;}
+
+/* grid genérico para el inventario (reutiliza las tarjetas de la tienda
+   fuera de sus contenedores "-inner" originales, que solo aportaban la
+   definición de columnas) */
+.inv-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));gap:16px;margin-top:4px;}
+.inv-qty-badge{
+  position:absolute;bottom:8px;right:8px;background:rgba(45,230,192,0.15);
+  border:1px solid #2de6c0;color:#eafff8;font-family:'Orbitron',sans-serif;
+  font-size:12px;padding:2px 8px;border-radius:2px;z-index:2;
+}
+.inv-effect{margin-top:8px;font-size:11.5px;font-style:italic;color:#a8c9be;}
+.inv-peticion{margin-top:6px;font-size:11px;color:#5f8f83;font-style:italic;}
+/* asegurar posicionamiento relativo para el badge en tarjetas que no lo tenían */
+.rack-item, .scope-card, .dogtag, .plate-card, .cyber-card, .dock-slot,
+.crate, .pocket-item, .showcase-card, .eng-card, .medical-card,
+.comms-card, .circuit-card, .pharma-card, .electric-card, .communist-card,
+.list-row{position:relative;}
+
+.move-divider{
+  margin-top:6px;font-size:10.3px;letter-spacing:0.1em;color:#5f8f83;
+  text-transform:uppercase;border-top:1px dashed rgba(45,230,192,0.2);padding-top:12px;
+}
+.move-row select{
+  padding:9px 10px;background:rgba(255,255,255,0.03);
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13px;min-width:160px;
+}
+.ledger-amount.transferencia{color:#8fd0f0;text-shadow:0 0 6px rgba(143,208,240,0.3);}
+
+/* espacio extra abajo para que el badge de cantidad no tape texto */
+.rack-item, .scope-card, .dogtag, .plate-card, .cyber-card, .dock-slot,
+.crate, .pocket-item, .showcase-card, .eng-card, .medical-card,
+.comms-card, .circuit-card, .pharma-card, .electric-card, .communist-card,
+.list-row{padding-bottom:34px !important;}
+
+.inv-subcat-nav{margin-bottom:14px;}
+
+/* histórico de compras */
+.compra-source-badge{
+  font-size:9.5px;letter-spacing:0.05em;padding:2px 7px;border-radius:2px;
+  text-transform:uppercase;white-space:nowrap;
+}
+.compra-source-badge.nave{color:#2de6c0;border:1px solid #2de6c0;}
+.compra-source-badge.personal{color:#e8934a;border:1px solid #e8934a;}
+
+.inv-card-click{cursor:pointer;display:contents;}
+
+/* panel de acciones dentro del modal de inventario */
+.inv-actions{
+  margin-top:16px;padding-top:14px;border-top:1px dashed rgba(45,230,192,0.25);
+  display:flex;flex-direction:column;gap:10px;
+}
+.inv-actions .move-row{flex-wrap:wrap;}
+.inv-actions input[type="number"]{
+  width:80px;padding:8px 9px;background:rgba(255,255,255,0.03);
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+}
+.inv-actions-max{font-size:11px;color:#5f8f83;}
+
+/* formulario de creación (taller / laboratorio) */
+.craft-field{margin-bottom:12px;}
+.craft-field label{display:block;font-size:10.3px;letter-spacing:0.06em;color:#5f8f83;margin-bottom:5px;text-transform:uppercase;}
+.craft-field input[type="text"], .craft-field input[type="number"],
+.craft-field select, .craft-field textarea{
+  width:100%;padding:9px 10px;background:#0a1015;
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13.4px;
+}
+.craft-field select option{background:#0a1015;color:#eafff8;}
+.craft-field textarea{resize:vertical;min-height:60px;}
+.craft-checkbox{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:12.6px;color:#c8ded6;}
+.craft-materials{display:flex;flex-direction:column;gap:8px;margin-bottom:10px;}
+.craft-material-row{display:flex;gap:8px;align-items:center;}
+.craft-material-row select{flex:2;}
+.craft-material-row input{flex:1;}
+.craft-material-row button{
+  background:none;border:1px solid #c94a2a;color:#c94a2a;width:28px;height:36px;cursor:pointer;
+}
+.craft-add-material{
+  background:none;border:1px dashed rgba(45,230,192,0.35);color:#7fe6cf;
+  padding:7px 12px;font-size:11.5px;cursor:pointer;margin-bottom:12px;
+}
+.craft-submit-btn{width:100%;}
+
+/* =========================================================
+   TALLER Y LABORATORIO — identidades visuales diferenciadas
+   ========================================================= */
+.facility-panel{position:relative;padding:24px 22px 20px;margin-bottom:18px;overflow:hidden;}
+
+/* --- TALLER: industrial, metal, remaches, rayas de peligro --- */
+.taller-panel{
+  background:
+    linear-gradient(180deg, rgba(32,20,10,0.82), rgba(14,9,5,0.92));
+  border:1px solid #e8934a;
+  box-shadow:0 0 22px rgba(232,148,74,0.14), inset 0 0 40px rgba(232,148,74,0.03);
+}
+.taller-panel::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:7px;
+  background:repeating-linear-gradient(135deg,#e8934a 0 10px,#1a1006 10px 20px);
+  opacity:0.55;
+}
+.taller-panel::after{
+  content:'';position:absolute;bottom:8px;right:10px;width:14px;height:14px;
+  border-radius:50%;background:radial-gradient(circle at 35% 35%, #6b4526, #2a1a0d);
+  box-shadow:0 0 4px rgba(0,0,0,0.6);
+}
+.taller-header{
+  font-family:'Orbitron',sans-serif;color:#e8934a;text-shadow:0 0 6px rgba(232,148,74,0.4);
+  font-size:15px;letter-spacing:0.08em;text-transform:uppercase;margin:8px 0 3px;
+}
+.taller-sub{font-size:10px;color:#a8703f;letter-spacing:0.08em;margin-bottom:18px;text-transform:uppercase;}
+.taller-panel .craft-field input, .taller-panel .craft-field select, .taller-panel .craft-field textarea{
+  border-color:rgba(232,148,74,0.35);
+}
+.taller-panel .craft-field label{color:#a8703f;}
+.taller-panel .craft-submit-btn{border-color:#e8934a;color:#e8934a;}
+.taller-panel .craft-submit-btn:hover:not(:disabled){background:#e8934a;color:#1a0f05;box-shadow:0 0 14px rgba(232,148,74,0.4);}
+.taller-panel .craft-add-material{border-color:rgba(232,148,74,0.35);color:#e8934a;}
+.taller-panel .move-locked{color:#a8703f;}
+
+/* --- LABORATORIO: aséptico, cristal, líneas de circuito --- */
+.lab-panel{
+  background:
+    repeating-linear-gradient(0deg, rgba(45,230,192,0.025) 0px, rgba(45,230,192,0.025) 1px, transparent 1px, transparent 26px),
+    repeating-linear-gradient(90deg, rgba(45,230,192,0.025) 0px, rgba(45,230,192,0.025) 1px, transparent 1px, transparent 26px),
+    linear-gradient(180deg, rgba(6,20,26,0.85), rgba(3,10,13,0.95));
+  border:1px solid #2de6c0;
+  box-shadow:0 0 22px rgba(45,230,192,0.14), inset 0 0 40px rgba(45,230,192,0.03);
+}
+.lab-panel::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, transparent, #2de6c0, transparent);
+  animation:slide 4s linear infinite;
+}
+.lab-panel::after{
+  content:'';position:absolute;top:10px;right:12px;width:10px;height:10px;
+  border:1.5px solid #2de6c0;border-radius:50%;box-shadow:0 0 6px rgba(45,230,192,0.5);
+}
+.lab-header{
+  font-family:'Orbitron',sans-serif;color:#2de6c0;text-shadow:0 0 6px rgba(45,230,192,0.4);
+  font-size:15px;letter-spacing:0.08em;text-transform:uppercase;margin:8px 0 3px;
+}
+.lab-sub{font-size:10px;color:#5f8f83;letter-spacing:0.08em;margin-bottom:18px;text-transform:uppercase;}
+
+@keyframes slide{0%{background-position:0% 0;}100%{background-position:200% 0;}}
+
+/* contraste garantizado para cualquier <select> de la página */
+select{background:#0a1015;color:#eafff8;}
+select option{background:#0a1015;color:#eafff8;}
+
+/* panel de administración (DJ) */
+.admin-panel{border-color:#c94a2a;box-shadow:0 0 20px rgba(201,74,42,0.12);}
+.admin-panel .panel-label span:first-child{color:#e8934a;}
+
+/* info del destino seleccionado en el panel DJ */
+.admin-target-info{
+  margin:-4px 0 14px;padding:12px;background:rgba(255,255,255,0.02);
+  border:1px solid rgba(201,74,42,0.25);
+}
+.admin-target-credits{font-size:12.6px;color:#c8ded6;margin-bottom:8px;}
+.admin-target-credits b{color:#e8934a;font-family:'Orbitron',sans-serif;}
+.admin-inv-list{max-height:200px;overflow-y:auto;display:flex;flex-direction:column;padding-right:16px;scrollbar-gutter:stable;}
+.admin-inv-row{
+  display:flex;align-items:center;gap:10px;padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);font-size:12px;color:#a8b8b2;
+}
+.admin-inv-row:last-child{border-bottom:none;}
+.admin-inv-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.admin-inv-qty-ctrl{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.admin-inv-qty-ctrl button{
+  width:20px;height:20px;background:rgba(45,230,192,0.08);border:1px solid rgba(45,230,192,0.3);
+  color:#7fe6cf;cursor:pointer;font-size:12px;line-height:1;padding:0;
+}
+.admin-inv-qty-ctrl span{min-width:20px;text-align:center;font-family:'Orbitron',sans-serif;font-size:11.5px;}
+.admin-inv-remove{
+  flex-shrink:0;background:none;border:none;color:#c94a2a;cursor:pointer;font-size:12px;padding:2px 4px;
+}
+.admin-inv-remove:hover{color:#ff6b47;}
+.admin-inv-empty{font-size:11.5px;color:#4a6a63;font-style:italic;}
+
+/* barra de filtro/búsqueda en Compras y Objetos */
+.filter-row{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+.filter-row input[type="text"]{
+  flex:2;min-width:180px;padding:9px 10px;background:#0a1015;
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+}
+.filter-row select{flex:1;min-width:130px;padding:9px 10px;}

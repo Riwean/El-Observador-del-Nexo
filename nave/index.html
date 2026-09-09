@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de la Nave — Asterión — Vorago Ferrea</title>
+<link rel="stylesheet" href="nave-styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<a class="nav-btn" href="../index.html" title="Ir a El Observador del Nexo">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </svg>
+  <span>el observador</span>
+</a>
+
+<div id="app">
+  <div class="wrap">
+
+    <div class="top-row">
+      <div class="brand-lockup">
+        <div class="ring-icon">
+          <svg viewBox="0 0 44 44"><ellipse cx="22" cy="22" rx="19" ry="7" transform="rotate(-18 22 22)"/><circle cx="22" cy="22" r="10"/></svg>
+        </div>
+        <div>
+          <h1>Registro de la Nave</h1>
+          <div class="sub">ASTERIÓN · BITÁCORA DE INTENDENCIA</div>
+        </div>
+      </div>
+      <div class="status-chips">
+        <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+      </div>
+    </div>
+
+    <div class="cat-nav" id="tabNav">
+      <button class="on" data-tab="registro">📋 REGISTRO</button>
+      <button data-tab="compras">🧾 COMPRAS</button>
+      <button data-tab="objetos">🛠️ OBJETOS</button>
+      <button data-tab="crear">🔧 CREAR</button>
+      <button data-tab="inventario">📦 INVENTARIO</button>
+      <button data-tab="admin" id="tabBtnAdmin" class="hidden">🎲 DIRECCIÓN</button>
+    </div>
+
+    <!-- =========== PESTAÑA: REGISTRO =========== -->
+    <div class="tab-view active" id="tab-registro">
+
+      <div class="panel">
+        <div class="panel-label"><span>Bote común</span><span class="tag">SALDO ACTUAL</span></div>
+        <div class="ship-balance" id="shipBalance">— cr</div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-label"><span>Mover créditos</span><span class="tag">SOLO TU PERSONAJE</span></div>
+        <div id="moveForm" class="move-form">
+          <div class="move-locked" id="moveLocked">Inicia sesión con un personaje vinculado para poder mover créditos.</div>
+          <div class="move-controls hidden" id="moveControls">
+            <div class="move-row">
+              <span id="movePersonajeLabel" class="move-personaje-label"></span>
+              <span class="move-personal-credits">Créditos personales: <b id="movePersonalCredits">0</b> cr</span>
+            </div>
+            <div class="move-row">
+              <input type="number" id="moveAmount" min="1" placeholder="Cantidad">
+              <button id="moveDepositBtn" class="cyber-btn">METER AL BOTE →</button>
+              <button id="moveWithdrawBtn" class="cyber-btn pink">← SACAR DEL BOTE</button>
+            </div>
+            <div id="moveError" class="move-error"></div>
+
+            <div class="move-divider">ENVIAR A OTRO PERSONAJE</div>
+            <div class="move-row">
+              <select id="moveTargetSelect"></select>
+              <input type="number" id="moveTransferAmount" min="1" placeholder="Cantidad">
+              <button id="moveTransferBtn" class="cyber-btn">ENVIAR →</button>
+            </div>
+            <div id="moveTransferError" class="move-error"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-label"><span>Histórico de movimientos</span><span class="tag" id="ledgerCount">0 REGISTROS</span></div>
+        <div id="ledgerList" class="ledger-list"></div>
+        <div id="ledgerEmpty" class="empty-note">Todavía no se ha registrado ningún movimiento.</div>
+      </div>
+
+    </div>
+
+    <!-- =========== PESTAÑA: COMPRAS =========== -->
+    <div class="tab-view" id="tab-compras">
+      <div class="panel">
+        <div class="panel-label"><span>Histórico de compras</span><span class="tag" id="comprasCount">0 REGISTROS</span></div>
+        <div class="filter-row">
+          <input type="text" id="comprasSearch" placeholder="Buscar por objeto o comprador...">
+          <select id="comprasFilterPago">
+            <option value="">Todos los pagos</option>
+            <option value="nave">Nave</option>
+            <option value="personal">Personal</option>
+          </select>
+        </div>
+        <div id="comprasList" class="ledger-list"></div>
+        <div id="comprasEmpty" class="empty-note">Todavía no se ha registrado ninguna compra.</div>
+      </div>
+    </div>
+
+    <!-- =========== PESTAÑA: OBJETOS (creación/consumo/transferencias) =========== -->
+    <div class="tab-view" id="tab-objetos">
+      <div class="panel">
+        <div class="panel-label"><span>Movimientos de objetos</span><span class="tag" id="objetosCount">0 REGISTROS</span></div>
+        <div class="filter-row">
+          <input type="text" id="objetosSearch" placeholder="Buscar por objeto o personaje...">
+          <select id="objetosFilterTipo">
+            <option value="">Todos los tipos</option>
+            <option value="transferencia">Transferencias</option>
+            <option value="consumo">Consumos</option>
+            <option value="creacion">Creaciones</option>
+          </select>
+        </div>
+        <div id="objetosList" class="ledger-list"></div>
+        <div id="objetosEmpty" class="empty-note">Todavía no se ha registrado ningún movimiento de objetos.</div>
+      </div>
+    </div>
+
+    <!-- =========== PESTAÑA: CREAR (Taller / Laboratorio) =========== -->
+    <div class="tab-view" id="tab-crear">
+      <div class="facility-panel taller-panel">
+        <div class="taller-header">🔩 TALLER</div>
+        <div class="taller-sub">MECÁNICA · ARMAMENTO · REPARACIONES — KAEL · WULFRAM</div>
+        <div id="tallerBody"></div>
+      </div>
+      <div class="facility-panel lab-panel">
+        <div class="lab-header">🧪 LABORATORIO</div>
+        <div class="lab-sub">QUÍMICA · BIOTECNOLOGÍA · SUSTANCIAS — NIKOLA</div>
+        <div id="labBody"></div>
+      </div>
+    </div>
+
+    <!-- =========== PESTAÑA: INVENTARIO =========== -->
+    <div class="tab-view" id="tab-inventario">
+
+      <div class="panel">
+        <div class="panel-label"><span>Inventario personal</span><span class="tag" id="invPersonalWho">—</span></div>
+        <div id="invPersonalLocked" class="move-locked">Inicia sesión con un personaje vinculado para ver tu inventario.</div>
+        <div id="invPersonalBody" class="hidden">
+          <div class="cat-nav" id="invPersonalCatNav"></div>
+          <div id="invPersonalContent"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-label"><span>Inventario de la nave</span><span class="tag">PÁLAMO YERRANTE</span></div>
+        <div class="cat-nav" id="invNaveCatNav"></div>
+        <div id="invNaveContent"></div>
+      </div>
+
+    </div>
+
+    <!-- =========== PESTAÑA: DIRECCIÓN (DJ) =========== -->
+    <div class="tab-view" id="tab-admin">
+      <div class="panel admin-panel">
+        <div class="panel-label"><span>Ajustar créditos</span><span class="tag">SIN LÍMITE — SIN ORIGEN</span></div>
+        <div class="craft-field">
+          <label>Destino</label>
+          <select id="adminCreditsTarget"></select>
+        </div>
+        <div id="adminCreditsInfo" class="admin-target-info"></div>
+        <div class="move-row">
+          <input type="number" id="adminCreditsAmount" min="1" placeholder="Cantidad">
+          <button class="cyber-btn" id="adminCreditsAdd">+ SUMAR</button>
+          <button class="cyber-btn pink" id="adminCreditsSub">− RESTAR</button>
+        </div>
+        <div id="adminCreditsError" class="move-error"></div>
+      </div>
+
+      <div class="panel admin-panel">
+        <div class="panel-label"><span>Dar / crear objeto</span><span class="tag">DIRECTO A CUALQUIER INVENTARIO</span></div>
+        <div id="adminItemForm"></div>
+      </div>
+
+      <div class="panel admin-panel">
+        <div class="panel-label"><span>Otorgar artefacto pretecnológico</span><span class="tag">ÚNICO — RARO — VALIOSO</span></div>
+        <div id="adminArtifactForm"></div>
+      </div>
+
+      <div class="panel admin-panel">
+        <div class="panel-label"><span>Notas privadas del DJ</span><span class="tag">SOLO TÚ VES ESTA PESTAÑA</span></div>
+        <div class="craft-field">
+          <label>Personaje</label>
+          <select id="adminNotesTarget"></select>
+        </div>
+        <div class="craft-field">
+          <textarea id="adminNotesText" placeholder="Notas de trama, secretos, pistas pendientes..." style="min-height:120px;"></textarea>
+        </div>
+        <button class="cyber-btn" id="adminNotesSave">GUARDAR NOTA</button>
+        <div id="adminNotesStatus" class="move-error" style="color:#7fe6cf;"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrap">
+      <footer>REGISTRO DE INTENDENCIA — NAVE ASTERIÓN — SOLO PARA TRIPULACIÓN AUTORIZADA</footer>
+    </div>
+  </div>
+</div>
+
+<div id="itemModalOverlay">
+  <div id="itemModalCard"></div>
+</div>
+
+<!-- =========== LOGIN (mismo patrón que la tienda) ============ -->
+<div id="loginOverlay">
+  <div id="loginCard">
+    <button id="loginCloseBtn" class="modal-close-flat login-close">✕</button>
+    <div class="login-title">&gt; ACCESO DE TRIPULACIÓN</div>
+    <div class="login-field">
+      <label>CORREO</label>
+      <input type="email" id="loginEmail" autocomplete="username">
+    </div>
+    <div class="login-field">
+      <label>CONTRASEÑA</label>
+      <input type="password" id="loginPassword" autocomplete="current-password">
+    </div>
+    <div id="loginError" class="login-error"></div>
+    <button id="loginSubmitBtn" class="cart-buy-btn">INICIAR SESIÓN</button>
+  </div>
+</div>
+
+<div id="toastBox" class="cart-toast"></div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import {
+    getDatabase, ref, onValue, get, push, update, runTransaction
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+  import {
+    getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBQRvxwmmFzm8Oas-Hdq4B56iei0lI0jiU",
+    authDomain: "vorago-ferrea.firebaseapp.com",
+    databaseURL: "https://vorago-ferrea-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "vorago-ferrea",
+    storageBucket: "vorago-ferrea.firebasestorage.app",
+    messagingSenderId: "1007816245680",
+    appId: "1:1007816245680:web:af4144d646c717da47d675"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const auth = getAuth(app);
+
+  window.fb = {
+    db, ref, onValue, get, push, update, runTransaction,
+    auth, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  };
+  window.dispatchEvent(new Event('fb-ready'));
+</script>
+<script src="nave-app.js"></script>
+</body>
+</html>
