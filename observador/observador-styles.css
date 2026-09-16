@@ -607,9 +607,7 @@ body {
 }
 
 /* ===== EDICIONES ESPECIALES ===== */
-/* Retransmisión en directo (Arcturus Morn): portada con imagen + piezas a ancho
-   completo, sin mercados/rumores/tablón/edictos. Reutiliza la paleta base del
-   periódico pero con acentos dorados para diferenciarse de las ediciones normales. */
+/* Retransmisión en directo: portada con imagen + piezas a ancho completo, acentos dorados */
 
 .especial-lema {
   text-align: center;

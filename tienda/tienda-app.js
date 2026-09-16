@@ -894,8 +894,7 @@ function confirmPurchase(){
       return;
     }
 
-    // Leemos el inventario actual para poder FUSIONAR cantidades en vez de
-    // crear una entrada nueva por cada compra del mismo ítem.
+    // Fusionar cantidades en el inventario en vez de duplicar entradas
     const invSnap = await get(ref(db, inventarioBase));
     const invData = invSnap.exists() ? invSnap.val() : {};
     const invIndex = {}; // "catId|nombre" -> { key, qty }
@@ -924,8 +923,7 @@ function confirmPurchase(){
         invIndex[mk] = { key: newInvKey, qty: l.qty };
       }
 
-      // El histórico de compras SÍ registra cada línea por separado,
-      // aunque en el inventario se fusionen — es un libro de auditoría.
+      // Histórico: cada línea por separado (auditoría)
       const newCompraKey = push(ref(db, 'tienda/compras')).key;
       updates[`tienda/compras/${newCompraKey}`] = {
         comprador: currentPersonaje || null,

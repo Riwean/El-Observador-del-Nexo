@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Verdal · El Dosel Verde</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #030b10;
+        color: #e3ede5;
+        font-family: system-ui, sans-serif;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      header {
+        position: absolute;
+        left: 32px;
+        top: 28px;
+        pointer-events: none;
+      }
+      .small {
+        font: 12px monospace;
+        letter-spacing: 0.16em;
+        color: #94b4a5;
+      }
+      h1 {
+        font-size: 52px;
+        letter-spacing: 0.09em;
+        font-weight: 400;
+        margin: 9px 0;
+      }
+      header p {
+        font-size: 15px;
+        color: #a3b9aa;
+        margin: 0;
+      }
+      .hint {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        color: #88a49e;
+        font-size: 13px;
+        text-align: right;
+        line-height: 1.8;
+      }
+      aside {
+        position: absolute;
+        right: 28px;
+        bottom: 100px;
+        width: 310px;
+        padding: 22px;
+        background: #071411e8;
+        border: 1px solid #c5e1c323;
+        border-radius: 8px;
+        max-height: 55vh;
+        overflow: auto;
+      }
+      aside h2 {
+        font-size: 24px;
+        font-weight: 450;
+        margin: 0 0 8px;
+      }
+      aside p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #b3c5b6;
+      }
+      #region-meta {
+        color: #8ca899;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+      #cities {
+        font-size: 14px;
+        color: #d3dcb5;
+      }
+      .bar {
+        position: absolute;
+        bottom: 24px;
+        left: 30px;
+        right: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+      .stats {
+        display: flex;
+        gap: 26px;
+        font-size: 12px;
+        color: #8fa79d;
+      }
+      .stats b {
+        font-size: 21px;
+        font-weight: 450;
+        display: block;
+        color: #dbe6d7;
+        margin-bottom: 5px;
+      }
+      .buttons {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        background: #071411e8;
+        padding: 12px;
+        border: 1px solid #c5e1c323;
+        border-radius: 8px;
+      }
+      button,
+      select {
+        font: 14px system-ui;
+        background: #162b24;
+        color: #e5edda;
+        border: 1px solid #67806b;
+        padding: 9px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      label {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      input {
+        accent-color: #96b685;
+      }
+      #region {
+        width: 100%;
+        margin-bottom: 18px;
+      }
+      details {
+        font-size: 12px;
+        color: #8fa79d;
+        line-height: 1.6;
+        border-top: 1px solid #7a95722d;
+        padding-top: 15px;
+        margin-top: 20px;
+      }
+      summary {
+        cursor: pointer;
+      }
+      details p {
+        font-size: 12px;
+      }
+      #loading {
+        position: absolute;
+        top: 48%;
+        left: 38%;
+        color: #b3c5b6;
+      }
+      #backToSystem {
+        position: absolute;
+        top: 10px;
+        left: 32px;
+        z-index: 5;
+        background: none;
+        border: none;
+        padding: 6px 0;
+        font: 12px monospace;
+        letter-spacing: 0.1em;
+        color: #94b4a5;
+        cursor: pointer;
+      }
+      #backToSystem:hover {
+        color: #e4ce86;
+        text-decoration: underline;
+      }
+      button:focus-visible,
+      select:focus-visible {
+        outline: 2px solid #e4ce86;
+      }
+      @media (max-width: 850px) {
+        header {
+          left: 20px;
+          top: 20px;
+        }
+        h1 {
+          font-size: 38px;
+        }
+        .hint {
+          display: none;
+        }
+        aside {
+          right: 16px;
+          bottom: 96px;
+          width: 270px;
+          padding: 15px;
+          max-height: 30vh;
+          background: #071411ed;
+        }
+        .bar {
+          left: 16px;
+          right: 16px;
+          bottom: 14px;
+          display: block;
+        }
+        .stats {
+          display: none;
+        }
+        .buttons {
+          justify-content: center;
+          gap: 9px;
+        }
+        label {
+          font-size: 12px;
+        }
+        aside h2 {
+          font-size: 20px;
+        }
+        aside p {
+          font-size: 13px;
+        }
+        #region {
+          margin-bottom: 12px;
+        }
+        header p {
+          font-size: 13px;
+        }
+      }
+    </style>
+    <!-- Three.js r180, MIT License. Copyright 2010-2025 three.js authors. -->
+    <!--
+The MIT License
+
+Copyright © 2010-2025 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+-->
+      <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head>
+  <body>
+    <button id="backToSystem" onclick="location.href='../../atlas.html'">← Volver al sistema</button>
+    <header>
+      <div class="small">SISTEMA VERDAL</div>
+      <h1>VERDAL</h1>
+      <p>El Dosel Verde · El granero del sector</p>
+    </header>
+    <div class="hint">
+      Arrastra para orbitar · Rueda para acercarte<br />Selecciona una meseta
+      para explorarla
+    </div>
+    <div id="loading">Abriendo Verdal…</div>
+    <aside>
+      <select aria-label="Región de Verdal" id="region"></select>
+      <h2 id="region-title"></h2>
+      <div id="region-meta"></div>
+      <p id="region-desc"></p>
+      <div id="cities"></div>
+      <details>
+        <summary>Geografía y escala</summary>
+        <p>
+          Un supercontinente, ocho mesetas elevadas y siete sistemas de
+          ríos-cañón: Vena del Trueno, Serpiente Escarlata, Garganta Silenciosa,
+          Río Ceniza, Fauces Negras, Venas Gemelas y Lágrima del Cielo.
+        </p>
+        <p>
+          Interpretación cartográfica del documento, que no fija coordenadas
+          planetarias. Mesetas a 2–4 km de altitud; cañones de 10–40 km de ancho
+          y 1–3 km de profundidad. Sus anchuras y el relieve se exageran aquí
+          para hacerlos visibles. Los puntos señalan regiones, no la extensión
+          de sus ciudades.
+        </p>
+        <p>
+          Mapa y nubes fijos incluidos en este archivo. La rotación es
+          ilustrativa, no un período astronómico documentado.
+        </p>
+      </details>
+    </aside>
+    <div class="bar">
+      <div class="stats">
+        <div><b>0,95 G</b>GRAVEDAD</div>
+        <div><b>25–35 °C</b>CLIMA TROPICAL</div>
+        <div><b>~5 millones</b>HABITANTES</div>
+      </div>
+      <div class="buttons">
+        <button id="play">Pausar</button
+        ><label><input id="clouds" type="checkbox" checked />Nubes</label
+        ><label><input id="markers" type="checkbox" checked />Regiones</label
+        ><button id="reset">Restablecer</button>
+      </div>
+    </div>
+    <script id="world-data" type="application/json">
+{"regions":[["La Corona","Meseta Central","3,5 km","~1,5 millones","Nueva Esperanza","Centro político y geográfico. Jungla más contenida y tierras templadas por la altitud. Rodeada por Vena del Trueno al norte, Serpiente Escarlata al este, Garganta Silenciosa al sur y Río Ceniza al oeste.",950,448,"#547541","M830 393 Q885 374 932 390 L991 379 1042 401 1088 415 1071 468 1086 521 1020 536 959 519 905 535 841 511 823 457Z"],["Los Campos Altos","Meseta Norte","2,8 km","~1,3 millones","Cosecha Verde · Puerto Raíz · Valle Fértil · Las Esporas","Principal región agrícola, al norte de Vena del Trueno. Produce la mitad de los alimentos de exportación. Grandes zonas de cultivo intercaladas con jungla.",910,232,"#718744","M635 308 L659 260 644 231 694 211 727 170 792 187 827 151 879 168 930 144 964 177 1012 171 1068 207 1112 203 1145 247 1117 293 1132 342 1092 402 1043 386 993 365 935 376 883 362 827 380 765 359 719 374 674 348Z"],["El Precipicio Verde","Meseta Este","3,2 km","~100.000","Ciudad Cielo (ruinas)","Acantilados orientales sobre el océano y vientos huracanados. Ciudad Cielo es una metrópolis abandonada de la Era Dorada, invadida por la jungla.",1240,460,"#28563d","M1146 342 L1210 320 1263 349 1306 335 1351 375 1342 418 1375 455 1357 498 1380 532 1337 578 1345 621 1300 649 1265 615 1219 623 1185 580 1135 565 1101 521 1086 467 1103 416Z"],["La Frontera Salvaje","Meseta Sur","2,5 km","~80.000","Última Luz","Jungla primordial, calor y tormentas perpetuas. Menos del 30 % explorado. Hábitat de megafauna como los brontos de dosel; Última Luz marca la frontera habitada.",1040,640,"#184733","M854 551 L907 550 961 535 1022 551 1087 536 1123 580 1174 595 1215 640 1255 633 1291 669 1268 714 1230 731 1213 768 1155 777 1101 755 1050 786 998 761 950 776 905 738 866 725 843 677 862 625Z"],["Las Terrazas","Meseta Oeste","2,3–3,5 km","~200.000","Niebla Alta","Meseta escalonada de humedad extrema y niebla perpetua. Agricultura en terrazas y cultivo de hongos; Niebla Alta se organiza en más de diez niveles.",637,450,"#46684b","M622 362 L667 361 715 390 765 375 816 395 808 455 827 512 818 559 774 573 739 551 695 567 657 532 620 540 608 501 574 476 593 432 580 395Z"],["Punta de Lanza","Meseta Noreste","3 km","~600.000","Puerto Estrella","Península de brisas marinas. Alberga el único puerto espacial de Verdal, la sede de Casa Tech y el centro del comercio exterior.",1320,175,"#658151","M1157 237 L1194 219 1221 178 1264 186 1297 154 1335 173 1379 148 1409 185 1376 207 1390 237 1345 257 1325 292 1276 277 1248 316 1208 304 1146 327 1131 293Z"],["El Jardín Venenoso","Meseta Suroeste","2,7 km","~50.000","Raíz Amarga","Entre Río Ceniza, Fauces Negras y Venas Gemelas. Selva tóxica y húmeda, rica en las plantas medicinales más valiosas del sector.",652,650,"#3c5947","M655 551 L693 584 738 570 774 590 823 573 846 623 829 674 853 722 804 737 773 716 728 737 696 704 654 697 634 659 650 628 619 593Z"],["El Confín","Meseta Exterior","2,2 km","~150.000","Los Fragmentos","Región meridional de submesetas aisladas y tormentas eléctricas más de 300 días al año. Tormenta Eterna, Refugio de Relámpagos, Valle del Trueno, Pico Electrificado y Campamento Aislado.",1000,840,"#315845","M715 756 L757 746 794 760 844 744 893 753 938 794 993 777 1050 804 1103 773 1151 795 1206 787 1240 815 1219 849 1170 863 1137 897 1089 876 1040 902 997 881 950 895 906 868 862 882 815 850 780 860 759 820 728 800Z"]],"map":"textures/map.png","clouds":"textures/clouds.png"}
+    </script>
+    <script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const data=JSON.parse(document.getElementById('world-data').textContent);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,innerWidth/innerHeight,.1,200);camera.position.set(0,.5,8.4);
+let renderer;try{renderer=new THREE.WebGLRenderer({antialias:true});}catch(e){document.querySelector('#loading').textContent='Activa WebGL o la aceleración gráfica en tu navegador para ver Verdal.';throw e;}
+renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x030b10);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;document.body.prepend(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=false;controls.minDistance=2.9;controls.maxDistance=13;
+function texture(svg){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{const t=new THREE.Texture(img);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=renderer.capabilities.getMaxAnisotropy();t.needsUpdate=true;resolve(t)};img.onerror=reject;img.src=(svg.startsWith('data:')||!svg.trim().startsWith('<'))?svg:'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});}
+const [map,cloudMap]=await Promise.all([texture(data.map),texture(data.clouds)]);
+cloudMap.colorSpace=THREE.NoColorSpace;
+const globe=new THREE.Group();scene.add(globe);
+const waterTime={value:0};
+const surface=new THREE.MeshPhysicalMaterial({map,roughness:.85,metalness:0,bumpMap:map,bumpScale:.0018,clearcoat:1,clearcoatRoughness:.25,ior:1.333});
+surface.onBeforeCompile=shader=>{
+shader.uniforms.waterTime=waterTime;
+shader.vertexShader='varying vec3 surfaceLocal;\n'+shader.vertexShader;
+shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nsurfaceLocal=position;');
+shader.fragmentShader='uniform float waterTime; varying vec3 surfaceLocal;\n'+shader.fragmentShader;
+shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>
+vec3 rawSurface=texture2D(map,vMapUv).rgb;
+float waterMask=smoothstep(.002,.022,rawSurface.b-rawSurface.r)*smoothstep(-.002,.016,rawSurface.b-rawSurface.g*.82);
+roughnessFactor=mix(.92,.24,waterMask);
+// El agua profunda no toma el detalle pintado del océano como roca
+vec3 deepWater=vec3(.006,.025,.047);
+diffuseColor.rgb=mix(diffuseColor.rgb,mix(deepWater,rawSurface,.42),waterMask*.64);
+`);
+shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`vec3 smoothSurfaceNormal=normal;
+#include <normal_fragment_maps>
+vec3 wavePoint=normalize(surfaceLocal);
+float ripple=(sin(dot(wavePoint,vec3(243.,151.,97.))+waterTime*.6)+.5*sin(dot(wavePoint,vec3(-177.,291.,131.))-waterTime*.4))*.000055;
+vec3 waterNormal=perturbNormalArb(-vViewPosition,smoothSurfaceNormal,vec2(dFdx(ripple),dFdy(ripple)),faceDirection);
+normal=normalize(mix(normal,waterNormal,waterMask));`);
+shader.fragmentShader=shader.fragmentShader.replace('#include <lights_physical_fragment>','#include <lights_physical_fragment>\nmaterial.clearcoat=waterMask*.8;');
+};
+const ground=new THREE.Mesh(new THREE.SphereGeometry(2,192,128),surface);globe.add(ground);
+const cloud=new THREE.Mesh(new THREE.SphereGeometry(2.04,128,80),new THREE.ShaderMaterial({
+transparent:true,depthWrite:false,uniforms:{cloudTexture:{value:cloudMap}},
+vertexShader:`varying vec2 cloudUV; varying vec3 cloudNormal; void main(){cloudUV=uv;cloudNormal=normalize(mat3(modelMatrix)*normal);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+fragmentShader:`uniform sampler2D cloudTexture; varying vec2 cloudUV; varying vec3 cloudNormal; void main(){vec4 texel=texture2D(cloudTexture,cloudUV);float density=texel.a*dot(texel.rgb,vec3(.2126,.7152,.0722));float opacity=smoothstep(.015,.63,density)*.9;if(opacity<.008)discard;float lit=max(dot(normalize(cloudNormal),normalize(vec3(-4.,4.,6.))),0.);vec3 color=vec3(.91,.96,1.)*(.23+lit*.95);gl_FragColor=vec4(color,opacity);
+#include <tonemapping_fragment>
+#include <colorspace_fragment>
+}`
+}));globe.add(cloud);
+const air=new THREE.Mesh(new THREE.SphereGeometry(2.06,80,48),new THREE.ShaderMaterial({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,vertexShader:'varying vec3 n;varying vec3 w;void main(){n=normalize(mat3(modelMatrix)*normal);w=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(w,1.);}',fragmentShader:'varying vec3 n;varying vec3 w;void main(){float f=pow(1.-max(dot(normalize(n),normalize(cameraPosition-w)),0.),3.);gl_FragColor=vec4(.19,.55,.75,f*.28);}'}));globe.add(air);
+scene.add(new THREE.AmbientLight(0xa5c5d1,1.2));const sun=new THREE.DirectionalLight(0xfff0cf,3.3);sun.position.set(-4,4,6);scene.add(sun);const fill=new THREE.DirectionalLight(0x348aa4,.5);fill.position.set(4,-1,-4);scene.add(fill);
+const fixedStars=[[-9,5,-20],[12,8,-30],[5,-5,-22],[-11,-7,-25],[1,7,-25],[17,1,-28],[-18,0,-29],[-6,10,-30],[9,12,-33],[-2,-10,-32],[21,6,-35],[-19,14,-40],[14,-13,-36],[-25,-10,-42],[3,14,-40],[-9,-17,-44],[26,18,-50],[-30,4,-45],[33,-7,-50],[7,-20,-50],[-17,23,-55],[22,-24,-60],[1,26,-60],[31,29,-65],[-36,-25,-66],[-40,17,-68],[16,36,-70],[39,0,-70],[-4,38,-72],[-27,-38,-75],[48,21,-80],[-51,8,-82],[2,-39,-80],[20,-43,-85],[49,-32,-90],[-39,40,-90],[35,44,-95],[-58,-21,-95]];
+const starG=new THREE.BufferGeometry();starG.setAttribute('position',new THREE.Float32BufferAttribute(fixedStars.flat(),3));scene.add(new THREE.Points(starG,new THREE.PointsMaterial({color:0xbbd6e3,size:.07,transparent:true,opacity:.7})));
+const markers=new THREE.Group();globe.add(markers);const points=[];
+function vec(x,y){const phi=x/2048*Math.PI*2,theta=y/1024*Math.PI;return new THREE.Vector3(-Math.cos(phi)*Math.sin(theta),Math.cos(theta),Math.sin(phi)*Math.sin(theta));}
+for(let i=0;i<data.regions.length;i++){const r=data.regions[i],m=new THREE.Mesh(new THREE.SphereGeometry(.018,12,8),new THREE.MeshBasicMaterial({color:0xffe6a8}));m.position.copy(vec(r[6],r[7])).multiplyScalar(2.069);m.userData.region=i;markers.add(m);points.push(m);}
+function focusRegion(r){
+// Detener el movimiento residual de la órbita antes de fijar la posición
+const damping=controls.enableDamping;controls.enableDamping=false;controls.update();controls.enableDamping=damping;
+const viewDirection=camera.position.clone().sub(controls.target).normalize();
+globe.quaternion.setFromUnitVectors(vec(r[6],r[7]),viewDirection);
+globe.updateMatrixWorld(true);
+}
+function select(i,focus=true){const r=data.regions[i];document.getElementById('region').value=i;document.getElementById('region-title').textContent=r[0];document.getElementById('region-meta').textContent=r[1]+' · '+r[2]+' · '+r[3];document.getElementById('region-desc').textContent=r[5];document.getElementById('cities').textContent=r[4];if(focus){focusRegion(r);playing=false;document.getElementById('play').textContent='Girar';}points.forEach((p,j)=>p.material.color.setHex(i===j?0xffffff:0xcab875));}
+const selectEl=document.getElementById('region');data.regions.forEach((r,i)=>{const o=document.createElement('option');o.value=i;o.textContent=r[0];selectEl.append(o)});selectEl.onchange=()=>select(Number(selectEl.value));let playing=true;select(0,false);globe.quaternion.setFromUnitVectors(vec(990,490),new THREE.Vector3(0,0,1));
+document.getElementById('play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pausar':'Girar'};document.getElementById('clouds').onchange=e=>cloud.visible=e.target.checked;document.getElementById('markers').onchange=e=>markers.visible=e.target.checked;document.getElementById('reset').onclick=()=>{camera.position.set(0,.5,8.4);controls.target.set(0,0,0);globe.quaternion.setFromUnitVectors(vec(990,490),new THREE.Vector3(0,0,1));controls.update();};
+const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let down=[0,0];renderer.domElement.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);renderer.domElement.addEventListener('pointerup',e=>{if(Math.hypot(e.clientX-down[0],e.clientY-down[1])>5||!markers.visible)return;pointer.set(e.clientX/innerWidth*2-1,-e.clientY/innerHeight*2+1);raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObjects([ground,...points]);if(hit[0]?.object.userData.region!==undefined)select(hit[0].object.userData.region,true);});
+const clock=new THREE.Clock();renderer.setAnimationLoop(()=>{let dt=Math.min(clock.getDelta(),.05);if(playing){globe.rotateY(dt*.035);waterTime.value+=dt;}controls.update();renderer.render(scene,camera)});document.getElementById('loading').remove();addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+
+    </script>
+  </body>
+</html>

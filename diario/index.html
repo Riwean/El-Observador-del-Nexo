@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diario de a Bordo — Nave Asterión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#040910;
+    --panel:#081019;
+    --panel-border:#12303a;
+    --cyan:#2de6c0;
+    --cyan-soft:#7fe6cf;
+    --text:#cdeee4;
+    --text-dim:#6f9c93;
+    --danger:#e63d3d;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(45,230,192,0.06), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:'JetBrains Mono', monospace;
+    padding:32px 16px 80px;
+  }
+  header{
+    max-width:900px;
+    margin:0 auto 40px;
+    text-align:center;
+  }
+  header h1{
+    font-family:'Orbitron', sans-serif;
+    font-weight:800;
+    letter-spacing:3px;
+    font-size:28px;
+    color:var(--cyan);
+    text-shadow:0 0 18px rgba(45,230,192,0.35);
+    margin:0 0 8px;
+  }
+  header p{
+    color:var(--text-dim);
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin:0;
+  }
+  .back-link{
+    display:inline-block;
+    margin-bottom:24px;
+    color:var(--text-dim);
+    text-decoration:none;
+    font-size:12px;
+    letter-spacing:1px;
+    border:1px solid var(--panel-border);
+    padding:6px 12px;
+    clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+  }
+  .back-link:hover{color:var(--cyan); border-color:var(--cyan);}
+  .filters{
+    max-width:900px;
+    margin:0 auto 28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:center;
+  }
+  .filter-btn{
+    background:transparent;
+    border:1px solid var(--panel-border);
+    color:var(--text-dim);
+    font-family:inherit;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:6px 12px;
+    cursor:pointer;
+    clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px);
+  }
+  .filter-btn.active, .filter-btn:hover{
+    color:var(--bg);
+    background:var(--cyan);
+    border-color:var(--cyan);
+  }
+  .timeline{
+    max-width:900px;
+    margin:0 auto;
+    position:relative;
+    padding-left:28px;
+    border-left:1px solid var(--panel-border);
+  }
+  .entry{
+    position:relative;
+    background:var(--panel);
+    border:1px solid var(--panel-border);
+    padding:20px 22px;
+    margin-bottom:22px;
+    clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
+  }
+  .entry::before{
+    content:'';
+    position:absolute;
+    left:-33px;
+    top:24px;
+    width:9px;
+    height:9px;
+    background:var(--cyan);
+    box-shadow:0 0 10px var(--cyan);
+    border-radius:50%;
+  }
+  .entry-meta{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:11px;
+    color:var(--text-dim);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+  }
+  .entry-id{color:var(--cyan-soft);}
+  .entry h2{
+    font-family:'Orbitron', sans-serif;
+    font-size:18px;
+    color:var(--cyan);
+    margin:0 0 12px;
+    letter-spacing:1px;
+  }
+  .entry img{
+    width:100%;
+    max-height:280px;
+    object-fit:cover;
+    margin-bottom:14px;
+    border:1px solid var(--panel-border);
+  }
+  .entry p{
+    font-size:14px;
+    line-height:1.7;
+    color:var(--text);
+    margin:0 0 14px;
+  }
+  .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .tag{
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--cyan-soft);
+    border:1px solid var(--panel-border);
+    padding:3px 8px;
+  }
+  .empty, .loading{
+    text-align:center;
+    color:var(--text-dim);
+    padding:60px 0;
+    letter-spacing:1px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <a class="back-link" href="../index.html">&larr; Volver al puente</a>
+    <h1>Diario de a Bordo</h1>
+    <p>Nave Asterión — Registro cronológico de la travesía</p>
+  </header>
+
+  <div class="filters" id="filters"></div>
+  <div class="timeline" id="timeline">
+    <div class="loading">Cargando bitácora...</div>
+  </div>
+
+<script>
+let ENTRADAS = [];
+let activeTag = null;
+
+async function cargar(){
+  try{
+    const res = await fetch('diario.json');
+    const data = await res.json();
+    ENTRADAS = (data.entradas || []).sort((a,b)=> b.id.localeCompare(a.id));
+    renderFiltros();
+    render();
+  }catch(e){
+    document.getElementById('timeline').innerHTML = '<div class="empty">No se pudo cargar el diario.</div>';
+  }
+}
+
+function renderFiltros(){
+  const tags = new Set();
+  ENTRADAS.forEach(e => (e.etiquetas||[]).forEach(t => tags.add(t)));
+  const el = document.getElementById('filters');
+  el.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-btn' + (activeTag===null ? ' active':'');
+  allBtn.textContent = 'Todas';
+  allBtn.onclick = () => { activeTag = null; renderFiltros(); render(); };
+  el.appendChild(allBtn);
+  [...tags].sort().forEach(t => {
+    const b = document.createElement('button');
+    b.className = 'filter-btn' + (activeTag===t ? ' active':'');
+    b.textContent = t;
+    b.onclick = () => { activeTag = t; renderFiltros(); render(); };
+    el.appendChild(b);
+  });
+}
+
+function render(){
+  const list = activeTag ? ENTRADAS.filter(e => (e.etiquetas||[]).includes(activeTag)) : ENTRADAS;
+  const el = document.getElementById('timeline');
+  if(!list.length){
+    el.innerHTML = '<div class="empty">Sin entradas para este filtro.</div>';
+    return;
+  }
+  el.innerHTML = list.map(e => `
+    <div class="entry">
+      <div class="entry-meta">
+        <span class="entry-id">REGISTRO #${e.id}</span>
+        <span>${e.fecha_relato}</span>
+      </div>
+      <h2>${e.titulo}</h2>
+      ${e.imagen ? `<img src="${e.imagen}" alt="${e.titulo}">` : ''}
+      <p>${e.cuerpo}</p>
+      <div class="tags">
+        ${(e.etiquetas||[]).map(t => `<span class="tag">${t}</span>`).join('')}
+      </div>
+    </div>
+  `).join('');
+}
+
+cargar();
+</script>
+</body>
+</html>

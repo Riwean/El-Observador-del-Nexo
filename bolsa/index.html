@@ -174,8 +174,7 @@
   const db = getDatabase(app);
   const auth = getAuth(app);
 
-  // Puente para que bolsa-app.js (script clásico, no módulo) pueda
-  // usar Firebase sin tener que convertir todo el proyecto a módulos.
+  // Puente para bolsa-app.js (script clásico)
   window.fb = {
     db, ref, onValue, get, push, update, runTransaction,
     auth, signInWithEmailAndPassword, signOut, onAuthStateChanged

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Índex Planetorum — Nave Asterión</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #03060a;
+        font-family: "Share Tech Mono", monospace;
+        color: #c9dcec;
+      }
+      #bgstars {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .crt-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            ellipse at center,
+            transparent 40%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            transparent 1px,
+            transparent 3px
+          );
+      }
+
+      .view {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+      }
+      .hidden {
+        display: none !important;
+      }
+
+      /* ---------- Mapa ---------- */
+      #mapView header {
+        position: absolute;
+        top: 32px;
+        left: 40px;
+        z-index: 10;
+      }
+      #toDesktopBtn {
+        position: absolute;
+        top: 32px;
+        right: 40px;
+        z-index: 10;
+        border: 1px solid rgba(120, 220, 255, 0.35);
+        background: rgba(20, 35, 50, 0.6);
+        color: #c9f2ff;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-family: "Share Tech Mono", monospace;
+        font-size: 13px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+      }
+      #toDesktopBtn:hover {
+        background: rgba(50, 80, 100, 0.6);
+      }
+      .eyebrow {
+        font: 12px monospace;
+        letter-spacing: 3px;
+        color: #5a8fb8;
+        text-transform: uppercase;
+      }
+      h1.title {
+        font-family: "Orbitron", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 5px;
+        color: #c9f2ff;
+        text-shadow: 0 0 14px rgba(120, 220, 255, 0.5);
+        margin-top: 6px;
+        text-transform: uppercase;
+      }
+      #mapView p.desc {
+        color: #7fa0b8;
+        font-size: 13px;
+        margin-top: 6px;
+        max-width: 420px;
+      }
+
+      #starMap {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+      }
+      .star-node {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        text-align: center;
+        --sc: #8fe0ff;
+      }
+      .star-glow {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: radial-gradient(
+          circle,
+          #fff 0%,
+          var(--sc) 35%,
+          transparent 72%
+        );
+        box-shadow:
+          0 0 18px var(--sc),
+          0 0 36px var(--sc);
+        animation: starpulse 3.2s ease-in-out infinite;
+        transition: transform 0.3s ease;
+      }
+      .star-node:hover .star-glow {
+        transform: scale(1.6);
+      }
+      @keyframes starpulse {
+        0%,
+        100% {
+          opacity: 0.85;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .star-label {
+        margin-top: 10px;
+        font:
+          12px "Orbitron",
+          sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--sc);
+        opacity: 0.75;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+      }
+      .star-node:hover .star-label {
+        opacity: 1;
+        text-shadow: 0 0 10px var(--sc);
+      }
+
+      /* ---------- Vista de sistema ---------- */
+      #systemView {
+        display: flex;
+        flex-direction: column;
+      }
+      #sysCanvasWrap {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+      #sysCanvasWrap canvas {
+        display: block;
+      }
+
+      .sys-topbar {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 22px 40px;
+        border-bottom: 1px solid rgba(120, 220, 255, 0.2);
+        background: linear-gradient(180deg, rgba(6, 12, 20, 0.7), transparent);
+      }
+      #backBtn {
+        border: 1px solid rgba(120, 220, 255, 0.35);
+        background: rgba(20, 35, 50, 0.6);
+        color: #c9f2ff;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-family: "Share Tech Mono", monospace;
+        font-size: 13px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+      #backBtn:hover {
+        background: rgba(50, 80, 100, 0.6);
+      }
+      #sysTitle {
+        font-family: "Orbitron", sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: #c9f2ff;
+        text-transform: uppercase;
+      }
+      #sysSubtitle {
+        font-size: 12px;
+        color: #6f96b0;
+        letter-spacing: 1px;
+        margin-top: 2px;
+      }
+
+      #tooltip {
+        position: fixed;
+        z-index: 40;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        background: rgba(10, 22, 34, 0.55);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(140, 220, 255, 0.5);
+        color: #d8f4ff;
+        font:
+          12px "Orbitron",
+          sans-serif;
+        letter-spacing: 1px;
+        padding: 7px 14px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        box-shadow:
+          0 0 18px rgba(100, 200, 255, 0.25),
+          inset 0 0 12px rgba(100, 200, 255, 0.08);
+      }
+      #tooltip.show {
+        opacity: 1;
+      }
+
+      #infoPanel {
+        position: absolute;
+        z-index: 30;
+        top: 110px;
+        right: 40px;
+        width: 330px;
+        background: rgba(8, 16, 26, 0.5);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(140, 220, 255, 0.35);
+        border-radius: 8px;
+        padding: 22px 24px;
+        opacity: 0;
+        transform: translateX(20px);
+        pointer-events: none;
+        transition: all 0.25s ease;
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        box-shadow:
+          0 0 30px rgba(90, 180, 255, 0.15),
+          inset 0 0 20px rgba(90, 180, 255, 0.05);
+      }
+      #infoPanel.show {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
+      }
+      #infoPanel h2 {
+        font-family: "Orbitron", sans-serif;
+        font-size: 17px;
+        color: #c9f2ff;
+        letter-spacing: 1.5px;
+        margin-bottom: 14px;
+        padding-right: 20px;
+        text-transform: uppercase;
+      }
+      .info-row {
+        margin-bottom: 11px;
+        font-size: 12.5px;
+        line-height: 1.5;
+      }
+      .info-row .k {
+        display: block;
+        color: #5a8fb8;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 10px;
+        margin-bottom: 2px;
+      }
+      .info-row .v {
+        color: #d6e6f0;
+      }
+      .info-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+        color: #5a8fb8;
+        font-size: 13px;
+      }
+      .info-close:hover {
+        color: #c9f2ff;
+      }
+      .info-hint {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(120, 220, 255, 0.2);
+        color: #7fc4e8;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        font-style: italic;
+      }
+
+      .hint {
+        position: absolute;
+        bottom: 24px;
+        left: 40px;
+        z-index: 10;
+        font-size: 11px;
+        color: #5a7a90;
+        letter-spacing: 1px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 700px) {
+        #infoPanel {
+          left: 16px;
+          right: 16px;
+          width: auto;
+          top: auto;
+          bottom: 16px;
+          max-height: 45vh;
+        }
+        .sys-topbar {
+          padding: 16px 20px;
+        }
+        #mapView header {
+          left: 20px;
+          top: 22px;
+        }
+        #toDesktopBtn {
+          right: 20px;
+          top: 22px;
+          padding: 6px 12px;
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="bgstars"></canvas>
+    <div class="crt-overlay"></div>
+
+    <div id="mapView" class="view">
+      <a id="toDesktopBtn" href="../index.html">← Volver a la consola</a>
+      <header>
+        <div class="eyebrow">La Cicatriz · Nave Asterión</div>
+        <h1 class="title">Índex Planetorum</h1>
+        <p class="desc">
+          Sistemas estelares registrados por la tripulación. Selecciona una
+          estrella para desplegar sus cuerpos orbitales.
+        </p>
+      </header>
+      <div id="starMap"></div>
+    </div>
+
+    <div id="systemView" class="view hidden">
+      <div id="sysCanvasWrap"></div>
+      <div class="sys-topbar">
+        <button id="backBtn">← Volver al Atlas</button>
+        <div>
+          <div id="sysTitle">—</div>
+          <div id="sysSubtitle">—</div>
+        </div>
+      </div>
+      <div id="infoPanel"></div>
+      <div class="hint">
+        Arrastra para orbitar · Rueda para zoom · Pasa el ratón sobre un cuerpo
+        para ver su ficha · Clic para explorar su superficie
+      </div>
+    </div>
+
+    <div id="tooltip"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

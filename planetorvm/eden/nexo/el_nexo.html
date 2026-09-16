@@ -1,0 +1,206 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>El Nexo · Hub Comercial del Sector</title><style>*{box-sizing:border-box}body{margin:0;background:#05080b;color:#e5ded0;font:16px system-ui,sans-serif;overflow:hidden}canvas{display:block;width:100%;height:100%}header{position:absolute;top:32px;left:36px;pointer-events:none}.eyebrow{font:12px monospace;letter-spacing:.22em;color:#a7a196}h1{font-size:clamp(34px,5vw,60px);font-weight:400;letter-spacing:.04em;margin:10px 0 6px}header p{margin:0;color:#a49f92;font-size:14px}.panel{position:absolute;bottom:28px;left:36px;right:36px;display:flex;align-items:end;justify-content:space-between;gap:20px}.stats{display:flex;gap:28px;font:13px monospace;color:#9c968a}.stats b{display:block;color:#e8d9b8;font:20px system-ui;margin-bottom:6px}.controls{padding:16px;background:#0c0f13dc;border:1px solid #ffffff20;border-radius:8px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}button{border:1px solid #ffffff30;background:#1c2126;color:#e5ded0;padding:10px 16px;border-radius:4px;font-size:14px;cursor:pointer}button:hover{background:#3a3226}label{font-size:14px;color:#c3bdae;display:flex;align-items:center;gap:8px}input{accent-color:#d0a24c}input[type=range]{width:85px}.hint{position:absolute;top:34px;right:36px;text-align:right;font-size:13px;color:#948d7f;line-height:1.8}#loading{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#d0a24c}
+#backToSystem{position:absolute;top:10px;left:36px;z-index:5;background:none;border:none;padding:6px 0;font:12px monospace;letter-spacing:.1em;color:#a7a196;cursor:pointer}
+#backToSystem:hover{color:#f0c574;text-decoration:underline}
+details{position:absolute;left:36px;top:178px;width:280px;color:#bcb5a5;font-size:14px;line-height:1.6}summary{cursor:pointer;color:#dcb877}details p{padding:12px;background:#0a0c0fdd;border-left:1px solid #8b6b34}
+#modulePanel{position:absolute;left:36px;top:178px;width:300px;display:none;background:#0a0c0fee;border:1px solid #ffffff20;border-radius:8px;padding:16px}
+#modulePanel h3{margin:0 0 4px;font-size:18px;color:#f0c574;font-weight:500}
+#modulePanel .sub{font:11px monospace;color:#9c968a;letter-spacing:.1em;margin-bottom:10px}
+#modulePanel p{margin:0;font-size:13px;line-height:1.55;color:#c3bdae}
+#modulePanel .close{position:absolute;top:8px;right:10px;cursor:pointer;color:#8f8878;font-size:13px}
+button:focus-visible,summary:focus-visible{outline:2px solid #f0c574}
+@media(max-width:700px){header{top:22px;left:20px}.hint{right:20px;top:25px;font-size:12px;max-width:120px}.panel{left:16px;right:16px;bottom:16px;display:block}.stats{gap:18px;margin:0 4px 16px;flex-wrap:wrap}.stats b{font-size:17px}.controls{gap:10px;padding:12px}details,#modulePanel{left:20px;top:140px;width:230px}h1{font-size:36px}.controls label{font-size:12px}button{padding:9px 12px}}</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head><body><button id="backToSystem" onclick="location.href='../../atlas.html'">← Volver al sistema</button><header><div class="eyebrow">PUNTO DE LAGRANGE L1 / VERDAL — UMBRA</div><h1>EL NEXO</h1><p>Donde todo se compra, todo se vende.</p></header><div class="hint">Arrastra para explorar<br>Rueda o pellizca para acercarte<br>Toca un módulo para ver su ficha</div><details><summary>Cuaderno orbital</summary><p>Doce estaciones-módulo unidas en un anillo irregular por túneles-pasarela, creciendo por acreción durante más de mil años. Sin gobierno central: cada módulo tiene su propia ley.<br><br>Verdal, el mundo verde más rico en comida del sector, domina un lado del cielo; Umbra, su luna oscura, el otro.<br><br>Interpretación visual del README. Proporciones y distancias ampliadas para su lectura; no están a escala real.</p></details><div id="modulePanel"><span class="close" id="closeModule">✕</span><h3 id="modName"></h3><div class="sub" id="modSub"></div><p id="modDesc"></p></div><div id="loading">Ensamblando la estación…</div><div class="panel"><div class="stats"><div><b>~8 km</b>DIÁMETRO DEL ANILLO</div><div><b>12</b>MÓDULOS</div><div><b>~900.000</b>HABITANTES</div></div><div class="controls"><button id="play">Pausar</button><label>Velocidad <input aria-label="Velocidad" id="speed" type="range" min="0.2" max="3" step="0.1" value="1"></label><label><input type="checkbox" id="traffic" checked> Tráfico</label><button id="reset">Restablecer</button></div></div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.01,300);camera.position.set(0,3.4,11.5);
+let renderer;try{renderer=new THREE.WebGLRenderer({antialias:true});}catch(e){document.querySelector('#loading').textContent='Esta escena necesita un navegador con WebGL activado.';throw e;}
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0x05080b);renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=3.8;controls.maxDistance=26;controls.maxPolarAngle=Math.PI*.85;
+
+let seed=417;function random(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}
+function hash(x,y,z){const n=Math.sin(x*127.1+y*311.7+z*74.7)*43758.5453;return n-Math.floor(n)}
+function noise(x,y,z){let a=Math.floor(x),b=Math.floor(y),c=Math.floor(z);x-=a;y-=b;z-=c;x=x*x*(3-2*x);y=y*y*(3-2*y);z=z*z*(3-2*z);const mix=(a,b,t)=>a+(b-a)*t;return mix(mix(mix(hash(a,b,c),hash(a+1,b,c),x),mix(hash(a,b+1,c),hash(a+1,b+1,c),x),y),mix(mix(hash(a,b,c+1),hash(a+1,b,c+1),x),mix(hash(a,b+1,c+1),hash(a+1,b+1,c+1),x),y),z);}
+
+scene.add(new THREE.AmbientLight(0x8790a0,1.0));
+const sun=new THREE.DirectionalLight(0xffe4b0,3.6);sun.position.set(-6,5,7);scene.add(sun);
+const fill=new THREE.DirectionalLight(0x4d7a68,.8);fill.position.set(5,-2,-4);scene.add(fill);
+
+// ---------- Datos de los 12 módulos ----------
+const MODULES=[
+ {n:'El Muelle',sub:'MÓDULO 1 · DOCKING BAY PRINCIPAL',pop:'~120.000',desc:'Entrada principal y atraque de naves. Gobernado por el Gremio de Estibadores. Cada nave que atraca paga, sea legal o no.',color:0x8a7a5a,h:.55},
+ {n:'La Bolsa',sub:'MÓDULO 2 · CONSORCIO DE MERCADERES',pop:'—',desc:'Sede financiera y comercial de los grandes mercaderes, entre ellos Lady Míriam Ashental.',color:0xc9a94f,h:.7},
+ {n:'Bajo Fondo',sub:'MÓDULO 3 · MERCADO NEGRO',pop:'censo subestimado',desc:'Territorio de los Cinco Capos. La ley aquí la pone quien tiene más pistolas.',color:0x6b2f2f,h:.45},
+ {n:'Santuario Menor',sub:'MÓDULO 4 · DISTRITO DE LUJO',pop:'—',desc:'Barrio de la élite del Nexo, hogar de magnates como Lord Cassius Lux.',color:0x8d6fae,h:.8},
+ {n:'El Santuario del Intercambio',sub:'MÓDULO 7 · SEDE DEL CREDO',pop:'—',desc:'Sede central del Credo del Intercambio, la orden que arbitra deudas en toda La Cicatriz.',color:0xd0a24c,h:.9},
+ {n:'Arsenal',sub:'MÓDULO · ASTILLEROS Y MILICIA',pop:'—',desc:'Dirigido por el Comandante Supremo Vrago Dessenkirr, veterano respetado por todas las facciones.',color:0x5a6b6f,h:.6},
+ {n:'El Puente',sub:'MÓDULO · COMUNICACIONES',pop:'—',desc:'Nodo de comunicaciones del sector. Objetivo constante de sabotaje.',color:0x4f7a8a,h:.65},
+ {n:'La Colmena',sub:'MÓDULO · VIVIENDA MASIVA',pop:'alta densidad',desc:'El módulo residencial más abarrotado. Sus Márgenes son terreno fértil para células de resistencia.',color:0x9a8a6a,h:.4},
+ {n:'Vertedero',sub:'MÓDULO · RECICLAJE Y DESGUACE',pop:'—',desc:'Procesa siglos de chatarra acumulada. Fuente ocasional de mutaciones y hallazgos peligrosos.',color:0x5a4a35,h:.3},
+ {n:'La Universidad',sub:'MÓDULO · INVESTIGACIÓN',pop:'—',desc:'Centro académico del sector, blanco frecuente de espionaje industrial.',color:0x6f8a9a,h:.75},
+ {n:'Túneles Muertos',sub:'MÓDULO · SECCIONES ABANDONADAS',pop:'—',desc:'Secciones más antiguas del anillo, parcialmente selladas. Exploradores desaparecen aquí.',color:0x3f3f3f,h:.25},
+ {n:'La Junta',sub:'MÓDULO 12 · GOBIERNO Y DIPLOMACIA',pop:'—',desc:'Sede administrativa. En crisis de relevancia desde que la Mesa Fragmentada se reunió en Santigua.',color:0x7a6f5a,h:.5},
+];
+
+// ---------- Anillo de la estación ----------
+const RING_R=4.4, TUBE_R=.34;
+const station=new THREE.Group();scene.add(station);
+const modGroup=new THREE.Group();station.add(modGroup);
+const modulePivots=[];
+const raycaster=new THREE.Raycaster();const mouse=new THREE.Vector2();
+
+for(let i=0;i<12;i++){
+  const ang=(i/12)*Math.PI*2;
+  const m=MODULES[i];
+  const pivot=new THREE.Group();
+  pivot.position.set(Math.cos(ang)*RING_R,Math.sin(i*1.7)*.18,Math.sin(ang)*RING_R);
+  pivot.lookAt(0,pivot.position.y,0);
+  modGroup.add(pivot);
+
+  const scale=.62+m.h*.55;
+  const bodyMat=new THREE.MeshStandardMaterial({color:m.color,roughness:.55,metalness:.6});
+  const trimMat=new THREE.MeshStandardMaterial({color:0xdcd3bf,roughness:.4,metalness:.3,emissive:0x59431f,emissiveIntensity:.35});
+
+  const hull=new THREE.Group();
+  const core=new THREE.Mesh(new THREE.CylinderGeometry(.55*scale,.68*scale,1.5*scale,8,1),bodyMat);
+  core.rotation.z=Math.PI/2;hull.add(core);
+  const ring1=new THREE.Mesh(new THREE.TorusGeometry(.62*scale,.05,6,16),trimMat);ring1.rotation.y=Math.PI/2;ring1.position.x=-.5*scale;hull.add(ring1);
+  const ring2=ring1.clone();ring2.position.x=.5*scale;hull.add(ring2);
+  for(let k=0;k<3;k++){const strut=new THREE.Mesh(new THREE.BoxGeometry(1.4*scale,.06,.06),trimMat);strut.rotation.x=k*Math.PI/3;hull.add(strut);}
+  const dish=new THREE.Mesh(new THREE.ConeGeometry(.22*scale,.3*scale,10,1,true),trimMat);dish.position.set(0,.55*scale,0);hull.add(dish);
+  const light=new THREE.Mesh(new THREE.SphereGeometry(.045,6,6),new THREE.MeshBasicMaterial({color:0xffcf8f}));light.position.set(.75*scale,0,0);hull.add(light);
+  hull.userData.moduleIndex=i;core.userData.moduleIndex=i;
+  hull.traverse(o=>{if(o.isMesh)o.userData.moduleIndex=i;});
+  pivot.add(hull);
+  modulePivots.push({pivot,ang,hull});
+
+  const label=makeLabelSprite(m.n);
+  label.position.set(0,.95*scale,0);
+  hull.add(label);
+}
+
+function makeLabelSprite(text){
+  const c=document.createElement('canvas');c.width=256;c.height=64;const ctx=c.getContext('2d');
+  ctx.font='28px system-ui';ctx.fillStyle='#f0e6cf';ctx.textAlign='center';ctx.fillText(text,128,40);
+  const tex=new THREE.CanvasTexture(c);
+  const mat=new THREE.SpriteMaterial({map:tex,transparent:true,depthWrite:false,opacity:.88});
+  const sp=new THREE.Sprite(mat);sp.scale.set(1.5,.38,1);
+  return sp;
+}
+
+// tubos-pasarela conectando el anillo
+const tunnelMat=new THREE.MeshStandardMaterial({color:0x8c8677,roughness:.7,metalness:.4,emissive:0x2a2416,emissiveIntensity:.25});
+for(let i=0;i<12;i++){
+  const a0=(i/12)*Math.PI*2,a1=((i+1)/12)*Math.PI*2;
+  const p0=new THREE.Vector3(Math.cos(a0)*RING_R,Math.sin(i*1.7)*.18,Math.sin(a0)*RING_R);
+  const p1=new THREE.Vector3(Math.cos(a1)*RING_R,Math.sin((i+1)*1.7)*.18,Math.sin(a1)*RING_R);
+  const mid=p0.clone().add(p1).multiplyScalar(.5);
+  const len=p0.distanceTo(p1);
+  const tube=new THREE.Mesh(new THREE.CylinderGeometry(.09,.09,len,6),tunnelMat);
+  tube.position.copy(mid);
+  tube.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),p1.clone().sub(p0).normalize());
+  station.add(tube);
+}
+// spokes radiales hacia el núcleo (Santuario del Intercambio = módulo 4, índice)
+const hubMat=new THREE.MeshStandardMaterial({color:0x6a6355,roughness:.6,metalness:.5});
+const hub=new THREE.Mesh(new THREE.IcosahedronGeometry(.9,1),hubMat);station.add(hub);
+for(let i=0;i<4;i++){
+  const ang=(i/4)*Math.PI*2+.4;
+  const p1=new THREE.Vector3(Math.cos(ang)*RING_R,0,Math.sin(ang)*RING_R);
+  const len=p1.length();
+  const spoke=new THREE.Mesh(new THREE.CylinderGeometry(.06,.06,len,6),tunnelMat);
+  spoke.position.copy(p1).multiplyScalar(.5);
+  spoke.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),p1.clone().normalize());
+  station.add(spoke);
+}
+// halo tenue de la estación
+const haloGeo=new THREE.TorusGeometry(RING_R,.02,4,64);
+station.add(new THREE.Mesh(haloGeo,new THREE.MeshBasicMaterial({color:0xffcf8f,transparent:true,opacity:.25})));
+
+station.rotation.x=.22;
+
+// ---------- Verdal (gigante verde) y Umbra (luna oscura) ----------
+const common=`float hash(vec3 p){return fract(sin(dot(p,vec3(127.1,311.7,74.7)))*43758.5453);}float noise(vec3 p){vec3 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(mix(hash(i),hash(i+vec3(1,0,0)),f.x),mix(hash(i+vec3(0,1,0)),hash(i+vec3(1,1,0)),f.x),f.y),mix(mix(hash(i+vec3(0,0,1)),hash(i+vec3(1,0,1)),f.x),mix(hash(i+vec3(0,1,1)),hash(i+vec3(1,1,1)),f.x),f.y),f.z);}float fbm(vec3 p){float f=0.;float a=.5;for(int i=0;i<6;i++){f+=a*noise(p);p=p*2.05+3.1;a*=.5;}return f;}`;
+const vertex=`varying vec3 p;varying vec3 n;varying vec3 world;void main(){p=position;n=normalize(mat3(modelMatrix)*normal);world=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(world,1.);}`;
+
+const verdal=new THREE.Mesh(new THREE.SphereGeometry(6.2,96,64),new THREE.ShaderMaterial({vertexShader:vertex,fragmentShader:`varying vec3 p;varying vec3 n;varying vec3 world;${common}
+void main(){vec3 q=normalize(p);float turbulence=fbm(q*6.);float bands=sin(q.y*30.+turbulence*8.);vec3 c=mix(vec3(.05,.14,.07),vec3(.24,.5,.22),bands*.5+.5);c=mix(c,vec3(.42,.55,.24),smoothstep(.55,.85,fbm(q*4.+7.)));c+=fbm(q*40.)*.04;float d=max(dot(normalize(n),normalize(vec3(-6.,5.,7.))),0.);gl_FragColor=vec4(c*(.1+d*.9),1.);
+#include <colorspace_fragment>}`}));
+verdal.position.set(-14,3,-30);scene.add(verdal);
+
+const umbra=new THREE.Mesh(new THREE.SphereGeometry(1.5,48,32),new THREE.ShaderMaterial({vertexShader:vertex,fragmentShader:`varying vec3 p;varying vec3 n;varying vec3 world;${common}
+void main(){vec3 q=normalize(p);float f=fbm(q*10.);vec3 c=mix(vec3(.05,.05,.06),vec3(.18,.17,.16),f);float d=max(dot(normalize(n),normalize(vec3(-6.,5.,7.))),0.);gl_FragColor=vec4(c*(.08+d*.95),1.);
+#include <colorspace_fragment>}`}));
+umbra.position.set(15,-2,-22);scene.add(umbra);
+
+const stars=new Float32Array(2600*3);const v=new THREE.Vector3();for(let i=0;i<2600;i++){v.set(random()-.5,random()-.5,random()-.5).normalize().multiplyScalar(90+random()*70);stars[i*3]=v.x;stars[i*3+1]=v.y;stars[i*3+2]=v.z;}
+const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(stars,3));
+scene.add(new THREE.Points(sg,new THREE.PointsMaterial({color:0xb8c2cc,size:.07,transparent:true,opacity:.7,sizeAttenuation:true})));
+
+// ---------- naves con tráfico ----------
+const shipGeo=new THREE.ConeGeometry(.045,.18,5);
+const shipMat=new THREE.MeshStandardMaterial({color:0xd7cdb2,roughness:.5,metalness:.6,emissive:0xffcf8f,emissiveIntensity:.4});
+const traffic=new THREE.Group();scene.add(traffic);
+const ships=[];
+for(let i=0;i<40;i++){
+  const mesh=new THREE.Mesh(shipGeo,shipMat);
+  const orbitR=RING_R+.9+random()*3.5;
+  ships.push({mesh,r:orbitR,a:random()*Math.PI*2,y:(random()-.5)*1.2,speed:.06+random()*.09,tilt:random()*.4-.2});
+  traffic.add(mesh);
+}
+
+// ---------- interacción ----------
+const modulePanel=document.querySelector('#modulePanel');
+document.querySelector('#closeModule').onclick=()=>modulePanel.style.display='none';
+renderer.domElement.addEventListener('pointerdown',e=>{
+  const r=renderer.domElement.getBoundingClientRect();
+  mouse.x=((e.clientX-r.left)/r.width)*2-1;mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+  raycaster.setFromCamera(mouse,camera);
+  const hits=raycaster.intersectObjects(modGroup.children,true);
+  if(hits.length){
+    let obj=hits[0].object;
+    let idx=obj.userData.moduleIndex;
+    if(idx===undefined){obj.traverseAncestors(a=>{if(idx===undefined&&a.userData.moduleIndex!==undefined)idx=a.userData.moduleIndex;});}
+    if(idx!==undefined){
+      const m=MODULES[idx];
+      document.querySelector('#modName').textContent=m.n;
+      document.querySelector('#modSub').textContent=m.sub+' · '+m.pop;
+      document.querySelector('#modDesc').textContent=m.desc;
+      modulePanel.style.display='block';
+      document.querySelector('details').style.display='none';
+    }
+  }
+});
+
+let playing=true;
+document.querySelector('#play').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pausar':'Reanudar';};
+document.querySelector('#traffic').onchange=e=>traffic.visible=e.target.checked;
+document.querySelector('#reset').onclick=()=>{camera.position.set(0,3.4,11.5);controls.target.set(0,0,0);controls.update();modulePanel.style.display='none';document.querySelector('details').style.display='block';};
+
+const clock=new THREE.Clock();let time=0;
+function animate(){
+  requestAnimationFrame(animate);
+  const dt=Math.min(clock.getDelta(),.05);
+  if(playing){
+    const step=dt*Number(document.querySelector('#speed').value);
+    time+=step;
+    modGroup.rotation.y+=step*.045;
+    verdal.rotation.y+=step*.02;
+    umbra.rotation.y+=step*.03;
+  }
+  for(const s of ships){
+    const a=s.a+time*s.speed;
+    s.mesh.position.set(Math.cos(a)*s.r,s.y+Math.sin(a*3)*.06,Math.sin(a)*s.r);
+    s.mesh.rotation.set(s.tilt,a+Math.PI/2,0);
+  }
+  controls.update();
+  renderer.render(scene,camera);
+}
+animate();
+document.querySelector('#loading').remove();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+</script>
+</body></html>

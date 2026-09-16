@@ -1859,10 +1859,7 @@ const ediciones = {
   },
 };
 
-// Ediciones especiales: fuera de la numeración semanal normal (no son "3.5" ni similar).
-// Usan un layout distinto (sin mercados/rumores/tablón/edictos) y pueden incluir
-// imágenes de una retransmisión en directo con el presentador Arcturus Morn,
-// reservado exclusivamente para hechos de esta magnitud.
+// Ediciones especiales: fuera de la numeración semanal normal, layout propio
 const especiales = {
   esp1: {
     numero: "ESP-01",
@@ -2095,9 +2092,7 @@ function renderizarDestacada(destacada) {
 }
 
 // --- EDICIONES ESPECIALES ---
-// Layout reducido: portada con imagen + piezas en profundidad a ancho completo.
-// Sin mercados, rumores, tablón ni edictos — se limpian esas secciones para que
-// no quede contenido residual de la última edición semanal visitada.
+// Layout reducido: portada con imagen + piezas en profundidad a ancho completo
 function renderizarEdicionEspecial(clave) {
   const especial = especiales[clave];
   if (!especial) return;
@@ -2174,8 +2169,7 @@ function renderizarColumnas(columnas) {
   container.innerHTML = html;
 }
 
-// Renderiza mercados (izquierda) y rumores (derecha) como sección de ancho completo,
-// independiente de las dos columnas de noticias, para que ninguna de las dos quede apretada.
+// Mercados y rumores como sección de ancho completo
 function renderizarMercadosYRumores(mercados, rumores) {
   const contenedor = document.getElementById("marketRumorSection");
   if (!contenedor) return;
@@ -2202,7 +2196,7 @@ function renderizarTicker(acciones) {
     return `<span class="ticker-item"><span class="ticker-symbol">${a.simbolo}</span> ${a.nombre} <span class="ticker-price">${a.valor}</span> <span class="${clase}">${flecha} ${a.variacion}</span></span>`;
   };
 
-  // Duplicamos la lista para que el bucle de la animación (translateX -50%) sea perfectamente continuo
+  // Duplicamos la lista para que el loop de la animación sea continuo
   const contenido = acciones.map(itemHTML).join("");
   track.innerHTML = contenido + contenido;
 }
@@ -2247,10 +2241,7 @@ function renderizarEdictos(edictos) {
       .join("");
 }
 
-// Genera automáticamente un botón por cada edición normal Y por cada especial.
-// Añadir una edición o un especial a sus objetos respectivos es suficiente para
-// que aparezca aquí sin tocar el HTML. Los especiales se distinguen con su propia
-// clase visual, y no ocupan hueco en la numeración semanal (no son "3.5").
+// Botón automático por cada edición normal y cada especial
 function renderizarSelector() {
   const selector = document.getElementById("editionSelector");
   if (!selector) return;
@@ -2265,10 +2256,7 @@ function renderizarSelector() {
     return;
   }
 
-  // Orden de publicación real: cada edición normal y cada especial lleva un
-  // número de "día" en su campo fecha. Los combinamos y ordenamos por ese día
-  // para que el selector siga el orden cronológico en el que se publicaron,
-  // en vez de mostrar siempre primero todas las normales y luego los especiales.
+  // Orden cronológico real por número de "día" en el campo fecha
   const extraerDia = (fecha) => {
     const match = fecha.match(/Día (\d+)/);
     return match ? Number(match[1]) : 0;

@@ -50,7 +50,7 @@
         btn.setAttribute('aria-expanded', 'false');
       }
     });
-    // al cambiar de capítulo, cerramos el menú para volver a ver el contenido
+    // cerrar menú al cambiar de capítulo
     document.addEventListener('click', function(e){
       if (e.target.closest && e.target.closest('.chapter-link')){
         nav.classList.remove('menu-open');

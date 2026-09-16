@@ -75,10 +75,8 @@ function initFirebaseWhenReady(){
 async function conectarFirebase(){
   const { db, ref, onValue, get, update, auth, onAuthStateChanged } = window.fb;
 
-  // No sembramos bolsa/precios aquí: escribir requiere auth != null y esto
-  // corre antes del login. mergedList() ya usa el precio del catálogo como
-  // fallback mientras no exista nada en Firebase para un activo — el nodo
-  // se crea de forma natural en cuanto el admin lanza el primer tick.
+  // No sembramos bolsa/precios aquí (escribir requiere auth != null antes del
+  // login); mergedList() usa el precio del catálogo como fallback.
 
   onValue(ref(db, 'bolsa/precios'), (snap) => {
     precios = snap.val() || {};
@@ -127,8 +125,7 @@ async function conectarFirebase(){
     if (currentTab === 'portfolio') renderPortfolio();
   });
 
-  // todos los portfolios de personajes — necesario para que el DJ pueda ver
-  // la posición de cada jugador, no solo la suya propia.
+  // todos los portfolios de personajes, para la vista de admin
   onValue(ref(db, 'bolsa/portfolio/personajes'), (snap) => {
     portfolioTodos = snap.val() || {};
     portfolioPersonaje = currentPersonaje ? (portfolioTodos[currentPersonaje] || {}) : {};

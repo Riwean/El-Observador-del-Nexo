@@ -43,10 +43,7 @@
 })();
 
 (function(){
-  // Solo reservamos hueco vertical si el bloque de arriba-izquierda (stack o
-  // botón ☰) realmente invadiría la franja horizontal donde arranca el
-  // título — en pantallas anchas .wrap está centrado y ya hay de sobra
-  // margen a la izquierda, así que no hace falta empujar nada hacia abajo.
+  // Reservar hueco vertical solo si el stack invade la franja del título
   function ajustarEspacioSuperior(){
     var wrap = document.querySelector('.wrap');
     var topRow = document.querySelector('.top-row');
@@ -56,12 +53,12 @@
     var visible = (toggle && getComputedStyle(toggle).display !== 'none') ? toggle : stack;
     if (!visible) { wrap.style.paddingTop = ''; return; }
 
-    wrap.style.paddingTop = ''; // medir la posición natural (sin hueco extra) primero
+    wrap.style.paddingTop = ''; // medir posición natural
     var stackRect = visible.getBoundingClientRect();
     var rowRect = topRow.getBoundingClientRect();
 
     var colisiona = rowRect.left < (stackRect.right + 16);
-    if (!colisiona) return; // ya hay hueco horizontal de sobra, no tocamos nada
+    if (!colisiona) return;
 
     var necesario = Math.ceil(stackRect.bottom + 14 - rowRect.top);
     if (necesario > 0){
@@ -197,8 +194,7 @@
   const db = getDatabase(app);
   const auth = getAuth(app);
 
-  // Puente para que tienda-app.js (script clásico, no módulo) pueda
-  // usar Firebase sin tener que convertir todo el proyecto a módulos.
+  // Puente para tienda-app.js (script clásico)
   window.fb = {
     db, ref, onValue, get, push, update, runTransaction,
     auth, signInWithEmailAndPassword, signOut, onAuthStateChanged

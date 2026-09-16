@@ -1,10 +1,7 @@
 /* =========================================================
    CONFIGURACIÓN DE PERSONAJES
    ========================================================= */
-// La clave técnica ("nave") puede no coincidir con el nombre que se
-// muestra en pantalla ("Pálamo Yerrante") — así el resto del código
-// (rutas de Firebase, vinculación de usuarios) no depende de decisiones
-// de presentación.
+// La clave técnica ("nave") puede no coincidir con el nombre mostrado
 const PERSONAJES = [
   { id: 'Hadria',  label: 'Hadria Von Drevan' },
   { id: 'Radjem',  label: 'Radjem' },
@@ -15,9 +12,7 @@ const PERSONAJES = [
   { id: 'nave',    label: 'Pálamo Yerrante (intendente de la nave)' },
 ];
 
-// Mismas categorías que el catálogo de la tienda (build_data.py), para que
-// el inventario se navegue igual — sin depender de cargar el data.json
-// completo, que solo hace falta en la propia tienda.
+// Mismas categorías que el catálogo de la tienda
 const CATEGORIAS = [
   { id: 'melee',      label: 'Cuerpo a Cuerpo',    skin: 'melee' },
   { id: 'distancia',  label: 'A Distancia',        skin: 'scope' },
@@ -76,9 +71,8 @@ function skinInnerClass(skin){
 /* =========================================================
    ÍNDICE DEL CATÁLOGO (para no duplicar datos en Firebase)
    ========================================================= */
-// El inventario solo guarda {name, qty, catId}. Para poder pintarlo con las
-// mismas tarjetas visuales que la tienda, cargamos data.json UNA vez y
-// montamos un índice "catId|nombre" -> ítem completo (stats, tl, efecto...).
+// El inventario solo guarda {name, qty, catId}. Para pintarlo con las
+// mismas tarjetas que la tienda, montamos un índice "catId|nombre" -> ítem completo.
 let catalogIndex = {};
 let catalogReady = false;
 let SUBCATS_BY_CAT = {}; // { melee: [{id,label}, ...], ... }
@@ -1357,8 +1351,7 @@ const craftState = {
   laboratorio: { materials: [], stats: [] },
 };
 
-// Sugerencias de partida según categoría — no son un esquema fijo, el
-// jugador puede añadir, quitar o renombrar libremente cada línea.
+// Sugerencias de partida según categoría, no un esquema fijo
 const CATEGORIA_STAT_PRESETS = {
   melee:      ['Daño', 'Choque', 'Atributo'],
   distancia:  ['Daño', 'Alcance', 'Peso', 'Munición'],
@@ -1588,8 +1581,7 @@ async function submitCraft(facId){
   try {
     const { db, ref, runTransaction, get, push, update } = window.fb;
 
-    // consumir materiales (secuencial; si alguno falla a mitad, los
-    // anteriores ya se habrán descontado — aceptable para una mesa de confianza)
+    // consumir materiales (secuencial, mesa de confianza)
     const materialNames = [];
     for (const m of materials){
       const invSnapBefore = (personajesData.nave.inventario || {})[m.invKey];

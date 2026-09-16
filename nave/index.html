@@ -47,10 +47,7 @@
 })();
 
 (function(){
-  // Mismo criterio que en la tienda: solo empujamos el contenido hacia abajo
-  // si el bloque de arriba-izquierda realmente invadiría la franja donde
-  // arranca el título. En pantallas anchas .wrap está centrado y ya sobra
-  // margen a la izquierda, así que no hace falta tocar nada.
+  // Reservar hueco vertical solo si el stack invade la franja del título
   function ajustarEspacioSuperior(){
     var wrap = document.querySelector('.wrap');
     var topRow = document.querySelector('.top-row');
