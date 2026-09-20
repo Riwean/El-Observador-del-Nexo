@@ -4694,24 +4694,6 @@
               "effect": "Equipamiento industrial completo para generación de energía por fusión, embalado para su transporte y montaje en instalaciones coloniales o industriales. Su volumen y peso encarecen considerablemente el transporte."
             },
             {
-              "name": "Tecnología de inmortalidad necrófaga",
-              "stats": [
-                {
-                  "label": "Tipos",
-                  "value": "Médico, Maltecnología, Compacto"
-                }
-              ],
-              "tipos": [
-                "Medical",
-                "Maltech"
-              ],
-              "tl": "TL 5",
-              "cost": "400.000 cr/ton",
-              "costValue": 400000.0,
-              "tlNum": 5,
-              "effect": "Procedimientos y dispositivos de maltecnología que prolongan la vida mediante métodos moralmente cuestionables —trasplantes forzados, extracción biológica de sujetos no consentidos, u otras prácticas similares—. Su posesión o comercio está prohibido y perseguido en la mayoría de mundos civilizados."
-            },
-            {
               "name": "Menaje del hogar, básico",
               "stats": [
                 {
@@ -4953,10 +4935,10 @@
                 "Pretech",
                 "Tool"
               ],
-              "tl": "TL 4",
+              "tl": "TL 5",
               "cost": "100.000 cr/ton",
               "costValue": 100000.0,
-              "tlNum": 4,
+              "tlNum": 5,
               "effect": "Componentes de recambio para maquinaria de tecnología anterior al Silencio, extraordinariamente escasos y valiosos, ya que muy pocos talleres pueden fabricarlos desde cero."
             },
             {
@@ -5005,10 +4987,10 @@
               "tipos": [
                 "Pretech"
               ],
-              "tl": "TL 0",
+              "tl": "TL 5",
               "cost": "50.000 cr/ton",
               "costValue": 50000.0,
-              "tlNum": 0,
+              "tlNum": 5,
               "effect": "Restos y componentes de tecnología anterior al Silencio, dañados o incompletos pero aún valiosos como fuente de materiales raros o piezas de ingeniería inversa. Muy buscada por técnicos e investigadores."
             },
             {
@@ -5026,7 +5008,12 @@
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
               "tlNum": 0,
-              "effect": "Seres sapientes comprados y vendidos como propiedad, en abierta violación de la ley en la mayoría de jurisdicciones civilizadas. Su comercio es clandestino, extremadamente lucrativo y moralmente repugnante allí donde se practica."
+              "effect": "Seres sapientes comprados y vendidos como propiedad, en abierta violación de la ley en la mayoría de jurisdicciones civilizadas. Su comercio es clandestino, extremadamente lucrativo y moralmente repugnante allí donde se practica.",
+              "noVentaEn": [
+                "el-nexo",
+                "verdal",
+                "herrumbre"
+              ]
             },
             {
               "name": "Armas ligeras de energía",
@@ -7444,7 +7431,8 @@
               "tl": "TL 4",
               "cost": "30.000 cr",
               "costValue": 30000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Estas bombas endocrinas neutralizan varias sustancias químicas del cerebro y, al mismo tiempo, estimulan los centros de percepción. El resultado es una conciencia de la situación fría y desapasionada que otorga +2 a las tiradas de iniciativa mientras el sistema está activo. La mayoría de los modelos incorporan salvaguardas para evitar la adicción psicológica y el daño cerebral, así que solo pueden usarse durante una hora al día. Con el sistema en marcha, el usuario sufre un -2 a todas las tiradas de habilidades sociales, y activarlo o desactivarlo lleva cinco rondas."
             },
             {
               "name": "Aumentos de bioadaptación",
@@ -7458,7 +7446,8 @@
               "tl": "TL 4",
               "cost": "10.000 cr",
               "costValue": 10000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Órganos sintéticos y filtros adicionales que permiten al portador sobrevivir en atmósferas tenues y soportar temperaturas que van desde el frío antártico hasta el calor suficiente para hervir agua. También le permiten alimentarse de casi cualquier forma de vida nativa: la biología de un planeta normal nunca es incomestible para él."
             },
             {
               "name": "Matriz de arsenal corporal",
@@ -7472,7 +7461,8 @@
               "tl": "TL 4",
               "cost": "10.000 cr",
               "costValue": 10000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Hay agentes que necesitan ir armados en todo momento sin dar la menor señal de ello. Las armas improvisadas y las pistolas ocultas sirven contra objetivos blandos, pero neutralizar a alguien con armadura motorizada exige algo más. Los detalles cambian de un usuario a otro, pero la matriz suele comportarse como armas medianas avanzadas que se emplean con Puñetazo o Apuñalar, más al menos un proyector de energía integrado equivalente a un rifle láser, que debe alimentarse con una célula de energía tipo A insertable. Replegada, solo se detecta con un examen médico. En el sector solo circula por canales militares o a través de los Barones."
             },
             {
               "name": "Escultura corporal",
@@ -7486,7 +7476,23 @@
               "tl": "TL 4",
               "cost": "10.000 cr",
               "costValue": 10000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Más que un implante, es una serie de cirugías complejas que se ofrecen en muchos mundos TL 4 con servicios médicos avanzados. Tras una semana de alteraciones y tratamientos, el aspecto externo del sujeto puede fijarse dentro de cualquier rango humano o casi humano, incluida la coincidencia total de retina y huellas dactilares con un objetivo concreto. Existe una versión TL 5, diez veces más cara, que reprograma el ADN a fondo: los cambios se vuelven hereditarios y las formas pensadas para mujeres pueden gestar descendencia. Ese tratamiento TL 5 es irreversible, y cualquier otra alteración mayor posterior exige más tensión de sistema permanente."
+            },
+            {
+              "name": "Escultura corporal genética",
+              "stats": [
+                {
+                  "label": "Tensión sistema",
+                  "value": "1"
+                }
+              ],
+              "effect": "Reprogramación completa del ADN: cambios hereditarios e irreversibles",
+              "tl": "TL 5",
+              "cost": "100.000 cr",
+              "costValue": 100000.0,
+              "tlNum": 5,
+              "descripcion": "Versión TL 5 de la escultura corporal, diez veces más cara. En lugar de limitarse a moldear el aspecto externo, reprograma al sujeto a nivel genético: sus alteraciones se vuelven hereditarias y las formas pensadas para mujeres pueden gestar descendencia. El tratamiento es irreversible, y cualquier otra alteración mayor posterior exige más tensión de sistema permanente. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Armadura dérmica",
@@ -7500,7 +7506,23 @@
               "tl": "TL 4",
               "cost": "20.000 cr",
               "costValue": 20000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Una fina malla de refuerzo subcutánea protege de forma notable contra impactos y cortes sin resultar perceptible salvo en un examen médico. Quien la lleva tiene CA 16 y es inmune al Choque de las armas cuerpo a cuerpo primitivas. Existe una versión TL 5, cinco veces más cara, que protege todavía más: vuelve al sujeto totalmente inmune a las armas primitivas, como si vistiera armadura motorizada."
+            },
+            {
+              "name": "Armadura dérmica pretecnológica",
+              "stats": [
+                {
+                  "label": "Tensión sistema",
+                  "value": "2"
+                }
+              ],
+              "effect": "Inmune a las armas primitivas, como con armadura motorizada",
+              "tl": "TL 5",
+              "cost": "100.000 cr",
+              "costValue": 100000.0,
+              "tlNum": 5,
+              "descripcion": "Versión TL 5 de la armadura dérmica, cinco veces más cara. La malla subcutánea es tan densa que vuelve al sujeto totalmente inmune a las armas primitivas, como si vistiera armadura motorizada, y sigue sin ser perceptible salvo en un examen médico. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Enlace de control de drones",
@@ -7514,7 +7536,8 @@
               "tl": "TL 4",
               "cost": "20.000 cr",
               "costValue": 20000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Frecuente entre los domadores de robots militares, aunque los civiles también pueden implantárselo para simplificar el pilotaje remoto de drones y otras unidades robóticas. Quien lo lleva da órdenes a un dron como Acción de Movimiento en lugar de Acción Principal, aunque cada dron solo puede recibir una orden por ronda. Además, puede «mirar» a través de los sensores de un dron pilotado como acción instantánea, y ese dron nunca se considera fuera de control aunque el piloto no gaste ninguna acción en dirigirlo. El enlace mantiene conexión con un dron a la vez, más tantos como puntos tenga el usuario en Programar."
             },
             {
               "name": "Malla capacitora piel de anguila",
@@ -7528,7 +7551,8 @@
               "tl": "TL 4",
               "cost": "25.000 cr",
               "costValue": 25000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Una malla de cables finos como cabellos, casi imperceptible, recorre las palmas y los dedos del usuario y le permite liberar breves descargas eléctricas controladas contra objetivos a menos de cinco metros. Como acción instantánea, añade 2d4 de daño no letal a un ataque de Puñetazo que impacte. Para el uso para el que fue concebida, también permite anular la mayoría de cerraduras electrónicas y sistemas de seguridad con una tirada exitosa de Sigilo o Reparar. Tanto lanzar una descarga como hackear un sistema pasan factura al organismo: cada ataque o tirada de habilidad suma 1 punto de tensión de sistema."
             },
             {
               "name": "Anclajes gecko",
@@ -7539,10 +7563,11 @@
                 }
               ],
               "effect": "Permite escalar superficies verticales como si fueran planas",
-              "tl": "TL 4",
+              "tl": "TL 5",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 5,
+              "descripcion": "Esta cirugía compleja implanta manipuladores gravitatorios miniaturizados en las manos y los pies del sujeto. Son demasiado débiles para permitir levitar o amortiguar caídas, pero pueden torcer la gravedad local alrededor de esas extremidades y anclar al sujeto a la superficie más cercana capaz de soportar su peso. Así, el usuario puede correr o trepar por superficies verticales, hacia arriba o hacia abajo, a su velocidad de movimiento normal, siempre que no cargue más que su estorbo máximo normal. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Transceptor hablafantasma",
@@ -7556,7 +7581,8 @@
               "tl": "TL 4",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Hay quien no puede permitirse estar incomunicado en ningún momento y bajo ninguna circunstancia. Para esas personas existe el hablafantasma: una red microfina de cableado de radio y aumentos ópticos que funciona como un compad integrado y permite recibir y emitir grabaciones de audio y de vídeo; estas últimas se reproducen en una ventana insertada en el campo visual del usuario. Fuera de una red de comunicaciones estándar, tiene un alcance de transmisión de veinte kilómetros y de recepción de cien. Los usuarios pueden enviarse entre sí diagramas e imágenes sencillos, además de grabaciones ópticas."
             },
             {
               "name": "Cavidad de ocultación",
@@ -7570,7 +7596,8 @@
               "tl": "TL 4",
               "cost": "10.000 cr",
               "costValue": 10000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Suele implantarse en el torso: un pequeño hueco moldeado en el cuerpo del portador y diseñado para pasar desapercibido ante la mayoría de escáneres médicos y de seguridad estándar. Supera automáticamente cualquier inspección que use escáneres inferiores a TL 4, e incluso con tecnología avanzada hace falta un registro personal minucioso para tener alguna posibilidad de descubrirla. Puede alojar un objeto del tamaño de una pistola y se abre y se cierra con una orden mental del usuario."
             },
             {
               "name": "Emisores holopiel",
@@ -7581,10 +7608,11 @@
                 }
               ],
               "effect": "Crea un holograma alrededor del usuario",
-              "tl": "TL 4",
+              "tl": "TL 5",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 5,
+              "descripcion": "Varios emisores holográficos implantados en el usuario le permiten alterar su apariencia externa para igualar cualquier cosa de dimensiones aproximadamente similares a las suyas, incluidas otras personas. Cambiar de aspecto es una Acción Principal, y solo puede adoptar apariencias que figuren en la biblioteca de formas del implante. La biblioteca es enorme y contiene ejemplos «genéricos» de numerosos objetos y personas de tamaño humano, pero imitar a una persona concreta exige al menos cinco minutos de observación de cerca. Los hologramas son buenos, pero imperfectos: quien examine al usuario con atención notará que hay algo artificial en su aspecto, y el tacto confirma cualquier sospecha al instante. Los emisores pueden simular ropa y generar sonidos que refuercen la ilusión o cambien la voz del usuario, si se dispone de registros de la persona real. El disfraz dura hasta que el usuario muera o decida deshacerlo. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Disparador de inmersión de identidad",
@@ -7595,10 +7623,11 @@
                 }
               ],
               "effect": "Permite asumir a la perfección una identidad falsa",
-              "tl": "TL 4",
+              "tl": "TL 5",
               "cost": "25.000 cr",
               "costValue": 25000.0,
-              "tlNum": 4
+              "tlNum": 5,
+              "descripcion": "Este implante emplea una estimulación neuronal micronizada, imperceptible para cualquier medio inferior a un escáner médico TL 5 o al examen quirúrgico TL 4 del tejido cerebral del sujeto. Cuando está activo, permite adoptar una personalidad secundaria con una biblioteca completa de recuerdos fabricados. Mientras dure, el sujeto creerá de forma honesta y absoluta ser esa identidad, y solo la telepatía o los métodos de interrogatorio TL 4 pueden delatarlo. La personalidad se activa a voluntad del usuario, pero solo se desactiva con un detonante prefijado, y al hacerlo el sujeto conserva todos los recuerdos vividos durante ese tiempo. El detonante puede ser cualquier estímulo perceptible (una hora concreta, la visión de una persona determinada, una frase clave…) y el usuario puede cambiarlo cada vez que activa el implante. Muchos disparadores incluyen además una «llave maestra» que desactiva de inmediato la identidad activada. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Sistema de inmunofiltración",
@@ -7612,7 +7641,8 @@
               "tl": "TL 4",
               "cost": "25.000 cr",
               "costValue": 25000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Este sistema de depuración de amplio espectro identifica y contiene con cuidado las sustancias tóxicas que entran en el organismo del usuario. Siempre que el sujeto tuviera que hacer una tirada de salvación para resistir una enfermedad o una toxina, puede ganar 1 punto de tensión de sistema para superarla automáticamente. La mayoría de estos sistemas vienen calibrados para filtrar las toxinas y sustancias químicas de uso habitual entre la policía y las fuerzas militares del sector, pero ante una toxina de guerra biológica especial los filtros rinden menos. En ese caso, lo máximo que pueden hacer es conceder una segunda tirada de salvación si se falla la primera, o una única tirada si normalmente no se permite ninguna."
             },
             {
               "name": "Disparador de coma inducido",
@@ -7626,7 +7656,8 @@
               "tl": "TL 4",
               "cost": "20.000 cr",
               "costValue": 20000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Una serie de implantes conectados al tronco encefálico permite al usuario provocar, con una orden mental, un coma terapéutico inducido. Ante cualquier cosa que no sea una inspección médica parece muerto, y mientras dura no necesita respirar, comer ni beber. No se cura durante el coma, pero cualquier enfermedad o veneno también detiene su avance. El usuario decide cuánto durará antes de activarlo y permanece inconsciente todo ese tiempo. Se puede sobrevivir en coma hasta dos semanas, y después hay que permanecer despierto tanto tiempo como se estuvo en coma."
             },
             {
               "name": "Alerta neurointrusa",
@@ -7640,7 +7671,8 @@
               "tl": "TL 5",
               "cost": "50.000 cr",
               "costValue": 50000.0,
-              "tlNum": 5
+              "tlNum": 5,
+              "descripcion": "Aunque algo primitivo para los estándares pretech, este implante cibernético TL 5 otorga al portador un +3 a todas las tiradas de salvación para resistir intrusiones telepáticas. Incluso si la salvación falla, el usuario sabrá que está sufriendo un asalto telepático, aunque algunas formas de control mental pueden impedirle decirlo hasta que cese su influencia. El aviso no indica el origen de la intrusión."
             },
             {
               "name": "Óptica panespectral",
@@ -7654,7 +7686,8 @@
               "tl": "TL 4",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Unos ajustes oculares permiten al portador ver con claridad con cualquier nivel de luz, salvo oscuridad absoluta, y le dan además una visión térmica capaz de distinguir formas y distancias incluso sin nada de luz. También ve la radiación peligrosa y los láseres sintonizados fuera del espectro visible, y las transmisiones de radio cercanas se le aparecen como destellos de color. El sistema no traduce esas transmisiones: solo avisa al usuario de que existen."
             },
             {
               "name": "Revestimiento de presión",
@@ -7668,7 +7701,8 @@
               "tl": "TL 4",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Lo compran de vez en cuando trabajadores expuestos al vacío total u otros entornos hostiles. Integra una membrana de presión ultrafina con la dermis del usuario y selladores de emergencia que se activan con una orden mental. Funciona como un traje de vacío de emergencia con suministro de oxígeno y reguladores de temperatura incorporados, capaz de mantener con vida al usuario hasta treinta minutos. Tras activarse, necesita 48 horas para recuperar su integridad estructural y su energía. Solo un examen médico detallado puede detectarlo."
             },
             {
               "name": "Extremidad protésica",
@@ -7682,7 +7716,8 @@
               "tl": "TL 4",
               "cost": "2.500 cr",
               "costValue": 2500.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "La ciencia médica postecnológica puede replicar manos, pies, brazos, piernas, ojos y numerosos órganos internos. Estas prótesis ofrecen una buena aproximación del sentido del tacto y, por lo general, es imposible distinguirlas de una extremidad normal sin una inspección minuciosa. Los mundos de nivel pretecnológico prefieren regenerar la extremidad perdida, pero quienes solo tienen acceso a la tecnología fronteriza corriente tienen motivos para agradecer las prótesis."
             },
             {
               "name": "Cableado revenant",
@@ -7696,7 +7731,8 @@
               "tl": "TL 5",
               "cost": "50.000 cr",
               "costValue": 50000.0,
-              "tlNum": 5
+              "tlNum": 5,
+              "descripcion": "Uno de los resultados más grotescos de la investigación pretech tardía en aumentos corporales: una red de actuadores de extremidades y racimos de sensores suplementarios que impregna todo el cuerpo del usuario. En combate, este puede designar hasta media docena de objetivos a la microIA limitada del sistema. Si el usuario pierde el conocimiento o muere, la microIA activa los actuadores para seguir luchando, aunque de él no quede más que una masa informe de tejido destrozado. La microIA no es brillante, pero sabe sortear la mayoría de terrenos y obstáculos físicos para matar a los objetivos designados. Los actuadores tienen energía para funcionar 3d4 rondas, o hasta que el portador reciba 25 puntos de golpe más de daño, lo que ocurra antes. El estrés del cableado hace mucho más difícil reanimar a un usuario caído con parches Lázaro o biopsiónica: todas las probabilidades de reanimación se reducen a la mitad."
             },
             {
               "name": "Ventana de tiempo lento",
@@ -7710,7 +7746,8 @@
               "tl": "TL 5",
               "cost": "30.000 cr",
               "costValue": 30000.0,
-              "tlNum": 5
+              "tlNum": 5,
+              "descripcion": "Ciberimplante pretech de vanguardia, instalado en respondedores de crisis y otras personas que dependían de decisiones tomadas en fracciones de segundo. Al activarse, acelera la velocidad de pensamiento del usuario más de un tres mil por ciento. Los reflejos físicos no se aceleran, pero el usuario tiene tiempo de procesar la situación y captar sus detalles. Quien activa una ventana de tiempo lento no puede ser sorprendido: siempre tira iniciativa con normalidad, por inesperado que sea el ataque. Esta aceleración castiga mucho los tejidos, y cada vez que se activa suma 1 punto de tensión de sistema."
             },
             {
               "name": "Anulaciones de estabilización",
@@ -7724,7 +7761,8 @@
               "tl": "TL 4",
               "cost": "25.000 cr",
               "costValue": 25000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Un intrincado entramado de microcapilares y órganos de respaldo se implanta en el torso y la columna del sujeto. Estas anulaciones pueden estabilizar al usuario cuando un trauma físico grave lo mataría: si queda reducido a 0 puntos de golpe, se estabiliza automáticamente, como si le hubieran aplicado con éxito un parche Lázaro, siempre que un parche hubiera podido salvarlo. Eso sí, tienden a interferir con el funcionamiento normal de los órganos, así que el modificador de Constitución del portador baja 1, con todas las consecuencias que ello tiene en los puntos de golpe máximos."
             },
             {
               "name": "Nanites marcadores",
@@ -7735,10 +7773,11 @@
                 }
               ],
               "effect": "Permite marcar a otros con nanites de rastreo",
-              "tl": "TL 4",
+              "tl": "TL 5",
               "cost": "15.000 cr",
               "costValue": 15000.0,
-              "tlNum": 4
+              "tlNum": 5,
+              "descripcion": "Aunque la nanotecnología auténtica queda fuera del alcance de la ciencia estándar TL 4, este implante instala en el usuario nanofactorías muy simples que exudan de forma constante un «polvo inteligente» imperceptible. Los objetos que toque pueden marcarse con esos nanites, que generan más de su especie hasta 48 horas después del marcado. El polvo deja entonces un rastro tras el objeto marcado, visible para el usuario o para alguien con un rastreador de la clave adecuada. Solo las contramedidas antinanites pueden eliminarlo: lavarse o frotar no basta. El polvo puede sondearse por radio para revelar su posición a cualquiera en un radio de cinco kilómetros, pero la mayoría de usuarios prefieren dejarlo en modo pasivo, donde pasa inadvertido a casi todos los sensores TL 4. Marcar un objeto suma 1 punto de tensión de sistema al usuario. Tecnología pre-Escisión: nadie en el sector sabe fabricarla, solo se encuentra en reliquias."
             },
             {
               "name": "Inyector de toxinas",
@@ -7752,7 +7791,8 @@
               "tl": "TL 4",
               "cost": "20.000 cr",
               "costValue": 20000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Los caninos o las uñas del usuario se modifican para poder inyectar uno de dos tipos de veneno. Si intenta inyectar a una víctima desprevenida a la que ya está tocando, el intento tiene éxito automáticamente. Si la víctima está alerta o en combate, solo se ve afectada si va sin armadura y el usuario supera una tirada de ataque de Puñetazo. Si tiene éxito, la víctima debe superar una salvación Física con -2 o quedar incapacitada por el veneno: muere en 1d6 rondas o queda incapacitada 1d6 horas, a elección del usuario. Cada ataque envenenado suma 2 puntos de tensión de sistema."
             },
             {
               "name": "Actuadores de reflejo instantáneo",
@@ -7766,7 +7806,8 @@
               "tl": "TL 4",
               "cost": "30.000 cr",
               "costValue": 30000.0,
-              "tlNum": 4
+              "tlNum": 4,
+              "descripcion": "Unas fibras de anulación neural se entretejen en las manos y los brazos del usuario y se conectan a un modulador perceptivo implantado en la base del tronco encefálico. Ante un ejercicio directo de coordinación mano-ojo, el implante puede activarse para lograr una exactitud y una precisión sobrehumanas. Cualquier tirada de ataque o de habilidad que dependa sobre todo de la destreza manual o de la puntería puede repetirse, aunque el pico de energía inflige 2 puntos de tensión de sistema al usuario. Una misma tirada solo puede repetirse una vez con este implante. Mientras está activo, las anulaciones enturbian los impulsos nerviosos normales y reducen en 1 el modificador de Destreza del usuario. Activarlo o desactivarlo requiere una Acción Principal."
             },
             {
               "name": "Ranura de equipo",
@@ -7799,7 +7840,7 @@
             {
               "name": "Prótesis, brazo",
               "cost": "5.000 cr",
-              "tl": "TL 4",
+              "tl": "TL 3",
               "stats": [
                 {
                   "label": "Tensión sistema",
@@ -7808,12 +7849,12 @@
               ],
               "effect": "Otorga +1 a las tiradas de Fuerza/Esfuerzo que requieran el uso del brazo, a cambio de 1 punto de tensión de sistema. También sirve como arma cuerpo a cuerpo (Daño 1d4, Choque 1, CA 10, Atributo Fuerza/Destreza), usando la habilidad de Puñetazo con +1 al ataque. Puede montarse una herramienta o arma pequeña en lugar de la mano. Algunos modelos avanzados incluyen una Ranura de Equipo por 1.000 créditos adicionales sin aumentar la tensión. Montar dos prótesis de brazo otorga +1 a los intentos de desarmar y +1 de daño luchando a dos armas.",
               "costValue": 5000.0,
-              "tlNum": 4
+              "tlNum": 3
             },
             {
               "name": "Prótesis, ojo",
               "cost": "5.000 cr",
-              "tl": "TL 4",
+              "tl": "TL 3",
               "stats": [
                 {
                   "label": "Tensión sistema",
@@ -7822,12 +7863,12 @@
               ],
               "effect": "Existe en distintos modelos, a elegir al implantarse: 1) Ondas de frecuencia — traduce en información visual ondas invisibles al ojo desnudo (gamma, infrarrojo, microondas, radio, ultravioleta o rayos X). 2) Visión telescópica — multiplica por cinco el alcance visual y reduce en -1 la penalización al disparar más allá del alcance estándar. 3) Mira láser — mira láser de largo alcance que calcula la distancia exacta al impactar y puede analizar la composición química del objeto.",
               "costValue": 5000.0,
-              "tlNum": 4
+              "tlNum": 3
             },
             {
               "name": "Prótesis, pierna",
               "cost": "8.000 cr",
-              "tl": "TL 4",
+              "tl": "TL 3",
               "stats": [
                 {
                   "label": "Tensión sistema",
@@ -7836,7 +7877,7 @@
               ],
               "effect": "Otorga +1 a las tiradas de Fuerza/Esfuerzo que requieran el uso de la pierna, a cambio de 1 punto de tensión de sistema. Sirve como arma cuerpo a cuerpo (Daño 2d4, Choque 1, CA 11, Atributo Fuerza), usando la habilidad de Puñetazo con +1 al ataque. Montar dos prótesis de pierna aumenta el movimiento base en 3 metros y permite correr al triple de la velocidad estándar sin cansarse, aunque cada hora corriendo añade 1 punto de tensión de sistema. Algunos modelos avanzados incluyen una Ranura de Equipo por 1.000 créditos adicionales sin aumentar la tensión.",
               "costValue": 8000.0,
-              "tlNum": 4
+              "tlNum": 3
             },
             {
               "name": "Prótesis, corazón",

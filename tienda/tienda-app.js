@@ -27,6 +27,7 @@ function registerItem(skin, item, catId){
 function getPriceInfo(item, catId){
   const world = currentWorld;
   const tlBlocked = (item.tlNum !== null && item.tlNum !== undefined) && item.tlNum > world.tlNum;
+  const noVenta = Array.isArray(item.noVentaEn) && item.noVentaEn.includes(world.id);
 
   let multiplier = 1.0;
   if (catId === 'comercio'){
@@ -48,9 +49,10 @@ function getPriceInfo(item, catId){
   }
 
   return {
-    available: !tlBlocked,
+    available: !tlBlocked && !noVenta,
     displayCost,
-    badge: tlBlocked ? `NO DISPONIBLE (requiere TL ${item.tlNum})` : null,
+    badge: noVenta ? 'NO DISPONIBLE EN ESTE MUNDO'
+         : (tlBlocked ? `NO DISPONIBLE (requiere TL ${item.tlNum})` : null),
   };
 }
 
@@ -638,7 +640,7 @@ function renderModalCard(skin, it, catId){
          </div>
          <button class="modal-add-cart">🛒 AÑADIR</button>
        </div>`
-    : `<button class="modal-add-cart" disabled>SIN PRECIO FIJO — NO DISPONIBLE EN CARRITO</button>`;
+    : `<button class="modal-add-cart" disabled>${pinfo.available ? 'SIN PRECIO FIJO — NO DISPONIBLE EN CARRITO' : 'NO DISPONIBLE EN ESTE MUNDO'}</button>`;
 
   const wrapClass = skinClass(skin);
   const innerClass = skinInnerClass(skin);
@@ -658,7 +660,7 @@ function renderModalCard(skin, it, catId){
       inner = `<div class="plate-card" style="cursor:default;"><div class="rivets"><span class="rivet"></span><span class="rivet"></span></div><div class="body"><div class="name" style="font-size:17px;">${esc(it.name)}</div>${statsHtml(it.stats,'stat')}${it.ac?`<span class="ac-badge">CA ${esc(it.ac)}</span>`:''}<span class="cr" style="font-size:17px;">${esc(pinfo.displayCost)}</span>${badge}${descHtml}</div></div>`;
       break;
     case 'cyber':
-      inner = `<div class="cyber-card" style="cursor:default;"><h4 style="font-size:17px;">${esc(it.name)}</h4>${statsHtml(it.stats,'stat')}${it.tl?`<div class="stat">${esc(it.tl)}</div>`:''}${it.effect?`<div class="effect">${esc(it.effect)}</div>`:''}<div class="cr" style="font-size:18px;">${esc(pinfo.displayCost)}</div>${badge}</div>`;
+      inner = `<div class="cyber-card" style="cursor:default;"><h4 style="font-size:17px;">${esc(it.name)}</h4>${statsHtml(it.stats,'stat')}${it.tl?`<div class="stat">${esc(it.tl)}</div>`:''}${(it.effect && !it.descripcion)?`<div class="effect">${esc(it.effect)}</div>`:''}<div class="cr" style="font-size:18px;">${esc(pinfo.displayCost)}</div>${badge}${it.descripcion?`<div class="modal-desc" style="color:#c9b8e8;font-size:14.5px;">${esc(it.descripcion)}</div>`:''}</div>`;
       break;
     case 'ship':
       inner = `<div class="dock-slot" style="cursor:default;grid-template-columns:1fr;"><div class="info"><h4 style="font-size:17px;">${esc(it.name)}</h4><div class="stats">${(it.stats||[]).map(s=>esc(s.label)+': '+esc(s.value)).join(' · ')}</div>${it.effect?`<div class="effect">${esc(it.effect)}</div>`:''}${badge}</div><div class="price" style="text-align:left;margin-top:10px;"><div class="cr" style="font-size:18px;">${esc(pinfo.displayCost)}</div><div class="tl">${esc(it.tl||'')}</div></div></div>`;
