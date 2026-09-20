@@ -1857,6 +1857,240 @@ const ediciones = {
       },
     ],
   },
+  8: {
+    numero: "LC-0008",
+    fecha: "Año 1050 P.E. | Día 351 | 07:40 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "DOCUMENTOS OFICIALES CONFIRMADOS",
+      titulo:
+        "THERON VON DREVAN, SEÑALADO POR ORDENAR EL ASESINATO DE UNA MUJER EMBARAZADA",
+      subtitulo:
+        "» Documentos oficiales cuya autenticidad este periódico ha podido verificar de forma independiente vinculan directamente al heredero legítimo de la Casa Von Drevan con el asesinato encubierto de una mujer que esperaba un hijo suyo",
+      contenido: [
+        "Este periódico ha tenido acceso a documentación oficial —registros médicos, órdenes internas y correspondencia administrativa— cuya autenticidad ha podido verificar de forma independiente, y que vincula directamente a Theron Von Drevan con el asesinato encubierto de una mujer que esperaba un hijo suyo. No se trata de un rumor ni de una filtración anónima sin respaldo: son documentos oficiales, con sellos y registros administrativos verificables.",
+        "Según la documentación consultada, la mujer —cuya identidad este periódico mantiene reservada por respeto a su familia— fue asesinada por orden directa de Theron poco después de confirmarse el embarazo. Los registros describen el encubrimiento posterior con un detalle administrativo que resulta, si cabe, todavía más inquietante que el crimen en sí: certificados médicos alterados, una causa de muerte oficial que no coincide con ningún informe forense real, y pagos registrados a al menos tres personas cuya función en el encubrimiento no queda especificada por escrito.",
+        "Theron Von Drevan continúa sin aparecer en público desde hace semanas. Este periódico no ha podido obtener reacción alguna de su entorno inmediato, ni de la Casa Von Drevan, ni de Aldric Von Drevan, actualmente en Santigua.",
+        "Este periódico es consciente de la gravedad de esta información y de sus implicaciones para una Casa que ya atraviesa la crisis más profunda de su historia reciente. Por ello, antes de su publicación, esta redacción sometió los documentos a un proceso de verificación exhaustivo, incluyendo la comprobación de sellos administrativos, cotejo de registros cruzados y consulta con fuentes independientes dentro de la propia administración de la Casa. El resultado de ese proceso es la razón por la que hoy publicamos esta noticia.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo:
+            "[BAJO FONDO] Los Gemelos Vex, muertos — un vídeo del combate se filtra",
+          contenido: [
+            "Este periódico puede confirmar la muerte de los Gemelos Vex, los últimos altos cargos de su facción que quedaban con vida tras semanas de purga en Bajo Fondo. La confirmación llega acompañada de un material que ha empezado a circular fuera de control por los canales menos regulados de la Outernet: un vídeo grabado en primera persona, aparentemente desde el punto de vista de uno de los combatientes del grupo que acompaña a Hadria Von Drevan, que muestra el enfrentamiento completo y termina con los cuerpos calcinados de ambos hermanos.",
+            "Este periódico ha optado por no reproducir ni enlazar el material, dada su crudeza. Ni la Casa Von Drevan ni ningún miembro identificable del grupo que aparece en el vídeo ha hecho declaración alguna sobre su origen ni sobre cómo llegó a filtrarse.",
+          ],
+        },
+        {
+          titulo:
+            "[BAJO FONDO] El Tasador, confirmado muerto sin haberse conocido nunca su rostro",
+          contenido: [
+            "La Casa Ashental ha confirmado la muerte de El Tasador, el más enigmático de los Cinco Capos originales, cuya identidad nunca llegó a conocerse públicamente ni siquiera después de su muerte. Con esta confirmación, y tras las bajas ya reportadas de Shen el Susurro, Grox y los Gemelos Vex, ninguno de los Cinco Capos que gobernaban Bajo Fondo hace apenas unas semanas sigue con vida y al mando.",
+            "Kartha «La Viuda», la única superviviente de la vieja guardia, se encuentra en paradero desconocido. Fuentes consultadas por este periódico la dan por huida del sistema, aunque ninguna ha podido confirmar su ubicación actual.",
+          ],
+        },
+        {
+          titulo:
+            "[SISTEMA EROSIÓN] Nace «La Mano de Hierro»: los Barones se alían, y Skarr mueve tropas hacia Ceniza",
+          contenido: [
+            "Fuentes procedentes del sistema Erosión confirman a este periódico la formación de una alianza formal entre varios Barones del Polvo, bautizada internamente como «La Mano de Hierro» — el primer pacto declarado de este tipo entre barones en memoria reciente del sector. El Barón Skarr, que gobierna Viento Rojo, Yesca, Espina y la ocupación militar de La Cuenca Verde (en Manath) desde hace años, encabeza la iniciativa según todas las fuentes consultadas.",
+            "El detonante inmediato, según estas mismas fuentes, es la pérdida de Los Fuelles y Cúpula Rencor a manos de una revuelta popular en Ceniza Prima, sumada al colapso total de los Cinco Capos de Bajo Fondo — un patrón que varios barones interpretan ya como una amenaza sistémica, no incidentes aislados.",
+            "Lo que hace de esta noticia algo más que un simple pacto de papel es el movimiento que la acompaña: este periódico ha podido confirmar que Skarr ha ordenado el desplazamiento de parte de sus fuerzas —incluidas tropas destacadas en la ocupación de La Cuenca Verde— hacia Ceniza Prima, para reforzar directamente al debilitado Barón Kaldrek. La decisión no está exenta de riesgo para el propio Skarr: reducir su presencia militar en Erosión, justo cuando la tensión social en la región lleva semanas latente, es una apuesta que varios analistas del sector consideran arriesgada incluso para un barón de su reputación.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[CASA ASHENTAL] Míriam Ashental adopta a Antares Kharthian como heredero legítimo",
+          contenido: [
+            "Lady Míriam Ashental ha formalizado la adopción de Antares Kharthian —conocido públicamente durante años como el cantante Orfeo— como heredero legítimo de la Casa Ashental, la casa nobiliaria de mayor rango de El Nexo. Antares Kharthian es, según ha podido confirmar este periódico, el nombre que la propia Ashental le dio cuando adquirió participación en su contrato artístico, antes de romperlo unilateralmente hace varias semanas.",
+            "La noticia sitúa a un antiguo esclavo artístico, con las cuerdas vocales mutiladas de forma deliberada, en la línea de sucesión de una de las casas más ricas y poderosas del sector. Ninguna otra casa nobiliaria de Santigua ni de Santuario Menor ha hecho declaraciones oficiales hasta el cierre de esta edición, aunque fuentes de la alta sociedad describen la reacción privada como de auténtica conmoción.",
+          ],
+        },
+        {
+          titulo: "[CRISTAL ROTO] Alucinaciones colectivas paralizan las cavernas",
+          contenido: [
+            "Fuentes procedentes de Cristal Roto, la luna minera del sistema Prisma conocida por sus cavernas de cristal de silicio, reportan un episodio sin precedentes en la memoria reciente del asentamiento: decenas de mineros y residentes de al menos tres cavernas habitadas sufrieron, durante varias horas seguidas, episodios de alucinación colectiva mucho más intensos y prolongados que los habituales «destellos» que la población local da por normales al vivir allí.",
+            "Testigos describen visiones compartidas y coincidentes entre personas que no tenían contacto directo entre sí en el momento de los hechos — un detalle que, según fuentes médicas consultadas, no encaja con el patrón conocido de los efectos ópticos del cristal, generalmente individuales e impredecibles. La actividad minera se ha detenido temporalmente en las zonas afectadas.",
+          ],
+        },
+        {
+          titulo: "[SINAIRE] Contacto confirmado: hay gente en Espesura Roja",
+          contenido: [
+            "Fuentes de la Hermandad de Santuario han confirmado a este periódico lo que hasta ahora era solo rumor entre los equipos de exploración de Sinaire: se ha establecido contacto con habitantes de Espesura Roja, el mundo de vegetación y fluidos rojizos que las primeras expediciones catalogaron como hostil pero deshabitado.",
+            "Ninguna fuente ha precisado todavía si se trata de descendientes de una colonia humana perdida durante los 150 años de desconexión, o de algo completamente distinto. Este periódico no ha podido confirmar si la comunicación establecida es verbal, ni en qué idioma. La propia Hermandad, poco dada a admitir vacíos en su conocimiento, se ha limitado a calificar el hallazgo como «de la máxima relevancia» sin ofrecer más detalles.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "Se mantiene la suspensión de cotización. Sin fecha de reapertura confirmada.",
+        },
+        {
+          recurso: "Cristales de silicio (Cristal Roto)",
+          variacion: "▼ -16%",
+          texto:
+            "La paralización temporal de la actividad minera tras el episodio de alucinaciones colectivas afecta ya a la exportación habitual.",
+        },
+        {
+          recurso: "Mercenarios y contratos de seguridad privada (general)",
+          variacion: "▲ +11%",
+          texto:
+            "Nuevo repunte tras la confirmación de la muerte de los Gemelos Vex y de El Tasador.",
+        },
+        {
+          recurso: "Kartha Armamento",
+          variacion: "▼ -6%",
+          texto:
+            "La huida de Kartha «La Viuda» genera incertidumbre sobre la continuidad de la marca que lleva su nombre.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "¿Y si nunca hubo Tasador?",
+          texto:
+            "Con nadie capaz de confirmar jamás el rostro de El Tasador, ni siquiera ahora que se declara muerto, circula la teoría de que el nombre nunca correspondió a una sola persona, sino a una identidad compartida o heredada entre varios intermediarios a lo largo de los años. Si es cierto, su «muerte» podría no significar nada en absoluto.",
+        },
+        {
+          titulo: "El otro hermano, en algún lugar de la Outernet",
+          texto:
+            "Pese a la gravedad de los documentos publicados hoy, sigue sin confirmarse el paradero de Theron Von Drevan. Al menos una fuente asegura haber detectado actividad reciente vinculada a sus credenciales personales en canales de la Outernet propios de zonas fuera del control habitual de las grandes facciones — sin que este periódico haya podido verificarlo de forma independiente.",
+        },
+        {
+          titulo: "Los Hijos de la Oscuridad, otra vez",
+          texto:
+            "Vuelve a circular el viejo mito de «Los Hijos de la Oscuridad» tras un rumor tan concreto como imposible de verificar: al menos dos fuentes distintas, sin relación aparente entre sí, aseguran que la primera comunicación establecida con Espesura Roja no llegó por canal humano convencional, sino interceptada de una transmisión que ya circulaba entre el mundo y algo situado mucho más lejos. Ninguna fuente sabe explicar qué significa eso, ni de dónde vendría esa transmisión. Tampoco lo desmienten.",
+        },
+        {
+          titulo: "El jardín que nadie pisa",
+          texto:
+            "Un rumor menor pero persistente en los salones de Santuario Menor: desde el anuncio de la adopción de Antares Kharthian, Lady Míriam Ashental habría dejado de recibir visitas en su jardín privado, el único rincón de su mansión donde, según quienes la conocen, siempre bajaba la guardia. Nadie ha sabido explicar si es duelo, cautela, o simplemente que ya no lo necesita en soledad.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "775 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "651 CR",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.717 CR",
+        variacion: "-6.0%",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.103 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "301 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "1.204 CR",
+        variacion: "-43.1%",
+      },
+      {
+        simbolo: "ASHT",
+        nombre: "Casa Ashental (mercado gris, fuera de La Bolsa)",
+        valor: "3.350 CR",
+        variacion: "+8.0%",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Personal de seguridad con experiencia en gestión de crisis institucional. Contrato inmediato, discreción imprescindible. Módulo 6.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre el paradero de Theron Von Drevan. Pago excepcional, discreción absoluta garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se busca personal técnico con experiencia en sistemas de comunicación de largo alcance para expedición a Sinaire. Consultar condiciones en Puerto Raíz.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Guías y buceadores con experiencia en cavernas cristalinas para labores de evacuación en Cristal Roto. Riesgo alto, pago acorde.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recomienda extremar la precaución con cualquier material audiovisual no verificado que circule por la Outernet relacionado con los sucesos recientes de Bajo Fondo.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se mantiene la suspensión de cotización en La Bolsa del Consorcio de Mercaderes. Sin fecha de reapertura confirmada.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Se recomienda evitar las zonas mineras de Cristal Roto hasta que se aclare el origen del fenómeno de alucinaciones colectivas registrado esta semana.",
+      },
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se recuerda que la Mesa Fragmentada continúa su sesión extraordinaria en Santigua, sin fecha de conclusión confirmada.",
+      },
+    ],
+  },
 };
 
 // Ediciones especiales: fuera de la numeración semanal normal, layout propio
