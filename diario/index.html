@@ -6,6 +6,8 @@
 <title>Diario de a Bordo — Nave Asterión</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../nav-shared.css">
+<script src="../nav-shared.js" defer></script>
 <style>
   :root{
     --bg:#040910;
@@ -26,7 +28,7 @@
       var(--bg);
     color:var(--text);
     font-family:'JetBrains Mono', monospace;
-    padding:32px 16px 80px;
+    padding:0 16px 80px;
   }
   header{
     max-width:900px;
@@ -49,18 +51,7 @@
     text-transform:uppercase;
     margin:0;
   }
-  .back-link{
-    display:inline-block;
-    margin-bottom:24px;
-    color:var(--text-dim);
-    text-decoration:none;
-    font-size:12px;
-    letter-spacing:1px;
-    border:1px solid var(--panel-border);
-    padding:6px 12px;
-    clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
-  }
-  .back-link:hover{color:var(--cyan); border-color:var(--cyan);}
+  .site-nav{margin:0 -16px 28px;}
   .filters{
     max-width:900px;
     margin:0 auto 28px;
@@ -166,8 +157,11 @@
 </style>
 </head>
 <body>
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+  <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+</div>
+
   <header>
-    <a class="back-link" href="../index.html">&larr; Volver al puente</a>
     <h1>Diario de a Bordo</h1>
     <p>Nave Asterión — Registro cronológico de la travesía</p>
   </header>

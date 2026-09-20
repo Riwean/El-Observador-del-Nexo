@@ -2,30 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bolsa de La Cicatriz</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../nav-shared.css">
 <link rel="stylesheet" href="bolsa-styles.css">
+<script src="../nav-shared.js" defer></script>
 </head>
 <body>
 <div class="scanlines"></div>
 
-<button class="corner-toggle corner-toggle-tl" id="tlToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="topLeftStack">☰</button>
-<div class="top-left-stack" id="topLeftStack">
-  <a class="nav-btn" href="../index.html" title="Volver a la consola">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
-      <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-    <span>volver a la consola</span>
-  </a>
-  <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#ff2f5e;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+<div class="site-nav" role="navigation" aria-label="Navegación">
+  <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+  <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Más opciones" aria-expanded="false" aria-controls="navExtras">☰</button>
+  <div class="nav-extras" id="navExtras">
+    <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#ff2f5e;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+    <div class="admin-row hidden" id="adminRow">
+      <div class="status-chip admin-chip" id="tickBtn">▲ LANZAR TICK DE MERCADO</div>
+      <div class="status-chip admin-chip" id="pesosBtn">⚖ AJUSTAR PESOS</div>
+    </div>
+  </div>
 </div>
 
-<button class="corner-toggle corner-toggle-bl hidden" id="blToggle" aria-label="Abrir accesos de DJ" aria-expanded="false" aria-controls="adminRow">☰</button>
-<div class="admin-row hidden" id="adminRow">
-  <div class="status-chip admin-chip" id="tickBtn">▲ LANZAR TICK DE MERCADO</div>
-  <div class="status-chip admin-chip" id="pesosBtn">⚖ AJUSTAR PESOS</div>
-</div>
+<!-- oculto; se mantiene por si bolsa-app.js lo referencia -->
+<button class="corner-toggle hidden" id="blToggle" type="button" hidden aria-hidden="true" tabindex="-1"></button>
 
 <header>
   <h1 class="flicker">bolsa <span>de la cicatriz</span></h1>

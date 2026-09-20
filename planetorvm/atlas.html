@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Índex Planetorum — Nave Asterión</title>
+    <link rel="stylesheet" href="../nav-shared.css">
+    <script src="../nav-shared.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
@@ -61,29 +63,29 @@
       /* ---------- Mapa ---------- */
       #mapView header {
         position: absolute;
-        top: 32px;
-        left: 40px;
+        top: 72px;
+        left: 20px;
+        right: 20px;
         z-index: 10;
+        pointer-events: none;
       }
-      #toDesktopBtn {
+      :root {
+        --nav-accent: #8fe0ff;
+        --nav-border: rgba(120, 220, 255, 0.35);
+        --nav-text: #c9f2ff;
+        --nav-bg: rgba(20, 35, 50, 0.6);
+        --nav-hover-text: #03060a;
+        --nav-font: "Share Tech Mono", monospace;
+        --nav-fs: 13px;
+        --nav-ls: 1px;
+        --nav-radius: 4px;
+        --nav-glow: none;
+      }
+      .atlas-back {
         position: absolute;
-        top: 32px;
-        right: 40px;
+        top: 16px;
+        left: 20px;
         z-index: 10;
-        border: 1px solid rgba(120, 220, 255, 0.35);
-        background: rgba(20, 35, 50, 0.6);
-        color: #c9f2ff;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-family: "Share Tech Mono", monospace;
-        font-size: 13px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        text-decoration: none;
-        display: inline-block;
-      }
-      #toDesktopBtn:hover {
-        background: rgba(50, 80, 100, 0.6);
       }
       .eyebrow {
         font: 12px monospace;
@@ -189,20 +191,6 @@
         padding: 22px 40px;
         border-bottom: 1px solid rgba(120, 220, 255, 0.2);
         background: linear-gradient(180deg, rgba(6, 12, 20, 0.7), transparent);
-      }
-      #backBtn {
-        border: 1px solid rgba(120, 220, 255, 0.35);
-        background: rgba(20, 35, 50, 0.6);
-        color: #c9f2ff;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-family: "Share Tech Mono", monospace;
-        font-size: 13px;
-        letter-spacing: 1px;
-        cursor: pointer;
-      }
-      #backBtn:hover {
-        background: rgba(50, 80, 100, 0.6);
       }
       #sysTitle {
         font-family: "Orbitron", sans-serif;
@@ -338,17 +326,20 @@
           max-height: 45vh;
         }
         .sys-topbar {
-          padding: 16px 20px;
+          padding: 12px;
+        }
+        #mapView header h1.title {
+          font-size: 22px;
+          letter-spacing: 3px;
+        }
+        .atlas-back {
+          left: 12px;
+          top: 12px;
         }
         #mapView header {
-          left: 20px;
-          top: 22px;
-        }
-        #toDesktopBtn {
-          right: 20px;
-          top: 22px;
-          padding: 6px 12px;
-          font-size: 11px;
+          top: 64px;
+          left: 16px;
+          right: 16px;
         }
       }
     </style>
@@ -358,7 +349,7 @@
     <div class="crt-overlay"></div>
 
     <div id="mapView" class="view">
-      <a id="toDesktopBtn" href="../index.html">← Volver a la consola</a>
+      <a class="nav-back atlas-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
       <header>
         <div class="eyebrow">La Cicatriz · Nave Asterión</div>
         <h1 class="title">Índex Planetorum</h1>
@@ -373,7 +364,7 @@
     <div id="systemView" class="view hidden">
       <div id="sysCanvasWrap"></div>
       <div class="sys-topbar">
-        <button id="backBtn">← Volver al Atlas</button>
+        <button id="backBtn" class="nav-back" type="button"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver al Atlas</span></button>
         <div>
           <div id="sysTitle">—</div>
           <div id="sysSubtitle">—</div>

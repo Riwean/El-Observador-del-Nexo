@@ -19,28 +19,10 @@
     *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
   }
 
-  /* ---------- NAV BUTTON (back to Observador) ---------- */
-  .nav-btn{
-    display:flex;align-items:center;gap:8px;
-    padding:9px 16px;
-    background:rgba(18,1,6,0.6);
-    border:1px solid var(--gold);
-    color:var(--gold-bright);
-    text-decoration:none;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1rem;letter-spacing:0.04em;
-    box-shadow:inset 0 0 8px rgba(201,162,74,0.05);
-    transition:all 0.25s ease;
-    white-space:nowrap;
-  }
-  .nav-btn svg{width:16px;height:16px;flex-shrink:0;}
-  .nav-btn:hover{
-    background:var(--gold);color:var(--wine-deep);
-    box-shadow:0 0 16px rgba(201,162,74,0.45);
-  }
-  @media (max-width:480px){
-    .nav-btn{font-size:0.82rem;padding:7px 11px;gap:6px;}
-    .nav-btn svg{width:13px;height:13px;}
+  :root{
+    --nav-accent:var(--gold); --nav-text:var(--gold-bright); --nav-bg:rgba(18,1,6,0.6);
+    --nav-hover-text:var(--wine-deep); --nav-font:'Cormorant Garamond',serif; --nav-fs:1rem; --nav-ls:0.04em;
+    --nav-glow:inset 0 0 8px rgba(201,162,74,0.05);
   }
 
   .stage{
@@ -69,7 +51,7 @@
   /* ---------- NAV ---------- */
   nav{
     display:flex;justify-content:flex-start;align-items:center;
-    padding:22px 40px;border-bottom:1px solid var(--line);
+    padding:22px calc(7vw + 18px);border-bottom:1px solid var(--line);   /* 7vw = cortinas abiertas */
     gap:20px;flex-wrap:wrap;
   }
   .nav-menu-toggle{
@@ -86,15 +68,13 @@
     display:flex;align-items:center;gap:10px;
   }
   @media (max-width:640px){
-    .nav-menu-toggle{ display:flex; order:-1; }
-    nav .nav-btn{
-      display:none; width:100%; box-sizing:border-box; order:3; margin-left:0;
-    }
+    nav{ padding:12px calc(7vw + 12px); gap:10px; }
+    .nav-menu-toggle{ display:flex; }
+    nav .brand{ flex:1 1 auto; justify-content:flex-end; }
     nav .navlinks{
       display:none; width:100%; order:4; margin-left:0 !important;
       flex-direction:column; align-items:flex-start; gap:8px;
     }
-    nav.menu-open .nav-btn{ display:flex; }
     nav.menu-open .navlinks{ display:flex; }
   }
   @keyframes heartbeat{

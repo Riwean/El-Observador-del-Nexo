@@ -4,76 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Registro de la Nave — Asterión — Vorago Ferrea</title>
+<link rel="stylesheet" href="../nav-shared.css">
 <link rel="stylesheet" href="nave-styles.css">
+<script src="../nav-shared.js" defer></script>
 </head>
 <body>
 
 <div class="bg-grid"></div>
 
-<button class="corner-toggle corner-toggle-tl" id="tlToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="topLeftStack">☰</button>
-<div class="top-left-stack" id="topLeftStack">
-  <a class="nav-btn" href="../index.html" title="Volver a la consola">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="3" width="16" height="18" rx="1" stroke="currentColor" stroke-width="1.6"/>
-      <path d="M7 7h10M7 10.5h10M7 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-    <span>volver a la consola</span>
-  </a>
-  <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
-  <a class="status-chip cross-link" href="../tienda/index.html" title="Ir a la tienda">
-    <span class="dot" style="background:#7fe6cf;"></span>🛒 IR A LA TIENDA
-  </a>
+<div class="site-nav" role="navigation" aria-label="Navegación">
+  <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+  <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Más opciones" aria-expanded="false" aria-controls="navExtras">☰</button>
+  <div class="nav-extras" id="navExtras">
+    <div class="status-chip login-chip" id="sessionChip"><span class="dot" id="sessionDot" style="background:#c94a2a;"></span><span id="sessionLabel">INICIAR SESIÓN</span></div>
+    <a class="status-chip cross-link" href="../tienda/index.html" title="Ir a la tienda">
+      <span class="dot" style="background:#7fe6cf;"></span>🛒 IR A LA TIENDA
+    </a>
+  </div>
 </div>
-
-<script>
-(function(){
-  function wireToggle(btnId, panelId){
-    var btn = document.getElementById(btnId);
-    var panel = document.getElementById(panelId);
-    if (!btn || !panel) return;
-    btn.addEventListener('click', function(e){
-      e.stopPropagation();
-      var open = panel.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('click', function(e){
-      if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn){
-        panel.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-  wireToggle('tlToggle', 'topLeftStack');
-})();
-
-(function(){
-  // Reservar hueco vertical solo si el stack invade la franja del título
-  function ajustarEspacioSuperior(){
-    var wrap = document.querySelector('.wrap');
-    var topRow = document.querySelector('.top-row');
-    var toggle = document.getElementById('tlToggle');
-    var stack = document.getElementById('topLeftStack');
-    if (!wrap || !topRow) return;
-    var visible = (toggle && getComputedStyle(toggle).display !== 'none') ? toggle : stack;
-    if (!visible) { wrap.style.paddingTop = ''; return; }
-
-    wrap.style.paddingTop = '';
-    var stackRect = visible.getBoundingClientRect();
-    var rowRect = topRow.getBoundingClientRect();
-
-    var colisiona = rowRect.left < (stackRect.right + 16);
-    if (!colisiona) return;
-
-    var necesario = Math.ceil(stackRect.bottom + 14 - rowRect.top);
-    if (necesario > 0){
-      wrap.style.paddingTop = (26 + necesario) + 'px';
-    }
-  }
-  window.addEventListener('load', ajustarEspacioSuperior);
-  window.addEventListener('resize', ajustarEspacioSuperior);
-  document.addEventListener('DOMContentLoaded', ajustarEspacioSuperior);
-})();
-</script>
 
 <div id="app">
   <div class="wrap">
