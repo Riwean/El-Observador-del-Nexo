@@ -8,7 +8,7 @@
     {
       "id": "el-nexo",
       "nombre": "El Nexo",
-      "faccion": "Sindicato del Nexo",
+      "faccion": "Casa Ashental",
       "tlNum": 4
     },
     {
@@ -3125,16 +3125,65 @@
               "cost": "5/50",
               "costValue": null,
               "tlNum": 0,
-              "effect": "Las versiones TL4 de este objeto prácticamente no cuentan como estorbo, aunque cuestan 50 créditos. Una mochila puesta cuenta como objeto preparado, aunque los objetos guardados dentro siguen requiriendo la ronda habitual para sacarlos. Los personajes sin mochila o dispositivo similar pueden tener dificultades para justificar el transporte de grandes cantidades de equipo."
+              "effect": "Las versiones TL4 de este objeto prácticamente no cuentan como estorbo, aunque cuestan 50 créditos. Una mochila puesta cuenta como objeto preparado, aunque los objetos guardados dentro siguen requiriendo la ronda habitual para sacarlos. Los personajes sin mochila o dispositivo similar pueden tener dificultades para justificar el transporte de grandes cantidades de equipo.",
+              "variantes": [
+                {
+                  "tl": "TL 0",
+                  "tlNum": 0,
+                  "cost": "5 cr",
+                  "costValue": 5.0
+                },
+                {
+                  "tl": "TL 1",
+                  "tlNum": 1,
+                  "cost": "9 cr",
+                  "costValue": 9.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 2",
+                  "tlNum": 2,
+                  "cost": "16 cr",
+                  "costValue": 16.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 3",
+                  "tlNum": 3,
+                  "cost": "28 cr",
+                  "costValue": 28.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 4",
+                  "tlNum": 4,
+                  "cost": "50 cr",
+                  "costValue": 50.0
+                }
+              ]
             },
             {
               "name": "Prismáticos",
               "stats": [],
-              "tl": "TL 2026-04-03 00:00:00",
+              "tl": "TL 3/4",
               "cost": "20/200",
               "costValue": null,
-              "tlNum": 2026,
-              "effect": "Prismáticos estándar 7x50. Existen versiones TL4 con óptica de baja luz integrada y hasta 25x150 de aumento; cuestan 200 créditos y requieren una célula tipo A para hasta una semana de uso regular."
+              "tlNum": 3,
+              "effect": "Prismáticos estándar 7x50. Existen versiones TL4 con óptica de baja luz integrada y hasta 25x150 de aumento; cuestan 200 créditos y requieren una célula tipo A para hasta una semana de uso regular.",
+              "variantes": [
+                {
+                  "tl": "TL 3",
+                  "tlNum": 3,
+                  "cost": "20 cr",
+                  "costValue": 20.0
+                },
+                {
+                  "tl": "TL 4",
+                  "tlNum": 4,
+                  "cost": "200 cr",
+                  "costValue": 200.0
+                }
+              ]
             },
             {
               "name": "Arnés de escalada",
@@ -3166,11 +3215,25 @@
             {
               "name": "Paracaídas gravitatorio",
               "stats": [],
-              "tl": "TL 2026-05-04 00:00:00",
+              "tl": "TL 4/5",
               "cost": "300/1.000",
               "costValue": null,
-              "tlNum": 2026,
-              "effect": "Al sujetarse a una persona u objeto y activarse, este cilindro modula suavemente la velocidad de caída hasta 1000 metros, frenando con seguridad hasta 300 kilos de peso. Las versiones TL5 pueden operar desde alturas orbitales y cuestan 1.000 créditos, donde puedan encontrarse. Ambas versiones se queman tras un solo uso."
+              "tlNum": 4,
+              "effect": "Al sujetarse a una persona u objeto y activarse, este cilindro modula suavemente la velocidad de caída hasta 1000 metros, frenando con seguridad hasta 300 kilos de peso. Las versiones TL5 pueden operar desde alturas orbitales y cuestan 1.000 créditos, donde puedan encontrarse. Ambas versiones se queman tras un solo uso.",
+              "variantes": [
+                {
+                  "tl": "TL 4",
+                  "tlNum": 4,
+                  "cost": "300 cr",
+                  "costValue": 300.0
+                },
+                {
+                  "tl": "TL 5",
+                  "tlNum": 5,
+                  "cost": "1.000 cr",
+                  "costValue": 1000.0
+                }
+              ]
             },
             {
               "name": "Arnés gravitatorio",
@@ -3242,7 +3305,42 @@
               "cost": "4/40",
               "costValue": null,
               "tlNum": 0,
-              "effect": "Ligera y resistente. Una metaherramienta puede usarse para cortar y unir los sintéticos empleados en la cuerda TL4, que cuenta como un punto de estorbo cada 40 metros y cuesta 40 créditos."
+              "effect": "Ligera y resistente. Una metaherramienta puede usarse para cortar y unir los sintéticos empleados en la cuerda TL4, que cuenta como un punto de estorbo cada 40 metros y cuesta 40 créditos.",
+              "variantes": [
+                {
+                  "tl": "TL 0",
+                  "tlNum": 0,
+                  "cost": "4 cr",
+                  "costValue": 4.0
+                },
+                {
+                  "tl": "TL 1",
+                  "tlNum": 1,
+                  "cost": "7 cr",
+                  "costValue": 7.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 2",
+                  "tlNum": 2,
+                  "cost": "13 cr",
+                  "costValue": 13.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 3",
+                  "tlNum": 3,
+                  "cost": "22 cr",
+                  "costValue": 22.0,
+                  "estimado": true
+                },
+                {
+                  "tl": "TL 4",
+                  "tlNum": 4,
+                  "cost": "40 cr",
+                  "costValue": 40.0
+                }
+              ]
             },
             {
               "name": "Informe de exploración",
@@ -4540,10 +4638,7 @@
                   "value": "Común, Baja tecnología, Cultural"
                 }
               ],
-              "tipos": [
-                "Low Tech",
-                "Cultural"
-              ],
+              "tipos": ["Low Tech", "Cultural"],
               "tl": "TL 0",
               "cost": "1.000 cr/ton",
               "costValue": 1000.0,
@@ -4558,10 +4653,7 @@
                   "value": "Supervivencia, Postecnológico, Común"
                 }
               ],
-              "tipos": [
-                "Survival",
-                "Postech"
-              ],
+              "tipos": ["Survival", "Postech"],
               "tl": "TL 4",
               "cost": "2.000 cr/ton",
               "costValue": 2000.0,
@@ -4576,10 +4668,7 @@
                   "value": "Agrícola, Supervivencia"
                 }
               ],
-              "tipos": [
-                "Agricultural",
-                "Survival"
-              ],
+              "tipos": ["Agricultural", "Survival"],
               "tl": "TL 4",
               "cost": "1.000 cr/ton",
               "costValue": 1000.0,
@@ -4594,9 +4683,7 @@
                   "value": "Supervivencia, Postech (Pág. 25/85)"
                 }
               ],
-              "tipos": [
-                "Survival"
-              ],
+              "tipos": ["Survival"],
               "tl": "—",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -4611,10 +4698,7 @@
                   "value": "Agrícola, Biotecnológico, Voluminoso"
                 }
               ],
-              "tipos": [
-                "Agricultural",
-                "Biotech"
-              ],
+              "tipos": ["Agricultural", "Biotech"],
               "tl": "TL 0",
               "cost": "2.000 cr/ton",
               "costValue": 2000.0,
@@ -4629,10 +4713,7 @@
                   "value": "Lujo, Biotecnológico, Compacto"
                 }
               ],
-              "tipos": [
-                "Luxury",
-                "Biotech"
-              ],
+              "tipos": ["Luxury", "Biotech"],
               "tl": "TL 3",
               "cost": "50.000 cr/ton",
               "costValue": 50000.0,
@@ -4647,10 +4728,7 @@
                   "value": "Raro, Mineral, Lujo, Compacto"
                 }
               ],
-              "tipos": [
-                "Mineral",
-                "Luxury"
-              ],
+              "tipos": ["Mineral", "Luxury"],
               "tl": "TL 0",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
@@ -4665,10 +4743,7 @@
                   "value": "Lujo, Baja tecnología, Compacto"
                 }
               ],
-              "tipos": [
-                "Luxury",
-                "Low Tech"
-              ],
+              "tipos": ["Luxury", "Low Tech"],
               "tl": "TL 0",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -4683,10 +4758,7 @@
                   "value": "Postecnológico, Herramienta, Voluminoso"
                 }
               ],
-              "tipos": [
-                "Postech",
-                "Tool"
-              ],
+              "tipos": ["Postech", "Tool"],
               "tl": "TL 4",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -4701,10 +4773,7 @@
                   "value": "Baja tecnología, Consumo"
                 }
               ],
-              "tipos": [
-                "Low Tech",
-                "Consumer"
-              ],
+              "tipos": ["Low Tech", "Consumer"],
               "tl": "TL 1",
               "cost": "2.000 cr/ton",
               "costValue": 2000.0,
@@ -4719,10 +4788,7 @@
                   "value": "Consumo, Postecnológico"
                 }
               ],
-              "tipos": [
-                "Consumer",
-                "Postech"
-              ],
+              "tipos": ["Consumer", "Postech"],
               "tl": "TL 4",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -4737,10 +4803,7 @@
                   "value": "Consumo, Pretecnológico"
                 }
               ],
-              "tipos": [
-                "Consumer",
-                "Pretech"
-              ],
+              "tipos": ["Consumer", "Pretech"],
               "tl": "TL 5",
               "cost": "50.000 cr/ton",
               "costValue": 50000.0,
@@ -4755,9 +4818,7 @@
                   "value": "Común, Ganado"
                 }
               ],
-              "tipos": [
-                "Livestock"
-              ],
+              "tipos": ["Livestock"],
               "tl": "TL 0",
               "cost": "2.000 cr/ton",
               "costValue": 2000.0,
@@ -4772,10 +4833,7 @@
                   "value": "Ganado, Biotecnológico"
                 }
               ],
-              "tipos": [
-                "Livestock",
-                "Biotech"
-              ],
+              "tipos": ["Livestock", "Biotech"],
               "tl": "TL 0",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -4790,10 +4848,7 @@
                   "value": "Ganado, Lujo"
                 }
               ],
-              "tipos": [
-                "Livestock",
-                "Luxury"
-              ],
+              "tipos": ["Livestock", "Luxury"],
               "tl": "TL 0",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
@@ -4808,10 +4863,7 @@
                   "value": "Médico, Postecnológico, Compacto"
                 }
               ],
-              "tipos": [
-                "Medical",
-                "Postech"
-              ],
+              "tipos": ["Medical", "Postech"],
               "tl": "TL 4",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
@@ -4826,10 +4878,7 @@
                   "value": "Médico, Pretecnológico, Compacto"
                 }
               ],
-              "tipos": [
-                "Medical",
-                "Pretech"
-              ],
+              "tipos": ["Medical", "Pretech"],
               "tl": "TL 5",
               "cost": "200.000 cr/ton",
               "costValue": 200000.0,
@@ -4844,9 +4893,7 @@
                   "value": "Común, Mineral, Voluminoso"
                 }
               ],
-              "tipos": [
-                "Mineral"
-              ],
+              "tipos": ["Mineral"],
               "tl": "TL 1",
               "cost": "1.000 cr/ton",
               "costValue": 1000.0,
@@ -4861,9 +4908,7 @@
                   "value": "Mineral, Voluminoso, Raro"
                 }
               ],
-              "tipos": [
-                "Mineral"
-              ],
+              "tipos": ["Mineral"],
               "tl": "TL 3",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -4878,9 +4923,7 @@
                   "value": "Común, Agrícola, Voluminoso"
                 }
               ],
-              "tipos": [
-                "Agricultural"
-              ],
+              "tipos": ["Agricultural"],
               "tl": "TL 0",
               "cost": "500 cr/ton",
               "costValue": 500.0,
@@ -4895,10 +4938,7 @@
                   "value": "Cultural, Lujo"
                 }
               ],
-              "tipos": [
-                "Cultural",
-                "Luxury"
-              ],
+              "tipos": ["Cultural", "Luxury"],
               "tl": "TL 0",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -4913,10 +4953,7 @@
                   "value": "Baja tecnología, Herramienta"
                 }
               ],
-              "tipos": [
-                "Low Tech",
-                "Tool"
-              ],
+              "tipos": ["Low Tech", "Tool"],
               "tl": "TL 2",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -4931,10 +4968,7 @@
                   "value": "Pretecnológico, Herramienta"
                 }
               ],
-              "tipos": [
-                "Pretech",
-                "Tool"
-              ],
+              "tipos": ["Pretech", "Tool"],
               "tl": "TL 5",
               "cost": "100.000 cr/ton",
               "costValue": 100000.0,
@@ -4949,10 +4983,7 @@
                   "value": "Postecnológico, Astronáutico, Raro"
                 }
               ],
-              "tipos": [
-                "Postech",
-                "Astronautic"
-              ],
+              "tipos": ["Postech", "Astronautic"],
               "tl": "TL 4",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
@@ -4967,9 +4998,7 @@
                   "value": "Tools, Postecnológico, Voluminoso"
                 }
               ],
-              "tipos": [
-                "Postech"
-              ],
+              "tipos": ["Postech"],
               "tl": "TL 2",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -4984,9 +5013,7 @@
                   "value": "Pretecnológico"
                 }
               ],
-              "tipos": [
-                "Pretech"
-              ],
+              "tipos": ["Pretech"],
               "tl": "TL 5",
               "cost": "50.000 cr/ton",
               "costValue": 50000.0,
@@ -5001,19 +5028,13 @@
                   "value": "Sapiente"
                 }
               ],
-              "tipos": [
-                "Sapient"
-              ],
+              "tipos": ["Sapient"],
               "tl": "TL 0",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
               "tlNum": 0,
               "effect": "Seres sapientes comprados y vendidos como propiedad, en abierta violación de la ley en la mayoría de jurisdicciones civilizadas. Su comercio es clandestino, extremadamente lucrativo y moralmente repugnante allí donde se practica.",
-              "noVentaEn": [
-                "el-nexo",
-                "verdal",
-                "herrumbre"
-              ]
+              "noVentaEn": ["el-nexo", "verdal", "herrumbre"]
             },
             {
               "name": "Armas ligeras de energía",
@@ -5023,10 +5044,7 @@
                   "value": "Militar, Postecnológico"
                 }
               ],
-              "tipos": [
-                "Military",
-                "Postech"
-              ],
+              "tipos": ["Military", "Postech"],
               "tl": "TL 4",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -5041,10 +5059,7 @@
                   "value": "Militar, Pretecnológico"
                 }
               ],
-              "tipos": [
-                "Military",
-                "Pretech"
-              ],
+              "tipos": ["Military", "Pretech"],
               "tl": "TL 5",
               "cost": "100.000 cr/ton",
               "costValue": 100000.0,
@@ -5059,10 +5074,7 @@
                   "value": "Militar, Baja tecnología"
                 }
               ],
-              "tipos": [
-                "Military",
-                "Low Tech"
-              ],
+              "tipos": ["Military", "Low Tech"],
               "tl": "TL 3",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -5077,11 +5089,7 @@
                   "value": "Herramienta, Postecnológico, Astronáutico"
                 }
               ],
-              "tipos": [
-                "Tool",
-                "Postech",
-                "Astronautic"
-              ],
+              "tipos": ["Tool", "Postech", "Astronautic"],
               "tl": "TL 4",
               "cost": "25.000 cr/ton",
               "costValue": 25000.0,
@@ -5096,10 +5104,7 @@
                   "value": "Baja tecnología, Herramienta"
                 }
               ],
-              "tipos": [
-                "Low Tech",
-                "Tool"
-              ],
+              "tipos": ["Low Tech", "Tool"],
               "tl": "TL 1",
               "cost": "5.000 cr/ton",
               "costValue": 5000.0,
@@ -5114,10 +5119,7 @@
                   "value": "Herramienta, Postecnológico"
                 }
               ],
-              "tipos": [
-                "Tool",
-                "Postech"
-              ],
+              "tipos": ["Tool", "Postech"],
               "tl": "TL 4",
               "cost": "10.000 cr/ton",
               "costValue": 10000.0,
@@ -5132,10 +5134,7 @@
                   "value": "Tools, Postecnológico, Médico"
                 }
               ],
-              "tipos": [
-                "Postech",
-                "Medical"
-              ],
+              "tipos": ["Postech", "Medical"],
               "tl": "TL 4",
               "cost": "50.000 cr/ton",
               "costValue": 50000.0,

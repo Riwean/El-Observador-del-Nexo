@@ -1067,3 +1067,93 @@ select option{background:#0a1015;color:#eafff8;}
   }
   .nav-btn svg{ width:13px; height:13px; }
 }
+
+
+/* =========================================================================
+   AÑADIDO: generar créditos con concepto + compras desplegables
+   ========================================================================= */
+.optional-tag{text-transform:none;letter-spacing:0;color:#4a6a63;font-size:10px;}
+
+/* atajos de concepto (panel DJ) */
+.concept-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;}
+.concept-chip{
+  background:transparent;cursor:pointer;padding:5px 9px;border-radius:2px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  border:1px solid rgba(45,230,192,0.4);color:#7fe6cf;transition:all 0.15s ease;
+}
+.concept-chip:hover{background:rgba(45,230,192,0.12);}
+.concept-chip.out{border-color:rgba(232,148,74,0.45);color:#e8934a;}
+.concept-chip.out:hover{background:rgba(232,148,74,0.12);}
+.admin-todos-row{
+  display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#c8ded6;
+  padding:3px 0;border-bottom:1px dashed rgba(255,255,255,0.05);
+}
+.admin-todos-row b{color:#e8934a;font-family:'Orbitron',sans-serif;font-weight:400;}
+
+/* concepto y mensaje en el histórico de movimientos */
+.ledger-concept-badge{
+  margin-left:8px;font-size:9.5px;letter-spacing:0.05em;padding:2px 7px;border-radius:2px;
+  text-transform:uppercase;white-space:nowrap;color:#e8934a;border:1px solid #c94a2a;
+}
+.ledger-nota{color:#c7b6f5;font-size:11.5px;font-style:italic;margin-top:2px;}
+
+/* compras: una fila por compra, con las líneas dentro de un desplegable */
+.compra-group{border-bottom:1px solid rgba(255,255,255,0.06);}
+.compra-group:last-child{border-bottom:none;}
+.compra-group .compra-summary{border-bottom:none;cursor:pointer;}
+.compra-group .compra-summary:hover{background:rgba(45,230,192,0.04);}
+.compra-group .compra-summary:focus-visible{outline:1px solid #2de6c0;outline-offset:-1px;}
+.compra-caret{display:inline-block;width:14px;color:#2de6c0;transition:transform 0.15s ease;}
+.compra-group.open .compra-caret{transform:rotate(90deg);}
+.compra-lines{
+  display:none;margin:0 4px 10px 18px;padding:4px 12px;
+  border-left:2px solid rgba(45,230,192,0.25);background:rgba(255,255,255,0.02);
+}
+.compra-group.open .compra-lines{display:block;}
+.compra-line{
+  display:flex;align-items:baseline;gap:12px;padding:6px 0;font-size:12.6px;color:#c8ded6;
+  border-bottom:1px dashed rgba(255,255,255,0.05);
+}
+.compra-line:last-child{border-bottom:none;}
+.compra-line-name{flex:1;min-width:0;color:#eafff8;}
+.compra-line-unit{color:#5f8f83;font-size:11px;white-space:nowrap;}
+.compra-line-total{font-family:'Orbitron',sans-serif;font-size:12px;color:#7fe6cf;white-space:nowrap;min-width:70px;text-align:right;}
+@media (max-width:480px){
+  .compra-line{flex-wrap:wrap;gap:4px 10px;}
+  .compra-line-name{flex-basis:100%;}
+  .compra-line-unit{flex:1;}
+}
+
+
+/* mensaje opcional en movimientos de créditos (estilo Bizum) */
+.move-row input.move-note{
+  flex:1;min-width:200px;padding:9px 10px;background:rgba(255,255,255,0.03);
+  border:1px solid rgba(45,230,192,0.3);color:#eafff8;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+}
+.move-row input.move-note:focus{outline:none;border-color:#2de6c0;}
+.move-row input.move-note::placeholder{color:#4a6a63;}
+
+
+/* =========================================================================
+   AÑADIDO: subcategorías que pueden ocupar varias filas sin "recuadro" exterior.
+   Cada botón lleva su propio borde y se solapan 1px, así una sola fila se ve
+   igual que antes y, si se parte en dos, cada fila termina limpia.
+   ========================================================================= */
+.subcat-nav{
+  border:none;width:auto;max-width:100%;gap:0;
+  margin-bottom:19px; /* 18px + 1px del solape */
+}
+.subcat-nav button{
+  border:1px solid rgba(45,230,192,0.2);
+  margin:0 -1px -1px 0;
+}
+.subcat-nav button.on{position:relative;z-index:1;border-color:rgba(45,230,192,0.45);}
+
+
+/* destinatario destacado en la 2.ª línea del histórico de movimientos */
+.ledger-dest{font-weight:600;font-size:12.6px;color:#2de6c0;}
+/* el destinatario toma el mismo color que el importe de su fila */
+.ledger-row.deposito .ledger-dest{color:#2de6c0;}
+.ledger-row.retirada .ledger-dest{color:#e8934a;}
+.ledger-row.transferencia .ledger-dest{color:#8fd0f0;}

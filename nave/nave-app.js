@@ -88,7 +88,12 @@ function loadCatalogIndex(){
         (cat.subcategorias || []).forEach(sub => {
           const skin = sub.subskin || cat.skin;
           (sub.items || []).forEach(it => {
-            catalogIndex[catalogKey(cat.id, it.name)] = { item: it, skin, subcatId: sub.id };
+            const entry = { item: it, skin, subcatId: sub.id };
+            catalogIndex[catalogKey(cat.id, it.name)] = entry;
+            // variantes de TL: se guardan en inventario como "Nombre (TL n)"
+            (it.variantes || []).forEach(v => {
+              catalogIndex[catalogKey(cat.id, `${it.name} (${v.tl})`)] = entry;
+            });
           });
         });
       });
@@ -373,6 +378,44 @@ function renderObjetosLog(){
   }).join('');
 }
 
+/* Compras: una compra = varias líneas.
+   - Compras nuevas ya se guardan como { ..., total, lineas:[{name,qty,unitPrice,total,catId}] }.
+   - Compras antiguas se guardaban una línea por registro: aquí se agrupan al vuelo
+     (mismo comprador + pago + origen + fecha, con ts a pocos segundos). */
+const comprasAbiertas = new Set(); // claves de compras desplegadas (sobreviven a los re-render)
+
+function agruparCompras(raw){
+  const out = [];
+  raw.forEach(c => {
+    if (c.lineas){
+      const lineas = Array.isArray(c.lineas) ? c.lineas : Object.values(c.lineas);
+      const total = (typeof c.total === 'number') ? c.total : lineas.reduce((s, l) => s + (l.total || 0), 0);
+      out.push({ ...c, lineas, total, legacy: false });
+      return;
+    }
+    // registro antiguo (una línea por documento)
+    const linea = { name: c.name, qty: c.qty, unitPrice: c.unitPrice, total: c.total, catId: c.catId };
+    const sig = `${c.comprador}|${c.pagadoCon}|${c.origen}|${c.fecha}`;
+    let grupo = null;
+    for (let i = out.length - 1; i >= 0 && i >= out.length - 15; i--){
+      const g = out[i];
+      if (g.legacy && g._sig === sig && Math.abs((g._minTs || 0) - (c.ts || 0)) <= 10000){ grupo = g; break; }
+    }
+    if (grupo){
+      grupo.lineas.unshift(linea);
+      grupo.total += (c.total || 0);
+      grupo._minTs = Math.min(grupo._minTs, c.ts || 0);
+    } else {
+      out.push({
+        key: c.key, comprador: c.comprador, pagadoCon: c.pagadoCon, origen: c.origen,
+        fecha: c.fecha, ts: c.ts, total: c.total || 0, lineas: [linea],
+        legacy: true, _sig: sig, _minTs: c.ts || 0
+      });
+    }
+  });
+  return out;
+}
+
 function renderCompras(){
   const list = document.getElementById('comprasList');
   const empty = document.getElementById('comprasEmpty');
@@ -380,22 +423,24 @@ function renderCompras(){
   const searchTerm = (document.getElementById('comprasSearch').value || '').trim().toLowerCase();
   const pagoFilter = document.getElementById('comprasFilterPago').value;
 
-  const filtered = comprasData.filter(c => {
+  const todas = agruparCompras(comprasData);
+  const filtered = todas.filter(c => {
     if (pagoFilter && (c.pagadoCon || 'nave') !== pagoFilter) return false;
     if (searchTerm){
-      const haystack = `${c.name} ${personajeLabel(c.comprador)}`.toLowerCase();
+      const nombres = c.lineas.map(l => l.name).join(' ');
+      const haystack = `${nombres} ${personajeLabel(c.comprador)}`.toLowerCase();
       if (!haystack.includes(searchTerm)) return false;
     }
     return true;
   });
 
   countEl.textContent = filtered.length + (filtered.length === 1 ? ' REGISTRO' : ' REGISTROS') +
-    (filtered.length !== comprasData.length ? ` (de ${comprasData.length})` : '');
+    (filtered.length !== todas.length ? ` (de ${todas.length})` : '');
 
   if (!filtered.length){
     list.innerHTML = '';
     empty.style.display = 'block';
-    empty.textContent = comprasData.length ? 'Sin resultados para ese filtro.' : 'Todavía no se ha registrado ninguna compra.';
+    empty.textContent = todas.length ? 'Sin resultados para ese filtro.' : 'Todavía no se ha registrado ninguna compra.';
     return;
   }
   empty.style.display = 'none';
@@ -405,17 +450,50 @@ function renderCompras(){
       ? personajeLabel(c.comprador)
       : `Pálamo Yerrante (a petición de ${personajeLabel(c.comprador)})`;
     const sourceLabel = c.pagadoCon === 'personal' ? 'PERSONAL' : 'NAVE';
+    const abierta = comprasAbiertas.has(c.key);
+    const unidades = c.lineas.reduce((s, l) => s + (Number(l.qty) || 0), 0);
+    const resumen = c.lineas.length === 1
+      ? `${esc(c.lineas[0].qty)}× ${esc(c.lineas[0].name)}`
+      : `${c.lineas.length} objetos · ${unidades} uds.`;
+
+    const lineasHtml = c.lineas.map(l => `
+      <div class="compra-line">
+        <span class="compra-line-name">${esc(l.qty)}× ${esc(l.name)}</span>
+        <span class="compra-line-unit">${formatCr(l.unitPrice || 0)} cr/ud</span>
+        <span class="compra-line-total">${formatCr(l.total || 0)} cr</span>
+      </div>`).join('');
+
     return `
-      <div class="ledger-row">
-        <div>
-          <span class="ledger-who">${esc(who)}</span>
-          <span class="compra-source-badge ${esc(c.pagadoCon || 'nave')}">${sourceLabel}</span>
-          <div class="ledger-meta">${esc(c.qty)}× ${esc(c.name)} · ${esc(c.origen || '—')} · ${esc(c.fecha || '')}</div>
+      <div class="compra-group ${abierta ? 'open' : ''}" data-key="${esc(c.key)}">
+        <div class="ledger-row compra-summary" role="button" tabindex="0" aria-expanded="${abierta}">
+          <div>
+            <span class="compra-caret">▸</span>
+            <span class="ledger-who">${esc(who)}</span>
+            <span class="compra-source-badge ${esc(c.pagadoCon || 'nave')}">${sourceLabel}</span>
+            <div class="ledger-meta">${resumen} · ${esc(c.origen || '—')} · ${esc(c.fecha || '')}</div>
+          </div>
+          <div class="ledger-amount deposito">${formatCr(c.total)} cr</div>
         </div>
-        <div class="ledger-amount deposito">${formatCr(c.total)} cr</div>
+        <div class="compra-lines">${lineasHtml}</div>
       </div>
     `;
   }).join('');
+
+  // desplegar / plegar (asignación directa: no acumula listeners entre re-render)
+  const toggle = (ev) => {
+    if (ev.type === 'keydown' && ev.key !== 'Enter' && ev.key !== ' ') return;
+    const head = ev.target.closest('.compra-summary');
+    if (!head) return;
+    ev.preventDefault();
+    const group = head.parentElement;
+    const key = group.dataset.key;
+    const nowOpen = !group.classList.contains('open');
+    group.classList.toggle('open', nowOpen);
+    head.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+    if (nowOpen) comprasAbiertas.add(key); else comprasAbiertas.delete(key);
+  };
+  list.onclick = toggle;
+  list.onkeydown = toggle;
 }
 
 /* =========================================================
@@ -442,6 +520,9 @@ function renderMoveForm(){
   targetSelect.innerHTML = others.map(p => `<option value="${p.id}">${esc(p.label)}</option>`).join('');
 }
 
+// Quien figura como emisor cuando el DJ ingresa o retira créditos
+const BANCO_NOMBRE = 'Depósito Central del Nexo';
+
 function renderLedger(){
   const list = document.getElementById('ledgerList');
   const empty = document.getElementById('ledgerEmpty');
@@ -457,7 +538,8 @@ function renderLedger(){
   empty.style.display = 'none';
 
   list.innerHTML = ledgerData.map(l => {
-    const who = personajeLabel(l.personaje);
+    const who = l.tipo === 'ajusteDJ' ? BANCO_NOMBRE : personajeLabel(l.personaje);
+    const dest = (txt) => `<span class="ledger-dest">${esc(txt)}</span>`;
     let accionTxt, sign, cls;
     if (l.tipo === 'deposito'){
       accionTxt = 'metió al bote'; sign = '+'; cls = 'deposito';
@@ -465,16 +547,19 @@ function renderLedger(){
       accionTxt = 'sacó del bote'; sign = '−'; cls = 'retirada';
     } else if (l.tipo === 'ajusteDJ'){
       const destinoTxt = l.hacia === 'nave' ? 'la nave' : personajeLabel(l.hacia);
-      accionTxt = `${l.signo > 0 ? 'dio créditos a' : 'quitó créditos a'} ${destinoTxt}`;
+      accionTxt = `${l.signo > 0 ? 'ingresó créditos a' : 'cargó créditos a'} ${dest(destinoTxt)}`;
       sign = l.signo > 0 ? '+' : '−'; cls = l.signo > 0 ? 'deposito' : 'retirada';
     } else { // transferencia
-      accionTxt = `envió a ${esc(personajeLabel(l.hacia))}`; sign = '→'; cls = 'transferencia';
+      accionTxt = `envió a ${dest(personajeLabel(l.hacia))}`; sign = '→'; cls = 'transferencia';
     }
+    const conceptoHtml = l.concepto ? `<span class="ledger-concept-badge">${esc(l.concepto)}</span>` : '';
+    const notaHtml = l.nota ? `<div class="ledger-nota">“${esc(l.nota)}”</div>` : '';
     return `
-      <div class="ledger-row">
+      <div class="ledger-row ${cls}">
         <div>
-          <span class="ledger-who">${esc(who)}</span>
+          <span class="ledger-who">${esc(who)}</span>${conceptoHtml}
           <div class="ledger-meta">${accionTxt} · ${esc(l.fecha || '')}</div>
+          ${notaHtml}
         </div>
         <div class="ledger-amount ${cls}">${sign}${formatCr(l.cantidad)} cr</div>
       </div>
@@ -483,6 +568,12 @@ function renderLedger(){
 }
 
 /* mover créditos: personaje -> bote (deposito) o bote -> personaje (retirada) */
+/* mensaje opcional tipo "Bizum" para movimientos de créditos */
+function leerNota(inputId){
+  const el = document.getElementById(inputId);
+  return el ? el.value.trim().slice(0, 120) : '';
+}
+
 function moveCredits(tipo){
   const errEl = document.getElementById('moveError');
   errEl.textContent = '';
@@ -497,6 +588,7 @@ function moveCredits(tipo){
     errEl.textContent = 'Introduce una cantidad válida.';
     return;
   }
+  const nota = leerNota('moveNote');
 
   const { db, ref, runTransaction, push, update } = window.fb;
   const personalRef = ref(db, `tienda/personajes/${currentPersonaje}/credits`);
@@ -526,14 +618,13 @@ function moveCredits(tipo){
       day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
     });
     const newKey = push(ref(db, 'tienda/ledger')).key;
-    return update(ref(db), {
-      [`tienda/ledger/${newKey}`]: {
-        personaje: currentPersonaje, tipo, cantidad: amount, fecha, ts: Date.now()
-      }
-    });
+    const entrada = { personaje: currentPersonaje, tipo, cantidad: amount, fecha, ts: Date.now() };
+    if (nota) entrada.nota = nota;
+    return update(ref(db), { [`tienda/ledger/${newKey}`]: entrada });
   }).then(() => {
     showToast(tipo === 'deposito' ? 'Créditos depositados en el bote común.' : 'Créditos retirados del bote común.');
     amountInput.value = '';
+    document.getElementById('moveNote').value = '';
   }).catch((err) => {
     if (err !== 'insufficient'){
       console.error('Error moviendo créditos:', err);
@@ -565,6 +656,7 @@ function transferCredits(){
     errEl.textContent = 'Introduce una cantidad válida.';
     return;
   }
+  const nota = leerNota('moveTransferNote');
 
   const { db, ref, runTransaction, push, update } = window.fb;
   const sourceRef = ref(db, `tienda/personajes/${currentPersonaje}/credits`);
@@ -590,15 +682,16 @@ function transferCredits(){
       day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
     });
     const newKey = push(ref(db, 'tienda/ledger')).key;
-    return update(ref(db), {
-      [`tienda/ledger/${newKey}`]: {
-        personaje: currentPersonaje, tipo: 'transferencia', hacia: targetId,
-        cantidad: amount, fecha, ts: Date.now()
-      }
-    });
+    const entrada = {
+      personaje: currentPersonaje, tipo: 'transferencia', hacia: targetId,
+      cantidad: amount, fecha, ts: Date.now()
+    };
+    if (nota) entrada.nota = nota;
+    return update(ref(db), { [`tienda/ledger/${newKey}`]: entrada });
   }).then(() => {
     showToast(`Créditos enviados a ${personajeLabel(targetId)}.`);
     amountInput.value = '';
+    document.getElementById('moveTransferNote').value = '';
   }).catch((err) => {
     if (err !== 'insufficient'){
       console.error('Error transfiriendo créditos:', err);
@@ -873,6 +966,35 @@ function isAdminUser(){
 
 const adminItemState = { stats: [] };
 
+// Destino especial del panel de créditos: todos los personajes jugadores (no la nave)
+const ADMIN_TODOS = '__todos__';
+
+// Atajos de concepto. Si terminan en espacio, el cursor queda listo para completar el texto.
+const ADMIN_CONCEPTOS_INGRESO = [
+  'Día de pago', 'Pago por contrato de ', 'Recompensa de misión', 'Botín',
+  'Venta de mercancía', 'Bonificación', 'Propina', 'Reembolso'
+];
+const ADMIN_CONCEPTOS_DESCUENTO = [
+  'Multa', 'Deuda', 'Mantenimiento', 'Sobornos', 'Impuestos', 'Pérdida'
+];
+
+function renderAdminConceptChips(){
+  const box = document.getElementById('adminCreditsChips');
+  if (!box) return;
+  const chip = (t, cls) => `<button type="button" class="concept-chip ${cls}" data-text="${esc(t)}">${esc(t.trim())}${t.endsWith(' ') ? '…' : ''}</button>`;
+  box.innerHTML =
+    ADMIN_CONCEPTOS_INGRESO.map(t => chip(t, 'in')).join('') +
+    ADMIN_CONCEPTOS_DESCUENTO.map(t => chip(t, 'out')).join('');
+  box.onclick = (ev) => {
+    const b = ev.target.closest('.concept-chip');
+    if (!b) return;
+    const input = document.getElementById('adminCreditsConcept');
+    input.value = b.dataset.text;
+    input.focus();
+    input.setSelectionRange(input.value.length, input.value.length);
+  };
+}
+
 function targetOptionsHtml(){
   const naveOpt = `<option value="nave">Nave (Pálamo Yerrante)</option>`;
   const pjOpts = PERSONAJES.filter(p => p.id !== 'nave')
@@ -883,9 +1005,10 @@ function targetOptionsHtml(){
 function renderAdminTab(){
   // --- ajustar créditos ---
   const targetSelect = document.getElementById('adminCreditsTarget');
-  targetSelect.innerHTML = targetOptionsHtml();
+  targetSelect.innerHTML = `<option value="${ADMIN_TODOS}">👥 Todos los jugadores (cada uno recibe la cantidad)</option>` + targetOptionsHtml();
   targetSelect.addEventListener('change', renderAdminCreditsInfo);
   renderAdminCreditsInfo();
+  renderAdminConceptChips();
 
   document.getElementById('adminCreditsAdd').onclick = () => adminAdjustCredits(1);
   document.getElementById('adminCreditsSub').onclick = () => adminAdjustCredits(-1);
@@ -996,6 +1119,14 @@ function renderAdminCreditsInfo(){
   const el = document.getElementById('adminCreditsInfo');
   if (!el) return;
   const targetId = document.getElementById('adminCreditsTarget').value;
+  if (targetId === ADMIN_TODOS){
+    const filas = PERSONAJES.filter(p => p.id !== 'nave').map(p => {
+      const c = (personajesData[p.id] && personajesData[p.id].credits) || 0;
+      return `<div class="admin-todos-row"><span>${esc(p.label)}</span><b>${formatCr(c)} cr</b></div>`;
+    }).join('');
+    el.innerHTML = `<div class="admin-target-credits">Se aplicará a cada personaje por separado (un registro por cada uno):</div>${filas}`;
+    return;
+  }
   const { credits, items } = targetSummary(targetId);
   el.innerHTML = `<div class="admin-target-credits">Créditos actuales: <b>${formatCr(credits)}</b> cr</div>${invSummaryHtml(items, targetId)}`;
 }
@@ -1019,28 +1150,69 @@ async function adminAdjustCredits(sign){
     errEl.textContent = 'Introduce una cantidad válida.';
     return;
   }
+  const concepto = document.getElementById('adminCreditsConcept').value.trim();
+  const nota = document.getElementById('adminCreditsNote').value.trim();
+
+  const destinos = targetId === ADMIN_TODOS
+    ? PERSONAJES.filter(p => p.id !== 'nave').map(p => p.id)
+    : [targetId];
 
   const { db, ref, runTransaction, push, update } = window.fb;
-  const path = targetId === 'nave' ? 'tienda/shipCredits' : `tienda/personajes/${targetId}/credits`;
+  const btnAdd = document.getElementById('adminCreditsAdd');
+  const btnSub = document.getElementById('adminCreditsSub');
+  btnAdd.disabled = true; btnSub.disabled = true;
 
   try {
-    await runTransaction(ref(db, path), (current) => {
-      const cur = (typeof current === 'number') ? current : 0;
-      return Math.max(0, cur + sign * amount);
-    });
     const fecha = nowFecha();
-    const logKey = push(ref(db, 'tienda/ledger')).key;
-    await update(ref(db), {
-      [`tienda/ledger/${logKey}`]: {
-        personaje: 'admin', tipo: 'ajusteDJ', hacia: targetId,
-        cantidad: amount, signo: sign, fecha, ts: Date.now()
-      }
-    });
+    const baseTs = Date.now();
+    let aplicados = 0;
+    let recortados = 0;
+
+    for (let i = 0; i < destinos.length; i++){
+      const tid = destinos[i];
+      const path = tid === 'nave' ? 'tienda/shipCredits' : `tienda/personajes/${tid}/credits`;
+
+      // Cantidad realmente aplicada (al restar no se baja de 0)
+      let aplicado = 0;
+      await runTransaction(ref(db, path), (current) => {
+        const cur = (typeof current === 'number') ? current : 0;
+        const next = Math.max(0, cur + sign * amount);
+        aplicado = Math.abs(next - cur);
+        return next;
+      });
+      if (!aplicado) continue;
+      if (aplicado < amount) recortados++;
+
+      const entrada = {
+        personaje: 'admin', tipo: 'ajusteDJ', hacia: tid,
+        cantidad: aplicado, signo: sign, fecha, ts: baseTs + i
+      };
+      if (concepto) entrada.concepto = concepto;
+      if (nota) entrada.nota = nota;
+
+      const logKey = push(ref(db, 'tienda/ledger')).key;
+      await update(ref(db), { [`tienda/ledger/${logKey}`]: entrada });
+      aplicados++;
+    }
+
+    if (!aplicados){
+      errEl.textContent = 'No había créditos que restar.';
+      return;
+    }
     document.getElementById('adminCreditsAmount').value = '';
-    showToast(`Créditos ${sign>0?'sumados a':'restados de'} ${targetId === 'nave' ? 'la nave' : personajeLabel(targetId)}.`);
+    document.getElementById('adminCreditsConcept').value = '';
+    document.getElementById('adminCreditsNote').value = '';
+
+    const quien = targetId === ADMIN_TODOS ? 'todos los jugadores'
+      : (targetId === 'nave' ? 'la nave' : personajeLabel(targetId));
+    let msg = `Créditos ${sign>0 ? 'sumados a' : 'restados de'} ${quien}.`;
+    if (recortados) msg += ' (alguno se quedó a 0)';
+    showToast(msg);
   } catch(err){
     console.error(err);
     errEl.textContent = 'Error de conexión — inténtalo de nuevo.';
+  } finally {
+    btnAdd.disabled = false; btnSub.disabled = false;
   }
 }
 
@@ -1343,8 +1515,8 @@ async function submitArtifact(){
    PESTAÑA CREAR: TALLER / LABORATORIO
    ========================================================= */
 const FACILITIES = {
-  taller:      { label: 'Taller',      allowed: ['kael', 'wulfram'], bodyId: 'tallerBody' },
-  laboratorio: { label: 'Laboratorio', allowed: ['nikola'],          bodyId: 'labBody' },
+  taller:      { label: 'Taller',      allowed: ['kael', 'wulfram', 'admin'], bodyId: 'tallerBody' },
+  laboratorio: { label: 'Laboratorio', allowed: ['nikola', 'admin'], bodyId: 'labBody' },
 };
 const craftState = {
   taller:      { materials: [], stats: [] }, // materials: [{invKey,amount}], stats: [{label,value}]
@@ -1377,7 +1549,7 @@ function renderCraftTab(){
     const body = document.getElementById(fac.bodyId);
     const allowed = currentUser && cp && fac.allowed.includes(cp);
     if (!allowed){
-      body.innerHTML = `<div class="move-locked">Solo ${fac.allowed.map(id => personajeLabel(id)).join(' o ')} ${fac.allowed.length>1?'pueden':'puede'} crear aquí. Cualquiera puede ver esta sección.</div>`;
+      body.innerHTML = `<div class="move-locked">Solo ${fac.allowed.filter(id => id !== 'admin').map(id => personajeLabel(id)).join(' o ')} (y el DJ) ${fac.allowed.length>2?'pueden':'puede'} crear aquí. Cualquiera puede ver esta sección.</div>`;
       return;
     }
     body.innerHTML = buildCraftForm(facId);

@@ -117,6 +117,9 @@
               <span class="move-personal-credits">Créditos personales: <b id="movePersonalCredits">0</b> cr</span>
             </div>
             <div class="move-row">
+              <input type="text" id="moveNote" class="move-note" maxlength="120" placeholder="Mensaje (opcional): ej. Para reparar la armadura">
+            </div>
+            <div class="move-row">
               <input type="number" id="moveAmount" min="1" placeholder="Cantidad">
               <button id="moveDepositBtn" class="cyber-btn">METER AL BOTE →</button>
               <button id="moveWithdrawBtn" class="cyber-btn pink">← SACAR DEL BOTE</button>
@@ -124,6 +127,9 @@
             <div id="moveError" class="move-error"></div>
 
             <div class="move-divider">ENVIAR A OTRO PERSONAJE</div>
+            <div class="move-row">
+              <input type="text" id="moveTransferNote" class="move-note" maxlength="120" placeholder="Mensaje (opcional): ej. Para la armadura de Kael">
+            </div>
             <div class="move-row">
               <select id="moveTargetSelect"></select>
               <input type="number" id="moveTransferAmount" min="1" placeholder="Cantidad">
@@ -214,12 +220,21 @@
     <!-- =========== PESTAÑA: DIRECCIÓN (DJ) =========== -->
     <div class="tab-view" id="tab-admin">
       <div class="panel admin-panel">
-        <div class="panel-label"><span>Ajustar créditos</span><span class="tag">SIN LÍMITE — SIN ORIGEN</span></div>
+        <div class="panel-label"><span>Generar / ajustar créditos</span><span class="tag">SIN LÍMITE — SIN ORIGEN</span></div>
         <div class="craft-field">
           <label>Destino</label>
           <select id="adminCreditsTarget"></select>
         </div>
         <div id="adminCreditsInfo" class="admin-target-info"></div>
+        <div class="craft-field">
+          <label>Concepto <span class="optional-tag">(sale destacado en el histórico)</span></label>
+          <div class="concept-chips" id="adminCreditsChips"></div>
+          <input type="text" id="adminCreditsConcept" maxlength="60" placeholder="Ej. Día de pago, Pago por contrato de Kessar...">
+        </div>
+        <div class="craft-field">
+          <label>Mensaje <span class="optional-tag">(opcional)</span></label>
+          <input type="text" id="adminCreditsNote" maxlength="200" placeholder="Ej. Escolta completada sin bajas, el cliente añade propina">
+        </div>
         <div class="move-row">
           <input type="number" id="adminCreditsAmount" min="1" placeholder="Cantidad">
           <button class="cyber-btn" id="adminCreditsAdd">+ SUMAR</button>

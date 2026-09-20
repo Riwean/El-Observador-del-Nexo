@@ -26,7 +26,11 @@ function registerItem(skin, item, catId){
 /* ---------------- cálculo de precio y disponibilidad por mundo ---------------- */
 function getPriceInfo(item, catId){
   const world = currentWorld;
-  const tlBlocked = (item.tlNum !== null && item.tlNum !== undefined) && item.tlNum > world.tlNum;
+  let tlBlocked = (item.tlNum !== null && item.tlNum !== undefined) && item.tlNum > world.tlNum;
+  if (Array.isArray(item.variantes) && item.variantes.length){
+    // con variantes basta con que alguna sea accesible en este mundo
+    tlBlocked = !item.variantes.some(v => v.tlNum <= world.tlNum);
+  }
   const noVenta = Array.isArray(item.noVentaEn) && item.noVentaEn.includes(world.id);
 
   let multiplier = 1.0;
@@ -58,6 +62,40 @@ function getPriceInfo(item, catId){
 
 function formatCr(n){
   return n.toLocaleString('es-ES');
+}
+
+/* ---------------- variantes de nivel tecnológico (Mochila TL0/TL4, etc.) ---------------- */
+function getVariants(item){
+  return (Array.isArray(item.variantes) && item.variantes.length) ? item.variantes : null;
+}
+// nombre con el que se guarda en carrito / inventario: "Mochila (TL 4)"
+function variantName(item, v){ return `${item.name} (${v.tl})`; }
+
+function getMultiplier(item, catId){
+  const world = currentWorld;
+  if (catId === 'comercio'){
+    const tipos = item.tipos || [];
+    const tabla = (DATA.modificadoresTipo[world.id]) || {};
+    if (tipos.length){
+      const sum = tipos.reduce((s,t) => s + (tabla[t] !== undefined ? tabla[t] : 1.0), 0);
+      return sum / tipos.length;
+    }
+    return 1.0;
+  }
+  if (DATA.categoriasConPrecio.includes(catId)){
+    const tabla = DATA.modificadoresCategoria[world.id] || {};
+    return tabla[catId] !== undefined ? tabla[catId] : 1.0;
+  }
+  return 1.0;
+}
+
+// precio final de una variante en el mundo actual, o null si no se puede comprar aquí
+function getVariantPrice(item, v, catId){
+  const world = currentWorld;
+  if (v.tlNum > world.tlNum) return null;
+  if (Array.isArray(item.noVentaEn) && item.noVentaEn.includes(world.id)) return null;
+  if (v.costValue === null || v.costValue === undefined) return null;
+  return Math.round(v.costValue * getMultiplier(item, catId));
 }
 
 /* ---------------- pantalla de entrada ---------------- */
@@ -609,12 +647,27 @@ function openItemModal(idx){
       qtyInput.value = v;
     });
   }
+  // selector de versión (TL) para objetos con variantes
+  let selVariant = null;
+  const vopts = container.querySelectorAll('.mv-opt');
+  if (vopts.length){
+    const first = container.querySelector('.mv-opt.on');
+    selVariant = first ? parseInt(first.dataset.vidx, 10) : 0;
+    vopts.forEach(b => b.addEventListener('click', () => {
+      if (b.disabled) return;
+      vopts.forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      selVariant = parseInt(b.dataset.vidx, 10);
+    }));
+  }
+
   if (addBtn){
     addBtn.addEventListener('click', () => {
       const qty = qtyInput ? Math.max(1, parseInt(qtyInput.value, 10) || 1) : 1;
-      const ok = addToCart(item, catId, qty);
+      const variant = (selVariant !== null && getVariants(item)) ? getVariants(item)[selVariant] : null;
+      const ok = addToCart(item, catId, qty, variant);
       if (ok){
-        showCartToast(`${qty}× ${item.name} añadido al manifiesto`);
+        showCartToast(`${qty}× ${variant ? variantName(item, variant) : item.name} añadido al manifiesto`);
         closeItemModal();
       }
     });
@@ -631,7 +684,35 @@ function renderModalCard(skin, it, catId){
   const badge = badgeHtml(pinfo);
 
   const numericPrice = catId ? getNumericPrice(it, catId) : null;
-  const addCartBtn = numericPrice !== null
+  const variants = catId ? getVariants(it) : null;
+  const firstOkVariant = variants ? variants.findIndex(v => getVariantPrice(it, v, catId) !== null) : -1;
+
+  const qtyRowHtml = `<div class="modal-add-row">
+         <div class="modal-qty-ctrl">
+           <button class="mq-btn" data-dir="-1" type="button">−</button>
+           <input class="mq-input" type="number" min="1" value="1">
+           <button class="mq-btn" data-dir="1" type="button">+</button>
+         </div>
+         <button class="modal-add-cart">🛒 AÑADIR</button>
+       </div>`;
+
+  const variantPickerHtml = (variants && firstOkVariant >= 0)
+    ? `<div class="mv-label">ELIGE VERSIÓN</div>
+       <div class="mv-picker">${variants.map((v, i) => {
+         const p = getVariantPrice(it, v, catId);
+         const off = p === null;
+         return `<button type="button" class="mv-opt${i === firstOkVariant ? ' on' : ''}" data-vidx="${i}"${off ? ' disabled' : ''}>
+           <span class="mv-tl">${esc(v.tl)}</span>
+           <span class="mv-price">${off ? 'NO DISPONIBLE' : formatCr(p) + ' cr'}</span>
+         </button>`;
+       }).join('')}</div>`
+    : '';
+
+  const addCartBtn = (variants && firstOkVariant >= 0)
+    ? variantPickerHtml + qtyRowHtml
+    : (variants && firstOkVariant < 0)
+    ? `<button class="modal-add-cart" disabled>NO DISPONIBLE EN ESTE MUNDO</button>`
+    : numericPrice !== null
     ? `<div class="modal-add-row">
          <div class="modal-qty-ctrl">
            <button class="mq-btn" data-dir="-1" type="button">−</button>
@@ -739,17 +820,18 @@ function getNumericPrice(item, catId){
 
 function cartKey(name, catId){ return catId + '|' + name; }
 
-function addToCart(item, catId, qty=1){
+function addToCart(item, catId, qty=1, variant=null){
   qty = Math.max(1, Math.floor(qty) || 1);
-  const price = getNumericPrice(item, catId);
+  const price = variant ? getVariantPrice(item, variant, catId) : getNumericPrice(item, catId);
   if (price === null) return false;
 
-  const key = cartKey(item.name, catId);
+  const name = variant ? variantName(item, variant) : item.name;
+  const key = cartKey(name, catId);
   const existing = cart.find(l => l.key === key);
   if (existing){
-    existing.qty += qty;
+    existing.qty = Math.min(99999, existing.qty + qty);
   } else {
-    cart.push({ key, name: item.name, catId, unitPrice: price, qty });
+    cart.push({ key, name, catId, unitPrice: price, qty: Math.min(99999, qty) });
   }
   saveCart();
   renderCart();
@@ -763,6 +845,14 @@ function changeCartQty(key, delta){
   if (line.qty <= 0){
     cart = cart.filter(l => l.key !== key);
   }
+  saveCart();
+  renderCart();
+}
+
+function setCartQty(key, n){
+  const line = cart.find(l => l.key === key);
+  if (!line) return;
+  line.qty = Math.max(1, Math.min(99999, Math.floor(n) || 1));
   saveCart();
   renderCart();
 }
@@ -789,6 +879,11 @@ function renderCart(){
   const countEl = document.getElementById('cartCount');
   const creditsEl = document.getElementById('cartShipCredits');
 
+  // si se está escribiendo en una cantidad, recordar foco y cursor para restaurarlos tras repintar
+  const act = document.activeElement;
+  const focusKey = (act && act.classList && act.classList.contains('cl-qty-input')) ? act.dataset.key : null;
+  const caret = focusKey ? act.selectionStart : null;
+
   if (!cart.length){
     linesEl.innerHTML = '';
     linesEl.classList.add('empty');
@@ -804,13 +899,21 @@ function renderCart(){
         <div class="cl-qty-row">
           <div class="cl-qty-ctrl">
             <button data-action="dec" data-key="${esc(l.key)}">−</button>
-            <span class="cl-qty-val">${l.qty}</span>
+            <input class="cl-qty-input" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="5" value="${l.qty}" data-key="${esc(l.key)}" aria-label="Cantidad de ${esc(l.name)}">
             <button data-action="inc" data-key="${esc(l.key)}">+</button>
           </div>
           <div class="cl-subtotal">${formatCr(l.unitPrice * l.qty)} cr</div>
         </div>
       </div>
     `).join('');
+
+    if (focusKey){
+      const inp = Array.from(linesEl.querySelectorAll('.cl-qty-input')).find(i => i.dataset.key === focusKey);
+      if (inp){
+        inp.focus();
+        try { inp.setSelectionRange(caret, caret); } catch(e){}
+      }
+    }
   }
 
   const total = cartTotal();
@@ -1082,6 +1185,26 @@ function initCart(){
     if (ev.target.id === 'cartOverlay') document.getElementById('cartOverlay').classList.remove('open');
   });
   document.getElementById('cartBuyBtn').addEventListener('click', confirmPurchase);
+
+  const cartLinesEl = document.getElementById('cartLines');
+  cartLinesEl.addEventListener('input', (ev) => {
+    const inp = ev.target.closest('.cl-qty-input');
+    if (!inp) return;
+    const digits = inp.value.replace(/\D/g, '').slice(0, 5);
+    if (digits !== inp.value) inp.value = digits;
+    const n = parseInt(digits, 10);
+    if (!n) return; // vacío o 0: se espera a que termine de escribir
+    setCartQty(inp.dataset.key, n);
+  });
+  cartLinesEl.addEventListener('focusout', (ev) => {
+    const inp = ev.target.closest && ev.target.closest('.cl-qty-input');
+    if (!inp) return;
+    const line = cart.find(l => l.key === inp.dataset.key);
+    if (line) inp.value = line.qty; // si lo dejó vacío o en 0, vuelve a la cantidad real
+  });
+  cartLinesEl.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Enter' && ev.target.classList && ev.target.classList.contains('cl-qty-input')) ev.target.blur();
+  });
 
   document.getElementById('cartLines').addEventListener('click', (ev) => {
     const btn = ev.target.closest('button[data-action]');

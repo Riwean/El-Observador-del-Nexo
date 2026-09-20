@@ -787,3 +787,44 @@ footer{text-align:center;font-size:10.9px;color:#3d5c54;letter-spacing:0.06em;}
   }
   .nav-btn svg{ width:13px; height:13px; }
 }
+
+
+/* =========================================================================
+   AÑADIDO: cantidad escrita en el carrito + selector de versión (TL)
+   ========================================================================= */
+.cl-qty-ctrl .cl-qty-input{
+  width:54px;height:24px;text-align:center;padding:0 2px;
+  background:rgba(45,230,192,0.04);border:1px solid rgba(45,230,192,0.35);
+  color:#eafff8;font-family:'Orbitron',sans-serif;font-size:13.8px;border-radius:0;
+}
+.cl-qty-ctrl .cl-qty-input:focus{outline:none;border-color:#2de6c0;background:rgba(45,230,192,0.1);}
+
+.mv-label{margin-top:14px;font-size:10px;letter-spacing:0.1em;color:#5f8f83;}
+.mv-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.mv-opt{
+  flex:1 1 72px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 6px;
+  background:rgba(45,230,192,0.04);border:1px solid rgba(45,230,192,0.3);color:#7fe6cf;
+  cursor:pointer;transition:all 0.15s ease;font-family:'Orbitron',sans-serif;
+}
+.mv-opt:hover:not(:disabled){background:rgba(45,230,192,0.12);}
+.mv-opt.on{background:rgba(45,230,192,0.2);border-color:#2de6c0;color:#eafff8;box-shadow:0 0 10px rgba(45,230,192,0.25);}
+.mv-opt:disabled{opacity:0.3;cursor:not-allowed;}
+.mv-opt .mv-tl{font-size:13px;letter-spacing:0.05em;}
+.mv-opt .mv-price{font-size:11px;}
+.mv-picker + .modal-add-row{margin-top:12px;}
+
+
+/* =========================================================================
+   AÑADIDO: subcategorías que pueden ocupar varias filas sin "recuadro" exterior.
+   Cada botón lleva su propio borde y se solapan 1px, así una sola fila se ve
+   igual que antes y, si se parte en dos, cada fila termina limpia.
+   ========================================================================= */
+.subcat-nav{
+  border:none;width:auto;max-width:100%;gap:0;
+  margin-bottom:19px; /* 18px + 1px del solape */
+}
+.subcat-nav button{
+  border:1px solid rgba(45,230,192,0.2);
+  margin:0 -1px -1px 0;
+}
+.subcat-nav button.on{position:relative;z-index:1;border-color:rgba(45,230,192,0.45);}
