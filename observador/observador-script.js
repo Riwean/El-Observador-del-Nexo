@@ -1880,7 +1880,7 @@ const ediciones = {
           titulo:
             "[BAJO FONDO] Los Gemelos Vex, muertos — un vídeo del combate se filtra",
           contenido: [
-            "Este periódico puede confirmar la muerte de los Gemelos Vex, los últimos altos cargos de su facción que quedaban con vida tras semanas de purga en Bajo Fondo. La confirmación llega acompañada de un material que ha empezado a circular fuera de control por los canales menos regulados de la Outernet: un vídeo grabado en primera persona, aparentemente desde el punto de vista de uno de los combatientes del grupo que acompaña a Hadria Von Drevan, que muestra el enfrentamiento completo y termina con los cuerpos calcinados de ambos hermanos.",
+            "Este periódico puede confirmar la muerte de los Gemelos Vex, los últimos altos cargos de su facción que quedaban con vida tras semanas de purga en Bajo Fondo. La confirmación llega acompañada de un material que ha empezado a circular fuera de control por los canales menos regulados de la Outernet: un vídeo grabado en primera persona, aparentemente desde el propio punto de vista de Hadria Von Drevan, que muestra el enfrentamiento completo y termina con los cuerpos calcinados de ambos hermanos.",
             "Este periódico ha optado por no reproducir ni enlazar el material, dada su crudeza. Ni la Casa Von Drevan ni ningún miembro identificable del grupo que aparece en el vídeo ha hecho declaración alguna sobre su origen ni sobre cómo llegó a filtrarse.",
           ],
         },
@@ -1909,6 +1909,7 @@ const ediciones = {
           contenido: [
             "Lady Míriam Ashental ha formalizado la adopción de Antares Kharthian —conocido públicamente durante años como el cantante Orfeo— como heredero legítimo de la Casa Ashental, la casa nobiliaria de mayor rango de El Nexo. Antares Kharthian es, según ha podido confirmar este periódico, el nombre que la propia Ashental le dio cuando adquirió participación en su contrato artístico, antes de romperlo unilateralmente hace varias semanas.",
             "La noticia sitúa a un antiguo esclavo artístico, con las cuerdas vocales mutiladas de forma deliberada, en la línea de sucesión de una de las casas más ricas y poderosas del sector. Ninguna otra casa nobiliaria de Santigua ni de Santuario Menor ha hecho declaraciones oficiales hasta el cierre de esta edición, aunque fuentes de la alta sociedad describen la reacción privada como de auténtica conmoción.",
+            "Este periódico logró contactar con Hadria Von Drevan para preguntarle por la noticia. Respondió sin ocultar nada: expresó su apoyo incondicional a la decisión, y felicitó públicamente a la Casa Ashental por ella.",
           ],
         },
         {
@@ -2283,6 +2284,144 @@ const especiales = {
       },
     ],
   },
+  esp4: {
+    numero: "ESP-04",
+    fecha: "Año 1050 P.E. | Día 352 | 21:15 HST — DECLARACIÓN EN DIRECTO",
+    etiqueta: "EDICIÓN ESPECIAL",
+    programa: "EL OBSERVADOR DEL NEXO — CON ARCTURUS MORN",
+    lema: "LA VERDAD TRASCIENDE. EL PODER CORROMPE.",
+    destacada: {
+      alerta: "PROPUESTA DE ESTADO",
+      titulo:
+        "HADRIA VON DREVAN PROPONE UN ESTADO PARA EL NEXO: CIENTO VEINTE DÍAS PARA DECIDIRLO",
+      imagen: "especial4-multitud-01.png",
+      subtitulo:
+        "» Doce módulos, una ciudadanía, un solo país — la propuesta llega tras negociaciones privadas previas con representantes de cada módulo",
+      contenido: [
+        "La transmisión comenzó sin música ni ceremonia. Hadria Von Drevan, sin casco, se dirigió esta noche a todo El Nexo con lo que ha descrito como «algo considerablemente menos emocionante y bastante más importante» que las últimas semanas de guerras, muertes y traiciones: qué va a pasar después.",
+        "«Bajo Fondo no puede regresar a lo que era», comenzó. «Pero tampoco pienso convertirlo en un territorio ocupado, en una propiedad de la Casa Von Drevan, en una dependencia de Lady Míriam Ashental ni en un monumento permanente a nuestra victoria sobre los Capos. Los Capos se terminan. Bajo Fondo no.»",
+        "Durante los próximos ciento veinte días, el Módulo 3 atravesará un periodo de reconstrucción, regularización y transición civil, según anunció Hadria: los talleres seguirán produciendo, los comerciantes podrán seguir comerciando, y quienes lleven toda una vida allí no serán expulsados «simplemente porque alguien haya decidido cambiar el membrete de la administración». Lo que sí termina, fue tajante, es la esclavitud, la compraventa de personas, la servidumbre por deuda y la idea de que una organización criminal pueda ejercer derechos soberanos sobre una parte de la estación.",
+        "Pero el anuncio no se detuvo en Bajo Fondo. «El problema de Bajo Fondo no apareció de la nada», continuó. «Creció dentro de una estructura que llevaba demasiado tiempo aceptando una ficción bastante cómoda: que doce módulos que comparten aire, energía, comunicaciones, tráfico, comercio y seguridad pueden comportarse como doce pequeños países y aun así fingir que forman una sola estación. No pueden.»",
+        "Por eso, dijo, propone que al término de esos ciento veinte días exista formalmente un Estado único para los doce módulos de El Nexo. «No quiero eliminar los módulos. Quiero que puedan permitirse seguir siendo diferentes. Lo que quiero eliminar es la necesidad de que cada uno se comporte como si los otros once fueran países extranjeros.»",
+        "La propuesta contempla sufragio universal censado —«un ciudadano adulto, un voto», sin distinción de patrimonio, gremio ni módulo de nacimiento—, una Asamblea con representación por módulo encargada de leyes y presupuesto, y un Ejecutivo Central con autoridad real de ejecución. Los gobiernos locales, insistió, seguirán existiendo para todo aquello que pertenece a la vida cotidiana de cada módulo.",
+        "Hadria se dirigió después, uno por uno, a los doce módulos de la estación —el contenido de esos mensajes específicos se recoge en pieza aparte en esta misma edición—, antes de cerrar con un llamamiento directo a quienes no ocupan ningún cargo: «No os pido que aceptéis esta propuesta porque yo la presente. Eso sería una base constitucional extraordinariamente pobre. Os pido que la examinéis.»",
+        "Cerró la transmisión con estas palabras: «No os estoy pidiendo que entreguéis vuestros módulos. Os estoy proponiendo que, juntos, ganemos algo que ninguno de ellos puede construir por separado.»",
+        "Este periódico ha podido confirmar que la declaración de esta noche llegó tras semanas de contactos privados previos con representantes de varios módulos, cuyo contenido exacto no ha trascendido.",
+      ],
+    },
+    piezas: [
+      {
+        titulo: "LO QUE HADRIA DIJO A CADA MÓDULO — Y LO QUE CADA UNO RESPONDIÓ",
+        tipo: "grid",
+        intro:
+          "En su declaración de esta noche, Hadria Von Drevan dedicó un mensaje específico a cada uno de los doce módulos de la estación. Este periódico recoge lo esencial de cada uno, junto con las primeras reacciones recogidas sobre el terreno.",
+        items: [
+          {
+            modulo: "El Muelle",
+            cita:
+              "Cuando miro el Muelle, no veo simplemente esclusas, tasas de atraque y contenedores. Veo la puerta del Nexo.",
+            reaccion:
+              "Prometió que la fuerza de sus trabajadores debería proceder «también de ser ciudadanos del lugar cuya entrada mantenéis abierta», no solo del poder de negociación de un gremio. Entre los estibadores, la reacción sigue dividida: mientras el liderazgo oficial evalúa la propuesta con cautela, la facción disidente que lleva meses exigiendo romper con el pacto tácito que protegía los envíos de Bajo Fondo del cobro de peaje ve en la propuesta una oportunidad de legitimar esa ruptura de una vez.",
+          },
+          {
+            modulo: "La Bolsa",
+            cita:
+              "El problema de La Bolsa no es que el Nexo carezca de contratos fiables. El problema es que incluso el mejor contrato pierde parte de su valor cuando la estación que lo sostiene puede entrar en crisis.",
+            reaccion:
+              "Prometió un mercado de capitales estable en vez de «la sala de apuestas de doce incertidumbres políticas superpuestas». El Consorcio de Mercaderes mantiene silencio oficial, aunque crece el número de comerciantes que, según fuentes del Módulo 2, ya cruzan directamente al Santuario del Intercambio para sellar acuerdos.",
+          },
+          {
+            modulo: "Bajo Fondo",
+            cita:
+              "Veo decenas de miles de personas a las que el resto del Nexo permitió vivir durante años bajo un gobierno criminal y después tuvo la indecencia de señalar como criminales por haber aprendido a sobrevivir allí.",
+            reaccion:
+              "Con los Cinco Capos ya completamente fuera de juego, los primeros días de la administración provisional transcurren, según testigos, entre calma tensa y desconfianza generalizada.",
+          },
+          {
+            modulo: "Santuario Menor",
+            cita:
+              "No considero que poseer más sea un delito. Considero que poseer más genera obligaciones mayores.",
+            reaccion:
+              "Prometió que la propiedad legítima y los títulos se mantendrían, pero sin jurisdicción privada ni exenciones legales por apellido. En los salones de Santigua y Santuario Menor, el ambiente entre las grandes Casas nobles se describe como de shock contenido.",
+          },
+          {
+            modulo: "Forja Menor",
+            cita:
+              "Forja Menor no debería ser solamente el sitio al que el resto llama cuando algo se rompe; debería ocupar un lugar central en la reconstrucción material del Nexo.",
+            reaccion:
+              "Fuentes del módulo describen la reacción como la más favorable de toda la estación hasta ahora — llevan generaciones reclamando ese reconocimiento.",
+          },
+          {
+            modulo: "La Colmena",
+            cita:
+              "No quiero convertir La Colmena en objeto de caridad. Quiero convertir a sus habitantes en ciudadanos.",
+            reaccion:
+              "Donde generaciones enteras han vivido con recortes de aire «temporales» que nunca se compensan, este periódico ha registrado algo que no aparecía en meses de crisis sucesivas: entusiasmo genuino entre buena parte de sus vecinos.",
+          },
+          {
+            modulo: "El Santuario del Intercambio (Credo)",
+            cita:
+              "No quiero un Credo subordinado al Gobierno como una oficina administrativa más. Quiero un Credo suficientemente independiente para mirar las cuentas del nuevo Estado.",
+            reaccion:
+              "Ver pieza aparte sobre el debate interno que esto ha desatado.",
+          },
+          {
+            modulo: "La Universidad",
+            cita:
+              "Quiero que La Universidad sea uno de los lugares desde los que El Nexo deje de limitarse a conservar aquello que sabe y vuelva a aumentar lo que sabe.",
+            reaccion:
+              "Varios claustros consultados reaccionan con cautela más que entusiasmo — «regulado» e «inspeccionado» son palabras que normalmente preceden a recortes, no a libertad, según fuentes académicas.",
+          },
+          {
+            modulo: "Arsenal",
+            cita:
+              "Quiero que algún día un soldado del Nexo pueda saber con absoluta claridad qué está defendiendo. No una Casa. El Nexo.",
+            reaccion:
+              "Fuentes internas describen inquietud entre mandos intermedios ante la promesa de convertirlo en un ejército nacional profesional, que implica renunciar a operar como poder paralelo.",
+          },
+          {
+            modulo: "Vertedero",
+            cita:
+              "No quiero que Vertedero deje de ser Vertedero. Quiero que deje de ser sinónimo de haber sido olvidado.",
+            reaccion:
+              "La reacción es ambivalente: para muchos, la idea de dejar de ser «residuo administrativo» resulta casi conmovedora; el recelo persiste porque promesas similares ya se han hecho antes.",
+          },
+          {
+            modulo: "El Puente",
+            cita:
+              "Quiero que conserve esa excelencia técnica, pero que forme parte de una red cuya responsabilidad sea servir a todo el Nexo. La información puede ser poder. Preferiría que también fuera infraestructura.",
+            reaccion:
+              "El gremio de señalistas recibe la oferta con cautela optimista, aunque la advertencia implícita sobre su histórica capacidad de presión mediante cortes de comunicación no ha pasado desapercibida.",
+          },
+          {
+            modulo: "La Junta",
+            cita:
+              "Creo que La Junta puede convertirse también en el lugar donde el Nexo deje de ser únicamente anfitrión de la política de otros y empiece a poseer una política propia.",
+            reaccion:
+              "La institución archivística estudia la oferta con cautela, entre «tentadora y aterradora a partes iguales», según fuentes cercanas.",
+          },
+        ],
+      },
+      {
+        titulo: "CREDO DEL INTERCAMBIO: DEBATE INTERNO SOBRE EL GRAVAMEN SUCESORIO",
+        contenido: [
+          "La promesa de Hadria de un Credo «independiente» capaz de fiscalizar al propio Estado —en vez de subordinado a él— ha añadido una capa nueva a un debate que ya recorría la orden desde hace días: el futuro del llamado Gravamen Sucesorio, la doctrina que permite transmitir una deuda de generación en generación como un bien heredado más.",
+          "Fuentes internas describen posturas enfrentadas entre escribas y mediadores: quienes consideran el Gravamen Sucesorio indistinguible, en la práctica, de la esclavitud por deuda que la propia declaración de esta noche condena, y quienes lo defienden como pilar histórico de la solvencia financiera del Credo, advirtiendo de que su eliminación podría colapsar contratos vigentes por valor incalculable.",
+          "La oferta de un rol fiscalizador oficial dentro del nuevo Estado divide aún más a la orden: para algunos, es la validación institucional que el Credo ha buscado durante generaciones; para otros, aceptar ese papel público sin resolver primero la cuestión del Gravamen Sucesorio sería, en palabras de una fuente interna, «pedirnos que vigilemos la casa ajena mientras la nuestra sigue construida sobre lo mismo que denunciamos». Ningún representante oficial de la orden ha hecho declaraciones públicas hasta el cierre de esta edición.",
+        ],
+      },
+      {
+        titulo: "REINALDO CUERVAS, EL HOMBRE QUE NEGOCIARÁ LOS 120 DÍAS",
+        imagen: "especial4-reinaldo-01.png",
+        contenido: [
+          "Con la declaración pública ya hecha, este periódico ha podido confirmar que las negociaciones módulo por módulo durante el periodo de transición recaerán sobre Reinaldo Cuervas, una figura hasta ahora ajena a la primera línea política de El Nexo pero con décadas de trayectoria en los pasillos administrativos de la estación.",
+          "Descrito por quienes lo conocen como «un hombre que lleva tantos años aquí que ya ni el polvo se acuerda de cuándo llegó», Cuervas tiene fama de resolver por la vía informal lo que los canales oficiales tardan años en tramitar. Ninguna fuente ha querido precisar los términos exactos de su contratación.",
+          "Hadria Von Drevan sí ha querido despejar cualquier duda sobre el respaldo que tiene Cuervas en estas negociaciones. «Mientras duren estas negociaciones, Reinaldo Cuervas habla con mi autoridad», declaró a este periódico. «Quien escuche su palabra debe entender que escucha la mía; y aquello que él comprometa en mi nombre quedará tan obligado como si hubiera salido de mi propia boca.»",
+          "Este periódico no ha podido determinar todavía qué acuerdos privados, si los hay, se están cerrando ya bajo su gestión — ni si el estilo transaccional que se le atribuye encaja del todo con el tono de tabla rasa institucional que la declaración pública de esta noche ha prometido.",
+        ],
+      },
+    ],
+  },
 };
 
 let edicionActual = 1;
@@ -2379,6 +2518,19 @@ function renderizarPiezasEspecial(piezas) {
   if (!container) return;
   const html = piezas
     .map((pieza) => {
+      if (pieza.tipo === "grid") {
+        const gridHtml = pieza.items
+          .map(
+            (item) =>
+              `<div class="modulo-card"><h4>${item.modulo}</h4>${
+                item.cita ? `<p class="modulo-cita">«${item.cita}»</p>` : ""
+              }<p class="modulo-reaccion">${item.reaccion}</p></div>`
+          )
+          .join("");
+        return `<article class="news-article especial-pieza"><h3>${pieza.titulo}</h3>${
+          pieza.intro ? `<p class="pieza-intro">${pieza.intro}</p>` : ""
+        }<div class="modulo-grid">${gridHtml}</div></article>`;
+      }
       const imagenHtml = pieza.imagen
         ? `<img class="especial-pieza-img" src="${pieza.imagen}" alt="${pieza.titulo}">`
         : "";

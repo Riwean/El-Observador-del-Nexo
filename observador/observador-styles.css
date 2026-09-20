@@ -99,6 +99,7 @@ body {
     color: #00ffff; font-size: 17px; line-height: 1; cursor: pointer;
   }
   .corner-toggle:hover{ background: #00ffff; color: #0a0e14; }
+  .corner-toggle svg{ width: 18px; height: 18px; }
 
   .nav-btn{
     position: fixed !important; top: 56px !important; left: 12px !important;
@@ -655,6 +656,55 @@ body {
 .especial-pieza h3 {
   color: #ffcc66;
   text-shadow: 0 0 5px rgba(255, 204, 102, 0.5);
+}
+
+.pieza-intro {
+  margin-bottom: 18px;
+}
+
+.modulo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.modulo-card {
+  border: 1px solid rgba(255, 204, 102, 0.4);
+  background: rgba(255, 204, 102, 0.04);
+  padding: 14px 16px;
+  border-radius: 2px;
+}
+
+.modulo-card h4 {
+  margin: 0 0 8px;
+  color: #ffcc66;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 204, 102, 0.25);
+  padding-bottom: 6px;
+}
+
+.modulo-cita {
+  font-style: italic;
+  color: #e8d7bd;
+  font-size: 0.88rem;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.modulo-reaccion {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .modulo-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .edition-btn-especial {
