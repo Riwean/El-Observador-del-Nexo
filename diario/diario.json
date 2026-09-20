@@ -36,11 +36,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 305",
       "titulo": "Herrumbre — La anexión",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Herrumbre",
-        "Hadria",
-        "Plan Quinquenal"
-      ],
+      "etiquetas": ["Herrumbre", "Hadria", "Plan Quinquenal"],
       "cuerpo": "El padre que oficiaba de guía espiritual en la colonia demostró ser un charlatán y un ladrón; la trampa que le tendió la tripulación terminó con su vida y la de sus seguidores. Después, Hadria —sello Von Drevan en mano— ofreció a los cerca de cien chatarreros de Herrumbre un contrato de anexión bajo su mando a cambio de un futuro mejor. Lo aceptaron. El primer borrador del que ya se conoce como Plan Quinquenal empezó a tomar forma esa misma noche. La nave puso rumbo a El Nexo.",
       "imagen": null
     },
@@ -49,12 +45,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 320 | 22:10 HST — EMISIÓN EN DIRECTO",
       "titulo": "El Nexo — Declaración de guerra",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "El Nexo",
-        "Hadria",
-        "Orfeo",
-        "El Observador del Nexo"
-      ],
+      "etiquetas": ["El Nexo", "Hadria", "Orfeo", "El Observador del Nexo"],
       "cuerpo": "Catorce días de tránsito después, la tripulación cambió su nave por una clase Cigüeña que trajo Jack, amiga de Nikola, quien se quedó custodiando la Salvación. Bajaron a El Nexo y hablaron primero con El Observador del Nexo, con acuerdo de grabación desde el instante de su llegada. La calle reconoció de inmediato a Orfeo, el cantante de ópera desaparecido, y la noticia corrió antes de que terminaran de hablar. Ante las cámaras, Hadria declaró la guerra abierta a los Barones del Polvo en nombre de la Casa Von Drevan, sin aval de su padre. El Observador rompió su numeración semanal para dedicar una edición especial íntegra a la emisión.",
       "imagen": null
     },
@@ -63,12 +54,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 320",
       "titulo": "El Nexo — La voz de Orfeo",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "El Nexo",
-        "Orfeo",
-        "Hadria",
-        "Lady Míriam Ashental"
-      ],
+      "etiquetas": ["El Nexo", "Orfeo", "Hadria", "Lady Míriam Ashental"],
       "cuerpo": "Al salir de la emisión, guardias Von Drevan se llevaron a Hadria sin que opusiera resistencia, a la espera de hablar con su hermano. Guardias de Lady Míriam Ashental intentaron llevarse a Orfeo; el resto del grupo se resistió —Nikola recibió tres disparos, Radjem uno en la mano— hasta que Orfeo aceptó acompañar a Miriam para proteger a los demás. En la Casa Ashental le operaron, restaurándole las cuerdas vocales con tecnología pre-Escisión. Miriam rompió entonces su contrato con él, le entregó una corbeta tipo fragata y declaró la guerra a Los Cinco Capos de Bajo Fondo.",
       "imagen": null
     },
@@ -91,13 +77,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 323 | 08:40 HST",
       "titulo": "Bajos Fondos — El rescate de Mole",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Bajo Fondo",
-        "Radjem",
-        "Kael",
-        "Orfeo",
-        "Nikola"
-      ],
+      "etiquetas": ["Bajo Fondo", "Radjem", "Kael", "Orfeo", "Nikola"],
       "cuerpo": "Con Bajo Fondo cerrado por la guerra contra los Ashental, Radjem y Kael bajaron con sigilo en busca de Rata, conocido de Radjem, y de Mole, luchador conocido de Hadria. Encontraron a Mole retenido bajo un contrato de servidumbre y lo liberaron. De vuelta en la nave, hallaron a Orfeo borracho, siete botellas rotas a su alrededor. Radjem estalló de ira sin ser escuchado; le pidió a Nikola que se quedara, Nikola se negó y Radjem, tras dudar, le dejó ir. Nikola atendió a Orfeo y le recordó que, de ser alguien normal, ya estaría muerto. Kael apoyó a Radjem; Radjem y Orfeo terminaron hablando a solas, de sus vidas. Nikola partió con una carta sellada Von Drevan como pago por un artefacto pre-Escisión —un holograma facial— donde le esperaba Teo Marchetti.",
       "imagen": null
     },
@@ -106,11 +86,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 326",
       "titulo": "El Nexo — Contrataciones",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "El Nexo",
-        "Credo del Intercambio",
-        "Enara de Vasconterra"
-      ],
+      "etiquetas": ["El Nexo", "Credo del Intercambio", "Enara de Vasconterra"],
       "cuerpo": "Con la nave ya asentada en El Nexo, se formalizó la contratación de toda la tripulación actual. A bordo, el caso Aldano dejó una anécdota que se ha convertido en amenaza recurrente entre él y Hadria. En el Credo del Intercambio, la tripulación firmó contratos de silencio; allí apareció por primera vez Sabrel Ondegui, identidad bajo la que se presentó quien más tarde se revelaría como Enara de Vasconterra.",
       "imagen": null
     },
@@ -119,12 +95,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 330 | 10:05 HST",
       "titulo": "Verdal — El discurso y la promesa",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Verdal",
-        "Hadria",
-        "Radjem",
-        "Orfeo"
-      ],
+      "etiquetas": ["Verdal", "Hadria", "Radjem", "Orfeo"],
       "cuerpo": "Hadria bajó a Verdal para repetir su ofrecimiento: alimentar a quienes se rebelaran contra sus Barones. La propuesta fue aceptada. De vuelta a bordo, Radjem le propuso matrimonio a Orfeo.",
       "imagen": null
     },
@@ -133,10 +104,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 337 | 09:15 HST",
       "titulo": "El Nexo — El despertar de Radjem",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Radjem",
-        "Enara de Vasconterra"
-      ],
+      "etiquetas": ["Radjem", "Enara de Vasconterra"],
       "cuerpo": "El despertar psiónico de Radjem se volvió incontrolable: pesadillas, crisis, un cuerpo al borde del colapso. Enara de Vasconterra le salvó la vida estabilizando sus poderes de urgencia, revelando en el proceso su propia naturaleza psíquica ante el resto de la tripulación.",
       "imagen": null
     },
@@ -145,11 +113,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 337",
       "titulo": "El Nexo — El Credo y Herrumbre Unlimited",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Credo del Intercambio",
-        "Hadria",
-        "Herrumbre Unlimited"
-      ],
+      "etiquetas": ["Credo del Intercambio", "Hadria", "Herrumbre Unlimited"],
       "cuerpo": "Hadria acudió al Credo del Intercambio para pedir, apoyándose en su propia doctrina de equivalencia, que se congelaran las cuentas de los Barones del Polvo. Ese mismo periodo se celebró una reunión de Herrumbre Unlimited, primer paso visible de lo que el Plan Quinquenal exige a la colonia.",
       "imagen": null
     },
@@ -173,11 +137,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 342",
       "titulo": "El precio de Ceniza",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Ceniza",
-        "Kael",
-        "Barón Kaldrek"
-      ],
+      "etiquetas": ["Ceniza", "Kael", "Barón Kaldrek"],
       "cuerpo": "El levantamiento en Los Fuelles y Cúpula Rencor ha roto el control de Kaldrek sobre Ceniza. Se escuchó el nombre de Kael entre los gritos de la multitud liberada. La tripulación registra esto como una victoria, aunque el precio empieza a hacerse evidente: ese nombre ya es un objetivo.",
       "imagen": null
     },
@@ -186,9 +146,7 @@
       "fecha_relato": "Año 1050 P.E. | Día 344 | 08:20 HST",
       "titulo": "El Nexo — Hadria se levanta",
       "autor": "Bitácora automática — Nave Asterión",
-      "etiquetas": [
-        "Hadria"
-      ],
+      "etiquetas": ["Hadria"],
       "cuerpo": "Hadria abandonó por fin la camilla. El precio de la mentira publicada tras Shen empieza a llegar, pero ha ganado el tiempo que necesitaba.",
       "imagen": null
     },
@@ -205,6 +163,43 @@
         "Enara de Vasconterra"
       ],
       "cuerpo": "Jack llegó a la nave con una herida de torso; se sospecha traición dentro de su tripulación anterior. Por encargo de Lady Míriam Ashental, la tripulación asaltó el edificio de los Gemelos Vex y acabó con ellos. Enara absorbió la peor parte de la explosión mediante sus capacidades psiónicas y permanece en la enfermería. Miriam Ashental adoptó a Antares —Orfeo— como su heredero legítimo.",
+      "imagen": null
+    },
+    {
+      "id": "0016",
+      "fecha_relato": "Año 1050 P.E. | Día 351",
+      "titulo": "El Nexo — El trato con Kartha",
+      "autor": "Bitácora automática — Nave Asterión",
+      "etiquetas": [
+        "El Nexo",
+        "Kartha",
+        "Orfeo",
+        "Gemelos Vex",
+        "Gyom Duléve",
+        "Marrit Duléve",
+        "La Larga Noche",
+        "Enara de Vasconterra",
+        "Credo del Intercambio",
+        "Lady Míriam Ashental",
+        "Kael",
+        "Horno 65",
+        "Viento Rojo"
+      ],
+      "cuerpo": "Coincidiendo con la edición 8 del Observador, la nave recibió una transmisión de Kartha «La Viuda», en paradero desconocido desde el colapso de los Cinco Capos. Su oferta: eliminar el vídeo en el que aparece Orfeo junto a los Gemelos Vex, mediante un contrato del Credo del Intercambio, a cambio de que la tripulación no la persiga, no la mate y no vaya a por ella por ninguna de las vías posibles. En la misma transmisión reveló el origen de Orfeo: era un feto, no un hijo. Gyom y Marrit Duléve, sus teóricos padres, ni lo engendraron ni lo modificaron; tuvieron la suerte de disponer de un método para incubarlo. Cuando se enteró de que eran unos farsantes, Kartha se encargó de ellos, y ambos figuran hoy entre las bajas de la Larga Noche. La tripulación vió la adolescencia de Enara huyendo de las instalaciones al intentar ayudarla ante un ataque psiónico. La tripulación acudió luego a firmar los papeles del trato y recibió el vídeo prometido. Fueron a contárselo a Lady Míriam Ashental y allí conocieron al amigo de Kael, traído por los comerciantes de Horno «65», que se quedó en la Casa Ashental para que le instalaran cyberware. De vuelta a la nave, hablaron del plan de Viento Rojo.",
+      "imagen": null
+    },
+    {
+      "id": "0017",
+      "fecha_relato": "Año 1050 P.E. | Día 352 | 21:15 HST — DECLARACIÓN EN DIRECTO",
+      "titulo": "El Nexo — Hadria habla al Nexo",
+      "autor": "Bitácora automática — Nave Asterión",
+      "etiquetas": [
+        "El Nexo",
+        "Hadria",
+        "El Observador del Nexo",
+        "Gobierno unificado"
+      ],
+      "cuerpo": "Al día siguiente, en la edición especial 4 de El Observador del Nexo, Hadria se dirigió a toda la estación para proponer un gobierno unificado para El Nexo.",
       "imagen": null
     }
   ]
