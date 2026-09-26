@@ -1,0 +1,164 @@
+{
+  "moneda": "cr",
+  "fondos": [
+    {
+      "id": "reconstruccion",
+      "nombre": "Fondo de Reconstrucción",
+      "principal": true,
+      "descripcion": "Recibe la inversión, contrata a las empresas y administra los ingresos de la nueva infraestructura."
+    },
+    {
+      "id": "reserva",
+      "nombre": "Reserva Estratégica",
+      "porcentaje": 10,
+      "descripcion": "Metales, maquinaria, cableado, componentes y materiales de construcción. No se convierte rutinariamente en dinero."
+    },
+    {
+      "id": "ciudadano",
+      "nombre": "Fondo Ciudadano",
+      "porcentaje": 5,
+      "descripcion": "Servicios, dividendos o inversiones para la comunidad. No sustituye el 10 % de ganancias netas de la Población Original."
+    },
+    {
+      "id": "discrecional",
+      "nombre": "Fondo Discrecional",
+      "porcentaje": 5,
+      "descripcion": "Emergencias, colonización, defensa, mantenimiento, deuda extraordinaria e inversiones urgentes."
+    }
+  ],
+  "reparto": {
+    "recuperador": 80
+  },
+  "tramos": [
+    {
+      "id": "A",
+      "nombre": "Préstamo sénior",
+      "deuda": true
+    },
+    {
+      "id": "B",
+      "nombre": "Pago diferido al contratista",
+      "deuda": true
+    },
+    {
+      "id": "C",
+      "nombre": "Contratos de compra anticipada",
+      "deuda": true
+    },
+    {
+      "id": "D",
+      "nombre": "Capital personal de Hadria",
+      "deuda": false
+    },
+    {
+      "id": "E",
+      "nombre": "Inversión privada de prueba",
+      "deuda": false
+    },
+    {
+      "id": "F",
+      "nombre": "Aportaciones sin nombre público",
+      "deuda": false
+    }
+  ],
+  "presupuestoFases": [
+    {
+      "fase": 0,
+      "presupuesto": 2500000
+    },
+    {
+      "fase": 1,
+      "presupuesto": 6000000
+    },
+    {
+      "fase": 2,
+      "presupuesto": 2000000
+    },
+    {
+      "fase": 3,
+      "presupuesto": 12000000
+    },
+    {
+      "fase": 4,
+      "presupuesto": 15000000
+    },
+    {
+      "fase": 5,
+      "presupuesto": 20000000
+    }
+  ],
+  "inversores": [
+    {
+      "nombre": "Lady Míriam Ashental",
+      "tramo": "A",
+      "tipo": "prestamo",
+      "min": 3000000,
+      "max": 4000000,
+      "via": "Préstamo sénior, con prioridad de acceso al Instituto de Recuperación Tecnológica (Fase V)"
+    },
+    {
+      "nombre": "Cassian Ferrolde",
+      "tramo": "B",
+      "tipo": "especie",
+      "min": 500000,
+      "max": 800000,
+      "via": "Aporta su flota. Cobra en diferido: prima de riesgo, primas por éxito y derechos sobre pecios de bajo interés"
+    },
+    {
+      "nombre": "Ilsabetta Cornvallar",
+      "tramo": "E",
+      "tipo": "capital",
+      "min": 400000,
+      "max": 600000,
+      "via": "Cantidad de prueba; ampliará si la contabilidad demuestra ser sólida"
+    },
+    {
+      "nombre": "Dr. Evren Sallostro",
+      "tramo": null,
+      "tipo": "intencion",
+      "min": 0,
+      "max": 0,
+      "via": "Carta de intención de membresía industrial, condicionada al Año 3"
+    },
+    {
+      "nombre": "Baltasar Wrenn",
+      "tramo": "C",
+      "tipo": "compra",
+      "min": 200000,
+      "max": 300000,
+      "via": "Compra anticipada; más simbólica que decisiva"
+    },
+    {
+      "nombre": "Renata Ophelin Duz",
+      "tramo": "C",
+      "tipo": "compra",
+      "min": 250000,
+      "max": 250000,
+      "via": "Compra anticipada de aleaciones en nombre de la Cooperativa de Refinerías"
+    },
+    {
+      "nombre": "Contactos de Arcturus y Enara",
+      "tramo": "F",
+      "tipo": "capital",
+      "min": 500000,
+      "max": 1000000,
+      "via": "Anónimos, sin dar la cara públicamente"
+    },
+    {
+      "nombre": "Hadria Von Drevan",
+      "tramo": "D",
+      "tipo": "capital",
+      "min": 500000,
+      "max": 500000,
+      "via": "Capital personal"
+    }
+  ],
+  "movimientos": [
+    {"mes": 0, "concepto": "Tramo A: préstamo sénior de Lady Míriam Ashental", "fondo": "reconstruccion", "categoria": "Financiación", "fase": 0, "tramo": "A", "importe": 4000000},
+    {"mes": 0, "concepto": "Tramo D: capital personal de Hadria", "fondo": "reconstruccion", "categoria": "Aporte", "fase": 0, "tramo": "D", "importe": 500000},
+    {"mes": 0, "concepto": "Constitución del Fondo y registro de concesiones", "fondo": "reconstruccion", "categoria": "Gasto", "fase": 0, "importe": -120000},
+    {"mes": 1, "concepto": "Puerto Espacial: plataforma y torre de control", "fondo": "reconstruccion", "categoria": "Obra", "fase": 0, "importe": -900000},
+    {"mes": 1, "concepto": "Avenida de la Fundación: trazado", "fondo": "reconstruccion", "categoria": "Obra", "fase": 0, "importe": -350000},
+    {"mes": 1, "concepto": "Reserva de combustible y alimentos: primeros envíos", "fondo": "reconstruccion", "categoria": "Suministros", "fase": 0, "importe": -250000}
+  ]
+}

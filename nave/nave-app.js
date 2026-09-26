@@ -1057,12 +1057,13 @@ function nowFecha() {
    lo fusiona (o crea) en el inventario destino. */
 async function transferItem(ctx, amount, fromId, toId) {
   const { db, ref, runTransaction, get, push, update } = window.fb;
-  const qtyRef = ref(
-    db,
-    `tienda/personajes/${fromId}/inventario/${ctx.invKey}/qty`,
-  );
+  const srcPath = `tienda/personajes/${fromId}/inventario/${ctx.invKey}`;
 
-  const result = await runTransaction(qtyRef, (current) => {
+  // se lee antes de restar, por si el stack desaparece al llegar a 0
+  const srcSnap = await get(ref(db, srcPath));
+  const src = srcSnap.exists() ? srcSnap.val() : {};
+
+  const result = await runTransaction(ref(db, `${srcPath}/qty`), (current) => {
     const cur = typeof current === "number" ? current : 0;
     if (cur < amount) return; // aborta, no hay suficientes
     return cur - amount;
@@ -1072,7 +1073,7 @@ async function transferItem(ctx, amount, fromId, toId) {
   }
   if (result.snapshot.val() === 0) {
     await update(ref(db), {
-      [`tienda/personajes/${fromId}/inventario/${ctx.invKey}`]: null,
+      [srcPath]: null,
     });
   }
 
@@ -1095,10 +1096,10 @@ async function transferItem(ctx, amount, fromId, toId) {
     const newKey = push(targetInvRef).key;
     await update(ref(db), {
       [`tienda/personajes/${toId}/inventario/${newKey}`]: {
+        ...src,
         name: ctx.name,
         qty: amount,
         catId: ctx.catId,
-        origen: null,
         fecha,
       },
     });

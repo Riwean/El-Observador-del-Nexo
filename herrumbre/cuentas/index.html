@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuentas · Herrumbre Unlimited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../nav-shared.css">
+<link rel="stylesheet" href="../css/herrumbre.css">
+<script src="../../nav-shared.js" defer></script>
+</head>
+<body>
+<div class="h-root" id="root">
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+    <div class="h-streak-wrap" aria-hidden="true"><div class="h-streak"></div></div>
+    <a class="nav-back" href="../../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+    <a class="h-brand" href="../index.html"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><polygon points="13,2 23,7.5 23,18.5 13,24 3,18.5 3,7.5" fill="none" stroke="#d4622b" stroke-width="2"/><rect class="spin-r" x="9" y="9" width="8" height="8" fill="#d4622b"/></svg><span>Herrumbre Unlimited</span></a>
+    <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Más opciones" aria-expanded="false" aria-controls="navExtras">☰</button>
+    <div class="nav-extras" id="navExtras">
+      <span class="h-tag" id="nav-tag" hidden>CUENTAS DE EJEMPLO</span>
+      <a class="status-chip" href="../index.html">Portada</a>
+      <a class="status-chip" href="index.html" aria-current="page">Cuentas</a>
+      <a class="status-chip" href="../mapa/index.html">Mapa</a>
+    </div>
+  </div>
+  <main>
+    <div class="wrap page-head">
+      <div>
+        <div class="eyebrow rise">TESORERÍA DE HERRUMBRE</div>
+        <h1 class="h1 rise" style="animation-delay:.1s">Cuentas</h1>
+        <p class="lead rise" style="animation-delay:.2s">Tesorería propia, separada del crédito de la nave. El Fondo de Reconstrucción recibe la inversión y paga las obras; los demás fondos se nutren de la recuperación.</p>
+      </div>
+      <div class="chips-cab" id="chips-cab"></div>
+    </div>
+
+    <div class="wrap"><div class="kpis" id="kpis"></div></div>
+
+    <div class="wrap grid-2">
+      <section class="card hud rise" style="animation-delay:.8s">
+        <h2 class="card__t">Entradas y salidas por trimestre</h2>
+        <div class="leyenda"><span><i style="background:#6fbfa5"></i>Entradas</span><span><i style="background:#d4622b"></i>Salidas</span></div>
+        <div class="chart" id="chart"></div>
+      </section>
+      <section class="card hud rise" style="animation-delay:.95s">
+        <h2 class="card__t">Presupuesto por fase</h2>
+        <div id="presupuesto"></div>
+      </section>
+    </div>
+
+    <section class="wrap sec">
+      <div class="eyebrow">FONDOS</div>
+      <h2>Reparto de lo recuperado</h2>
+      <p class="lead lead--s">De los materiales ordinarios que recupera cada cuadrilla, el 80 % es del recuperador. La tecnología pre-Escisión queda fuera del reparto.</p>
+      <div class="reparto" id="reparto"></div>
+      <div class="fondos" id="fondos"></div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="eyebrow">FINANCIACIÓN</div>
+      <h2>Tramos del primer año</h2>
+      <div class="tramos" id="tramos"></div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="eyebrow">COMPROMISOS</div>
+      <h2>Inversores</h2>
+      <p class="lead lead--s" id="inv-resumen"></p>
+      <div class="tramos" id="inversores"></div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="eyebrow">LIBRO MAYOR</div>
+      <h2>Registro de movimientos</h2>
+      <div class="tabla card hud">
+        <div class="trow thead"><span>Fecha</span><span>Concepto</span><span>Categoría</span><span class="tr">Importe</span><span class="tr">Saldo del fondo</span></div>
+        <div id="registro"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="h-foot wrap" id="pie"></footer>
+</div>
+<script type="module" src="../js/cuentas.js"></script>
+</body>
+</html>

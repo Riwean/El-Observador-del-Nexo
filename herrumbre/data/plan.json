@@ -1,0 +1,98 @@
+{
+  "titulo": "Herrumbre Unlimited",
+  "ejemplo": false,
+  "mesActual": 1,
+  "poblacion": { "actual": 580, "inicial": 100 },
+  "duracionMeses": 60,
+  "resumen": "Herrumbre es la luna que Hadria Von Drevan anexionó. Este es el panel del plan de cinco años para levantarla como capital: en qué fase está, cuánto dinero tiene y qué hay ya construido.",
+  "fases": [
+    {
+      "id": 0, "romano": "0", "nombre": "La ciudad antes de la ciudad", "proyecto": "Proyecto Libro Mayor",
+      "mesesTxt": "Meses 0-3", "desde": 0, "hasta": 3,
+      "resumen": "No se construye una ciudad bonita: se construye el esqueleto sobre el que pueda aparecer una.",
+      "hitos": [
+        "Puerto Espacial de Nuevo Herrumbre en construcción: plataforma, torre de control y hangares provisionales",
+        "Distrito de Tránsito y Avenida de la Fundación",
+        "Central provisional de energía, agua, saneamiento, comunicaciones y estación de emergencias",
+        "Parcela del Credo del Intercambio, cedida jurídicamente al Credo",
+        "Trazado de los grandes corredores: industrial, universitario, logístico y reservas de suelo residencial",
+        "Fondo de Reconstrucción, registro público de concesiones y contabilidad auditada"
+      ],
+      "mapa": "img/mapa-f0.webp", "aereo": null
+    },
+    {
+      "id": 1, "romano": "I", "nombre": "Caída de Estrellas", "proyecto": "Saneamiento orbital",
+      "mesesTxt": "Meses 1-18", "desde": 1, "hasta": 18,
+      "resumen": "Con el cielo saneado, Nuevo Herrumbre empieza a ser el centro desde el que se administra.",
+      "hitos": [
+        "Distrito de Recuperación: Centro de Control de Caídas, Guardia de Caída y hangares para remolcadores",
+        "Campos de Descenso, separados del núcleo urbano",
+        "Estación de Clasificación Cero",
+        "Clínica de Recuperadores",
+        "Ferrocarril industrial de carga entre puerto, campos y futura zona fabril"
+      ],
+      "mapa": "img/mapa-f1.webp", "aereo": "img/aereo-f1.webp"
+    },
+    {
+      "id": 2, "romano": "II", "nombre": "Derecho de Rescate y la Lonja", "proyecto": "Derecho de Rescate · La Lonja de los Pecios",
+      "mesesTxt": "Años 1-2", "desde": 12, "hasta": 24,
+      "resumen": "Nuevo Herrumbre empieza a parecer una ciudad y no un campamento industrial.",
+      "hitos": [
+        "Distrito de la Lonja, alrededor de la Lonja de los Pecios",
+        "Barrio de Recuperadores",
+        "Mercado del Cielo Caído",
+        "Distrito Aduanero y Franco en el puerto",
+        "Primeros barrios planificados",
+        "Casa de Cuentas del Credo del Intercambio"
+      ],
+      "mapa": "img/mapa-f2.webp", "aereo": "img/aereo-f2.webp"
+    },
+    {
+      "id": 3, "romano": "III", "nombre": "Renacer", "proyecto": "Urbanización y crecimiento demográfico",
+      "mesesTxt": "Años 2-4", "desde": 24, "hasta": 48,
+      "resumen": "La verdadera fundación de Nuevo Herrumbre como ciudad.",
+      "hitos": [
+        "Universidad de Nuevo Herrumbre y Barrio Universitario",
+        "Hospital General, que absorbe la Clínica de Recuperadores",
+        "Escuelas, parques protegidos, invernaderos, agua y transporte público eléctrico",
+        "Plaza de la Fundación, con El Rescate y El Pacto",
+        "Ayuntamiento y estación central"
+      ],
+      "mapa": "img/mapa-f3.webp", "aereo": "img/aereo-f3.webp"
+    },
+    {
+      "id": 4, "romano": "IV", "nombre": "Forja del Cielo", "proyecto": "Industrialización de Herrumbre",
+      "mesesTxt": "Años 2-5", "desde": 24, "hasta": 60,
+      "resumen": "Nuevo Herrumbre deja de vivir del salvamento y pasa a producir.",
+      "hitos": [
+        "Distrito de la Forja, separado del centro residencial",
+        "Patio de Motores y Astilleros de Tierra",
+        "Barrio de las Cien Fraguas",
+        "Corredores de Pruebas",
+        "Corredor de Ingeniería Aplicada, entre la universidad y la industria"
+      ],
+      "mapa": "img/mapa-f4.webp", "aereo": "img/aereo-f4.webp"
+    },
+    {
+      "id": 5, "romano": "V", "nombre": "La ciudad del quinto año", "proyecto": "Proyecto Lázaro (fuera de la ciudad)",
+      "mesesTxt": "Años 3-5", "desde": 36, "hasta": 60,
+      "resumen": "La base urbana, académica, industrial y administrativa que alimenta al Instituto Lázaro sin contenerlo.",
+      "hitos": [
+        "Ampliación universitaria y Casa de Transferencia Tecnológica",
+        "Centro de Congresos de la Recuperación",
+        "Gran terminal civil del puerto y Puerto Franco comercial",
+        "Santuario del Intercambio",
+        "Museo, Teatro, Biblioteca Central, Archivo y jardines climatizados",
+        "Casa de los Primeros Cien"
+      ],
+      "mapa": "img/mapa-f5.webp", "aereo": "img/aereo-f5.webp"
+    }
+  ],
+  "flujo": [
+    { "titulo": "Puerto", "texto": "Lo que llega del cielo entra por el puerto." },
+    { "titulo": "Lonja", "texto": "Adquiere valor en la Lonja." },
+    { "titulo": "Universidad", "texto": "Se comprende en la universidad." },
+    { "titulo": "Forja", "texto": "Se transforma en la industria." },
+    { "titulo": "Ciudad", "texto": "Y termina financiando la ciudad que lo hizo posible." }
+  ]
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa · Herrumbre Unlimited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../nav-shared.css">
+<link rel="stylesheet" href="../css/herrumbre.css">
+<script src="../../nav-shared.js" defer></script>
+</head>
+<body>
+<div class="h-root" id="root">
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+    <div class="h-streak-wrap" aria-hidden="true"><div class="h-streak"></div></div>
+    <a class="nav-back" href="../../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+    <a class="h-brand" href="../index.html"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><polygon points="13,2 23,7.5 23,18.5 13,24 3,18.5 3,7.5" fill="none" stroke="#d4622b" stroke-width="2"/><rect class="spin-r" x="9" y="9" width="8" height="8" fill="#d4622b"/></svg><span>Herrumbre Unlimited</span></a>
+    <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Más opciones" aria-expanded="false" aria-controls="navExtras">☰</button>
+    <div class="nav-extras" id="navExtras">
+      <a class="status-chip" href="../index.html">Portada</a>
+      <a class="status-chip" href="../cuentas/index.html">Cuentas</a>
+      <a class="status-chip" href="index.html" aria-current="page">Mapa</a>
+    </div>
+  </div>
+  <main>
+    <div class="wrap page-head">
+      <div>
+        <div class="eyebrow rise">TERRITORIO</div>
+        <h1 class="h1 glitch">Mapa de Nuevo Herrumbre</h1>
+        <p class="lead rise" style="animation-delay:.2s">Elige una fase y pulsa cualquier zona del plano para ver su ficha. El color indica en qué estado está hoy según el mes del plan.</p>
+      </div>
+      <span class="live"><i class="pulse-dot"></i>EN VIVO</span>
+    </div>
+
+    <div class="wrap"><div class="tabs" id="tabs" role="tablist" aria-label="Fases del plan"></div></div>
+
+    <div class="wrap mapgrid">
+      <div class="mapcol">
+        <div class="stagebox hud">
+          <div class="stage" id="stage">
+            <img id="img" alt="">
+            <svg id="svg" preserveAspectRatio="none"></svg>
+            <div class="radar"></div>
+            <div class="scan"></div>
+            <span class="stage__tag" id="tag"></span>
+            <span class="stage__live"><i class="pulse-dot"></i>ENLACE ACTIVO<i class="caret"></i></span>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="seg" id="vista">
+            <button id="v-mapa" aria-pressed="true">Plano</button>
+            <button id="v-aereo" aria-pressed="false">Vista aérea</button>
+          </div>
+          <label class="chk"><input type="checkbox" id="contornos" checked> Contornos</label>
+          <div class="legend">
+            <span><i class="lg-ok"></i>Operativa</span>
+            <span><i class="lg-warn"></i>En obra</span>
+            <span><i class="lg-info"></i>En planificación</span>
+          </div>
+        </div>
+      </div>
+      <aside class="panel hud" id="panel" aria-live="polite"></aside>
+    </div>
+
+    <section class="wrap sec">
+      <div class="eyebrow">ZONAS DE ESTA FASE</div>
+      <div class="zonas" id="zonas"></div>
+    </section>
+
+    <div class="wrap">
+      <section class="card editor" id="editor" hidden>
+        <h2 class="card__t">Editor de zonas</h2>
+        <p class="lead lead--s">Elige una zona, pulsa sobre el plano para marcar los vértices de su polígono y pega el resultado en <code>data/zonas.json</code>, sustituyendo el <code>"rect"</code> por este <code>"poly"</code>.</p>
+        <div class="editor__row">
+          <label>Zona <select id="ed-zona"></select></label>
+          <button class="btn btn--ghost" id="ed-undo">Deshacer</button>
+          <button class="btn btn--ghost" id="ed-clear">Limpiar</button>
+          <button class="btn" id="ed-copy">Copiar</button>
+        </div>
+        <textarea id="ed-out" readonly rows="3"></textarea>
+      </section>
+    </div>
+  </main>
+  <footer class="h-foot wrap" id="pie"></footer>
+</div>
+<script type="module" src="../js/mapa.js"></script>
+</body>
+</html>

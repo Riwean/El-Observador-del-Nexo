@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herrumbre Unlimited</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../nav-shared.css">
+<link rel="stylesheet" href="css/herrumbre.css">
+<script src="../nav-shared.js" defer></script>
+</head>
+<body>
+<div class="h-root" id="root">
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+    <div class="h-streak-wrap" aria-hidden="true"><div class="h-streak"></div></div>
+    <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+    <a class="h-brand" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><polygon points="13,2 23,7.5 23,18.5 13,24 3,18.5 3,7.5" fill="none" stroke="#d4622b" stroke-width="2"/><rect class="spin-r" x="9" y="9" width="8" height="8" fill="#d4622b"/></svg><span>Herrumbre Unlimited</span></a>
+    <button class="nav-menu-btn" id="navMenuBtn" type="button" aria-label="Más opciones" aria-expanded="false" aria-controls="navExtras">☰</button>
+    <div class="nav-extras" id="navExtras">
+      <a class="status-chip" href="index.html" aria-current="page">Portada</a>
+      <a class="status-chip" href="cuentas/index.html">Cuentas</a>
+      <a class="status-chip" href="mapa/index.html">Mapa</a>
+    </div>
+  </div>
+  <main>
+    <section class="hero">
+      <div class="hero__img" id="hero-img"></div>
+      <div class="hero__shade"></div>
+      <div class="wrap hero__in">
+        <div class="boot" aria-hidden="true">
+          <div class="type c-ok" style="animation-delay:.2s">&gt; ENLACE ESTABLECIDO · HERRUMBRE</div>
+          <div class="type c-acc" style="animation-delay:1.3s">&gt; PLAN QUINQUENAL · CARGADO</div>
+          <div class="boot__l"><span class="type" style="animation-delay:2.4s">&gt; TERRITORIO INDEPENDIENTE · EN CURSO</span><span class="caret"></span></div>
+        </div>
+        <h1 class="glitch"><span>Herrumbre</span><span>Unlimited</span></h1>
+        <p class="lead rise" id="hero-lead" style="animation-delay:.6s"></p>
+        <div class="ctas rise" style="animation-delay:.9s">
+          <a class="btn" href="cuentas/index.html">Ver las cuentas</a>
+          <a class="btn btn--ghost" href="mapa/index.html">Abrir el mapa</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap"><div class="stats" id="stats"></div></div>
+
+    <section class="wrap sec">
+      <div class="eyebrow">PLAN QUINQUENAL</div>
+      <h2>Seis fases, cinco años</h2>
+      <div class="gantt" id="gantt"></div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="fases" id="fases"></div>
+    </section>
+
+    <section class="wrap sec">
+      <div class="eyebrow">EL EJE DEL PLAN</div>
+      <h2>Del cielo a la ciudad</h2>
+      <div class="flujo" id="flujo"></div>
+    </section>
+
+    <section class="wrap sec portales">
+      <a class="portal hud" href="cuentas/index.html">
+        <div class="portal__t">
+          <span class="mono-l">02 · TESORERÍA</span>
+          <b>Cuentas</b>
+          <p>Fondos, financiación por tramos, presupuesto por fase y el registro de cada movimiento.</p>
+          <span class="portal__go">Abrir cuentas →</span>
+        </div>
+        <svg width="220" height="160" viewBox="0 0 220 160" aria-hidden="true">
+          <line x1="0" y1="140" x2="220" y2="140" stroke="#343a42"/>
+          <rect class="bar" style="animation-delay:.2s" x="16" y="90" width="22" height="50" fill="#6fbfa5"/><rect class="bar" style="animation-delay:.3s" x="42" y="70" width="22" height="70" fill="#d4622b"/>
+          <rect class="bar" style="animation-delay:.4s" x="84" y="70" width="22" height="70" fill="#6fbfa5"/><rect class="bar" style="animation-delay:.5s" x="110" y="80" width="22" height="60" fill="#d4622b"/>
+          <rect class="bar" style="animation-delay:.6s" x="152" y="40" width="22" height="100" fill="#6fbfa5"/><rect class="bar" style="animation-delay:.7s" x="178" y="60" width="22" height="80" fill="#d4622b"/>
+        </svg>
+      </a>
+      <a class="portal portal--mapa hud" id="portal-mapa" href="mapa/index.html">
+        <div class="portal__t">
+          <span class="mono-l">03 · TERRITORIO</span>
+          <b>Mapa en vivo</b>
+          <p>Nuevo Herrumbre fase a fase: puerto, distritos y edificios. Pulsa una zona para ver su ficha.</p>
+          <span class="portal__go">Abrir el mapa →</span>
+        </div>
+      </a>
+    </section>
+  </main>
+  <footer class="h-foot wrap" id="pie"></footer>
+</div>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

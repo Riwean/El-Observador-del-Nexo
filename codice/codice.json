@@ -1,0 +1,1586 @@
+{
+  "lugares": [
+    {
+      "id": "eden",
+      "nombre": "Edén",
+      "tipo": "sistema",
+      "padre": null,
+      "tono": 150,
+      "nivel": 2,
+      "resumen": "Sistema de Sol Manso, una enana amarilla estable. Aquí está Verdal, el granero del sector, y en el punto de Lagrange entre Verdal y su luna Umbra flota El Nexo, la estación por la que pasa casi todo el comercio de La Cicatriz.",
+      "datos": {
+        "Estrella": "Sol Manso"
+      },
+      "secciones": [],
+      "atlas": "../planetorvm/atlas.html?system=eden",
+      "superficie": null
+    },
+    {
+      "id": "verdal",
+      "nombre": "Verdal",
+      "tipo": "planeta",
+      "padre": "eden",
+      "tono": 158,
+      "nivel": 2,
+      "resumen": "Mundo de jungla densa y el único planeta realmente habitable de La Cicatriz. Da de comer a medio sector y está libre de Barones: lo gobierna el Consejo de Agricultores.\n\nHadria bajó a Verdal a dar otro discurso y ofreció alimento a cualquiera que se rebelara contra los Barones. El Consejo aceptó la propuesta por diez votos contra dos, según publicó El Observador del Nexo.",
+      "datos": {
+        "Población": "~5 millones",
+        "Economía": "Agricultura y exportación de alimentos",
+        "Gobierno": "Consejo de Agricultores"
+      },
+      "secciones": [
+        {
+          "titulo": "Región inmediata",
+          "texto": null
+        },
+        {
+          "titulo": "Consorcios",
+          "texto": "Sobre el papel, la tierra se trabaja en Consorcios regionales colectivos: el del Grano, el de la Raíz, el del Vergel, el de Micólogos… En la práctica, muchos han acabado en manos de sus Supervisores, que deciden quién trabaja y quién come.\n\nContra eso, y no contra ningún señor, se ha levantado Zara «Espinas»."
+        },
+        {
+          "titulo": "Fauna y flora",
+          "texto": null
+        }
+      ],
+      "atlas": "../planetorvm/atlas.html?system=eden",
+      "superficie": "../planetorvm/eden/verdal/verdal.html?system=eden"
+    },
+    {
+      "id": "el-nexo",
+      "nombre": "El Nexo",
+      "tipo": "estación",
+      "padre": "verdal",
+      "tono": 42,
+      "nivel": 3,
+      "resumen": "Estación comercial situada en el punto de Lagrange entre Verdal y su luna Umbra. Es un crisol: aquí se cruzan todas las rutas, todas las casas y todos los acentos del sector.\n\nNo tiene gobierno central. Doce módulos se administran cada uno a su manera, y el poder real se lo reparten las casas nobles, los gremios, el Credo del Intercambio y Los Cinco Capos. Desde que la Casa Ashental declaró la guerra a los Capos, los bajos fondos están cerrados.\n\nAquí tiene su sede el Sindicato del Nexo, y aquí declaró Hadria la guerra a los Barones, en directo para El Observador del Nexo.",
+      "datos": {
+        "Función": "Centro comercial del sector",
+        "Gobierno": "Doce módulos independientes"
+      },
+      "secciones": [
+        {
+          "titulo": "Distritos",
+          "texto": "**Santuario Menor.** El barrio de la nobleza. Allí están la Mansión Ashental y la vida social de las casas.\n\n**La Bolsa.** Donde se mueve el dinero del sector. Las casas nobles tienen aquí presencia operativa, no residencia.\n\n**Bajo Fondo.** Servidumbre por deudas, contratos de esclavitud y negocios sin licencia. Cerrado desde la guerra entre los Ashental y los Cinco Capos. Aquí estaba retenido Mole cuando Radjem y Kael lo sacaron.\n\n**Otros poderes.** El Muelle y sus estibadores, Forja Menor, La Colmena, la Universidad, el Arsenal, el Vertedero, El Puente de los señalistas y La Junta."
+        }
+      ],
+      "atlas": "../planetorvm/atlas.html?system=eden",
+      "superficie": "../planetorvm/eden/nexo/el_nexo.html?system=eden"
+    },
+    {
+      "id": "erosion",
+      "nombre": "Erosión",
+      "tipo": "sistema",
+      "padre": null,
+      "tono": 16,
+      "nivel": 2,
+      "resumen": "Sistema de Sol Óxido, una enana naranja que se enfría, con luz rojiza permanente.\n\nEs el territorio del Barón Skarr, que lo gobierna a la vista de todos: Viento Rojo, su luna Yesca, Espina y La Cuenca Verde, en Manath. En los últimos meses han saltado revueltas en Viento Rojo, en Yesca y en La Cuenca Verde, aunque lo de Viento Rojo se ha exagerado mucho al contarlo.",
+      "datos": {
+        "Estrella": "Sol Óxido"
+      },
+      "secciones": [],
+      "atlas": "../planetorvm/atlas.html?system=erosion",
+      "superficie": null
+    },
+    {
+      "id": "viento-rojo",
+      "nombre": "Viento Rojo",
+      "tipo": "planeta",
+      "padre": "erosion",
+      "tono": 16,
+      "nivel": 2,
+      "resumen": "Mundo de subsistencia de unos 800.000 habitantes, gobernado abiertamente por el Barón Skarr, que no se esconde detrás de nadie. Depende del agua y del grano que llegan de La Cuenca Verde, en Manath.\n\nEs el mundo de Radjem. De aquí salió encadenado hacia Venas Rojas, y aquí siguen el Capataz Hierro y el padre que lo delató.\n\nEs el próximo objetivo de la tripulación: acabar con Skarr y con el Capataz Hierro, sin dejar títeres en la sucesión, y poner a Radjem al frente del planeta.",
+      "datos": {
+        "Población": "~800.000",
+        "Gobierno": "Barón Skarr"
+      },
+      "secciones": [
+        {
+          "titulo": "Región inmediata",
+          "texto": null
+        },
+        {
+          "titulo": "Fauna y flora",
+          "texto": null
+        },
+        {
+          "titulo": "Macrorregiones",
+          "texto": null
+        }
+      ],
+      "atlas": "../planetorvm/atlas.html?system=erosion",
+      "superficie": null
+    },
+    {
+      "padre": "viento-rojo",
+      "tono": null,
+      "nivel": 2,
+      "resumen": "Pueblo minero de La Cicatriz Negra, en Viento Rojo. Aquí creció Radjem, en una familia minera de trece hermanos, buscando agua bajo tierra con sus murciélagos.\n\nAquí organizó las protestas mineras y aquí lo traicionaron: su propio padre lo delató y el Capataz Hierro le dio una paliza pública antes de venderlo como esclavo a Venas Rojas y quedarse con todo lo que tenía.",
+      "datos": {
+        "Región": "La Cicatriz Negra",
+        "Economía": "Minería y búsqueda de agua"
+      },
+      "secciones": [
+        {
+          "titulo": "El secadero",
+          "texto": "La colonia de murciélagos que Radjem crió para localizar agua bajo el subsuelo. Su favorito, Konrad V, escapó durante la captura y nadie sabe dónde está."
+        }
+      ],
+      "atlas": null,
+      "superficie": null,
+      "id": "pozo-del-diablo",
+      "nombre": "Pozo del Diablo",
+      "tipo": "poblado"
+    },
+    {
+      "id": "yesca",
+      "nombre": "Yesca",
+      "tipo": "luna",
+      "padre": "viento-rojo",
+      "tono": 28,
+      "nivel": 2,
+      "resumen": "Luna de Viento Rojo. Cantera de hierro con mano de obra esclava.\n\nSegún El Observador del Nexo, también aquí han saltado revueltas contra el Barón Skarr.",
+      "datos": {
+        "Población": "~6.000 en turnos",
+        "Economía": "Minería de hierro"
+      },
+      "secciones": [],
+      "atlas": "../planetorvm/atlas.html?system=erosion",
+      "superficie": null
+    },
+    {
+      "padre": "erosion",
+      "tono": 140,
+      "nivel": 2,
+      "resumen": "Planeta del sistema Erosión dividido en dos regiones. La Cuenca Verde, antes llamada El Manantial, lleva unos ocho meses ocupada por las tropas del Barón Skarr y exporta agua, grano y aleaciones a Viento Rojo bajo cuota. Meridal, antes llamada Cuenca, es un cráter neutral donde el agua solo es líquida unas tres horas al día y donde Skarr no manda de verdad.\n\nLa Cuenca Verde se ha levantado en revuelta, según El Observador del Nexo.",
+      "datos": {
+        "Regiones": "La Cuenca Verde y Meridal",
+        "Gobierno": "Barón Skarr (La Cuenca Verde)"
+      },
+      "secciones": [],
+      "atlas": null,
+      "superficie": null,
+      "id": "manath",
+      "nombre": "Manath",
+      "tipo": "planeta"
+    },
+    {
+      "id": "mortaja",
+      "nombre": "Mortaja",
+      "tipo": "sistema",
+      "padre": null,
+      "tono": 208,
+      "nivel": 2,
+      "resumen": "Sistema de Sudario, una enana fría de luz gris azulada.\n\nAquí estaba Venas Rojas, el planeta minero de Hematón donde empezó todo. Desde que estalló, Herrumbre es la única colonia del sistema.",
+      "datos": {
+        "Estrella": "Sudario"
+      },
+      "secciones": [],
+      "atlas": "../planetorvm/atlas.html?system=mortaja",
+      "superficie": null
+    },
+    {
+      "padre": "mortaja",
+      "tono": 0,
+      "nivel": 3,
+      "resumen": "Planeta minero de Hematón y prisión de esclavos de un Barón del Polvo. El Hematón se extraía con sangre humana. Allí coincidieron los cinco: Hadria llevaba cinco años, Kael seis meses, Orfeo cuatro, Radjem diecinueve días y Nikola acababa de llegar.\n\nTras una reducción inexplicada de la guardia, escaparon por un conducto, robaron de una taquilla las llaves de una nave de transporte y salieron del planeta. Poco después, Venas Rojas reventó a su espalda.\n\nHadria reivindicó después su destrucción en público como «una cuenta saldada» y advirtió de que no era la única.",
+      "datos": {
+        "Estado": "Destruido",
+        "Recurso": "Hematón"
+      },
+      "secciones": [
+        {
+          "titulo": "Los Deudores de Sangre",
+          "texto": "La banda de presos que Hadria fundó y lideró en Venas Rojas, basada en la doctrina del Credo del Intercambio. Fuera de la prisión casi nadie ha oído hablar de ella."
+        }
+      ],
+      "atlas": null,
+      "superficie": null,
+      "id": "venas-rojas",
+      "nombre": "Venas Rojas",
+      "tipo": "planeta"
+    },
+    {
+      "id": "sudario",
+      "nombre": "Sudario",
+      "tipo": "planeta",
+      "padre": "mortaja",
+      "tono": 112,
+      "nivel": 2,
+      "resumen": "Gigante gaseoso. Una de sus lunas es Herrumbre, la única colonia que queda en el sistema Mortaja.",
+      "datos": {},
+      "secciones": [],
+      "atlas": "../planetorvm/atlas.html?system=mortaja",
+      "superficie": null
+    },
+    {
+      "id": "herrumbre",
+      "nombre": "Herrumbre",
+      "tipo": "luna",
+      "padre": "sudario",
+      "tono": 22,
+      "nivel": 3,
+      "resumen": "Luna chatarrera de Sudario. Lleva mil años viviendo del desguace de las naves que caen en ella, y bajo la chatarra hay tierra de verdad, no solo cascos apilados. El combustible lo controla el Gremio de Artesanos.\n\nLa tripulación paró aquí a por repuestos, y los chatarreros le ofrecieron combustible a cambio de hacerse cargo de un pecio pre-Escisión llamado «Drevan». Después, Hadria convenció a la colonia de anexionarse bajo su mando, a título personal y no en nombre de la Casa Von Drevan, con un Plan Quinquenal para convertirla en algo más que un vertedero: Herrumbre Unlimited.\n\nDesde que arrancó el proyecto, la población no deja de crecer: de cien personas a doscientas sesenta y, en los últimos días, a unas quinientas ochenta.",
+      "datos": {
+        "Población": "~580",
+        "Economía": "Desguace de naves",
+        "Anexión": "A título personal de Hadria Von Drevan"
+      },
+      "secciones": [
+        {
+          "titulo": "Casco Viejo",
+          "texto": "El único poblado y el Núcleo Original de la colonia: mil años de reciclaje, capa sobre capa. Por el contrato de anexión, pertenece para siempre a la Población Original."
+        },
+        {
+          "titulo": "Corredores de Caída",
+          "texto": "Un accidente geográfico natural que atrae más pecios que el resto de la luna. Los chatarreros lo usan desde siempre para recuperar lo que cae."
+        },
+        {
+          "titulo": "La Expansión",
+          "texto": "Todavía no existe: es la zona que el Plan Quinquenal prevé construir."
+        },
+        {
+          "titulo": "El pecio Drevan",
+          "texto": "Dentro del pecio, la tripulación encontró un feto humano en conservación, la armadura y la espada ceremonial de oficial que hoy lleva Hadria, el uniforme de tropa de Radjem y su exsanguinadora, un espejo, drones pre-Escisión que desactivaron con un PEM, una partitura de ópera, un diario en un idioma desconocido y las coordenadas de Letargo.\n\nAntes de volver, deshabilitaron cualquier emisión de señal del pecio."
+        },
+        {
+          "titulo": "El contrato de anexión",
+          "texto": "La anexión es a título personal de Hadria. La colonia conserva un Consejo de Herrumbre con derecho de veto y poder para rescindir el contrato. Vesna «Casquillo» Orlok quedó como gobernadora y Dara Vekk al mando de la milicia.\n\nEl Plan Quinquenal prevé, entre otros, el Fondo de Reconstrucción, Caída de Estrellas, el Derecho de Rescate, La Lonja de los Pecios, Renacer, Forja del Cielo, el Puerto Franco y el Proyecto Lázaro, un instituto de arqueotecnología pre-Escisión."
+        }
+      ],
+      "atlas": "../planetorvm/atlas.html?system=mortaja",
+      "superficie": "../planetorvm/mortaja/herrumbre/herrumbre_planeta.html?system=mortaja",
+      "gobierno": {
+        "personaje": "vesna-orlok",
+        "titulo": "Gobernadora",
+        "nota": "Instalada por Hadria Von Drevan en el documento de anexión."
+      }
+    },
+    {
+      "id": "casco-viejo",
+      "nombre": "Casco Viejo",
+      "tipo": "poblado",
+      "padre": "herrumbre",
+      "tono": null,
+      "nivel": 3,
+      "resumen": "El único poblado de Herrumbre y el Núcleo Original de la colonia: mil años de reciclaje, capa sobre capa. Por el contrato de anexión, pertenece para siempre a la Población Original.",
+      "datos": {},
+      "secciones": [],
+      "atlas": null,
+      "superficie": null
+    },
+    {
+      "id": "alcurnia",
+      "nombre": "Alcurnia",
+      "tipo": "sistema",
+      "padre": null,
+      "tono": 268,
+      "nivel": 2,
+      "resumen": "Sistema cuya capital, Santigua, es el mundo de la nobleza. Tiene su propio asiento en la Mesa Fragmentada.\n\nLa Mesa Fragmentada, que siempre se había reunido en El Nexo, se reunirá por primera vez en la historia en Santigua. La elección de sede no ha gustado a todos.",
+      "datos": {},
+      "secciones": [],
+      "atlas": null,
+      "superficie": null
+    },
+    {
+      "id": "santigua",
+      "nombre": "Santigua",
+      "tipo": "capital",
+      "padre": "alcurnia",
+      "tono": null,
+      "nivel": 2,
+      "resumen": "Capital del sistema Alcurnia y mundo de la nobleza por antonomasia, de acceso restringido. Conviven casas de raíces muy distintas.\n\nAquí vive Aldric Von Drevan desde hace tres años. La tripulación viajó hasta Santigua a bordo del crucero Von Drevan, sin llegar a bajar de él.",
+      "datos": {},
+      "secciones": [],
+      "atlas": null,
+      "superficie": null
+    },
+    {
+      "padre": null,
+      "tono": 330,
+      "nivel": 2,
+      "resumen": "Sistema de Sol Cárdeno, una enana roja inestable. Su mundo principal es Ceniza.",
+      "datos": {
+        "Estrella": "Sol Cárdeno"
+      },
+      "secciones": [],
+      "atlas": null,
+      "superficie": null,
+      "id": "cardeno",
+      "nombre": "Cárdeno",
+      "tipo": "sistema"
+    },
+    {
+      "id": "ceniza",
+      "nombre": "Ceniza",
+      "tipo": "planeta",
+      "padre": "cardeno",
+      "tono": 8,
+      "nivel": 2,
+      "resumen": "Mundo que el Barón Kaldrek gobernaba como dictador absoluto hasta que una revuelta interna le rompió el control. Los Fuelles y la Cúpula Rencor se liberaron gritando el nombre de Kael.\n\nKaldrek huyó, pero conserva el Cerco de Vidrio. Desde entonces, el nombre de Kael está en la lista de los Barones.",
+      "datos": {
+        "Gobierno": "En disputa"
+      },
+      "secciones": [],
+      "atlas": null,
+      "superficie": null
+    },
+    {
+      "padre": null,
+      "tono": 30,
+      "nivel": 2,
+      "resumen": "Sistema de Sol Yunque, una enana amarilla-blanca inusualmente cercana a Horno.",
+      "datos": {
+        "Estrella": "Sol Yunque"
+      },
+      "secciones": [],
+      "atlas": null,
+      "superficie": null,
+      "id": "yunque",
+      "nombre": "Yunque",
+      "tipo": "sistema"
+    },
+    {
+      "id": "horno",
+      "nombre": "Horno",
+      "tipo": "planeta",
+      "padre": "yunque",
+      "tono": 34,
+      "nivel": 2,
+      "resumen": "Mundo industrial. Aquí creció Kael «53» Vostok, que se ganaba la vida como comeescoria, limpiando en moto las vías de metal fundido. También es de aquí Treún «Ceniza» Rescoldo, su vecina de infancia en Alba Roja.\n\nTiene un gobierno civil con asiento en la Mesa Fragmentada. Tras lo de Ceniza hay descontento y agitación a la vista de todos, pero no revuelta armada: la gente sabe que levantarse sin un plan es morir.",
+      "datos": {},
+      "secciones": [],
+      "atlas": null,
+      "superficie": null
+    },
+    {
+      "padre": null,
+      "tono": 250,
+      "nivel": 1,
+      "resumen": null,
+      "datos": {},
+      "secciones": [],
+      "atlas": null,
+      "superficie": null,
+      "id": "letargo",
+      "nombre": "Letargo",
+      "tipo": "planeta"
+    }
+  ],
+  "facciones": [
+    {
+      "id": "casa-von-drevan",
+      "nombre": "Casa Von Drevan",
+      "tipo": "Casa noble",
+      "nivel": 2,
+      "actitud": "neutral",
+      "sede": "el-nexo",
+      "presencia": [
+        "el-nexo",
+        "santigua"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#0a0909",
+        "acento": "#d4a537",
+        "secundario": "#c2303a",
+        "brillo": "#b3202a"
+      },
+      "emblema": {
+        "tipo": "rombo",
+        "letra": "V"
+      },
+      "resumen": "Una de las familias de la Escisión, con sede en El Nexo. Su patriarca, Aldric Von Drevan, al que llaman el León del Nexo, dejó la estación hace tres años y vive en Santigua. En El Nexo quedó como regente su heredero legítimo, Theron.\n\nHadria es hijo bastardo reconocido de Aldric. Cuando lo secuestraron los piratas, la casa se negó a pagar el rescate. Años después, Hadria declaró la guerra a los Barones con el sello Von Drevan y sin respaldo de la casa, obligándola a posicionarse. Desde entonces está partida en dos: los leales a Aldric y los que siguen a Theron.",
+      "datos": {},
+      "secciones": [
+        {
+          "titulo": "Linaje",
+          "texto": "El nombre de la casa viene de un antecesor, Drevan. En Herrumbre, la tripulación encontró un pecio pre-Escisión con ese mismo nombre."
+        }
+      ],
+      "lideres": [
+        {
+          "personaje": "aldric-von-drevan",
+          "titulo": "Patriarca"
+        }
+      ]
+    },
+    {
+      "id": "casa-ashental",
+      "nombre": "Casa Ashental",
+      "tipo": "Casa noble",
+      "nivel": 3,
+      "actitud": "aliado",
+      "sede": "el-nexo",
+      "presencia": [
+        "el-nexo"
+      ],
+      "modo": "claro",
+      "colores": {
+        "fondo": "#f6f2e8",
+        "acento": "#c99a2e",
+        "secundario": "#17140e"
+      },
+      "emblema": {
+        "tipo": "sol",
+        "letra": "A"
+      },
+      "resumen": "La casa noble más rica y poderosa de El Nexo, al menos en rango: gremios, Capos o el Credo pueden mover más dinero, pero ninguno tiene su título. Su vida social está en Santuario Menor, donde tiene la mansión; en La Bolsa solo opera.\n\nLa encabeza Lady Míriam Ashental, que ha adoptado a Antares «Orfeo» como heredero legítimo.",
+      "datos": {},
+      "secciones": [
+        {
+          "titulo": "Historia",
+          "texto": "Lady Míriam tenía un porcentaje del contrato artístico de Orfeo. Cuando la tripulación llegó a El Nexo, su guardia intentó llevárselo, y Orfeo aceptó ir para proteger al grupo.\n\nMíriam le devolvió la voz con tecnología pre-Escisión, rompió su contrato, le regaló una corbeta tipo fragata y declaró la guerra a Los Cinco Capos. Por encargo suyo, la tripulación asaltó el edificio de los Gemelos Vex. Poco después, adoptó a Antares como heredero legítimo."
+        },
+        {
+          "titulo": "Secretos",
+          "texto": null
+        }
+      ],
+      "lideres": [
+        {
+          "personaje": "miriam-ashental",
+          "titulo": "Cabeza de Casa"
+        }
+      ]
+    },
+    {
+      "id": "barones-del-polvo",
+      "nombre": "Barones del Polvo",
+      "tipo": "Red de poder",
+      "nivel": 2,
+      "actitud": "hostil",
+      "sede": null,
+      "presencia": [
+        "viento-rojo",
+        "yesca",
+        "manath",
+        "ceniza",
+        "horno",
+        "venas-rojas"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#100e0b",
+        "acento": "#b8925a",
+        "secundario": "#8a867d",
+        "brillo": "#7a5a2a"
+      },
+      "emblema": {
+        "tipo": "anillo",
+        "letra": "B"
+      },
+      "resumen": "No son señores de un territorio, sino personas poderosas que actúan en la sombra y compran gobiernos que ni siquiera saben que existen. Solo es Barón quien los demás Barones reconocen como tal, y en un mismo sistema puede haber varios con intereses distintos.\n\nNo todos se esconden igual: el Barón Skarr gobierna Viento Rojo a la vista de todos, mientras que otros mueven los hilos sin dar la cara. Venas Rojas era una de sus minas de esclavos.\n\nHadria les ha declarado la guerra en público a todos los que tengan esclavos: exige que renuncien a sus títulos, liberen a los esclavos, abran sus registros, entreguen sus centros de detención y disuelvan sus ejércitos.",
+      "datos": {},
+      "secciones": []
+    },
+    {
+      "id": "credo-del-intercambio",
+      "nombre": "Credo del Intercambio",
+      "tipo": "Orden financiera y religiosa",
+      "nivel": 2,
+      "actitud": "neutral",
+      "sede": null,
+      "presencia": [
+        "el-nexo"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#0a1114",
+        "acento": "#5fb3c9",
+        "secundario": "#c9d4d8"
+      },
+      "emblema": {
+        "tipo": "anillo",
+        "letra": "C"
+      },
+      "resumen": "La orden financiera y religiosa dominante del sector, regida por su doctrina de la equivalencia.\n\nHadria sirvió en el Credo ocho años, de Escriba de Cuentas a Mediador de Corporaciones, bajo el preceptor Malven, y en Venas Rojas fundó Los Deudores de Sangre sobre su doctrina. La tripulación ha firmado contratos de silencio con el Credo, y Hadria le ha pedido que congele las cuentas de los Barones apoyándose en sus propias reglas.",
+      "datos": {},
+      "secciones": []
+    },
+    {
+      "nivel": 2,
+      "actitud": "hostil",
+      "sede": "el-nexo",
+      "presencia": [
+        "el-nexo"
+      ],
+      "modo": "oscuro",
+      "resumen": "Los cinco grandes jefes del crimen de El Nexo. Controlan los bajos fondos y buena parte de lo que se mueve por debajo de la mesa.\n\nLady Míriam Ashental les declaró la guerra el día que rompió el contrato de Orfeo. Desde entonces han caído Shen el Susurro, su mano derecha, los Gemelos Vex y tres de sus altos cargos.",
+      "datos": {},
+      "secciones": [],
+      "id": "los-cinco-capos",
+      "nombre": "Los Cinco Capos",
+      "tipo": "Crimen organizado",
+      "colores": {
+        "fondo": "#0e0b10",
+        "acento": "#b04a6a",
+        "secundario": "#6b5a78",
+        "brillo": "#7a2a4a"
+      },
+      "emblema": {
+        "tipo": "anillo",
+        "letra": "5"
+      }
+    },
+    {
+      "nivel": 2,
+      "actitud": "hostil",
+      "sede": null,
+      "presencia": [],
+      "modo": "oscuro",
+      "resumen": "Nave-teatro itinerante, propiedad nominal de Valerius Kaine y endeudada con mecenas como Lady Míriam Ashental o Kartha «La Viuda». Detrás del mecenazgo hay un sistema de esclavitud artística.\n\nOrfeo fue su esclavo desde los doce años. Madame Vesper lo delató ante Shen el Susurro y le cortaron las cuerdas vocales. Hoy la Esfinge está en pleno declive.",
+      "datos": {},
+      "secciones": [],
+      "id": "la-esfinge-carmesi",
+      "nombre": "La Esfinge Carmesí",
+      "tipo": "Nave-teatro itinerante",
+      "colores": {
+        "fondo": "#120a0c",
+        "acento": "#c2304a",
+        "secundario": "#d9b77a",
+        "brillo": "#8a1a2a"
+      },
+      "emblema": {
+        "tipo": "sol",
+        "letra": "E"
+      },
+      "lideres": [
+        {
+          "personaje": "valerius-kaine",
+          "titulo": "Propietario"
+        }
+      ]
+    },
+    {
+      "nivel": 2,
+      "actitud": "aliado",
+      "sede": "verdal",
+      "presencia": [
+        "verdal"
+      ],
+      "modo": "oscuro",
+      "resumen": "Gobierna Verdal desde doce escaños; con siete votos sale adelante cualquier decisión. Lo preside la Consejera Suprema Elara Marveste.\n\nAceptó por diez votos contra dos la propuesta de Hadria de alimentar a quienes se rebelen contra los Barones.",
+      "datos": {},
+      "secciones": [
+        {
+          "titulo": "Escaños",
+          "texto": "1. Central: Elara Marveste, Consejera Suprema\n2. Norte, Cosecha Verde (Consorcio del Grano): Doren Osvalen\n3. Norte, Puerto Raíz (Consorcio de la Raíz): Selvia Durand\n4. Norte, Valle Fértil (Consorcio del Vergel): Damian Larosa\n5. Norte, Las Esporas (Consorcio de Micólogos): Verena Feroval\n6. Este, Precipicio Verde: Tobal Salvente\n7. Sur, Frontera Salvaje: Coren Brava\n8. Oeste, Las Terrazas: Selia Miradel\n9. Noreste, Punta de Lanza: Cassio Soldano\n10. Suroeste, Jardín Venenoso: Mira Cendral\n11. Exterior, El Confín: Aurelio Caldera\n12. Comunidades Dispersas: Nerea Rovane"
+        }
+      ],
+      "id": "consejo-de-agricultores",
+      "nombre": "Consejo de Agricultores",
+      "tipo": "Gobierno de Verdal",
+      "colores": {
+        "fondo": "#0a120d",
+        "acento": "#7cc47a",
+        "secundario": "#c9b56a",
+        "brillo": "#3f7a45"
+      },
+      "emblema": {
+        "tipo": "sol",
+        "letra": "V"
+      },
+      "lideres": [
+        {
+          "personaje": "elara-marveste",
+          "titulo": "Consejera Suprema"
+        }
+      ]
+    },
+    {
+      "nivel": 2,
+      "actitud": "neutral",
+      "sede": "el-nexo",
+      "presencia": [
+        "el-nexo"
+      ],
+      "modo": "oscuro",
+      "resumen": "El medio de noticias y televisión de El Nexo. La tripulación tiene con él un acuerdo de grabación desde el día que llegó a la estación.\n\nPor su emisión pasó la declaración de guerra de Hadria a los Barones. La edición especial 02 cubrió la escalada de la guerra de Lady Míriam contra los Cinco Capos, y la 03, el especial de Hadria tras el interrogatorio de Shen.",
+      "datos": {},
+      "secciones": [],
+      "id": "el-observador-del-nexo",
+      "nombre": "El Observador del Nexo",
+      "tipo": "Medio de noticias",
+      "colores": {
+        "fondo": "#0b0e12",
+        "acento": "#d9d2bf",
+        "secundario": "#8a93a0",
+        "brillo": "#5a6a80"
+      },
+      "emblema": {
+        "tipo": "anillo",
+        "letra": "O"
+      },
+      "lideres": [
+        {
+          "personaje": "arcturus-morn",
+          "titulo": "Director"
+        }
+      ]
+    },
+    {
+      "id": "gremio-de-artesanos",
+      "nombre": "Gremio de Artesanos",
+      "tipo": "Gremio",
+      "nivel": 2,
+      "actitud": "sin-datos",
+      "sede": null,
+      "presencia": [
+        "herrumbre"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#140f0a",
+        "acento": "#d9822b",
+        "secundario": "#8a9098",
+        "brillo": "#b5651d"
+      },
+      "emblema": {
+        "tipo": "engranaje",
+        "letra": "G"
+      },
+      "resumen": "Los artesanos de Herrumbre: metalurgia, herrería, remiendos y cirugía. Su jefa, Vesna «Casquillo» Orlok, controla el combustible de la colonia.",
+      "datos": {},
+      "secciones": [],
+      "lideres": [
+        {
+          "personaje": "vesna-orlok",
+          "titulo": "Jefa del Gremio"
+        }
+      ]
+    },
+    {
+      "id": "milicia-de-herrumbre",
+      "nombre": "Milicia de Herrumbre",
+      "tipo": "Milicia",
+      "nivel": 2,
+      "actitud": "sin-datos",
+      "sede": null,
+      "presencia": [
+        "herrumbre"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#0c110d",
+        "acento": "#8fb573",
+        "secundario": "#d6c98a",
+        "brillo": "#4f6b3f"
+      },
+      "emblema": {
+        "tipo": "escudo",
+        "letra": "M"
+      },
+      "resumen": "La milicia de la colonia, al mando de Dara Vekk, una ex militar paranoica con los forasteros.",
+      "datos": {},
+      "secciones": [],
+      "lideres": [
+        {
+          "personaje": "dara-vekk",
+          "titulo": "Cabecilla"
+        }
+      ]
+    },
+    {
+      "id": "mercado-de-herrumbre",
+      "nombre": "Mercado de Herrumbre",
+      "tipo": "Comercio informal",
+      "nivel": 2,
+      "actitud": "sin-datos",
+      "sede": null,
+      "presencia": [
+        "herrumbre"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#0c1014",
+        "acento": "#e0c04a",
+        "secundario": "#7d8896",
+        "brillo": "#8a7420"
+      },
+      "emblema": {
+        "tipo": "anillo",
+        "letra": "M"
+      },
+      "resumen": "El comercio informal y el contrabando de la colonia.",
+      "datos": {},
+      "secciones": []
+    },
+    {
+      "id": "culto-de-los-naufragios",
+      "nombre": "Culto de los Naufragios",
+      "tipo": "Culto extinto",
+      "nivel": 2,
+      "actitud": "sin-datos",
+      "sede": null,
+      "presencia": [
+        "herrumbre"
+      ],
+      "modo": "oscuro",
+      "colores": {
+        "fondo": "#0d0f14",
+        "acento": "#8aa0c4",
+        "secundario": "#4a5468",
+        "brillo": "#3d4e70"
+      },
+      "emblema": {
+        "tipo": "cuna",
+        "letra": "N"
+      },
+      "resumen": "Culto sincrético que veneraba las naves caídas, los «Naufragios», como reliquias sagradas. Ya no queda nadie.",
+      "datos": {},
+      "secciones": [],
+      "estado": "extinta",
+      "lideres": [
+        {
+          "personaje": "ilan-kess",
+          "titulo": "Predicador"
+        }
+      ]
+    }
+  ],
+  "personajes": [
+    {
+      "id": "miriam-ashental",
+      "nombre": "Lady Míriam Ashental",
+      "cargo": "Cabeza de Casa Ashental",
+      "genero": "f",
+      "actitud": "aliado",
+      "nota": "Aliada interesada",
+      "lugar": "el-nexo",
+      "faccion": "casa-ashental",
+      "retrato": null,
+      "nivel": 3,
+      "vista": "Día 345",
+      "resumen": "Cabeza de la Casa Ashental, la casa noble más poderosa de El Nexo. Tenía un porcentaje del contrato artístico de Orfeo.\n\nCuando la tripulación llegó a El Nexo, su guardia intentó llevarse a Orfeo, y él aceptó ir para proteger al grupo. Míriam le devolvió la voz con tecnología pre-Escisión, rompió su contrato, le regaló una corbeta y declaró la guerra a Los Cinco Capos.\n\nPor encargo suyo, la tripulación asaltó el edificio de los Gemelos Vex. Poco después adoptó a Antares como heredero legítimo.",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Heredero adoptado"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "aldric-von-drevan",
+      "nombre": "Aldric Von Drevan",
+      "cargo": "Patriarca de Casa Von Drevan",
+      "genero": "m",
+      "actitud": "neutral",
+      "nota": null,
+      "lugar": "santigua",
+      "faccion": "casa-von-drevan",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Patriarca de la Casa Von Drevan, el León del Nexo, y padre de Hadria. Hace tres años dejó El Nexo y se instaló en Santigua.\n\nCuando Theron quiso matar a Hadria, Aldric intervino y lo llamó a Santigua. Le dijo que no entendía nada, que por su culpa tendría que arreglarlo, pero que lo haría; y que hasta entonces demostrara ser algo más que el apellido Von Drevan.",
+      "vinculos": [
+        {
+          "legajo": "hadria",
+          "nombre": "Hadria Von Drevan",
+          "rel": "Hijo"
+        },
+        {
+          "personaje": "theron-von-drevan",
+          "rel": "Heredero"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "theron-von-drevan",
+      "nombre": "Theron Von Drevan",
+      "cargo": "Heredero de Casa Von Drevan",
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "casa-von-drevan",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Hijo legítimo y heredero de Aldric, regente de la casa en El Nexo desde que su padre se fue a Santigua.\n\nCuando Hadria fue a hablar con él, quiso matarlo, y solo la intervención de Aldric lo impidió. Hadria sospecha que fue él, o algún consejero, quien bloqueó el pago de su rescate. Últimamente circulan rumores sobre su comportamiento extraño.",
+      "vinculos": [
+        {
+          "personaje": "aldric-von-drevan",
+          "rel": "Padre"
+        },
+        {
+          "legajo": "hadria",
+          "nombre": "Hadria Von Drevan",
+          "rel": "Medio hermano"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "maestra-dunas",
+      "nombre": "Maestra Dunas",
+      "cargo": "Maestra de Viento Rojo",
+      "genero": "f",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": "viento-rojo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Maestra de los nómadas de Viento Rojo.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "baron-skarr",
+      "nombre": "Barón Skarr",
+      "cargo": "Barón del Polvo",
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "viento-rojo",
+      "faccion": "barones-del-polvo",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Barón del Polvo que gobierna Viento Rojo a la vista de todos, sin esconderse detrás de nadie. Controla también Yesca, Espina y La Cuenca Verde de Manath: es el señor de hecho de todo el sistema Erosión.\n\nEs el objetivo del próximo arco de la tripulación.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "baron-kaldrek",
+      "nombre": "Barón Kaldrek",
+      "cargo": "Barón del Polvo",
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "ceniza",
+      "faccion": "barones-del-polvo",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Barón del Polvo que gobernaba Ceniza como dictador absoluto. Una revuelta interna de Los Fuelles y la Cúpula Rencor le rompió el control y tuvo que huir, aunque conserva el Cerco de Vidrio.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "baron-de-horno",
+      "nombre": "Sin identificar",
+      "cargo": "Barón del Polvo",
+      "genero": null,
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "horno",
+      "faccion": "barones-del-polvo",
+      "retrato": null,
+      "nivel": 1,
+      "vista": null,
+      "resumen": null,
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "jack-la-tasadora",
+      "nombre": "Jack \"La Tasadora\"",
+      "cargo": "Contrabandista",
+      "genero": "f",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Contrabandista de El Nexo y vieja amiga de Nikola: lo sacó de Santuario Orbital cuando tenía precio puesto a su cabeza y trabajaron años juntos.\n\nLes consiguió la nave clase Cigüeña y se quedó custodiando la Salvación. Hace poco llegó a la Asterión con una herida en el torso; sospecha que la ha traicionado su antigua tripulación.",
+      "vinculos": [
+        {
+          "legajo": "nikola",
+          "nombre": "Thomas «Nikola» Marrow",
+          "rel": "Contacto cercano"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "vesna-orlok",
+      "nombre": "Vesna \"Casquillo\" Orlok",
+      "cargo": "Gobernadora de Herrumbre",
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Gobernadora de Herrumbre y jefa del Gremio de Artesanos. Hadria Von Drevan la instaló al frente de la colonia en el documento de anexión que le ofreció.\n\nControla el combustible de Herrumbre. Cincuentona, con un brazo protésico oxidado a propósito: dice que así nadie se lo roba.\n\nDirecta y nada sentimental, pero cumple su palabra cuando se la dan. No regala nada: todo se paga en trabajo, chatarra o favores. Es la puerta de entrada obligada al combustible.",
+      "vinculos": [
+        {
+          "legajo": "hadria",
+          "nombre": "Hadria Von Drevan",
+          "rel": "La instaló como gobernadora"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "borin-kaska",
+      "nombre": "Borin Kaska",
+      "cargo": "Metalúrgico veterano",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Supervisa el desguace de cascos y la fundición básica de la colonia. Curtido, con las manos cubiertas de quemaduras viejas.",
+      "vinculos": [
+        {
+          "personaje": "yorik-petsch",
+          "rel": "Suministra metal a su herrería"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "yorik-petsch",
+      "nombre": "Yorik Petsch",
+      "cargo": "Herrero",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Forja y repara herramientas, blindajes y piezas con el metal que le suministra la fundición de Borin. Corpulento y silencioso mientras trabaja; con un mazo en la mano habla más que en una conversación normal.",
+      "vinculos": [
+        {
+          "personaje": "borin-kaska",
+          "rel": "Le suministra el metal"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "teo-marchetti",
+      "nombre": "Teo Marchetti",
+      "cargo": "Mecánico",
+      "genero": "m",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": null,
+      "faccion": "gremio-de-artesanos",
+      "retrato": "../legajos/retratos/teo.png",
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Mecánico joven y prodigio, atrapado en Herrumbre por deudas con el Gremio. Idealista y hastiado de la colonia, soñaba con irse. Se fue con la tripulación.",
+      "vinculos": [
+        {
+          "personaje": "vesna-orlok",
+          "rel": "Jefa del Gremio al que debía dinero"
+        }
+      ],
+      "capitulos": [],
+      "legajo": "teo",
+      "origen": "herrumbre"
+    },
+    {
+      "id": "farlan-bosk",
+      "nombre": "Farlan Bosk",
+      "cargo": "Vendedor de cosas generales",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Regenta el puesto de «todo y nada» de Herrumbre. Medio sordo.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "sella-nordveil",
+      "nombre": "Sella Nordveil",
+      "cargo": "Vende y remienda ropa",
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Vende y remienda ropa recuperada de tripulaciones y de envíos rotos: nada nuevo de fábrica, todo con historia. Tiene buen ojo para combinar prendas dispares en algo presentable.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "renko-achkov",
+      "nombre": "Doctor Renko Achkov",
+      "cargo": "Cirujano",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "gremio-de-artesanos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "El único con formación quirúrgica real en Herrumbre. Antiguo cirujano de campo, curtido en algún conflicto de los Barones del Polvo.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "ilan-kess",
+      "nombre": "Padre Ilan Kess",
+      "cargo": "Predicador",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "culto-de-los-naufragios",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Predicaba un culto sincrético a los «Naufragios», naves caídas veneradas como reliquias sagradas.",
+      "vinculos": [],
+      "capitulos": [],
+      "estado": "fallecido"
+    },
+    {
+      "id": "mara-cendal",
+      "nombre": "Mara Cendal",
+      "cargo": "Viuda y devota",
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "culto-de-los-naufragios",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Viuda de un chatarrero muerto en un colapso. Era la más devota del culto y creía ciegamente.",
+      "vinculos": [],
+      "capitulos": [],
+      "estado": "fallecido"
+    },
+    {
+      "id": "adolescentes-del-culto",
+      "nombre": "Adolescentes del culto",
+      "cargo": "Seguidores",
+      "genero": null,
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "culto-de-los-naufragios",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Se sintieron atraídos por el culto por rebeldía adolescente.",
+      "vinculos": [],
+      "capitulos": [],
+      "estado": "fallecido"
+    },
+    {
+      "id": "chatarrero-mayor",
+      "nombre": "Chatarrero Mayor",
+      "cargo": "Chatarrero de la colonia",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "culto-de-los-naufragios",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Chatarrero de la colonia, especialmente interesado en el dinero.",
+      "vinculos": [],
+      "capitulos": [],
+      "estado": "fallecido"
+    },
+    {
+      "id": "dara-vekk",
+      "nombre": "Dara Vekk",
+      "cargo": "Cabecilla de la milicia",
+      "genero": null,
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "milicia-de-herrumbre",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Ex militar, paranoica con los forasteros.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "id": "osk-vantel",
+      "nombre": "Osk Vantel",
+      "cargo": "Miliciano",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "milicia-de-herrumbre",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Miliciano de Herrumbre, leal a Dara Vekk.",
+      "vinculos": [
+        {
+          "personaje": "dara-vekk",
+          "rel": "Le es leal"
+        }
+      ],
+      "capitulos": []
+    },
+    {
+      "id": "ferro-casaigne",
+      "nombre": "Ferro Casaigne",
+      "cargo": "Miliciano",
+      "genero": "m",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": null,
+      "faccion": "milicia-de-herrumbre",
+      "retrato": "../legajos/retratos/ferro.png",
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Miliciano de Herrumbre, cuarentón y curtido, sin ambición de mando propio. Se fue con la tripulación.",
+      "vinculos": [],
+      "capitulos": [],
+      "legajo": "ferro",
+      "origen": "herrumbre"
+    },
+    {
+      "id": "el-corredor",
+      "nombre": "El Corredor",
+      "cargo": "Contrabandista",
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "herrumbre",
+      "faccion": "mercado-de-herrumbre",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Contrabandista sin nombre conocido. Aparece y desaparece.",
+      "vinculos": [],
+      "capitulos": []
+    },
+    {
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "pozo-del-diablo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Se llamaba Tobin y fue un referente para Radjem, hasta que traicionó a los suyos para convertirse en el Capataz Hierro. Capturó a Radjem tras las protestas mineras, le dio una paliza pública, lo vendió como esclavo a Venas Rojas y se quedó con sus posesiones.",
+      "vinculos": [
+        {
+          "legajo": "radjem",
+          "nombre": "Radjem",
+          "rel": "Lo vendió como esclavo"
+        }
+      ],
+      "capitulos": [],
+      "id": "capataz-hierro",
+      "nombre": "Capataz Hierro",
+      "cargo": "Capataz de Pozo del Diablo"
+    },
+    {
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "pozo-del-diablo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Minero de Pozo del Diablo y padre de trece hijos. Delató a Radjem por miedo a las represalias. Nunca aclaró qué pasó la noche de la tormenta eléctrica en que perdió a Yasira, la gemela de Radjem.",
+      "vinculos": [
+        {
+          "legajo": "radjem",
+          "nombre": "Radjem",
+          "rel": "Hijo al que delató"
+        }
+      ],
+      "capitulos": [],
+      "id": "kest",
+      "nombre": "Kest",
+      "cargo": "Minero, padre de Radjem"
+    },
+    {
+      "genero": null,
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Contrabandista y viejo conocido de Radjem, que le ayudó con dinero cuando montó su negocio de agua. Radjem y Kael bajaron a los bajos fondos de El Nexo a buscar su información.\n\nLe castigaron con la «Sed de Hierro», la amputación de un brazo. Radjem ha intentado contactar con él, sin éxito.",
+      "vinculos": [
+        {
+          "legajo": "radjem",
+          "nombre": "Radjem",
+          "rel": "Viejo conocido"
+        }
+      ],
+      "capitulos": [],
+      "id": "rata",
+      "nombre": "Rata",
+      "cargo": "Contrabandista"
+    },
+    {
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Madame Vesper delató a Orfeo ante él, y después le cortaron las cuerdas vocales.\n\nHadria, Radjem y Orfeo lo interrogaron. Hadria le leyó los recuerdos y el interrogatorio acabó con su muerte; Hadria quedó en camilla, sangrando por todos los orificios.",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Le cortaron la voz por su orden"
+        },
+        {
+          "personaje": "zaviel-cortenz",
+          "rel": "Su mano derecha"
+        }
+      ],
+      "capitulos": [],
+      "id": "shen-el-susurro",
+      "nombre": "Shen «el Susurro»",
+      "cargo": "Jefe criminal",
+      "estado": "fallecido"
+    },
+    {
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Murió en la guerra de Lady Míriam Ashental contra los Cinco Capos.",
+      "vinculos": [
+        {
+          "personaje": "shen-el-susurro",
+          "rel": "Su jefe"
+        }
+      ],
+      "capitulos": [],
+      "id": "zaviel-cortenz",
+      "nombre": "Zaviel Cortenz",
+      "cargo": "Mano derecha de Shen el Susurro",
+      "estado": "fallecido"
+    },
+    {
+      "genero": null,
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Enemigos del pasado de Orfeo. Por encargo de Lady Míriam Ashental, la tripulación asaltó su edificio y acabó con ellos. En el asalto, Enara absorbió con sus poderes lo peor de una explosión y acabó en la enfermería.",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Enemigos de su pasado"
+        }
+      ],
+      "capitulos": [],
+      "id": "gemelos-vex",
+      "nombre": "Los Gemelos Vex",
+      "cargo": "Jefes criminales",
+      "estado": "fallecido"
+    },
+    {
+      "genero": null,
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Murió en la guerra de Lady Míriam Ashental contra los Cinco Capos.",
+      "vinculos": [
+        {
+          "personaje": "gemelos-vex",
+          "rel": "Sus jefes"
+        }
+      ],
+      "capitulos": [],
+      "id": "orelyen-bofort",
+      "nombre": "Orelyen Bofort",
+      "cargo": "Alto cargo de los Gemelos Vex",
+      "estado": "fallecido"
+    },
+    {
+      "genero": "f",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Murió en la guerra de Lady Míriam Ashental contra los Cinco Capos.",
+      "vinculos": [
+        {
+          "personaje": "gemelos-vex",
+          "rel": "Sus jefes"
+        }
+      ],
+      "capitulos": [],
+      "id": "katrin-vornhov",
+      "nombre": "Katrin Vornhov",
+      "cargo": "Alta cargo de los Gemelos Vex",
+      "estado": "fallecido"
+    },
+    {
+      "genero": "f",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": "los-cinco-capos",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Murió en la guerra de Lady Míriam Ashental contra los Cinco Capos.",
+      "vinculos": [
+        {
+          "personaje": "gemelos-vex",
+          "rel": "Sus jefes"
+        }
+      ],
+      "capitulos": [],
+      "id": "livia-cavaljeri",
+      "nombre": "Livia Cavaljeri",
+      "cargo": "Alta cargo de los Gemelos Vex",
+      "estado": "fallecido"
+    },
+    {
+      "genero": "m",
+      "actitud": "neutral",
+      "nota": "Acuerdo de grabación con la tripulación",
+      "lugar": "el-nexo",
+      "faccion": "el-observador-del-nexo",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Dirige el medio de noticias y televisión de la estación. Por su cadena han pasado la declaración de guerra de Hadria y sus especiales.",
+      "vinculos": [],
+      "capitulos": [],
+      "id": "arcturus-morn",
+      "nombre": "Arcturus Morn",
+      "cargo": "Director de El Observador del Nexo"
+    },
+    {
+      "genero": "f",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": "verdal",
+      "faccion": "consejo-de-agricultores",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Preside el Consejo de Agricultores, que aceptó por diez votos contra dos la propuesta de Hadria de alimentar a quienes se rebelen contra los Barones.",
+      "vinculos": [],
+      "capitulos": [],
+      "id": "elara-marveste",
+      "nombre": "Elara Marveste",
+      "cargo": "Consejera Suprema de Verdal"
+    },
+    {
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "verdal",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Se ha levantado contra los Supervisores que controlan los Consorcios de Verdal. No lucha contra ningún señor, sino contra un sistema cooperativo podrido por dentro.",
+      "vinculos": [],
+      "capitulos": [],
+      "id": "zara-espinas",
+      "nombre": "Zara «Espinas»",
+      "cargo": "Rebelde de Verdal"
+    },
+    {
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "santigua",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Se ha mostrado alarmada por la decisión de reunir la Mesa Fragmentada en Santigua, según El Observador del Nexo.",
+      "vinculos": [],
+      "capitulos": [],
+      "id": "irenne-castalvor",
+      "nombre": "Duquesa Irenne Castalvor",
+      "cargo": "Noble de Santigua"
+    },
+    {
+      "genero": "m",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": null,
+      "faccion": "la-esfinge-carmesi",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Dueño nominal de la nave-teatro, endeudado con sus mecenas. Fue él quien le puso a Zivajava el nombre artístico de «Orfeo».",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Su antiguo dueño"
+        }
+      ],
+      "capitulos": [],
+      "id": "valerius-kaine",
+      "nombre": "Valerius Kaine",
+      "cargo": "Propietario de La Esfinge Carmesí"
+    },
+    {
+      "genero": "f",
+      "actitud": "hostil",
+      "nota": null,
+      "lugar": null,
+      "faccion": "la-esfinge-carmesi",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Delató a Orfeo ante Shen el Susurro. Por su culpa le cortaron las cuerdas vocales, y murieron la Doctora Yeva Marchenko y otros catorce miembros de El Juicio Descalzo.",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Lo delató"
+        },
+        {
+          "personaje": "shen-el-susurro",
+          "rel": "A quien lo delató"
+        }
+      ],
+      "capitulos": [],
+      "id": "madame-vesper",
+      "nombre": "Madame Vesper",
+      "cargo": "De La Esfinge Carmesí"
+    },
+    {
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": null,
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Mecenas de La Esfinge Carmesí. Como Lady Míriam, tenía un porcentaje del contrato de Orfeo.",
+      "vinculos": [
+        {
+          "personaje": "miriam-ashental",
+          "rel": "También tenía parte del contrato de Orfeo"
+        }
+      ],
+      "capitulos": [],
+      "id": "kartha-la-viuda",
+      "nombre": "Kartha «La Viuda»",
+      "cargo": "Mecenas"
+    },
+    {
+      "genero": "f",
+      "actitud": "aliado",
+      "nota": null,
+      "lugar": null,
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Dirigía El Juicio Descalzo, la célula de resistencia a la que perteneció Orfeo. Murió con otros catorce en la masacre que siguió a la delación de Madame Vesper.",
+      "vinculos": [
+        {
+          "legajo": "orfeo",
+          "nombre": "Antares «Orfeo» Ashental",
+          "rel": "Compañero de célula"
+        }
+      ],
+      "capitulos": [],
+      "id": "yeva-marchenko",
+      "nombre": "Doctora Yeva Marchenko",
+      "cargo": "Líder de El Juicio Descalzo",
+      "estado": "fallecido"
+    },
+    {
+      "genero": "m",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": null,
+      "faccion": "credo-del-intercambio",
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Mentor de Hadria en el Credo del Intercambio durante sus ocho años de ascenso, de Escriba de Cuentas a Mediador de Corporaciones.",
+      "vinculos": [
+        {
+          "legajo": "hadria",
+          "nombre": "Hadria Von Drevan",
+          "rel": "Su pupilo"
+        }
+      ],
+      "capitulos": [],
+      "id": "malven",
+      "nombre": "Preceptor Malven",
+      "cargo": "Preceptor del Credo del Intercambio"
+    },
+    {
+      "genero": "f",
+      "actitud": "sin-datos",
+      "nota": null,
+      "lugar": "el-nexo",
+      "faccion": null,
+      "retrato": null,
+      "nivel": 2,
+      "vista": null,
+      "resumen": "Madre de Hadria y cantante célebre de El Nexo. Murió en un accidente de vehículo cuando Hadria tenía dieciséis años. Nunca se aclaró qué pasó; hay quien habla de sabotaje.",
+      "vinculos": [
+        {
+          "legajo": "hadria",
+          "nombre": "Hadria Von Drevan",
+          "rel": "Hijo"
+        },
+        {
+          "personaje": "aldric-von-drevan",
+          "rel": "Padre de su hijo"
+        }
+      ],
+      "capitulos": [],
+      "id": "hellena",
+      "nombre": "Hellena",
+      "cargo": "Cantante de El Nexo",
+      "estado": "fallecido"
+    }
+  ]
+}

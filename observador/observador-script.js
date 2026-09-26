@@ -2092,6 +2092,273 @@ const ediciones = {
       },
     ],
   },
+  9: {
+    numero: "LC-0009",
+    fecha: "Año 1050 P.E. | Día 358 | 08:05 HST",
+    precio: "5 CR (digital) | 10 CR (impreso)",
+    destacada: {
+      alerta: "PRIMER PASO CONFIRMADO",
+      titulo:
+        "REINALDO CUERVAS LOGRA QUE LOS DOCE MÓDULOS ACCEDAN A INICIAR EL PROCESO",
+      subtitulo:
+        "» Ninguna facción se ha levantado de la mesa de negociación desde que comenzaron las conversaciones sobre el nuevo Estado",
+      contenido: [
+        "Este periódico puede confirmar que Reinaldo Cuervas, encargado por Hadria Von Drevan de negociar la transición hacia el Estado unificado propuesto hace días, ha logrado que los representantes de los doce módulos de El Nexo accedan formalmente a iniciar el proceso — un primer paso que, hace apenas una semana, ni los analistas más optimistas del sector daban por seguro.",
+        "Según fuentes cercanas a las negociaciones, el acuerdo no implica todavía ningún compromiso vinculante sobre la forma final del Estado, sino la apertura oficial de mesas de trabajo específicas para cada módulo, bajo la coordinación directa de Cuervas. «No hemos ganado nada todavía», habría dicho el propio Cuervas a uno de los representantes presentes, según una fuente que solicitó anonimato. «Hemos ganado que nadie se haya levantado de la mesa. Eso ya es más de lo que yo esperaba hace un mes.»",
+        "Ni La Junta, ni el Arsenal, ni ninguno de los otros módulos ha ofrecido declaraciones públicas sobre el contenido de las conversaciones. Este periódico seguirá esta historia en las próximas semanas.",
+      ],
+    },
+    columnas: [
+      [
+        {
+          titulo: "[CASA VON DREVAN] Theron, desheredado oficialmente",
+          contenido: [
+            "El Consejo de la Casa Von Drevan ha formalizado esta semana lo que llevaba tiempo anticipándose: Theron Von Drevan ha sido despojado oficialmente de todo derecho de sucesión sobre la Casa. La decisión llega semanas después de que este periódico revelara documentos oficiales que lo vinculaban directamente con el asesinato encubierto de una mujer embarazada.",
+            "Con esta decisión, Hadria Von Drevan queda como el único heredero de peso público reconocido por la Casa, aunque ningún título formal se le ha otorgado todavía. Theron continúa sin aparecer en público. Este periódico no ha podido obtener reacción alguna de su entorno inmediato.",
+          ],
+        },
+        {
+          titulo:
+            "[SINAIRE] Confirmado: más de 2,6 millones de personas en Espesura Roja",
+          contenido: [
+            "La Hermandad de Santuario ha confirmado oficialmente lo que hasta ahora era solo rumor entre los equipos de exploración de Sinaire: Espesura Roja alberga una población humana de más de 2,6 millones de personas, repartida en varias ciudades a lo largo del sistema fluvial del planeta.",
+            "Lejos de tratarse de descendientes de una colonia perdida durante los 150 años de desconexión de Sinaire con el resto de La Cicatriz, los registros indican que el asentamiento tiene casi 400 años de antigüedad — una civilización entera que ha sobrevivido generaciones enteras completamente aislada, sin que nadie en el resto del sector lo supiera.",
+            "Lo más inquietante, según fuentes de la propia Hermandad, es que el hallazgo no sería un caso aislado: «Cada planeta de Sinaire con condiciones mínimamente habitables parece tener sus propias colonias humanas», habría reconocido una fuente interna. Espesura Roja es, hasta ahora, la única confirmada oficialmente — no necesariamente la única que existe.",
+          ],
+        },
+        {
+          titulo:
+            "[HERRUMBRE] La colonia se dispara: de 260 a más de 580 en cuatro días, sin que nadie sepa muy bien quién está detrás",
+          contenido: [
+            "Herrumbre, la pequeña colonia sin nombre oficial situada en la órbita de Sudario, atraviesa un crecimiento que ningún analista del sector sabe explicar del todo. Lo que hace apenas unos meses era un asentamiento de poco más de cien personas dedicado a la recuperación artesanal de restos navales ha pasado a contar con 260 habitantes desde el inicio de un proyecto de desarrollo cuyo origen exacto sigue sin estar claro — y en los últimos cuatro días, esa cifra se ha disparado hasta superar los 580.",
+            "Bajo el nombre de Herrumbre Unlimited, la operación recluta activamente cuadrillas de desguazadores para la recuperación de pecios, constructores y arquitectos para nueva infraestructura portuaria, e ingenieros especializados en remolque orbital. Lo que nadie ha podido confirmar es quién financia realmente el proyecto. Algunas fuentes hablan de una iniciativa nacida de los propios trabajadores y cooperativas de recuperación, organizándose sin respaldo externo. Otras, sin embargo, apuntan —sin ninguna confirmación oficial— a que sería Lady Míriam Ashental quien estaría detrás de la construcción del nuevo puerto espacial, en lo que sería una expansión discreta de los intereses de la Casa Ashental fuera de El Nexo.",
+            "Este periódico ha intentado sin éxito obtener declaraciones de algún responsable identificable de Herrumbre Unlimited. Nadie, hasta el momento, ha reclamado públicamente la autoría del proyecto.",
+          ],
+        },
+        {
+          titulo: "[CASCADA] El perihelio abre la temporada de turismo",
+          contenido: [
+            "Con la órbita excéntrica de Cascada entrando en su fase de perihelio, los hielos del planeta han comenzado a derretirse en las cascadas gigantescas que le dan nombre — torrentes que se evaporan hacia el espacio formando anillos de vapor temporales, uno de los espectáculos naturales más buscados del sector. La Coordinadora Selia Vardoja ha anunciado la apertura oficial de la temporada turística, con las primeras naves de visitantes llegando ya desde varios sistemas para presenciarlo antes de que todo vuelva a congelarse de golpe con el afelio.",
+            "Fuentes cercanas al Consejo del Cuenco, sin embargo, insinúan que las cuentas de reservas para la próxima Larga Guardia —el periodo de hibernación forzosa que sigue a cada perihelio— no terminan de cuadrar del todo, aunque nadie en el Consejo lo ha hecho oficial. Por ahora, la temporada continúa con normalidad.",
+          ],
+        },
+      ],
+      [
+        {
+          titulo:
+            "[SANTIGUA] Reacciones nobiliarias a la adopción de Antares Kharthian",
+          contenido: [
+            "Semanas después de que Lady Míriam Ashental formalizara la adopción de Antares Kharthian como heredero legítimo de la Casa Ashental, empiezan a filtrarse las primeras posturas concretas de otras casas nobles de Santigua. Fuentes de la alta sociedad describen un abanico que va desde el rechazo frontal —al menos dos casas menores habrían evitado deliberadamente coincidir con representantes de la Casa Ashental en actos sociales recientes— hasta la cautela calculada de quienes prefieren no significarse públicamente contra la casa más rica de El Nexo, sea cual sea su heredero.",
+            "Ninguna casa ha emitido comunicado oficial. Este periódico seguirá recabando reacciones en próximas ediciones.",
+          ],
+        },
+        {
+          titulo:
+            "[BAJÍO DE CORAL] Sospechas de predicciones manipuladas en el Coro Mayor",
+          contenido: [
+            "Fuentes del sistema Prisma apuntan a una investigación interna discreta en marcha dentro del Coro Mayor de Bajío de Coral, centrada en Ossian Vetris, hijo de la venerada matriarca Aeda Sorna Vetris y una de las figuras con mayor racha de aciertos en la historia reciente del Registro de predicciones. Según estas fuentes, una jueza verificadora habría detectado patrones de fractura «demasiado limpios» en varias de sus predicciones más celebradas — más regulares y violentos de lo que la naturaleza produce por sí sola.",
+            "Ninguna acusación formal se ha presentado todavía. Este periódico recuerda a sus lectores que el sistema del Registro de Bajío de Coral sostiene buena parte de la legitimidad económica y espiritual del planeta — cualquier escándalo que lo tocara tendría consecuencias muy por encima de una sola familia.",
+          ],
+        },
+        {
+          titulo:
+            "[CRISTAL ROTO] El turismo de riesgo continúa pese a las alucinaciones",
+          contenido: [
+            "Semanas después de que este periódico informara sobre el episodio de alucinaciones colectivas registrado en varias cavernas habitadas de Cristal Roto, fuentes locales confirman que el negocio turístico de «la visión completa» —la experiencia más cara del catálogo, ofrecida en la sección oficialmente sellada de La Hondura— continúa operando con normalidad, pese al riesgo estructural documentado y a los propios efectos psicológicos ya conocidos del lugar.",
+            "Según estas fuentes, las indemnizaciones a visitantes que sufren convulsiones o que no logran recuperarse de la experiencia se negocian y pagan en silencio, antes incluso de que abandonen la luna. Ninguna autoridad local ha respondido a las preguntas de este periódico sobre por qué la actividad sigue permitida.",
+          ],
+        },
+        {
+          titulo: "[SOCIEDAD] Puente Nexo, ¿basada en gente real?",
+          contenido: [
+            "Circula entre espectadores habituales de «El Secreto de Puente Nexo» la teoría de que sus personajes principales estarían inspirados en figuras reales del propio sector — con nombres sospechosamente parecidos a los de Hadria Von Drevan y su círculo más cercano. La productora, Puente Nexo Media, ha desmentido oficialmente cualquier relación. El rumor, pese al desmentido, no ha dejado de crecer.",
+          ],
+        },
+        {
+          titulo:
+            "[CONFÍN HUECO] Una grabación con varias voces conversando",
+          contenido: [
+            "Rumores procedentes de Stengad, en Confín Hueco, hablan de una grabación que lleva semanas circulando a medias entre el Gremio de Talladores sin que nadie la haga pública. A diferencia de las habituales «voces ajenas» que suelen aparecer en los registros sonoros del sistema de cuevas —fragmentos aislados, atribuidos generalmente a ecos de la propia actividad minera—, quienes han escuchado esta grabación de pasada aseguran que contiene varias voces distintas, manteniendo lo que describen como una conversación completa.",
+            "La responsable de la grabación, según estas mismas fuentes, se niega tanto a destruirla como a compartirla abiertamente. Este periódico no ha podido verificar el contenido ni su autenticidad.",
+          ],
+        },
+      ],
+    ],
+    mercados: {
+      titulo: "[MERCADOS Y COTIZACIONES]",
+      contenido: [
+        {
+          recurso: "Operaciones de La Bolsa (Consorcio de Mercaderes)",
+          variacion: "CIERRE CAUTELAR",
+          texto:
+            "Se mantiene la suspensión de cotización. Sin fecha de reapertura confirmada.",
+        },
+        {
+          recurso: "Servicios de recuperación orbital (Herrumbre)",
+          variacion: "▲ +38%",
+          texto:
+            "Disparada la demanda de contratos de remolque, desguace y construcción portuaria ante el crecimiento explosivo de la colonia.",
+        },
+        {
+          recurso: "Cristales de silicio (Cristal Roto)",
+          variacion: "▲ +4%",
+          texto:
+            "Recuperación parcial tras la paralización temporal de semanas atrás, aunque la actividad turística sigue generando incertidumbre.",
+        },
+        {
+          recurso: "Aleaciones y silicio de exportación (Espesura Roja / Sinaire)",
+          variacion: "▲ +12%",
+          texto:
+            "Primeras especulaciones sobre acceso comercial a un mercado de 2,6 millones de personas hasta ahora completamente aislado.",
+        },
+        {
+          recurso: "Mercenarios y contratos de seguridad privada (general)",
+          variacion: "▲ +5%",
+          texto:
+            "Se mantiene la demanda elevada, sostenida por la incertidumbre general del sector.",
+        },
+      ],
+    },
+    rumores: {
+      titulo: "[RUMORES Y SUSURROS]",
+      contenido: [
+        {
+          titulo: "Herrumbre, ¿quién paga esto de verdad?",
+          texto:
+            "Circula entre trabajadores recién llegados a Herrumbre el rumor de que al menos un envío de material administrativo llevaba un sello oficial que nadie supo reconocer — ni de la Casa Ashental, ni de ningún gremio conocido del sector. Nadie ha conservado el documento para poder mostrarlo.",
+        },
+        {
+          titulo: "El otro hermano, otra vez",
+          texto:
+            "Con el desheredamiento de Theron Von Drevan ya oficial, una fuente asegura haberlo reconocido recientemente en una zona muy alejada de El Nexo, aunque no ha sido posible verificar el dato de ninguna forma.",
+        },
+        {
+          titulo: "Espesura Roja no está sola",
+          texto:
+            "Tras la confirmación de que Sinaire podría albergar colonias humanas en cada planeta mínimamente habitable, empieza a circular la pregunta que nadie en la Hermandad quiere responder en público: ¿durante cuántas décadas han estado esas colonias comerciando o comunicándose entre sí sin que el resto del sector lo supiera?",
+        },
+        {
+          titulo: "¿A quién habla realmente Colmena?",
+          texto:
+            "Circula entre diplomáticos de la Mesa Fragmentada un rumor incómodo sobre el Delegado Yrjö Marnas, única voz reconocida de Colmena ante el consejo: al menos una fuente asegura que buena parte de los «protocolos heredados» que él mismo presenta como voluntad de la red fueron, en realidad, decisiones políticas tomadas generaciones atrás por simple necesidad práctica — nunca comunicadas por el organismo en sí. Nadie se atreve a preguntarlo abiertamente. Si es cierto, nadie sabe qué parte de lo que el sector cree entender sobre Colmena es real, y qué parte es superstición institucionalizada que ya nadie cuestiona.",
+        },
+      ],
+    },
+    acciones: [
+      {
+        simbolo: "CIGÜ",
+        nombre: "Tecnocracia de Forja Muerta",
+        valor: "775 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "MRCD",
+        nombre: "Consorcio de Mercaderes (El Nexo)",
+        valor: "— CR",
+        variacion: "CIERRE CAUTELAR",
+      },
+      {
+        simbolo: "VRDT",
+        nombre: "República de Verdal Agro-Exportaciones",
+        valor: "651 CR",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "KRTH",
+        nombre: "Kartha Armamento",
+        valor: "2.717 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "SNTR",
+        nombre: "Hermandad de Santuario Médica",
+        valor: "1.150 CR",
+        variacion: "+4.3%",
+      },
+      {
+        simbolo: "HELO",
+        nombre: "Cooperativa Hielo Eterno",
+        valor: "504 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "ESFN",
+        nombre: "La Esfinge Carmesí Producciones",
+        valor: "301 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "PLVO",
+        nombre: "Barones del Polvo Holdings",
+        valor: "215 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+      {
+        simbolo: "VDRV",
+        nombre: "Casa Von Drevan (mercado gris, fuera de La Bolsa)",
+        valor: "1.480 CR",
+        variacion: "+22.9%",
+      },
+      {
+        simbolo: "ASHT",
+        nombre: "Casa Ashental (mercado gris, fuera de La Bolsa)",
+        valor: "3.350 CR (último cierre)",
+        variacion: "PAUSADA",
+      },
+    ],
+    tablon: {
+      titulo: "[TABLÓN DE CONTRATOS]",
+      contenido: [
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Cuadrillas de desguace con experiencia en recuperación de pecios. Contrato por objetivos, alojamiento incluido. Herrumbre Unlimited, órbita de Sudario.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Arquitectos e ingenieros de estructuras portuarias para proyecto de expansión en Herrumbre. Se valorará experiencia previa en construcción orbital. Herrumbre Unlimited.",
+        },
+        {
+          tipo: "SE BUSCA",
+          texto:
+            "Pilotos y técnicos de remolque orbital para operaciones de despeje de corredores. Herrumbre Unlimited. Alto riesgo, compensación acorde.",
+        },
+        {
+          tipo: "COMPRO",
+          texto:
+            "Cualquier información verificable sobre quién financia realmente el proyecto de Herrumbre Unlimited. Pago generoso, discreción garantizada. Canal #ECO-14.",
+        },
+        {
+          tipo: "TRABAJO",
+          texto:
+            "Se buscan guías con experiencia verificable para expediciones turísticas en zonas restringidas de Cristal Roto. Discreción imprescindible.",
+        },
+      ],
+    },
+    edictos: [
+      {
+        tipo: "CONVOCATORIA",
+        texto:
+          "Se confirma la apertura de mesas de trabajo específicas por módulo dentro del proceso de transición hacia el nuevo Estado de El Nexo.",
+      },
+      {
+        tipo: "MERCADO",
+        texto:
+          "Se mantiene la suspensión de cotización en La Bolsa del Consorcio de Mercaderes. Sin fecha de reapertura confirmada.",
+      },
+      {
+        tipo: "TRÁNSITO",
+        texto:
+          "Se recomienda precaución a cualquier nave que solicite atraque en Herrumbre ante el crecimiento acelerado y no regulado del tráfico portuario de la colonia.",
+      },
+      {
+        tipo: "SEGURIDAD",
+        texto:
+          "Se recuerda que la sección de La Hondura, en Cristal Roto, permanece oficialmente cerrada por riesgo de derrumbe estructural.",
+      },
+    ],
+  },
 };
 
 // Ediciones especiales: fuera de la numeración semanal normal, layout propio

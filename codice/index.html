@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Códice — Nave Asterión</title>
+<link rel="stylesheet" href="../nav-shared.css">
+<script src="../nav-shared.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:wght@400;500&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="codice.css">
+</head>
+<body>
+<div id="app" class="th">
+  <div id="deco" aria-hidden="true"></div>
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+    <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+    <div class="nav-extras" id="navExtras">
+      <a class="status-chip" href="#/" data-sec="inicio">Inicio</a>
+      <a class="status-chip" href="#/personajes" data-sec="personajes">Personajes</a>
+      <a class="status-chip" href="#/facciones" data-sec="facciones">Facciones</a>
+      <a class="status-chip" href="#/lugares" data-sec="lugares">Lugares</a>
+      <a class="status-chip" href="../legajos/index.html">Legajos</a>
+    </div>
+    <button class="nav-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navExtras">&#9776;</button>
+  </div>
+  <div class="wrap">
+    <main id="view"><p class="cargando">Cargando el registro…</p></main>
+    <footer class="pie">Códice de la nave Asterión</footer>
+  </div>
+</div>
+<div id="peek" class="peek gl th" role="tooltip" hidden></div>
+<script src="codice.js"></script>
+</body>
+</html>
