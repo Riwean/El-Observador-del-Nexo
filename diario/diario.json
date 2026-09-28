@@ -2,7 +2,7 @@
   "entradas": [
     {
       "id": "0001",
-      "fecha_relato": "Año 1050 P.E. | Día 292",
+      "fecha_relato": "Año 1050 P.E. | Día 307",
       "titulo": "Venas Rojas — Fuga",
       "autor": "Bitácora automática — Nave Asterión",
       "etiquetas": [
@@ -18,7 +18,7 @@
     },
     {
       "id": "0002",
-      "fecha_relato": "Año 1050 P.E. | Día 302",
+      "fecha_relato": "Año 1050 P.E. | Día 308",
       "titulo": "Herrumbre — El pecio Drevan",
       "autor": "Bitácora automática — Nave Asterión",
       "etiquetas": [
@@ -33,7 +33,7 @@
     },
     {
       "id": "0003",
-      "fecha_relato": "Año 1050 P.E. | Día 305",
+      "fecha_relato": "Año 1050 P.E. | Día 309",
       "titulo": "Herrumbre — La anexión",
       "autor": "Bitácora automática — Nave Asterión",
       "etiquetas": ["Herrumbre", "Hadria", "Plan Quinquenal"],
