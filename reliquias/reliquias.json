@@ -1,0 +1,137 @@
+{
+  "salas": [
+    {
+      "titulo": "Radjem",
+      "portador": "Radjem",
+      "reliquias": [
+        {
+          "id": "exsanguinadora",
+          "nombre": "Exsanguinadora",
+          "imagen": "img/exsanguinadora.png",
+          "datos": {
+            "Tipo": "Catalizador psiónico",
+            "Material": "Sangriza"
+          },
+          "texto": "Una pistola tallada en sangriza, una piedra oscura como la obsidiana que bebe sangre. No tiene cargador ni mecanismo a la vista: se alimenta de la sangre de quien la empuña y escupe una mezcla oscura de sangre. Cuando se atasca, hay que limpiarle por dentro la sangre coagulada."
+        },
+        {
+          "id": "uniforme-drevan",
+          "nombre": "Uniforme Drevan de Tropa",
+          "imagen": "img/uniforme tropa drevan.png",
+          "datos": {
+            "Tipo": "Uniforme de combate",
+            "Insignia": "Estrella de ocho puntas · DREVAN"
+          },
+          "texto": "Un abrigo largo de placas y cuero reforzado, con la estrella de ocho puntas y el blasón DREVAN grabados en la hombrera: la insignia de una unidad que no figura en ningún registro conocido del Ejército del Mandato en La Cicatriz. Pesa como una chaqueta, aguanta el vacío, permite saltos enormes y planear en la caída, y absorbe cualquier líquido que lo toque. Si así iba equipada la tropa rasa de esa casa, nadie en la Mesa Fragmentada se le acerca."
+        }
+      ]
+    },
+    {
+      "titulo": "Hadria Von Drevan",
+      "portador": "Hadria",
+      "reliquias": [
+        {
+          "id": "traje-ceremonial-drevan",
+          "nombre": "Traje Ceremonial Drevan",
+          "imagen": "img/armadura oficial Drevan.png",
+          "datos": {
+            "Tipo": "Armadura de oficial",
+            "Casa": "Drevan"
+          },
+          "texto": "La armadura de oficial de la misma casa que el uniforme de Radjem, más pesada y más solemne. Protege la mente de intrusiones psíquicas y, cuando quien la lleva se planta, no hay fuerza que lo mueva."
+        },
+        {
+          "id": "mascara-sin-rostro",
+          "nombre": "Máscara sin rostro",
+          "imagen": "img/mascara oficial Drevan.png",
+          "datos": {
+            "Tipo": "Máscara",
+            "Casa": "Drevan"
+          },
+          "texto": "La máscara de oficial de la casa Drevan. Quien la mira no consigue fijar quién hay detrás, y la voz de quien la lleva se distorsiona lo justo para que el timbre no lo delate."
+        },
+        {
+          "id": "espada-drevan",
+          "nombre": "Espada Ceremonial Drevan",
+          "imagen": "img/espada ceremonial.png",
+          "datos": {
+            "Tipo": "Espada de una mano",
+            "Casa": "Drevan"
+          },
+          "texto": "En manos ajenas es solo una buena espada. En las de un Von Drevan despierta: brilla, y su filo vibra tan rápido que apenas se nota un desenfoque. La primera vez que la empuña su dueño, le toma una gota de sangre para reconocerlo. Corta casi cualquier cosa."
+        },
+        {
+          "id": "espejo",
+          "nombre": "Espejo ornamentado",
+          "imagen": "img/espejo.png",
+          "datos": {
+            "Tipo": "Espejo de cuerpo entero",
+            "Ubicación": "Habitación de Hadria",
+            "Origen": "Pecio Drevan, camarote del oficial"
+          },
+          "texto": "Un espejo de cuerpo entero con un marco profusamente ornamentado, recuperado del camarote del oficial del pecio Drevan. Nadie sabe todavía qué hace, ni si hace algo."
+        },
+        {
+          "id": "feto-drevan",
+          "nombre": "Feto pre-Escisión",
+          "imagen": "img/feto-drevan.png",
+          "datos": {
+            "Tipo": "Feto humano en cápsula",
+            "Origen": "Nave Drevan anterior a la Escisión",
+            "Ubicación": "A bordo del Asterión"
+          },
+          "texto": "Un feto humano conservado en una cápsula, recuperado de una nave Drevan de antes de la Escisión. No se sabe nada más de él."
+        }
+      ]
+    },
+    {
+      "titulo": "Nikola",
+      "portador": "Nikola",
+      "reliquias": [
+        {
+          "id": "espejo-roto",
+          "nombre": "Máscara del Espejo Roto",
+          "imagen": "img/espejo roto.png",
+          "datos": {
+            "Tipo": "Dispositivo holográfico facial",
+            "Origen": "Tecnología recuperada"
+          },
+          "texto": "Una gorguera metálica ajustada al cuello que proyecta sobre la cabeza un rostro que no es el de quien la lleva, o un óvalo de estática si lo que se busca es no tener cara. La imagen es algo granulada y parpadea, pero a simple vista engaña. Se calienta, la batería es caprichosa y cualquier interferencia la hace temblar."
+        }
+      ]
+    },
+    {
+      "titulo": "Kael",
+      "portador": "Kael",
+      "reliquias": [
+        {
+          "id": "drones-pre-escision",
+          "nombre": "Drones pre-Escisión",
+          "imagen": "img/drones-pre-escision.png",
+          "datos": {
+            "Tipo": "Drones",
+            "Origen": "Anteriores a la Escisión",
+            "Estado": "Uno reparado"
+          },
+          "texto": "Un lote de drones de antes de la Escisión. Kael ha conseguido devolverle la vida a uno; de lo que son capaces, todavía no se sabe nada."
+        }
+      ]
+    },
+    {
+      "titulo": "Orfeo",
+      "portador": "Orfeo",
+      "reliquias": [
+        {
+          "id": "partitura",
+          "nombre": "Partitura de ópera",
+          "imagen": "img/partitura.png",
+          "datos": {
+            "Tipo": "Partitura",
+            "Idioma": "Anterior a la Escisión, desconocido"
+          },
+          "texto": "Una partitura de ópera escrita en una lengua de antes de la Escisión que nadie sabe leer. La letra es un misterio, pero las notas, tocadas solas, dan una música que Orfeo nunca había oído, de una belleza inaudita."
+        }
+      ]
+    }
+  ]
+}

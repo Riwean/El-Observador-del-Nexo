@@ -80,6 +80,8 @@ html, body {
 .app:nth-child(8) { animation-delay: 1.79s; }
 .app:nth-child(9) { animation-delay: 1.86s; }
 .app:nth-child(10) { animation-delay: 1.93s; }
+.app:nth-child(11) { animation-delay: 2s; }
+.app:nth-child(12) { animation-delay: 2.07s; }
 @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
 .app-panel {

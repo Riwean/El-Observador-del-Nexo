@@ -1,0 +1,13 @@
+{
+  "carteles": [
+    {
+      "id": "johnny-freedom",
+      "nombre": "Johnny Freedom",
+      "imagen": "carteles/johnny-freedom.png",
+      "emisor": "Consejo de Barones",
+      "recompensa": "50.000.000 Cr.",
+      "estado": "activo",
+      "nuevo": true
+    }
+  ]
+}

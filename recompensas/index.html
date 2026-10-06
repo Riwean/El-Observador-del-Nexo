@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablón de recompensas — Nave Asterión</title>
+<link rel="stylesheet" href="../nav-shared.css">
+<script src="../nav-shared.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;800&family=Black+Ops+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="recompensas.css">
+</head>
+<body>
+  <div class="site-nav" role="navigation" aria-label="Navegación">
+  <a class="nav-back" href="../index.html" title="Volver a la consola" aria-label="Volver a la consola"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="nav-back-text">Volver a la consola</span></a>
+</div>
+
+  <header>
+    <h1>Tablón de recompensas</h1>
+    <div class="sub">Carteles recogidos por la tripulación del Asterión</div>
+  </header>
+
+  <div class="filtros" id="filtros"></div>
+
+  <div class="tablon" id="tablon">
+    <div class="aviso">Cargando carteles...</div>
+  </div>
+
+  <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Cartel">
+    <button class="cerrar" id="cerrar" aria-label="Cerrar">×</button>
+    <img id="visorImg" alt="">
+    <div class="ficha" id="visorFicha"></div>
+  </div>
+
+<script src="recompensas.js"></script>
+</body>
+</html>
