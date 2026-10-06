@@ -10,7 +10,7 @@ const ediciones = {
       titulo:
         "ORFEO SIGUE SIN APARECER: EL SILENCIO DE LA ESFINGE CARMESÍ SE ALARGA",
       subtitulo:
-        "» Cuatro meses sin funciones – La Esfinge Carmesí mantiene la versión oficial mientras crecen las preguntas",
+        "» Cuatro meses sin funciones - La Esfinge Carmesí mantiene la versión oficial mientras crecen las preguntas",
       contenido: [
         "La voz más celebrada del sector continúa ausente de los escenarios. ORFEO, prima voce de La Esfinge Carmesí desde hace años, no se presenta en público desde su última actuación registrada en Forja Muerta. La nave-teatro insiste en que se trata de un 'retiro voluntario por agotamiento vocal', pero la prolongación del silencio empieza a generar inquietud entre mecenas y seguidores por igual.",
         "Fuentes cercanas al Consorcio de Mercaderes señalan que Lady Míriam Ashental, principal patrocinadora del contrato de Orfeo, habría solicitado en repetidas ocasiones una actualización médica directa, sin obtener respuesta satisfactoria por parte de la dirección de la nave. El Consorte Valerius Kaine, propietario nominal de La Esfinge, no ha concedido entrevistas desde hace semanas.",
@@ -215,7 +215,7 @@ const ediciones = {
         {
           tipo: "SE BUSCA",
           texto:
-            "Pilotos con experiencia en rutas Viento Rojo–Horno. Pago por adelantado ante la situación actual. Preguntar por 'El Cartógrafo', Módulo 9.",
+            "Pilotos con experiencia en rutas Viento Rojo-Horno. Pago por adelantado ante la situación actual. Preguntar por 'El Cartógrafo', Módulo 9.",
         },
         {
           tipo: "TRABAJO",
